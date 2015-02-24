@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PMSDataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="PMSDataModelStoreContainer" />
+  <!--Errors Found During Generation:
+      warning 6013: The table/view 'PMSData.dbo.complogo' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="complogo">
+        <Property Name="LOGO" Type="varchar(max)" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'PMSData.dbo.DELHIST' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="DELHIST">
+        <Property Name="DTABLE" Type="char" MaxLength="30" />
+        <Property Name="DTYPE" Type="char" MaxLength="1" />
+        <Property Name="DCOND" Type="varchar(max)" />
+        <Property Name="EDITED" Type="bit" />
+        <Property Name="EDITDT" Type="date" />
+        <Property Name="BKDT" Type="date" />
+      </EntityType>-->
+</Schema>
