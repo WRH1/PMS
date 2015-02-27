@@ -1,0 +1,135 @@
+﻿@model IEnumerable<PMS.AECRPDTL>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MAINCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PMSCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CL_DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SLNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CP_CYL1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CP_CYL2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CP_CYL3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CP_CYL4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CP_CYL5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CP_CYL6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CP_CYL7)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CP_CYL8)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CP_CYL9)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CP_CYL10)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAINCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PMSCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CL_DATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SLNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CP_CYL1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CP_CYL2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CP_CYL3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CP_CYL4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CP_CYL5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CP_CYL6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CP_CYL7)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CP_CYL8)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CP_CYL9)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CP_CYL10)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

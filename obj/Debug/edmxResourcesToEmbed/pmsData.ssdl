@@ -1,21 +1,3298 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="PMSDataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
-  <EntityContainer Name="PMSDataModelStoreContainer" />
+  <EntityContainer Name="PMSDataModelStoreContainer">
+    <EntitySet Name="ACCIDENT" EntityType="PMSDataModel.Store.ACCIDENT" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ACCPIC" EntityType="PMSDataModel.Store.ACCPIC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AEBERHED" EntityType="PMSDataModel.Store.AEBERHED" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AECPBEDT" EntityType="PMSDataModel.Store.AECPBEDT" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AECRPDTL" EntityType="PMSDataModel.Store.AECRPDTL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AEPERDETL" EntityType="PMSDataModel.Store.AEPERDETL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AEPERHEAD" EntityType="PMSDataModel.Store.AEPERHEAD" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AUDIT" EntityType="PMSDataModel.Store.AUDIT" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AUXODET1" EntityType="PMSDataModel.Store.AUXODET1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AUXODET2" EntityType="PMSDataModel.Store.AUXODET2" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AUXODET3" EntityType="PMSDataModel.Store.AUXODET3" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AUXODET4" EntityType="PMSDataModel.Store.AUXODET4" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AUXOHEAD" EntityType="PMSDataModel.Store.AUXOHEAD" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BACKUPS" EntityType="PMSDataModel.Store.BACKUPS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BER_INSP" EntityType="PMSDataModel.Store.BER_INSP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BKIMGDBF" EntityType="PMSDataModel.Store.BKIMGDBF" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BRKDNPIC" EntityType="PMSDataModel.Store.BRKDNPIC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BRKDOWN" EntityType="PMSDataModel.Store.BRKDOWN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="COMPDETL" EntityType="PMSDataModel.Store.COMPDETL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CompItem" EntityType="PMSDataModel.Store.CompItem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="complogo" EntityType="PMSDataModel.Store.complogo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="COMPMST" EntityType="PMSDataModel.Store.COMPMST" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CURRMAST" EntityType="PMSDataModel.Store.CURRMAST" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CYL_COND_INSP" EntityType="PMSDataModel.Store.CYL_COND_INSP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DBLTDETL" EntityType="PMSDataModel.Store.DBLTDETL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DBLTHEAD" EntityType="PMSDataModel.Store.DBLTHEAD" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DBLTITEM" EntityType="PMSDataModel.Store.DBLTITEM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DEFECTS" EntityType="PMSDataModel.Store.DEFECTS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DEFLDETL" EntityType="PMSDataModel.Store.DEFLDETL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DEFLHEAD" EntityType="PMSDataModel.Store.DEFLHEAD" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DEFMALST" EntityType="PMSDataModel.Store.DEFMALST" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DEFOFF" EntityType="PMSDataModel.Store.DEFOFF" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DEFPIC" EntityType="PMSDataModel.Store.DEFPIC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DEFPST" EntityType="PMSDataModel.Store.DEFPST" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DELHIST" EntityType="PMSDataModel.Store.DELHIST" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DRDETL" EntityType="PMSDataModel.Store.DRDETL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DRITEMS" EntityType="PMSDataModel.Store.DRITEMS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DRMAIN" EntityType="PMSDataModel.Store.DRMAIN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DRSUB" EntityType="PMSDataModel.Store.DRSUB" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EX_VALVE_INSP" EntityType="PMSDataModel.Store.EX_VALVE_INSP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FILEVAR" EntityType="PMSDataModel.Store.FILEVAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FOXUSER" EntityType="PMSDataModel.Store.FOXUSER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FPLOGBK" EntityType="PMSDataModel.Store.FPLOGBK" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GROOVE16_INSP" EntityType="PMSDataModel.Store.GROOVE16_INSP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GROOVPROF_INSP" EntityType="PMSDataModel.Store.GROOVPROF_INSP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GRPBK" EntityType="PMSDataModel.Store.GRPBK" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GRPMAIN" EntityType="PMSDataModel.Store.GRPMAIN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HATCHDETL" EntityType="PMSDataModel.Store.HATCHDETL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HATCHHEAD" EntityType="PMSDataModel.Store.HATCHHEAD" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="IN_LOC" EntityType="PMSDataModel.Store.IN_LOC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="INCIDENT" EntityType="PMSDataModel.Store.INCIDENT" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="INCIDENTOF" EntityType="PMSDataModel.Store.INCIDENTOF" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="INCIDENTPIC" EntityType="PMSDataModel.Store.INCIDENTPIC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="INJURY" EntityType="PMSDataModel.Store.INJURY" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="INJURYOF" EntityType="PMSDataModel.Store.INJURYOF" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="INJURYPERS" EntityType="PMSDataModel.Store.INJURYPERS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="INJURYPIC" EntityType="PMSDataModel.Store.INJURYPIC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="INSUDONE" EntityType="PMSDataModel.Store.INSUDONE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="INSUMAIN" EntityType="PMSDataModel.Store.INSUMAIN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JOBPARTS" EntityType="PMSDataModel.Store.JOBPARTS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LINER" EntityType="PMSDataModel.Store.LINER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LINEREAD" EntityType="PMSDataModel.Store.LINEREAD" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LINERPIC" EntityType="PMSDataModel.Store.LINERPIC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LOGBOOK" EntityType="PMSDataModel.Store.LOGBOOK" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MAINBK" EntityType="PMSDataModel.Store.MAINBK" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MAINITEM" EntityType="PMSDataModel.Store.MAINITEM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MAINMANUF" EntityType="PMSDataModel.Store.MAINMANUF" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MAINMEG" EntityType="PMSDataModel.Store.MAINMEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MAINSUB" EntityType="PMSDataModel.Store.MAINSUB" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MAINTEN" EntityType="PMSDataModel.Store.MAINTEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MAINTPIC" EntityType="PMSDataModel.Store.MAINTPIC" store:Type="Tables" store:Schema="dbo" store:Name="MAINTPIC">
+      <DefiningQuery>SELECT 
+      [MAINTPIC].[PK] AS [PK], 
+      [MAINTPIC].[MAINCODE] AS [MAINCODE], 
+      [MAINTPIC].[PMSCODE] AS [PMSCODE], 
+      [MAINTPIC].[MNTDATE] AS [MNTDATE], 
+      [MAINTPIC].[PICPATH] AS [PICPATH], 
+      [MAINTPIC].[TOOLTEXT] AS [TOOLTEXT], 
+      [MAINTPIC].[EDITDT] AS [EDITDT], 
+      [MAINTPIC].[EDITED] AS [EDITED], 
+      [MAINTPIC].[BKDT] AS [BKDT]
+      FROM [dbo].[MAINTPIC] AS [MAINTPIC]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MAINTYPE" EntityType="PMSDataModel.Store.MAINTYPE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MANUF" EntityType="PMSDataModel.Store.MANUF" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ME_CYLINDER_INSP" EntityType="PMSDataModel.Store.ME_CYLINDER_INSP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ME_PERFORM_INSP" EntityType="PMSDataModel.Store.ME_PERFORM_INSP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MEBRDTL" EntityType="PMSDataModel.Store.MEBRDTL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MEBRHEAD" EntityType="PMSDataModel.Store.MEBRHEAD" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MECRSDTL" EntityType="PMSDataModel.Store.MECRSDTL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MECRSHED" EntityType="PMSDataModel.Store.MECRSHED" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MEEXOVR" EntityType="PMSDataModel.Store.MEEXOVR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MEPERDET" EntityType="PMSDataModel.Store.MEPERDET" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MEPERFORM" EntityType="PMSDataModel.Store.MEPERFORM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MESPDTL" EntityType="PMSDataModel.Store.MESPDTL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MESPITEM" EntityType="PMSDataModel.Store.MESPITEM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MOTMEG" EntityType="PMSDataModel.Store.MOTMEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MSGDATA" EntityType="PMSDataModel.Store.MSGDATA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MSM" EntityType="PMSDataModel.Store.MSM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="mymenu" EntityType="PMSDataModel.Store.mymenu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NEARMISS" EntityType="PMSDataModel.Store.NEARMISS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NEAROFF" EntityType="PMSDataModel.Store.NEAROFF" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NEARPIC" EntityType="PMSDataModel.Store.NEARPIC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NkkType" EntityType="PMSDataModel.Store.NkkType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OFFEX" EntityType="PMSDataModel.Store.OFFEX" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OVRPMS" EntityType="PMSDataModel.Store.OVRPMS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PASSWORD" EntityType="PMSDataModel.Store.PASSWORD" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PETMAIN" EntityType="PMSDataModel.Store.PETMAIN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PETPMS" EntityType="PMSDataModel.Store.PETPMS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PISTDETL" EntityType="PMSDataModel.Store.PISTDETL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PISTON" EntityType="PMSDataModel.Store.PISTON" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PISTREAD" EntityType="PMSDataModel.Store.PISTREAD" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PMSBK" EntityType="PMSDataModel.Store.PMSBK" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PMSCOND" EntityType="PMSDataModel.Store.PMSCOND" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PMSDESC" EntityType="PMSDataModel.Store.PMSDESC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="pmsflds" EntityType="PMSDataModel.Store.pmsflds" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PMSHIST" EntityType="PMSDataModel.Store.PMSHIST" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PMSITEM" EntityType="PMSDataModel.Store.PMSITEM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PMSJOB" EntityType="PMSDataModel.Store.PMSJOB" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PMSTYPE" EntityType="PMSDataModel.Store.PMSTYPE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="POSTPOND" EntityType="PMSDataModel.Store.POSTPOND" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PUMPOVER" EntityType="PMSDataModel.Store.PUMPOVER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="REP_ORDER" EntityType="PMSDataModel.Store.REP_ORDER" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="ACCIDENT">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SRNUMB" Type="char" MaxLength="10" />
+    <Property Name="SEVERITY" Type="numeric" Precision="1" />
+    <Property Name="PROBABLE" Type="numeric" Precision="1" />
+    <Property Name="SUBJECT" Type="char" MaxLength="250" />
+    <Property Name="ARRDATE" Type="date" />
+    <Property Name="CAUSE" Type="numeric" Precision="1" />
+    <Property Name="ACCDATE" Type="date" />
+    <Property Name="LT" Type="char" MaxLength="10" />
+    <Property Name="GMT" Type="char" MaxLength="10" />
+    <Property Name="DEPPORT" Type="char" MaxLength="30" />
+    <Property Name="DEPDATE" Type="date" />
+    <Property Name="DESTPORT" Type="char" MaxLength="30" />
+    <Property Name="LOCATION" Type="char" MaxLength="2" />
+    <Property Name="ACCTYPE" Type="char" MaxLength="2" />
+    <Property Name="PRIMCAUSE" Type="char" MaxLength="2" />
+    <Property Name="SECONCAUS" Type="char" MaxLength="2" />
+    <Property Name="PLACEINCI" Type="char" MaxLength="2" />
+    <Property Name="DAMAGE1" Type="char" MaxLength="2" />
+    <Property Name="DAMAGE2" Type="char" MaxLength="2" />
+    <Property Name="COST" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DAYSLOST" Type="numeric" Precision="2" />
+    <Property Name="HRSLOST" Type="numeric" Precision="2" />
+    <Property Name="MINSLOST" Type="numeric" Precision="2" />
+    <Property Name="TOTALS" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="EVENTS" Type="varchar(max)" />
+    <Property Name="CAUSDAM" Type="varchar(max)" />
+    <Property Name="REMARK" Type="varchar(max)" />
+    <Property Name="DDAYS" Type="numeric" Precision="3" />
+    <Property Name="DHRS" Type="numeric" Precision="2" />
+    <Property Name="DMINS" Type="numeric" Precision="2" />
+    <Property Name="EDAMAGE" Type="varchar(max)" />
+    <Property Name="DDAMAGE" Type="varchar(max)" />
+    <Property Name="TREPAIR" Type="varchar(max)" />
+    <Property Name="PREPAIR" Type="varchar(max)" />
+    <Property Name="DETAIL" Type="varchar(max)" />
+    <Property Name="PERSONAL" Type="char" MaxLength="2" />
+    <Property Name="JOB" Type="char" MaxLength="2" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="ACCPIC">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SRNUMB" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="PICPATH" Type="char" MaxLength="254" />
+    <Property Name="TOOLTEXT" Type="char" MaxLength="100" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="AEBERHED">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="CL_DATE" Type="date" />
+    <Property Name="ENG_TYPE" Type="char" MaxLength="30" />
+    <Property Name="NORM_BORE" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="LAST_OVER" Type="numeric" Precision="10" />
+    <Property Name="RUN_HRS" Type="numeric" Precision="10" />
+    <Property Name="ENG_NO" Type="numeric" Precision="3" />
+    <Property Name="ENG_LOCA" Type="char" MaxLength="30" />
+    <Property Name="REMARKS" Type="varchar(max)" />
+    <Property Name="MEAS_BY" Type="char" MaxLength="30" />
+    <Property Name="CHK_INTER1" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="STD_CLE11" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="STD_CLE12" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="WER_LIMIT1" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CHK_INTER2" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="STD_CLE21" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="STD_CLE22" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="WER_LIMIT2" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="MAX_ALLOW" Type="numeric" Precision="10" Scale="3" />
+    <Property Name="CRANK_TEMP" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="NUM" Type="numeric" Precision="2" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="AECPBEDT">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="CL_DATE" Type="date" />
+    <Property Name="SLNO" Type="numeric" Precision="2" />
+    <Property Name="REN_DATE1" Type="date" />
+    <Property Name="REN_DATE2" Type="date" />
+    <Property Name="REN_DATE3" Type="date" />
+    <Property Name="REN_DATE4" Type="date" />
+    <Property Name="REN_DATE5" Type="date" />
+    <Property Name="REN_DATE6" Type="date" />
+    <Property Name="REN_DATE7" Type="date" />
+    <Property Name="REN_DATE8" Type="date" />
+    <Property Name="REN_DATE9" Type="date" />
+    <Property Name="REN_DATE10" Type="date" />
+    <Property Name="REN_DATE11" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="NUM" Type="numeric" Precision="2" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="AECRPDTL">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="CL_DATE" Type="date" />
+    <Property Name="SLNO" Type="numeric" Precision="2" />
+    <Property Name="CP_CYL1" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CP_CYL2" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CP_CYL3" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CP_CYL4" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CP_CYL5" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CP_CYL6" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CP_CYL7" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CP_CYL8" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CP_CYL9" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CP_CYL10" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="NUM" Type="numeric" Precision="2" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="AEPERDETL">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DT" Type="date" Nullable="false" />
+    <Property Name="ENGNUM" Type="numeric" Precision="1" />
+    <Property Name="UNITNUM" Type="numeric" Precision="2" />
+    <Property Name="PMAX" Type="numeric" Precision="6" Scale="1" />
+    <Property Name="FUELRACK" Type="numeric" Precision="6" />
+    <Property Name="EXHTEMP" Type="numeric" Precision="6" />
+    <Property Name="JKTTEMP" Type="numeric" Precision="6" Scale="1" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="AEPERHEAD">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DT" Type="date" />
+    <Property Name="ENGNUM" Type="numeric" Precision="1" />
+    <Property Name="DTMEASURED" Type="date" />
+    <Property Name="LOAD" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="TCHRRPM" Type="numeric" Precision="6" />
+    <Property Name="SCAVPRES" Type="numeric" Precision="8" Scale="2" />
+    <Property Name="SCAVTEMP" Type="numeric" Precision="8" Scale="2" />
+    <Property Name="ACPRESDROP" Type="numeric" Precision="8" Scale="2" />
+    <Property Name="LOPRESS" Type="numeric" Precision="8" Scale="2" />
+    <Property Name="LOTEMPIN" Type="numeric" Precision="8" Scale="2" />
+    <Property Name="LOTEMPOUT" Type="numeric" Precision="8" Scale="2" />
+    <Property Name="GOVRLOADIN" Type="numeric" Precision="8" Scale="2" />
+    <Property Name="ELLOADKW" Type="numeric" Precision="8" Scale="2" />
+    <Property Name="ELLOADAMPS" Type="numeric" Precision="8" Scale="2" />
+    <Property Name="INJECTOR" Type="numeric" Precision="5" />
+    <Property Name="CYLHDOHAUL" Type="numeric" Precision="5" />
+    <Property Name="COMPDECARB" Type="numeric" Precision="5" />
+    <Property Name="REMARKS" Type="varchar(max)" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="AUDIT">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="USERS" Type="char" MaxLength="36" />
+    <Property Name="DATETIME" Type="char" MaxLength="23" />
+    <Property Name="MODULE" Type="char" MaxLength="21" />
+    <Property Name="MODULECODE" Type="char" MaxLength="111" />
+    <Property Name="MODE" Type="char" MaxLength="7" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="USERNAME" Type="char" MaxLength="60" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="AUXODET1">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="TYPE" Type="char" MaxLength="2" />
+    <Property Name="CYLNO1FA" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO1PS" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO2FA" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO2PS" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO3FA" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO3PS" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO4FA" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO4PS" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO5FA" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO5PS" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO6FA" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO6PS" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO7FA" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO7PS" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO8FA" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO8PS" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO9FA" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO9PS" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO10FA" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO10PS" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="NUM" Type="numeric" Precision="2" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="AUXODET2">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="TYPE" Type="char" MaxLength="2" />
+    <Property Name="CYLNO1" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="CYLNO2" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="CYLNO3" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="CYLNO4" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="CYLNO5" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="CYLNO6" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="CYLNO7" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="CYLNO8" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="CYLNO9" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="CYLNO10" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="STDCLEAN" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="LIMIT" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="NUM" Type="numeric" Precision="2" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="AUXODET3">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="TYPE" Type="char" MaxLength="2" />
+    <Property Name="CYLNO1" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO2" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO3" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO4" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO5" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO6" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO7" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO8" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO9" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLNO10" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="NUM" Type="numeric" Precision="2" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="AUXODET4">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="TYPE" Type="char" MaxLength="2" />
+    <Property Name="CYLNO1" Type="char" MaxLength="10" />
+    <Property Name="CYLNO2" Type="char" MaxLength="10" />
+    <Property Name="CYLNO3" Type="char" MaxLength="10" />
+    <Property Name="CYLNO4" Type="char" MaxLength="10" />
+    <Property Name="CYLNO5" Type="char" MaxLength="10" />
+    <Property Name="CYLNO6" Type="char" MaxLength="10" />
+    <Property Name="CYLNO7" Type="char" MaxLength="10" />
+    <Property Name="CYLNO8" Type="char" MaxLength="10" />
+    <Property Name="CYLNO9" Type="char" MaxLength="10" />
+    <Property Name="CYLNO10" Type="char" MaxLength="10" />
+    <Property Name="NUM" Type="numeric" Precision="2" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="AUXOHEAD">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="ENGTYPE" Type="char" MaxLength="10" />
+    <Property Name="NOMBORE" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="SINCELAST" Type="numeric" Precision="5" />
+    <Property Name="AUXENGNO" Type="numeric" Precision="2" />
+    <Property Name="AUXENGLOC" Type="char" MaxLength="30" />
+    <Property Name="TOTRUN" Type="numeric" Precision="7" />
+    <Property Name="STDCLEAN" Type="char" MaxLength="5" />
+    <Property Name="WEARLIMIT" Type="char" MaxLength="5" />
+    <Property Name="REMARKS1" Type="varchar(max)" />
+    <Property Name="TURBOCHARG" Type="bit" />
+    <Property Name="AIRCOOLER" Type="bit" />
+    <Property Name="BUSHES" Type="bit" />
+    <Property Name="CONDASFND" Type="char" MaxLength="100" />
+    <Property Name="ANYREPAIR" Type="char" MaxLength="50" />
+    <Property Name="STDDIA1" Type="numeric" Precision="5" />
+    <Property Name="OVALIMIT1" Type="numeric" Precision="5" />
+    <Property Name="STDDIA2" Type="numeric" Precision="5" />
+    <Property Name="OVALIMIT2" Type="numeric" Precision="5" />
+    <Property Name="STDTORQUE" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="ANGROTA" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="STDLENG" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="CHKINTERV" Type="numeric" Precision="5" />
+    <Property Name="WRKHRLIMIT" Type="numeric" Precision="5" />
+    <Property Name="ELOLIMIT" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="LASTRENEW" Type="date" />
+    <Property Name="RUNHRSINCE" Type="numeric" Precision="7" />
+    <Property Name="REMARKS2" Type="varchar(max)" />
+    <Property Name="NUM" Type="numeric" Precision="2" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="BACKUPS">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BUPFILE" Type="char" MaxLength="50" />
+    <Property Name="BUPPATH" Type="varchar(max)" />
+    <Property Name="BUPTYPE" Type="char" MaxLength="1" />
+    <Property Name="BUPDATE" Type="datetime" />
+    <Property Name="BUPSRNUM" Type="numeric" Precision="4" />
+    <Property Name="BUPEDA" Type="char" MaxLength="1" />
+    <Property Name="BUPREC" Type="numeric" Precision="20" />
+  </EntityType>
+  <EntityType Name="BER_INSP">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TYPECODE" Type="char" MaxLength="8" />
+    <Property Name="BUILDER" Type="char" MaxLength="50" />
+    <Property Name="ENG_NO" Type="char" MaxLength="10" />
+    <Property Name="CHECKEDBY" Type="char" MaxLength="50" />
+    <Property Name="NO_OF_CYL" Type="char" MaxLength="10" />
+    <Property Name="ENG_TYPE" Type="char" MaxLength="50" />
+    <Property Name="CLOCKWISE" Type="char" MaxLength="10" />
+    <Property Name="ENG_HRS" Type="char" MaxLength="10" />
+    <Property Name="ENTDATE" Type="char" MaxLength="10" />
+    <Property Name="BEARINGNO" Type="char" MaxLength="10" />
+    <Property Name="BEARINGHRS" Type="char" MaxLength="10" />
+    <Property Name="DRAWINGNO" Type="char" MaxLength="50" />
+    <Property Name="MARKING" Type="char" MaxLength="50" />
+    <Property Name="MATERIAL" Type="char" MaxLength="50" />
+    <Property Name="OVERLAY" Type="char" MaxLength="50" />
+    <Property Name="SN_FLASH" Type="char" MaxLength="10" />
+    <Property Name="SHIMS" Type="char" MaxLength="10" />
+    <Property Name="BER_HOUSE" Type="char" MaxLength="50" />
+    <Property Name="BER_MAKER" Type="char" MaxLength="50" />
+    <Property Name="OFFSET" Type="char" MaxLength="50" />
+    <Property Name="THIK_SHELL" Type="char" MaxLength="50" />
+    <Property Name="THIN_SHELL" Type="char" MaxLength="50" />
+    <Property Name="CORROSION" Type="char" MaxLength="10" />
+    <Property Name="LACQUERING" Type="char" MaxLength="10" />
+    <Property Name="SCRATCHES" Type="char" MaxLength="10" />
+    <Property Name="TEARING" Type="char" MaxLength="10" />
+    <Property Name="CRACKS" Type="char" MaxLength="10" />
+    <Property Name="LOOSEWHITE" Type="char" MaxLength="10" />
+    <Property Name="SCUFFING" Type="char" MaxLength="10" />
+    <Property Name="TRAPPED" Type="char" MaxLength="10" />
+    <Property Name="DETACHMENT" Type="char" MaxLength="10" />
+    <Property Name="MISALIGN" Type="char" MaxLength="10" />
+    <Property Name="SEIZURES" Type="char" MaxLength="10" />
+    <Property Name="WIPING" Type="char" MaxLength="10" />
+    <Property Name="FRETTING" Type="char" MaxLength="10" />
+    <Property Name="PEELINGOFF" Type="char" MaxLength="10" />
+    <Property Name="SPARKERO" Type="char" MaxLength="10" />
+    <Property Name="HARDCONT" Type="char" MaxLength="10" />
+    <Property Name="POROSITES" Type="char" MaxLength="10" />
+    <Property Name="SQUEEZED" Type="char" MaxLength="10" />
+    <Property Name="DENTMARKS" Type="char" MaxLength="10" />
+    <Property Name="HEATCRACKS" Type="char" MaxLength="10" />
+    <Property Name="ROUGHSURFA" Type="char" MaxLength="10" />
+    <Property Name="SCRA_JOUR" Type="char" MaxLength="10" />
+    <Property Name="UNEVSURF" Type="char" MaxLength="10" />
+    <Property Name="CONCAVE" Type="char" MaxLength="10" />
+    <Property Name="WEAK_LIGHT" Type="char" MaxLength="10" />
+    <Property Name="CONICAL" Type="char" MaxLength="10" />
+    <Property Name="CONVEX" Type="char" MaxLength="10" />
+    <Property Name="EVENTSUNEVEN" Type="char" MaxLength="10" />
+    <Property Name="WIDE" Type="char" MaxLength="10" />
+    <Property Name="ASSEMBLY" Type="char" MaxLength="10" />
+    <Property Name="DIRT" Type="char" MaxLength="10" />
+    <Property Name="MAT_DEF" Type="char" MaxLength="10" />
+    <Property Name="BONDING" Type="char" MaxLength="10" />
+    <Property Name="HARD_CONT" Type="char" MaxLength="10" />
+    <Property Name="OTHER" Type="char" MaxLength="10" />
+    <Property Name="CLEARANCE" Type="char" MaxLength="10" />
+    <Property Name="HOU_GEO" Type="char" MaxLength="10" />
+    <Property Name="SHEL_GEO" Type="char" MaxLength="10" />
+    <Property Name="CONTAMIN" Type="char" MaxLength="10" />
+    <Property Name="JOU_GEO" Type="char" MaxLength="10" />
+    <Property Name="SPA_ERO" Type="char" MaxLength="10" />
+    <Property Name="DESIGN" Type="char" MaxLength="10" />
+    <Property Name="LUBRICA" Type="char" MaxLength="10" />
+    <Property Name="WATER" Type="char" MaxLength="10" />
+    <Property Name="SHEL_THICK" Type="char" MaxLength="10" />
+    <Property Name="ST_ANG1" Type="char" MaxLength="20" />
+    <Property Name="ST_ANG2" Type="char" MaxLength="20" />
+    <Property Name="ST_ANG3" Type="char" MaxLength="20" />
+    <Property Name="END_ANG1" Type="char" MaxLength="20" />
+    <Property Name="END_ANG2" Type="char" MaxLength="20" />
+    <Property Name="END_ANG3" Type="char" MaxLength="20" />
+    <Property Name="PISTON1" Type="char" MaxLength="50" />
+    <Property Name="PISTON2" Type="char" MaxLength="50" />
+    <Property Name="PISTON3" Type="char" MaxLength="50" />
+    <Property Name="DEPTH1" Type="char" MaxLength="50" />
+    <Property Name="DEPTH2" Type="char" MaxLength="50" />
+    <Property Name="DEPTH3" Type="char" MaxLength="50" />
+    <Property Name="TOP_FORE" Type="char" MaxLength="20" />
+    <Property Name="TOP_AFT" Type="char" MaxLength="20" />
+    <Property Name="BOT_FORE" Type="char" MaxLength="20" />
+    <Property Name="BOT_AFT" Type="char" MaxLength="20" />
+    <Property Name="UP_EX_FORE" Type="char" MaxLength="20" />
+    <Property Name="UP_EX_AF" Type="char" MaxLength="20" />
+    <Property Name="LO_EX_FO" Type="char" MaxLength="20" />
+    <Property Name="LO_EX_AF" Type="char" MaxLength="20" />
+    <Property Name="UP_MAN_FO" Type="char" MaxLength="20" />
+    <Property Name="UP_MAN_AF" Type="char" MaxLength="20" />
+    <Property Name="LO_MAN_FO" Type="char" MaxLength="20" />
+    <Property Name="LO_MAN_AF" Type="char" MaxLength="20" />
+    <Property Name="REM" Type="char" MaxLength="254" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="BKIMGDBF">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SLNO" Type="numeric" Precision="8" />
+    <Property Name="FROMDT" Type="date" />
+    <Property Name="TODT" Type="date" />
+    <Property Name="BKBY" Type="char" MaxLength="60" />
+    <Property Name="BKFILENAME" Type="char" MaxLength="30" />
+    <Property Name="BKPATH" Type="char" MaxLength="250" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="BRKDNPIC">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="PICPATH" Type="char" MaxLength="254" />
+    <Property Name="TOOLTEXT" Type="char" MaxLength="100" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="BRKDOWN">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="BRKDATE" Type="date" />
+    <Property Name="REASON" Type="varchar(max)" />
+    <Property Name="ACTION" Type="varchar(max)" />
+    <Property Name="DELAY" Type="bit" />
+    <Property Name="DAY" Type="numeric" Precision="3" />
+    <Property Name="HOURS" Type="numeric" Precision="2" />
+    <Property Name="ASSIST" Type="bit" />
+    <Property Name="REPAIRER" Type="char" MaxLength="60" />
+    <Property Name="PORT" Type="char" MaxLength="60" />
+    <Property Name="RUNHRS" Type="numeric" Precision="10" />
+    <Property Name="OVERHAUL" Type="date" />
+    <Property Name="INTERVAL" Type="numeric" Precision="9" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="COMPDETL">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="COMPCODE" Type="char" MaxLength="10" />
+    <Property Name="SUBCODE" Type="char" MaxLength="10" />
+    <Property Name="MAINCAT" Type="char" MaxLength="3" />
+    <Property Name="SUBCAT" Type="char" MaxLength="3" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSDATE" Type="date" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="OHAULAT" Type="numeric" Precision="7" />
+    <Property Name="RUNHRS" Type="numeric" Precision="10" />
+    <Property Name="TOTHRS" Type="numeric" Precision="10" />
+    <Property Name="MAKERID" Type="char" MaxLength="20" />
+    <Property Name="SIMPLEID" Type="char" MaxLength="10" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="FROMDATE" Type="date" />
+    <Property Name="UNITOHAUL" Type="numeric" Precision="10" />
+    <Property Name="UNITTOTHRS" Type="numeric" Precision="10" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="CompItem">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCAT" Type="char" MaxLength="3" />
+    <Property Name="SUBCAT" Type="char" MaxLength="3" />
+    <Property Name="NAME" Type="char" MaxLength="20" />
+    <Property Name="CONDITION" Type="char" MaxLength="254" />
+    <Property Name="TYPECODE" Type="char" MaxLength="10" />
+    <Property Name="CONTROL" Type="char" MaxLength="20" />
+    <Property Name="ORDCODE" Type="char" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="complogo">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LOGO" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="COMPMST">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="COMPCODE" Type="char" MaxLength="10" />
+    <Property Name="SUBCODE" Type="char" MaxLength="10" />
+    <Property Name="MAINCAT" Type="char" MaxLength="3" />
+    <Property Name="SUBCAT" Type="char" MaxLength="3" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSDATE" Type="date" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="OHAULAT" Type="numeric" Precision="7" />
+    <Property Name="RUNHRS" Type="numeric" Precision="10" />
+    <Property Name="TOTHRS" Type="numeric" Precision="10" />
+    <Property Name="MAKERID" Type="char" MaxLength="20" />
+    <Property Name="SIMPLEID" Type="char" MaxLength="10" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="CANEDIT" Type="bit" />
+    <Property Name="WORK" Type="varchar(max)" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="CURRMAST">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CURCODE" Type="char" MaxLength="4" />
+    <Property Name="CURNAME" Type="char" MaxLength="60" />
+    <Property Name="CURNUM" Type="numeric" Precision="3" />
+  </EntityType>
+  <EntityType Name="CYL_COND_INSP">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TYPECODE" Type="char" MaxLength="8" />
+    <Property Name="BUILDER" Type="char" MaxLength="50" />
+    <Property Name="ENG_NO" Type="char" MaxLength="10" />
+    <Property Name="CHECKEDBY" Type="char" MaxLength="50" />
+    <Property Name="NO_OF_CYL" Type="char" MaxLength="10" />
+    <Property Name="ENG_TYPE" Type="char" MaxLength="50" />
+    <Property Name="MK" Type="char" MaxLength="10" />
+    <Property Name="ENG_HRS" Type="char" MaxLength="10" />
+    <Property Name="ENTDATE" Type="char" MaxLength="10" />
+    <Property Name="UNITNO" Type="char" MaxLength="10" />
+    <Property Name="WKS_PR_PL" Type="char" MaxLength="20" />
+    <Property Name="MCR" Type="char" MaxLength="10" />
+    <Property Name="LUB_P_CON" Type="char" MaxLength="20" />
+    <Property Name="LUB_TYPE" Type="char" MaxLength="50" />
+    <Property Name="CYLOIL_CON" Type="char" MaxLength="20" />
+    <Property Name="AT_LOAD" Type="char" MaxLength="20" />
+    <Property Name="COIL_TYPE" Type="char" MaxLength="20" />
+    <Property Name="SULPH" Type="char" MaxLength="20" />
+    <Property Name="SHIP_POS" Type="char" MaxLength="50" />
+    <Property Name="WE_COND" Type="char" MaxLength="50" />
+    <Property Name="SEA_W_TEMP" Type="char" MaxLength="20" />
+    <Property Name="DEP_PORT" Type="char" MaxLength="50" />
+    <Property Name="DEP_DT" Type="char" MaxLength="20" />
+    <Property Name="DES_PORT" Type="char" MaxLength="50" />
+    <Property Name="DES_DT" Type="char" MaxLength="20" />
+    <Property Name="L_HOURS" Type="char" MaxLength="20" />
+    <Property Name="INS_PIPE" Type="char" MaxLength="20" />
+    <Property Name="PC_RING" Type="char" MaxLength="20" />
+    <Property Name="LINE_MATE" Type="char" MaxLength="50" />
+    <Property Name="DRAW_NO" Type="char" MaxLength="50" />
+    <Property Name="FRAME_TYPE" Type="char" MaxLength="50" />
+    <Property Name="LIN_COL_TY" Type="char" MaxLength="50" />
+    <Property Name="PRO_MARK" Type="char" MaxLength="50" />
+    <Property Name="WEAR_TYPE" Type="char" MaxLength="50" />
+    <Property Name="LINE_HOND" Type="char" MaxLength="20" />
+    <Property Name="CYL_COV_TD" Type="char" MaxLength="20" />
+    <Property Name="TEMP_B_MT" Type="char" MaxLength="10" />
+    <Property Name="SHIMS" Type="char" MaxLength="20" />
+    <Property Name="DEPTH_0" Type="char" MaxLength="10" />
+    <Property Name="DEPTH_1" Type="char" MaxLength="10" />
+    <Property Name="DEPTH_2" Type="char" MaxLength="10" />
+    <Property Name="DEPTH_3" Type="char" MaxLength="10" />
+    <Property Name="DEPTH_4" Type="char" MaxLength="10" />
+    <Property Name="DEPTH_5" Type="char" MaxLength="10" />
+    <Property Name="DEPTH_6" Type="char" MaxLength="10" />
+    <Property Name="DEPTH_7" Type="char" MaxLength="10" />
+    <Property Name="DEPTH_8" Type="char" MaxLength="10" />
+    <Property Name="DEPTH_9" Type="char" MaxLength="10" />
+    <Property Name="DEPTH_10" Type="char" MaxLength="10" />
+    <Property Name="DEPTH_11" Type="char" MaxLength="10" />
+    <Property Name="DEPTH_A1" Type="char" MaxLength="10" />
+    <Property Name="DEPTH_A2" Type="char" MaxLength="10" />
+    <Property Name="DIAFA_0" Type="char" MaxLength="10" />
+    <Property Name="DIAFA_1" Type="char" MaxLength="10" />
+    <Property Name="DIAFA_2" Type="char" MaxLength="10" />
+    <Property Name="DIAFA_3" Type="char" MaxLength="10" />
+    <Property Name="DIAFA_4" Type="char" MaxLength="10" />
+    <Property Name="DIAFA_5" Type="char" MaxLength="10" />
+    <Property Name="DIAFA_6" Type="char" MaxLength="10" />
+    <Property Name="DIAFA_7" Type="char" MaxLength="10" />
+    <Property Name="DIAFA_8" Type="char" MaxLength="10" />
+    <Property Name="DIAFA_9" Type="char" MaxLength="10" />
+    <Property Name="DIAFA_10" Type="char" MaxLength="10" />
+    <Property Name="DIAFA_11" Type="char" MaxLength="10" />
+    <Property Name="DIAFA_A1" Type="char" MaxLength="10" />
+    <Property Name="DIAFA_A2" Type="char" MaxLength="10" />
+    <Property Name="DIAEM_0" Type="char" MaxLength="10" />
+    <Property Name="DIAEM_1" Type="char" MaxLength="10" />
+    <Property Name="DIAEM_2" Type="char" MaxLength="10" />
+    <Property Name="DIAEM_3" Type="char" MaxLength="10" />
+    <Property Name="DIAEM_4" Type="char" MaxLength="10" />
+    <Property Name="DIAEM_5" Type="char" MaxLength="10" />
+    <Property Name="DIAEM_6" Type="char" MaxLength="10" />
+    <Property Name="DIAEM_7" Type="char" MaxLength="10" />
+    <Property Name="DIAEM_8" Type="char" MaxLength="10" />
+    <Property Name="DIAEM_9" Type="char" MaxLength="10" />
+    <Property Name="DIAEM_10" Type="char" MaxLength="10" />
+    <Property Name="DIAEM_11" Type="char" MaxLength="10" />
+    <Property Name="DIAEM_A1" Type="char" MaxLength="10" />
+    <Property Name="DIAEM_A2" Type="char" MaxLength="10" />
+    <Property Name="LINE_REM" Type="char" MaxLength="200" />
+    <Property Name="BMATE_R1" Type="char" MaxLength="50" />
+    <Property Name="BMATE_R2" Type="char" MaxLength="50" />
+    <Property Name="BMATE_R3" Type="char" MaxLength="50" />
+    <Property Name="BMATE_R4" Type="char" MaxLength="50" />
+    <Property Name="COAT_R1" Type="char" MaxLength="50" />
+    <Property Name="COAT_R2" Type="char" MaxLength="50" />
+    <Property Name="COAT_R3" Type="char" MaxLength="50" />
+    <Property Name="COAT_R4" Type="char" MaxLength="50" />
+    <Property Name="COATLS_R1" Type="char" MaxLength="50" />
+    <Property Name="COATLS_R2" Type="char" MaxLength="50" />
+    <Property Name="COATLS_R3" Type="char" MaxLength="50" />
+    <Property Name="COATLS_R4" Type="char" MaxLength="50" />
+    <Property Name="PROF_R1" Type="char" MaxLength="50" />
+    <Property Name="PROF_R2" Type="char" MaxLength="50" />
+    <Property Name="PROF_R3" Type="char" MaxLength="50" />
+    <Property Name="PROF_R4" Type="char" MaxLength="50" />
+    <Property Name="MANUF_R1" Type="char" MaxLength="50" />
+    <Property Name="MANUF_R2" Type="char" MaxLength="50" />
+    <Property Name="MANUF_R3" Type="char" MaxLength="50" />
+    <Property Name="MANUF_R4" Type="char" MaxLength="50" />
+    <Property Name="LKTYP_R1" Type="char" MaxLength="50" />
+    <Property Name="LKTYP_R2" Type="char" MaxLength="50" />
+    <Property Name="LKTYP_R3" Type="char" MaxLength="50" />
+    <Property Name="LKTYP_R4" Type="char" MaxLength="50" />
+    <Property Name="CLGROV_R1" Type="char" MaxLength="50" />
+    <Property Name="CLGROV_R2" Type="char" MaxLength="50" />
+    <Property Name="CLGROV_R3" Type="char" MaxLength="50" />
+    <Property Name="CLGROV_R4" Type="char" MaxLength="50" />
+    <Property Name="CLGRWD_R1" Type="char" MaxLength="50" />
+    <Property Name="CLGRWD_R2" Type="char" MaxLength="50" />
+    <Property Name="CLGRWD_R3" Type="char" MaxLength="50" />
+    <Property Name="CLGRWD_R4" Type="char" MaxLength="50" />
+    <Property Name="BRK_R1" Type="char" MaxLength="50" />
+    <Property Name="BRK_R2" Type="char" MaxLength="50" />
+    <Property Name="BRK_R3" Type="char" MaxLength="50" />
+    <Property Name="BRK_R4" Type="char" MaxLength="50" />
+    <Property Name="RNG_DEG_A" Type="char" MaxLength="20" />
+    <Property Name="RNG_DEG_B" Type="char" MaxLength="20" />
+    <Property Name="RNG_DEG_C" Type="char" MaxLength="20" />
+    <Property Name="RNG_DEG_D" Type="char" MaxLength="20" />
+    <Property Name="RNG_DEG_E" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG1_A" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG1_B" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG1_C" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG1_D" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG1_E" Type="char" MaxLength="20" />
+    <Property Name="GAP_RNG1" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG2_A" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG2_B" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG2_C" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG2_D" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG2_E" Type="char" MaxLength="20" />
+    <Property Name="GAP_RNG2" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG3_A" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG3_B" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG3_C" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG3_D" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG3_E" Type="char" MaxLength="20" />
+    <Property Name="GAP_RNG3" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG4_A" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG4_B" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG4_C" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG4_D" Type="char" MaxLength="20" />
+    <Property Name="WDT_RNG4_E" Type="char" MaxLength="20" />
+    <Property Name="GAP_RNG4" Type="char" MaxLength="20" />
+    <Property Name="GRV_RNG1_F" Type="char" MaxLength="20" />
+    <Property Name="GRV_RNG1_E" Type="char" MaxLength="20" />
+    <Property Name="GRV_RNG1_A" Type="char" MaxLength="20" />
+    <Property Name="GRV_RNG1_M" Type="char" MaxLength="20" />
+    <Property Name="GRV_RNG2_F" Type="char" MaxLength="20" />
+    <Property Name="GRV_RNG2_E" Type="char" MaxLength="20" />
+    <Property Name="GRV_RNG2_A" Type="char" MaxLength="20" />
+    <Property Name="GRV_RNG2_M" Type="char" MaxLength="20" />
+    <Property Name="GRV_RNG3_F" Type="char" MaxLength="20" />
+    <Property Name="GRV_RNG3_E" Type="char" MaxLength="20" />
+    <Property Name="GRV_RNG3_A" Type="char" MaxLength="20" />
+    <Property Name="GRV_RNG3_M" Type="char" MaxLength="20" />
+    <Property Name="GRV_RNG4_F" Type="char" MaxLength="20" />
+    <Property Name="GRV_RNG4_E" Type="char" MaxLength="20" />
+    <Property Name="GRV_RNG4_A" Type="char" MaxLength="20" />
+    <Property Name="GRV_RNG4_M" Type="char" MaxLength="20" />
+    <Property Name="LST_OVL" Type="char" MaxLength="20" />
+    <Property Name="CRWN_HRS" Type="char" MaxLength="20" />
+    <Property Name="HI_TOPLOAD" Type="char" MaxLength="10" />
+    <Property Name="R_PIS_OVL" Type="char" MaxLength="20" />
+    <Property Name="TEST" Type="char" MaxLength="20" />
+    <Property Name="BNZ_RING" Type="char" MaxLength="10" />
+    <Property Name="OROS_PIST" Type="char" MaxLength="10" />
+    <Property Name="CHK_LIN_CO" Type="char" MaxLength="10" />
+    <Property Name="MAX_BURN1" Type="char" MaxLength="20" />
+    <Property Name="PIST1" Type="char" MaxLength="20" />
+    <Property Name="MAX_BURN2" Type="char" MaxLength="20" />
+    <Property Name="PIST2" Type="char" MaxLength="20" />
+    <Property Name="MAX_BURN3" Type="char" MaxLength="20" />
+    <Property Name="PIST3" Type="char" MaxLength="20" />
+    <Property Name="LIN_CRACK" Type="char" MaxLength="20" />
+    <Property Name="LIN_SCUF" Type="char" MaxLength="20" />
+    <Property Name="LIN_LEAK" Type="char" MaxLength="20" />
+    <Property Name="PCRN_BURN" Type="char" MaxLength="20" />
+    <Property Name="PCRN_CRACK" Type="char" MaxLength="20" />
+    <Property Name="PCRM_LEAK" Type="char" MaxLength="20" />
+    <Property Name="PCRM_HGW" Type="char" MaxLength="20" />
+    <Property Name="PRING_BRK" Type="char" MaxLength="20" />
+    <Property Name="PRING_COLL" Type="char" MaxLength="20" />
+    <Property Name="PRING_SCUF" Type="char" MaxLength="20" />
+    <Property Name="PRING_STIC" Type="char" MaxLength="20" />
+    <Property Name="PSKRT_LEAK" Type="char" MaxLength="20" />
+    <Property Name="PSKRT_SCUF" Type="char" MaxLength="20" />
+    <Property Name="PROD_SBOX" Type="char" MaxLength="20" />
+    <Property Name="PIS_REM" Type="char" MaxLength="20" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="DBLTDETL">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="TYPE" Type="char" MaxLength="2" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="INSPECTION" Type="char" MaxLength="2" />
+    <Property Name="COATTING" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="BLISTERING" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="SCALETYPE" Type="char" MaxLength="1" />
+    <Property Name="THICKNESS" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="INTENSITY" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="AVGDEPT" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="ANODES" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="FACTURES" Type="char" MaxLength="5" />
+    <Property Name="BULCKING" Type="char" MaxLength="5" />
+    <Property Name="WELDSEAMS" Type="char" MaxLength="5" />
+    <Property Name="THINNING" Type="char" MaxLength="5" />
+    <Property Name="RESIDUES" Type="char" MaxLength="5" />
+    <Property Name="NARRATIVE" Type="bit" />
+    <Property Name="PHOTO" Type="bit" />
+    <Property Name="REPAIRS" Type="bit" />
+    <Property Name="REPAIRDOCK" Type="bit" />
+    <Property Name="FOLLOWUP" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="DBLTHEAD">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="INSPBY" Type="char" MaxLength="30" />
+    <Property Name="ALLS" Type="char" MaxLength="2" />
+    <Property Name="PORT" Type="char" MaxLength="2" />
+    <Property Name="STBD" Type="char" MaxLength="2" />
+    <Property Name="FWD" Type="char" MaxLength="2" />
+    <Property Name="AFT" Type="char" MaxLength="2" />
+    <Property Name="UPP" Type="char" MaxLength="2" />
+    <Property Name="LWR" Type="char" MaxLength="2" />
+    <Property Name="ENTINS" Type="char" MaxLength="2" />
+    <Property Name="ENTNOTE" Type="char" MaxLength="30" />
+    <Property Name="ACCINS" Type="char" MaxLength="2" />
+    <Property Name="ACCNOTE" Type="char" MaxLength="30" />
+    <Property Name="SOUINS" Type="char" MaxLength="2" />
+    <Property Name="SOURNOTE" Type="char" MaxLength="30" />
+    <Property Name="PIPINS" Type="char" MaxLength="2" />
+    <Property Name="PIPNOTE" Type="char" MaxLength="30" />
+    <Property Name="SUCINS" Type="char" MaxLength="2" />
+    <Property Name="SUCNOTE" Type="char" MaxLength="30" />
+    <Property Name="REMARKS" Type="varchar(max)" />
+    <Property Name="DETAIL" Type="varchar(max)" />
+    <Property Name="HOLDNO1" Type="char" MaxLength="20" />
+    <Property Name="HOLDNO2" Type="char" MaxLength="20" />
+    <Property Name="BKDT" Type="date" />
+    <Property Name="TESTALL" Type="char" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="DBLTITEM">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CODE" Type="char" MaxLength="3" />
+    <Property Name="NAME" Type="char" MaxLength="30" />
+    <Property Name="UNDER" Type="char" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="DEFECTS">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="USERCAT" Type="numeric" Precision="1" />
+    <Property Name="DMONTH" Type="char" MaxLength="2" />
+    <Property Name="DYEAR" Type="numeric" Precision="4" />
+    <Property Name="CATEGORY" Type="numeric" Precision="1" />
+    <Property Name="SLNO" Type="numeric" Precision="3" />
+    <Property Name="REFNO" Type="char" MaxLength="12" />
+    <Property Name="DTFOUND" Type="date" />
+    <Property Name="ORDCAT" Type="numeric" Precision="1" />
+    <Property Name="REPORD" Type="char" MaxLength="20" />
+    <Property Name="DEFECTIVE" Type="varchar(max)" />
+    <Property Name="RECTIFIED" Type="varchar(max)" />
+    <Property Name="DRYDOCK" Type="varchar(max)" />
+    <Property Name="REMARKS" Type="varchar(max)" />
+    <Property Name="DTRECTIFY" Type="date" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="CANCELED" Type="bit" />
+    <Property Name="USERNAME" Type="char" MaxLength="60" />
+    <Property Name="PMS" Type="bit" />
+    <Property Name="NONPMS" Type="bit" />
+    <Property Name="CRITICAL" Type="bit" />
+    <Property Name="SAFETY" Type="bit" />
+    <Property Name="GRPCODE" Type="char" MaxLength="8" />
+    <Property Name="OFFUNIQ" Type="char" MaxLength="10" />
+    <Property Name="CAUSE" Type="varchar(max)" />
+    <Property Name="ASSIST" Type="bit" />
+    <Property Name="ITEMNAME" Type="char" MaxLength="60" />
+    <Property Name="DDSPEC" Type="char" MaxLength="2" />
+    <Property Name="TARGETDT" Type="date" />
+    <Property Name="MARPOL" Type="bit" />
+    <Property Name="VESSEL" Type="bit" />
+    <Property Name="SMS" Type="bit" />
+    <Property Name="SIRE" Type="bit" />
+    <Property Name="CDI" Type="bit" />
+    <Property Name="PSC" Type="bit" />
+    <Property Name="SOLAS" Type="bit" />
+    <Property Name="TECCLASS" Type="bit" />
+    <Property Name="OTHERS" Type="bit" />
+    <Property Name="OFFUPDT" Type="bit" />
+    <Property Name="SIRECODE" Type="char" MaxLength="3" />
+    <Property Name="BKDT" Type="date" />
+    <Property Name="MAJ_MIN" Type="bit" />
+    <Property Name="PSTPND" Type="bit" />
+    <Property Name="PSTREM" Type="char" MaxLength="250" />
+    <Property Name="OLDTGDT" Type="date" />
+    <Property Name="DEFTODD" Type="bit" />
+  </EntityType>
+  <EntityType Name="DEFLDETL">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="TYPE" Type="char" MaxLength="2" />
+    <Property Name="CYLNO1" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="CYLNO2" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="CYLNO3" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="CYLNO4" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="CYLNO5" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="CYLNO6" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="CYLNO7" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="CYLNO8" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="CYLNO9" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="CYLNO10" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="CYLNO11" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="CYLNO12" Type="numeric" Precision="8" Scale="3" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="DEFLHEAD">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="DRAFTFWD" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="DRAFTAFT" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="PORT" Type="char" MaxLength="30" />
+    <Property Name="CRANKTMP" Type="numeric" Precision="4" Scale="1" />
+    <Property Name="DEFMEASBY" Type="char" MaxLength="30" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="REMARKS" Type="varchar(max)" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="DEFMALST">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GRPCODE" Type="char" MaxLength="8" />
+    <Property Name="DESCEND" Type="char" MaxLength="90" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="DEFOFF">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OFFUSER" Type="char" MaxLength="60" />
+    <Property Name="OFFCOMM" Type="varchar(max)" />
+    <Property Name="OFFCOMMDT" Type="datetime" />
+    <Property Name="REFNO" Type="char" MaxLength="12" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="UPDTREC" Type="bit" />
+    <Property Name="OFFDEFCODE" Type="char" MaxLength="10" />
+    <Property Name="SHPDEFCODE" Type="char" MaxLength="10" />
+    <Property Name="OFFUPDT" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="DEFPIC">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="REFNO" Type="char" MaxLength="12" />
+    <Property Name="PICPATH" Type="char" MaxLength="250" />
+    <Property Name="REMARKS" Type="char" MaxLength="250" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="SLNO" Type="numeric" Precision="3" />
+    <Property Name="OFFUPDT" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="DEFPST">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SLNO" Type="numeric" Precision="5" />
+    <Property Name="REFNO" Type="char" MaxLength="12" />
+    <Property Name="TARGETDT" Type="date" />
+    <Property Name="PSTREM" Type="char" MaxLength="250" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="PSTUSER" Type="char" MaxLength="60" />
+    <Property Name="PSTPND" Type="bit" />
+    <Property Name="SENT" Type="bit" />
+    <Property Name="ENTDT" Type="date" />
+    <Property Name="OFFUPDT" Type="bit" />
+    <Property Name="OLDTGDT" Type="date" />
+    <Property Name="DEFPSTCODE" Type="char" MaxLength="20" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="DELHIST">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DTABLE" Type="char" MaxLength="30" />
+    <Property Name="DTYPE" Type="char" MaxLength="1" />
+    <Property Name="DCOND" Type="varchar(max)" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="DRDETL">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DRCODE" Type="char" MaxLength="10" />
+    <Property Name="JAN" Type="date" />
+    <Property Name="FEB" Type="date" />
+    <Property Name="MAR" Type="date" />
+    <Property Name="APR" Type="date" />
+    <Property Name="MAY" Type="date" />
+    <Property Name="JUN" Type="date" />
+    <Property Name="JUL" Type="date" />
+    <Property Name="AUG" Type="date" />
+    <Property Name="SEP" Type="date" />
+    <Property Name="OCT" Type="date" />
+    <Property Name="NOV" Type="date" />
+    <Property Name="DEC" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="DRYEAR" Type="numeric" Precision="4" />
+    <Property Name="SLNO" Type="numeric" Precision="2" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="DRITEMS">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ENV" Type="bit" />
+    <Property Name="DRILLITEM" Type="char" MaxLength="60" />
+    <Property Name="ITEMNO" Type="numeric" Precision="2" />
+    <Property Name="DRILLCODE" Type="char" MaxLength="10" />
+    <Property Name="GRPCODE" Type="char" MaxLength="10" />
+    <Property Name="SUBGRPCODE" Type="char" MaxLength="10" />
+    <Property Name="REMARK" Type="varchar(max)" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="DESCRIPT" Type="varchar(max)" />
+    <Property Name="FREQ" Type="numeric" Precision="3" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="DRMAIN">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GRPCODE" Type="char" MaxLength="10" />
+    <Property Name="GRPNAME" Type="char" MaxLength="60" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="DRSUB">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ENV" Type="bit" />
+    <Property Name="GRPCODE" Type="char" MaxLength="10" />
+    <Property Name="SUBGRPCODE" Type="char" MaxLength="10" />
+    <Property Name="SUBGRPNAME" Type="char" MaxLength="60" />
+    <Property Name="SUBDETL" Type="bit" />
+    <Property Name="FREQ" Type="numeric" Precision="3" />
+    <Property Name="SUBNO" Type="numeric" Precision="2" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="DESCRIPT" Type="varchar(max)" />
+    <Property Name="REMARK" Type="varchar(max)" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="EX_VALVE_INSP">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TYPECODE" Type="char" MaxLength="8" />
+    <Property Name="BUILDER" Type="char" MaxLength="50" />
+    <Property Name="ENG_NO" Type="char" MaxLength="10" />
+    <Property Name="NO_OF_CYL" Type="char" MaxLength="10" />
+    <Property Name="ENG_TYPE" Type="char" MaxLength="50" />
+    <Property Name="VALVE_NO" Type="char" MaxLength="10" />
+    <Property Name="VALVE_HRS" Type="char" MaxLength="20" />
+    <Property Name="SPARE" Type="char" MaxLength="10" />
+    <Property Name="TEST" Type="char" MaxLength="10" />
+    <Property Name="DIS_CYL_NO" Type="char" MaxLength="20" />
+    <Property Name="DIS_DT" Type="char" MaxLength="10" />
+    <Property Name="DIS_HRS" Type="char" MaxLength="10" />
+    <Property Name="CHECK_OHL" Type="char" MaxLength="30" />
+    <Property Name="CHK_OHL_DT" Type="char" MaxLength="10" />
+    <Property Name="CHK_PLACE" Type="char" MaxLength="50" />
+    <Property Name="MOUN_CYLNO" Type="char" MaxLength="20" />
+    <Property Name="MOUN_DT" Type="char" MaxLength="10" />
+    <Property Name="MOUN_HRS" Type="char" MaxLength="10" />
+    <Property Name="REM" Type="char" MaxLength="200" />
+    <Property Name="B_TYPE" Type="char" MaxLength="50" />
+    <Property Name="B_MARK" Type="char" MaxLength="50" />
+    <Property Name="B_S_MAT" Type="char" MaxLength="50" />
+    <Property Name="B_DRAWNO" Type="char" MaxLength="50" />
+    <Property Name="B_LST_OVL" Type="char" MaxLength="10" />
+    <Property Name="B_HRS_TOT" Type="char" MaxLength="10" />
+    <Property Name="B_CRACK" Type="char" MaxLength="10" />
+    <Property Name="B_BLOW" Type="char" MaxLength="10" />
+    <Property Name="B_ST_CON" Type="char" MaxLength="50" />
+    <Property Name="B_DNT_MRK" Type="char" MaxLength="10" />
+    <Property Name="B_STGRND" Type="char" MaxLength="10" />
+    <Property Name="B_STGRND_H" Type="char" MaxLength="10" />
+    <Property Name="B_DEP_CHM" Type="char" MaxLength="10" />
+    <Property Name="B_MX_DTHIK" Type="char" MaxLength="10" />
+    <Property Name="B_ANGDEP" Type="char" MaxLength="10" />
+    <Property Name="B_D_W_F_V" Type="char" MaxLength="10" />
+    <Property Name="B_REM" Type="char" MaxLength="10" />
+    <Property Name="S_MARK" Type="char" MaxLength="50" />
+    <Property Name="S_B_MAT" Type="char" MaxLength="50" />
+    <Property Name="S_D_U_MAT" Type="char" MaxLength="50" />
+    <Property Name="S_S_MAT" Type="char" MaxLength="50" />
+    <Property Name="S_ST_SUR" Type="char" MaxLength="50" />
+    <Property Name="S_DRAW" Type="char" MaxLength="50" />
+    <Property Name="S_LST_OVL" Type="char" MaxLength="10" />
+    <Property Name="S_HRS_TOT" Type="char" MaxLength="10" />
+    <Property Name="S_CRACKS" Type="char" MaxLength="10" />
+    <Property Name="S_BLOW" Type="char" MaxLength="10" />
+    <Property Name="S_ST_CON" Type="char" MaxLength="50" />
+    <Property Name="S_S_D_MAX" Type="char" MaxLength="50" />
+    <Property Name="S_AT_POS" Type="char" MaxLength="10" />
+    <Property Name="S_BRN_RATE" Type="char" MaxLength="50" />
+    <Property Name="S_D_M_L" Type="char" MaxLength="10" />
+    <Property Name="S_D_GRIND" Type="char" MaxLength="10" />
+    <Property Name="S_D_HRS" Type="char" MaxLength="10" />
+    <Property Name="S_S_D_A_S" Type="char" MaxLength="10" />
+    <Property Name="S_M_S_D_S" Type="char" MaxLength="10" />
+    <Property Name="S_W_S_R" Type="char" MaxLength="10" />
+    <Property Name="S_REM" Type="char" MaxLength="200" />
+    <Property Name="H_MARK" Type="char" MaxLength="50" />
+    <Property Name="H_DRAW" Type="char" MaxLength="50" />
+    <Property Name="H_LST_OVL" Type="char" MaxLength="10" />
+    <Property Name="H_HRS_TOT" Type="char" MaxLength="10" />
+    <Property Name="H_MINTOP" Type="char" MaxLength="10" />
+    <Property Name="H_MAXTOP" Type="char" MaxLength="10" />
+    <Property Name="H_MINBOT" Type="char" MaxLength="10" />
+    <Property Name="H_MAXBOT" Type="char" MaxLength="10" />
+    <Property Name="H_SP_G_H_T" Type="char" MaxLength="10" />
+    <Property Name="C_MM_A_1" Type="char" MaxLength="10" />
+    <Property Name="C_MM_A_2" Type="char" MaxLength="10" />
+    <Property Name="C_MM_A_3" Type="char" MaxLength="10" />
+    <Property Name="C_MM_B_1" Type="char" MaxLength="10" />
+    <Property Name="C_MM_B_2" Type="char" MaxLength="10" />
+    <Property Name="C_MM_B_3" Type="char" MaxLength="10" />
+    <Property Name="C_MM_C_1" Type="char" MaxLength="10" />
+    <Property Name="C_MM_C_2" Type="char" MaxLength="10" />
+    <Property Name="C_MM_C_3" Type="char" MaxLength="10" />
+    <Property Name="C_PO_A_1" Type="char" MaxLength="10" />
+    <Property Name="C_PO_A_2" Type="char" MaxLength="10" />
+    <Property Name="C_PO_A_3" Type="char" MaxLength="10" />
+    <Property Name="C_PO_B_1" Type="char" MaxLength="10" />
+    <Property Name="C_PO_B_2" Type="char" MaxLength="10" />
+    <Property Name="C_PO_B_3" Type="char" MaxLength="10" />
+    <Property Name="C_PO_C_1" Type="char" MaxLength="10" />
+    <Property Name="C_PO_C_2" Type="char" MaxLength="10" />
+    <Property Name="C_PO_C_3" Type="char" MaxLength="10" />
+    <Property Name="C_REM" Type="char" MaxLength="200" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="FILEVAR">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DBF" Type="char" MaxLength="50" />
+    <Property Name="VARNAME" Type="char" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FOXUSER">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TYPE" Type="char" MaxLength="12" />
+    <Property Name="ID" Type="char" MaxLength="12" />
+    <Property Name="NAME" Type="varchar(max)" />
+    <Property Name="READONLY" Type="bit" />
+    <Property Name="CKVAL" Type="numeric" Precision="6" />
+    <Property Name="DATA" Type="varchar(max)" />
+    <Property Name="UPDATED" Type="date" />
+  </EntityType>
+  <EntityType Name="FPLOGBK">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPT" Type="char" MaxLength="50" />
+    <Property Name="TYPECODE" Type="char" MaxLength="10" />
+    <Property Name="SERIAL" Type="numeric" Precision="2" />
+    <Property Name="CATEGORY" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="GROOVE16_INSP">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TYPECODE" Type="char" MaxLength="8" />
+    <Property Name="BUILDER" Type="char" MaxLength="50" />
+    <Property Name="ENG_NO" Type="char" MaxLength="10" />
+    <Property Name="CHECKEDBY" Type="char" MaxLength="50" />
+    <Property Name="NO_OF_CYL" Type="char" MaxLength="10" />
+    <Property Name="ENG_TYPE" Type="char" MaxLength="50" />
+    <Property Name="ENG_HRS" Type="char" MaxLength="10" />
+    <Property Name="CROWN_HRS" Type="char" MaxLength="10" />
+    <Property Name="UNITNO" Type="char" MaxLength="10" />
+    <Property Name="ENTDATE" Type="char" MaxLength="10" />
+    <Property Name="RNG_NO" Type="numeric" Precision="2" />
+    <Property Name="ROW_ID" Type="numeric" Precision="2" />
+    <Property Name="FORE" Type="char" MaxLength="20" />
+    <Property Name="T23" Type="char" MaxLength="20" />
+    <Property Name="T45" Type="char" MaxLength="20" />
+    <Property Name="T68" Type="char" MaxLength="20" />
+    <Property Name="EXH" Type="char" MaxLength="20" />
+    <Property Name="T113" Type="char" MaxLength="20" />
+    <Property Name="T135" Type="char" MaxLength="20" />
+    <Property Name="T158" Type="char" MaxLength="20" />
+    <Property Name="AFT" Type="char" MaxLength="20" />
+    <Property Name="T203" Type="char" MaxLength="20" />
+    <Property Name="T225" Type="char" MaxLength="20" />
+    <Property Name="T248" Type="char" MaxLength="20" />
+    <Property Name="MAN" Type="char" MaxLength="20" />
+    <Property Name="T293" Type="char" MaxLength="20" />
+    <Property Name="T315" Type="char" MaxLength="20" />
+    <Property Name="T338" Type="char" MaxLength="20" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="GROOVPROF_INSP">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TYPECODE" Type="char" MaxLength="8" />
+    <Property Name="BUILDER" Type="char" MaxLength="50" />
+    <Property Name="ENG_NO" Type="char" MaxLength="10" />
+    <Property Name="CHECKEDBY" Type="char" MaxLength="50" />
+    <Property Name="NO_OF_CYL" Type="char" MaxLength="10" />
+    <Property Name="ENG_TYPE" Type="char" MaxLength="50" />
+    <Property Name="RED_RNG_H" Type="char" MaxLength="10" />
+    <Property Name="ENG_HRS" Type="char" MaxLength="10" />
+    <Property Name="ENTDATE" Type="char" MaxLength="10" />
+    <Property Name="CYL_NO" Type="numeric" Precision="2" />
+    <Property Name="ROW_ID" Type="numeric" Precision="2" />
+    <Property Name="CL30" Type="char" MaxLength="20" />
+    <Property Name="CL35" Type="char" MaxLength="20" />
+    <Property Name="CL40" Type="char" MaxLength="20" />
+    <Property Name="CL45" Type="char" MaxLength="20" />
+    <Property Name="CL50" Type="char" MaxLength="20" />
+    <Property Name="CL55" Type="char" MaxLength="20" />
+    <Property Name="CL60" Type="char" MaxLength="20" />
+    <Property Name="CL65" Type="char" MaxLength="20" />
+    <Property Name="CL70" Type="char" MaxLength="20" />
+    <Property Name="CL75" Type="char" MaxLength="20" />
+    <Property Name="CL80" Type="char" MaxLength="20" />
+    <Property Name="CL85" Type="char" MaxLength="20" />
+    <Property Name="CL90" Type="char" MaxLength="20" />
+    <Property Name="CL95" Type="char" MaxLength="20" />
+    <Property Name="CL100" Type="char" MaxLength="20" />
+    <Property Name="CL105" Type="char" MaxLength="20" />
+    <Property Name="WEAR_RATE" Type="char" MaxLength="50" />
+    <Property Name="REM_1_6" Type="char" MaxLength="200" />
+    <Property Name="REM_7_12" Type="char" MaxLength="200" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="GRPBK">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="GRPMCODE" Type="char" MaxLength="10" />
+    <Property Name="GRPMNAME" Type="char" MaxLength="60" />
+    <Property Name="GRPMPARENT" Type="char" MaxLength="10" />
+    <Property Name="OFFUPDT" Type="bit" />
+    <Property Name="USERS" Type="char" MaxLength="35" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="GRPMAIN">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="GRPMCODE" Type="char" MaxLength="10" />
+    <Property Name="GRPMNAME" Type="char" MaxLength="60" />
+    <Property Name="GRPMPARENT" Type="char" MaxLength="10" />
+    <Property Name="OFFUPDT" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="HATCHDETL">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="TYPECODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="TYPE" Type="char" MaxLength="2" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="FLD1" Type="char" MaxLength="10" />
+    <Property Name="FLD2" Type="char" MaxLength="10" />
+    <Property Name="FLD3" Type="char" MaxLength="10" />
+    <Property Name="FLD4" Type="char" MaxLength="10" />
+    <Property Name="FLD5" Type="char" MaxLength="10" />
+    <Property Name="FLD6" Type="char" MaxLength="10" />
+    <Property Name="FLD7" Type="char" MaxLength="10" />
+    <Property Name="FLD8" Type="char" MaxLength="10" />
+    <Property Name="FLD9" Type="char" MaxLength="10" />
+    <Property Name="NARRATIVE" Type="bit" />
+    <Property Name="PHOTO" Type="bit" />
+    <Property Name="REPAIRS" Type="bit" />
+    <Property Name="REPAIRDOCK" Type="bit" />
+    <Property Name="FOLLOWUP" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="HATCHHEAD">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="TYPECODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="INSPBY" Type="char" MaxLength="30" />
+    <Property Name="PACKING" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="OPENS" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="CLOSES" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="REMARKS1" Type="varchar(max)" />
+    <Property Name="REMARKS2" Type="varchar(max)" />
+    <Property Name="REMARKS3" Type="varchar(max)" />
+    <Property Name="REMARKS4" Type="varchar(max)" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="IN_LOC">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DESCEND" Type="char" MaxLength="50" />
+    <Property Name="TYPES" Type="char" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="INCIDENT">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SRNUMB" Type="char" MaxLength="10" />
+    <Property Name="PROP" Type="bit" />
+    <Property Name="ENVI" Type="bit" />
+    <Property Name="BUSI" Type="bit" />
+    <Property Name="SEVERITY" Type="numeric" Precision="1" />
+    <Property Name="PROBABLE" Type="numeric" Precision="1" />
+    <Property Name="RISKFACTOR" Type="numeric" Precision="3" />
+    <Property Name="SUBJECT" Type="varchar(max)" />
+    <Property Name="ACCDATE" Type="date" />
+    <Property Name="LT" Type="char" MaxLength="10" />
+    <Property Name="GMT" Type="char" MaxLength="10" />
+    <Property Name="DEPPORT" Type="char" MaxLength="30" />
+    <Property Name="DEPDATE" Type="date" />
+    <Property Name="DESTPORT" Type="char" MaxLength="30" />
+    <Property Name="ARRDATE" Type="date" />
+    <Property Name="PORTNAME" Type="char" MaxLength="30" />
+    <Property Name="LATITUDE" Type="char" MaxLength="10" />
+    <Property Name="LONGITUDE" Type="char" MaxLength="10" />
+    <Property Name="TASKINVOL" Type="char" MaxLength="10" />
+    <Property Name="LOCATION" Type="char" MaxLength="10" />
+    <Property Name="ACCTYPE" Type="char" MaxLength="10" />
+    <Property Name="PRIMCAUSE" Type="char" MaxLength="10" />
+    <Property Name="SECONCAUS" Type="char" MaxLength="10" />
+    <Property Name="PERSONAL" Type="char" MaxLength="10" />
+    <Property Name="JOB" Type="char" MaxLength="10" />
+    <Property Name="MAINCAT" Type="char" MaxLength="10" />
+    <Property Name="SUBCAT" Type="char" MaxLength="10" />
+    <Property Name="DDAYS" Type="numeric" Precision="3" />
+    <Property Name="DHRS" Type="numeric" Precision="2" />
+    <Property Name="DMINS" Type="numeric" Precision="2" />
+    <Property Name="DREASON" Type="char" MaxLength="100" />
+    <Property Name="MHOURLOSTD" Type="numeric" Precision="3" />
+    <Property Name="MHOURLOSTH" Type="numeric" Precision="2" />
+    <Property Name="MHOURLOSTM" Type="numeric" Precision="2" />
+    <Property Name="DEVIA" Type="bit" />
+    <Property Name="OFFHIRE" Type="bit" />
+    <Property Name="SHOREA" Type="bit" />
+    <Property Name="REPTYPE" Type="numeric" Precision="1" />
+    <Property Name="EVENTS" Type="varchar(max)" />
+    <Property Name="CAUSEWHY" Type="varchar(max)" />
+    <Property Name="REGULATION" Type="varchar(max)" />
+    <Property Name="ROUTVIOLAT" Type="varchar(max)" />
+    <Property Name="EXCEPVIOLA" Type="varchar(max)" />
+    <Property Name="SLIP" Type="varchar(max)" />
+    <Property Name="LAPSE" Type="varchar(max)" />
+    <Property Name="MISTAKE" Type="varchar(max)" />
+    <Property Name="REMARKDAMAGE" Type="varchar(max)" />
+    <Property Name="REPLACE" Type="varchar(max)" />
+    <Property Name="OFFHCOST" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="VDELAYCOST" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="MANHLCOST" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="DEVIATCOST" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="REPAIRS" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="MISCEXPCOS" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="TOTALS" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="MISCREASON" Type="varchar(max)" />
+    <Property Name="DETLOVR" Type="varchar(max)" />
+    <Property Name="ATTCHSURV" Type="bit" />
+    <Property Name="ATTCHMAST" Type="bit" />
+    <Property Name="ATTCHLOG" Type="bit" />
+    <Property Name="ATCHPHOTO" Type="bit" />
+    <Property Name="MASTERNAME" Type="char" MaxLength="30" />
+    <Property Name="CENAME" Type="char" MaxLength="30" />
+    <Property Name="REPODATE" Type="date" />
+    <Property Name="MASTERCOMM" Type="varchar(max)" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="INCIDENTOF">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OFFUSER" Type="char" MaxLength="60" />
+    <Property Name="OFFCOMM" Type="varchar(max)" />
+    <Property Name="OFFCOMMDT" Type="date" />
+    <Property Name="REFNO" Type="char" MaxLength="10" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="UPDTREC" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="INCIDENTPIC">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SRNUMB" Type="char" MaxLength="10" />
+    <Property Name="PICPATH" Type="char" MaxLength="254" />
+    <Property Name="TOOLTEXT" Type="char" MaxLength="100" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="INJURY">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SRNUMB" Type="char" MaxLength="10" />
+    <Property Name="SEVERITY" Type="numeric" Precision="1" />
+    <Property Name="PROBABLE" Type="numeric" Precision="1" />
+    <Property Name="RISKFACTOR" Type="numeric" Precision="3" />
+    <Property Name="SUBJECT" Type="varchar(max)" />
+    <Property Name="ACCDATE" Type="date" />
+    <Property Name="LT" Type="char" MaxLength="10" />
+    <Property Name="GMT" Type="char" MaxLength="10" />
+    <Property Name="DEPPORT" Type="char" MaxLength="30" />
+    <Property Name="DEPDATE" Type="date" />
+    <Property Name="DESTPORT" Type="char" MaxLength="30" />
+    <Property Name="ARRDATE" Type="date" />
+    <Property Name="PORTNAME" Type="char" MaxLength="30" />
+    <Property Name="LATITUDE" Type="char" MaxLength="10" />
+    <Property Name="LONGITUDE" Type="char" MaxLength="10" />
+    <Property Name="PERSNAME" Type="char" MaxLength="30" />
+    <Property Name="RANK" Type="char" MaxLength="10" />
+    <Property Name="AGE" Type="numeric" Precision="3" />
+    <Property Name="TASKINVOL" Type="char" MaxLength="10" />
+    <Property Name="LOCATION" Type="char" MaxLength="10" />
+    <Property Name="ACCTYPE" Type="char" MaxLength="10" />
+    <Property Name="PRIMCAUSE" Type="char" MaxLength="10" />
+    <Property Name="SECONCAUS" Type="char" MaxLength="10" />
+    <Property Name="PERSONAL" Type="char" MaxLength="10" />
+    <Property Name="JOB" Type="char" MaxLength="10" />
+    <Property Name="MAININJURY" Type="char" MaxLength="10" />
+    <Property Name="SAFEWORKCO" Type="char" MaxLength="10" />
+    <Property Name="DDAYS" Type="numeric" Precision="3" />
+    <Property Name="DHRS" Type="numeric" Precision="2" />
+    <Property Name="DMINS" Type="numeric" Precision="2" />
+    <Property Name="DREASON" Type="char" MaxLength="50" />
+    <Property Name="MHOURWORKH" Type="numeric" Precision="2" />
+    <Property Name="MHOURWORKM" Type="numeric" Precision="2" />
+    <Property Name="PREVDAYH" Type="numeric" Precision="2" />
+    <Property Name="PREVDAYM" Type="numeric" Precision="2" />
+    <Property Name="RESTH" Type="numeric" Precision="2" />
+    <Property Name="RESTM" Type="numeric" Precision="2" />
+    <Property Name="MHOURLOSTD" Type="numeric" Precision="3" />
+    <Property Name="MHOURLOSTH" Type="numeric" Precision="2" />
+    <Property Name="MHOURLOSTM" Type="numeric" Precision="2" />
+    <Property Name="DEVIA" Type="bit" />
+    <Property Name="OFFHIRE" Type="bit" />
+    <Property Name="REPATRI" Type="bit" />
+    <Property Name="EVACU" Type="bit" />
+    <Property Name="HOSPITAL" Type="bit" />
+    <Property Name="OCIMF1" Type="bit" />
+    <Property Name="OCIMF2" Type="bit" />
+    <Property Name="OCIMF3" Type="bit" />
+    <Property Name="OCIMF4" Type="bit" />
+    <Property Name="OCIMF5" Type="bit" />
+    <Property Name="OCIMF6" Type="bit" />
+    <Property Name="OCIMF7" Type="bit" />
+    <Property Name="EVENTS" Type="varchar(max)" />
+    <Property Name="CAUSEWHY" Type="varchar(max)" />
+    <Property Name="REGULATION" Type="varchar(max)" />
+    <Property Name="ROUTVIOLAT" Type="varchar(max)" />
+    <Property Name="EXCEPVIOLA" Type="varchar(max)" />
+    <Property Name="SLIPLAPSE" Type="varchar(max)" />
+    <Property Name="MISTAKE" Type="varchar(max)" />
+    <Property Name="REMARK" Type="varchar(max)" />
+    <Property Name="FIRSTAID" Type="varchar(max)" />
+    <Property Name="MEDICOST" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="DOCTCOST" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="REPATCOST" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="EVACCOST" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="OFFHCOST" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="VDELAYCOST" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="MANHLCOST" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="DEVIATCOST" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="MISCEXPCOS" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="TOTALS" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="MISCREASON" Type="varchar(max)" />
+    <Property Name="ATTCHMAST" Type="bit" />
+    <Property Name="ATTCHLOG" Type="bit" />
+    <Property Name="ATTCHPHOTO" Type="bit" />
+    <Property Name="MASTERNAME" Type="char" MaxLength="30" />
+    <Property Name="CENAME" Type="char" MaxLength="30" />
+    <Property Name="REPODATE" Type="date" />
+    <Property Name="MASTERCOMM" Type="varchar(max)" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="INJURYOF">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OFFUSER" Type="char" MaxLength="60" />
+    <Property Name="OFFCOMM" Type="varchar(max)" />
+    <Property Name="OFFCOMMDT" Type="date" />
+    <Property Name="REFNO" Type="char" MaxLength="10" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="UPDTREC" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="INJURYPERS">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SRNUMB" Type="char" MaxLength="10" />
+    <Property Name="CREWCODE" Type="char" MaxLength="10" />
+    <Property Name="CREWNAME" Type="char" MaxLength="200" />
+    <Property Name="JDATE" Type="date" />
+    <Property Name="CDATE" Type="date" />
+    <Property Name="REPATRIAT" Type="bit" />
+    <Property Name="HOSPITAL" Type="bit" />
+    <Property Name="RANK" Type="char" MaxLength="20" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="INJURYPIC">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SRNUMB" Type="char" MaxLength="10" />
+    <Property Name="PICPATH" Type="char" MaxLength="254" />
+    <Property Name="TOOLTEXT" Type="char" MaxLength="100" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="INSUDONE">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="INSULCODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="READING" Type="char" MaxLength="4" />
+    <Property Name="RDATE" Type="date" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="INSUMAIN">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="INSULCODE" Type="char" MaxLength="10" />
+    <Property Name="INSULATOR" Type="char" MaxLength="60" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="OFFUPDT" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="JOBPARTS">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SCHED" Type="numeric" Precision="4" />
+    <Property Name="KEYS" Type="char" MaxLength="8" />
+    <Property Name="CATEGORY" Type="char" MaxLength="1" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="LINER">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="PS1" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="PS2" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="PS3" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="PS4" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="PS5" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="PS6" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="PS7" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="PS8" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="PS9" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="PS10" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="PS11" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="PS12" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="FA1" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="FA2" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="FA3" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="FA4" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="FA5" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="FA6" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="FA7" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="FA8" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="FA9" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="FA10" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="FA11" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="FA12" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="LINERNOW" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="TOTSH" Type="numeric" Precision="10" />
+    <Property Name="A_HRS" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="MAXDIAPER" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLOIL" Type="char" MaxLength="20" />
+    <Property Name="SPECCONS" Type="numeric" Precision="7" Scale="4" />
+    <Property Name="MES" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="LINEREAD">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="LCLSID" Type="char" MaxLength="15" />
+    <Property Name="LINRSINCE" Type="date" />
+    <Property Name="LTOTHRS" Type="char" MaxLength="6" />
+    <Property Name="LHRSNET" Type="char" MaxLength="6" />
+    <Property Name="WITHDRAWN" Type="bit" />
+    <Property Name="MAXOVAL" Type="char" MaxLength="6" />
+    <Property Name="PERMOVAL" Type="char" MaxLength="6" />
+    <Property Name="REMARK" Type="char" MaxLength="80" />
+    <Property Name="COND" Type="char" MaxLength="80" />
+    <Property Name="HIST" Type="char" MaxLength="254" />
+    <Property Name="CHECKS" Type="bit" />
+    <Property Name="NONRETURN" Type="bit" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="LINER" Type="numeric" Precision="1" />
+    <Property Name="IDTMARKS" Type="char" MaxLength="15" />
+    <Property Name="MES" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="LINERPIC">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="PICPATH" Type="char" MaxLength="254" />
+    <Property Name="TOOLTEXT" Type="char" MaxLength="100" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="MES" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="LOGBOOK">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DT" Type="datetime" />
+    <Property Name="TYPECODE" Type="char" MaxLength="10" />
+    <Property Name="CATEGORY" Type="char" MaxLength="1" />
+    <Property Name="DATA1" Type="char" MaxLength="15" />
+    <Property Name="DATA2" Type="char" MaxLength="15" />
+    <Property Name="DATA3" Type="char" MaxLength="15" />
+    <Property Name="DATA4" Type="char" MaxLength="15" />
+    <Property Name="DATA5" Type="char" MaxLength="15" />
+    <Property Name="DATA6" Type="char" MaxLength="15" />
+    <Property Name="DATA7" Type="char" MaxLength="15" />
+    <Property Name="DATA8" Type="char" MaxLength="15" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="datetime" />
+    <Property Name="BKDT" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MAINBK">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="MAINITEM" Type="char" MaxLength="40" />
+    <Property Name="SURVTYPE" Type="char" MaxLength="1" />
+    <Property Name="M_P" Type="char" MaxLength="1" />
+    <Property Name="TOTHRS" Type="numeric" Precision="7" />
+    <Property Name="ME" Type="bit" />
+    <Property Name="ORGDIA" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="AE" Type="bit" />
+    <Property Name="NUM" Type="numeric" Precision="2" />
+    <Property Name="THU_DATE" Type="date" />
+    <Property Name="SEPA" Type="bit" />
+    <Property Name="ACOMP" Type="bit" />
+    <Property Name="AL" Type="bit" />
+    <Property Name="PMPOHL" Type="bit" />
+    <Property Name="PMPRTN" Type="bit" />
+    <Property Name="MOTOHL" Type="bit" />
+    <Property Name="MOTRTN" Type="bit" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="L_MGROUP" Type="bit" />
+    <Property Name="MTCODE" Type="char" MaxLength="8" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="MES" Type="bit" />
+    <Property Name="GRPMCODE" Type="char" MaxLength="10" />
+    <Property Name="OFFUPDT" Type="bit" />
+    <Property Name="USERS" Type="char" MaxLength="35" />
+    <Property Name="SLF" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MAINITEM">
+    <Key>
+      <PropertyRef Name="MAINCODE" />
+    </Key>
+    <Property Name="MAINCODE" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="MAINITEM" Type="char" MaxLength="40" />
+    <Property Name="SURVTYPE" Type="char" MaxLength="1" />
+    <Property Name="M_P" Type="char" MaxLength="1" />
+    <Property Name="TOTHRS" Type="numeric" Precision="7" />
+    <Property Name="ME" Type="bit" />
+    <Property Name="ORGDIA" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="AE" Type="bit" />
+    <Property Name="NUM" Type="numeric" Precision="2" />
+    <Property Name="THU_DATE" Type="date" />
+    <Property Name="SEPA" Type="bit" />
+    <Property Name="ACOMP" Type="bit" />
+    <Property Name="AL" Type="bit" />
+    <Property Name="PMPOHL" Type="bit" />
+    <Property Name="PMPRTN" Type="bit" />
+    <Property Name="MOTOHL" Type="bit" />
+    <Property Name="MOTRTN" Type="bit" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="L_MGROUP" Type="bit" />
+    <Property Name="MTCODE" Type="char" MaxLength="8" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="MES" Type="bit" />
+    <Property Name="GRPMCODE" Type="char" MaxLength="10" />
+    <Property Name="OFFUPDT" Type="bit" />
+    <Property Name="SLF" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MAINMANUF">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CONNS" Type="char" MaxLength="8" />
+    <Property Name="MANUFCODE" Type="char" MaxLength="10" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MAINMEG">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MEGGERCODE" Type="char" MaxLength="10" />
+    <Property Name="MEGGERITEM" Type="char" MaxLength="60" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="KWRATING" Type="char" MaxLength="10" />
+    <Property Name="WPROOF" Type="bit" />
+    <Property Name="BEARINGNUM" Type="char" MaxLength="20" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MAINSUB">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CONNS" Type="char" MaxLength="8" />
+    <Property Name="CATEGORY" Type="char" MaxLength="1" />
+    <Property Name="MAIN" Type="char" MaxLength="60" />
+    <Property Name="SUBMAIN" Type="char" MaxLength="30" />
+    <Property Name="PARTNAME" Type="char" MaxLength="55" />
+    <Property Name="TYPE" Type="char" MaxLength="30" />
+    <Property Name="SERIAL" Type="char" MaxLength="40" />
+    <Property Name="HP" Type="numeric" Precision="5" />
+    <Property Name="CAPACITY" Type="char" MaxLength="17" />
+    <Property Name="YEARB" Type="numeric" Precision="4" />
+    <Property Name="AMPS" Type="numeric" Precision="5" />
+    <Property Name="KVA" Type="numeric" Precision="7" Scale="1" />
+    <Property Name="RPM" Type="numeric" Precision="5" />
+    <Property Name="VOLTS" Type="numeric" Precision="5" />
+    <Property Name="HZ" Type="numeric" Precision="5" />
+    <Property Name="HEAD" Type="char" MaxLength="8" />
+    <Property Name="SUCTHEAD" Type="char" MaxLength="8" />
+    <Property Name="DISCHPRESS" Type="char" MaxLength="8" />
+    <Property Name="CUFTPERMIN" Type="char" MaxLength="8" />
+    <Property Name="SPECIFIC" Type="varchar(max)" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="MODEL" Type="char" MaxLength="50" />
+    <Property Name="EQUIPDESC" Type="char" MaxLength="50" />
+    <Property Name="RATING" Type="char" MaxLength="20" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MAINTEN">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="WORK" Type="varchar(max)" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="TY" Type="char" MaxLength="1" />
+    <Property Name="UNSCHDL" Type="bit" />
+    <Property Name="PLANNED" Type="varchar(max)" />
+    <Property Name="REASON" Type="varchar(max)" />
+    <Property Name="HRSTAKEN" Type="numeric" Precision="6" />
+    <Property Name="OHAULAT" Type="numeric" Precision="7" />
+    <Property Name="HRSNET" Type="numeric" Precision="7" />
+    <Property Name="CRIT" Type="bit" />
+    <Property Name="ADDBY" Type="char" MaxLength="80" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="TOTHRS" Type="numeric" Precision="8" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="STFNAME" Type="char" MaxLength="60" />
+    <Property Name="ABSESTOS" Type="bit" />
+    <Property Name="ABSGVNBY" Type="char" MaxLength="60" />
+    <Property Name="ABSDTL" Type="varchar(max)" />
+    <Property Name="HOTWORK" Type="bit" />
+    <Property Name="HOTGVNBY" Type="char" MaxLength="60" />
+    <Property Name="HOTDETL" Type="varchar(max)" />
+    <Property Name="RISK" Type="bit" />
+    <Property Name="APPROVALDT" Type="date" />
+    <Property Name="NKKCODE" Type="numeric" Precision="2" />
+    <Property Name="BKDT" Type="date" />
+    <Property Name="NONSCH" Type="bit" />
+  </EntityType>
   <!--Errors Found During Generation:
-      warning 6013: The table/view 'PMSData.dbo.complogo' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-      
-      <EntityType Name="complogo">
-        <Property Name="LOGO" Type="varchar(max)" />
-      </EntityType>
-      Errors Found During Generation:
-      warning 6013: The table/view 'PMSData.dbo.DELHIST' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-      
-      <EntityType Name="DELHIST">
-        <Property Name="DTABLE" Type="char" MaxLength="30" />
-        <Property Name="DTYPE" Type="char" MaxLength="1" />
-        <Property Name="DCOND" Type="varchar(max)" />
-        <Property Name="EDITED" Type="bit" />
-        <Property Name="EDITDT" Type="date" />
-        <Property Name="BKDT" Type="date" />
-      </EntityType>-->
+      warning 6002: The table/view 'PMSData.dbo.MAINTPIC' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="MAINTPIC">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="MNTDATE" Type="date" />
+    <Property Name="PICPATH" Type="char" MaxLength="254" />
+    <Property Name="TOOLTEXT" Type="char" MaxLength="100" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MAINTYPE">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MTCODE" Type="char" MaxLength="8" />
+    <Property Name="MAINTYPE" Type="char" MaxLength="45" />
+    <Property Name="L_DEFA" Type="bit" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MANUF">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ADDRESS" Type="char" MaxLength="45" />
+    <Property Name="ADDRESS2" Type="char" MaxLength="30" />
+    <Property Name="ADDRESS3" Type="char" MaxLength="35" />
+    <Property Name="CITY" Type="char" MaxLength="25" />
+    <Property Name="COUNTRY" Type="char" MaxLength="25" />
+    <Property Name="PHONE" Type="char" MaxLength="20" />
+    <Property Name="TELEX" Type="char" MaxLength="15" />
+    <Property Name="FAX" Type="char" MaxLength="30" />
+    <Property Name="MANUFCODE" Type="char" MaxLength="10" />
+    <Property Name="EMAIL" Type="char" MaxLength="50" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="ME_CYLINDER_INSP">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TYPECODE" Type="char" MaxLength="8" />
+    <Property Name="ENG_NO" Type="char" MaxLength="10" />
+    <Property Name="TEST_NO" Type="char" MaxLength="10" />
+    <Property Name="OBS_NO" Type="char" MaxLength="10" />
+    <Property Name="ROW_ID" Type="numeric" Precision="2" />
+    <Property Name="CYL_1" Type="char" MaxLength="20" />
+    <Property Name="CYL_2" Type="char" MaxLength="20" />
+    <Property Name="CYL_3" Type="char" MaxLength="20" />
+    <Property Name="CYL_4" Type="char" MaxLength="20" />
+    <Property Name="CYL_5" Type="char" MaxLength="20" />
+    <Property Name="CYL_6" Type="char" MaxLength="20" />
+    <Property Name="CYL_7" Type="char" MaxLength="20" />
+    <Property Name="CYL_8" Type="char" MaxLength="20" />
+    <Property Name="CYL_9" Type="char" MaxLength="20" />
+    <Property Name="CYL_10" Type="char" MaxLength="20" />
+    <Property Name="CYL_11" Type="char" MaxLength="20" />
+    <Property Name="CYL_12" Type="char" MaxLength="20" />
+    <Property Name="CYL_13" Type="char" MaxLength="20" />
+    <Property Name="CYL_14" Type="char" MaxLength="20" />
+    <Property Name="CYL_15" Type="char" MaxLength="20" />
+    <Property Name="CYL_16" Type="char" MaxLength="20" />
+    <Property Name="CYL_17" Type="char" MaxLength="20" />
+    <Property Name="CYL_18" Type="char" MaxLength="20" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="ME_PERFORM_INSP">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TYPECODE" Type="char" MaxLength="8" />
+    <Property Name="ENG_TYPE" Type="char" MaxLength="50" />
+    <Property Name="BUILDER" Type="char" MaxLength="50" />
+    <Property Name="ENG_NO" Type="char" MaxLength="10" />
+    <Property Name="YARD" Type="char" MaxLength="50" />
+    <Property Name="LAYOUT_KW" Type="char" MaxLength="30" />
+    <Property Name="LAYOUT_RPM" Type="char" MaxLength="30" />
+    <Property Name="SIGN" Type="char" MaxLength="80" />
+    <Property Name="TEST_NO" Type="char" MaxLength="10" />
+    <Property Name="NO_OF_TC" Type="char" MaxLength="10" />
+    <Property Name="T_SRLNO_1" Type="char" MaxLength="30" />
+    <Property Name="T_SRLNO_2" Type="char" MaxLength="30" />
+    <Property Name="T_SRLNO_3" Type="char" MaxLength="30" />
+    <Property Name="T_SRLNO_4" Type="char" MaxLength="30" />
+    <Property Name="NO_OF_CYL" Type="char" MaxLength="10" />
+    <Property Name="BORE_M" Type="char" MaxLength="10" />
+    <Property Name="STROKE_M" Type="char" MaxLength="10" />
+    <Property Name="T_MAKE" Type="char" MaxLength="50" />
+    <Property Name="T_TYPE" Type="char" MaxLength="50" />
+    <Property Name="CYL_MEAN" Type="char" MaxLength="20" />
+    <Property Name="T_MAX_RPM" Type="char" MaxLength="20" />
+    <Property Name="T_MAX_TEMP" Type="char" MaxLength="20" />
+    <Property Name="C_SLIP_FAC" Type="char" MaxLength="30" />
+    <Property Name="C_DIAM" Type="char" MaxLength="30" />
+    <Property Name="CYL_INT" Type="char" MaxLength="10" />
+    <Property Name="CL_EXFRMME" Type="char" MaxLength="10" />
+    <Property Name="CL_EXFRMGT" Type="char" MaxLength="10" />
+    <Property Name="TC_SPEC" Type="char" MaxLength="200" />
+    <Property Name="OBS_NO" Type="char" MaxLength="10" />
+    <Property Name="FOIL_VISCO" Type="char" MaxLength="20" />
+    <Property Name="FVISCO_AT" Type="char" MaxLength="20" />
+    <Property Name="BUNK_STA" Type="char" MaxLength="50" />
+    <Property Name="CYLOIL_BRN" Type="char" MaxLength="50" />
+    <Property Name="CYLOIL_TYP" Type="char" MaxLength="50" />
+    <Property Name="OIL_BRAND" Type="char" MaxLength="50" />
+    <Property Name="HEAT_VALVE" Type="char" MaxLength="20" />
+    <Property Name="CIROIL_BRN" Type="char" MaxLength="50" />
+    <Property Name="CIROIL_TYP" Type="char" MaxLength="50" />
+    <Property Name="DENS_AT15" Type="char" MaxLength="20" />
+    <Property Name="SUL_PER" Type="char" MaxLength="10" />
+    <Property Name="TOIL_BRN" Type="char" MaxLength="50" />
+    <Property Name="TOIL_TYP" Type="char" MaxLength="50" />
+    <Property Name="TEST_DT" Type="char" MaxLength="10" />
+    <Property Name="TEST_HOUR" Type="char" MaxLength="10" />
+    <Property Name="LOAD_PER" Type="char" MaxLength="10" />
+    <Property Name="AMB_PRE" Type="char" MaxLength="10" />
+    <Property Name="ENG_RPM" Type="char" MaxLength="20" />
+    <Property Name="T_RUN_HRS" Type="char" MaxLength="20" />
+    <Property Name="GOV_INDX" Type="char" MaxLength="20" />
+    <Property Name="SPD_SET" Type="char" MaxLength="20" />
+    <Property Name="VIT_CONT" Type="char" MaxLength="20" />
+    <Property Name="DRAFT_FORE" Type="char" MaxLength="20" />
+    <Property Name="LOG_KNOTS" Type="char" MaxLength="20" />
+    <Property Name="WIND_M_S" Type="char" MaxLength="20" />
+    <Property Name="WIND_DIREC" Type="char" MaxLength="20" />
+    <Property Name="EF_PWR_KW" Type="char" MaxLength="20" />
+    <Property Name="IND_PWR_KW" Type="char" MaxLength="20" />
+    <Property Name="EF_FUL_CON" Type="char" MaxLength="20" />
+    <Property Name="IN_FUL_CON" Type="char" MaxLength="20" />
+    <Property Name="DRAFT_AFT" Type="char" MaxLength="20" />
+    <Property Name="OBS_KNOTS" Type="char" MaxLength="20" />
+    <Property Name="WAVE_HIGHT" Type="char" MaxLength="20" />
+    <Property Name="WAV_DIREC" Type="char" MaxLength="20" />
+    <Property Name="AC_IN_1" Type="char" MaxLength="10" />
+    <Property Name="AC_IN_2" Type="char" MaxLength="10" />
+    <Property Name="AC_IN_3" Type="char" MaxLength="10" />
+    <Property Name="AC_IN_4" Type="char" MaxLength="10" />
+    <Property Name="AC_OUT_1" Type="char" MaxLength="10" />
+    <Property Name="AC_OUT_2" Type="char" MaxLength="10" />
+    <Property Name="AC_OUT_3" Type="char" MaxLength="10" />
+    <Property Name="AC_OUT_4" Type="char" MaxLength="10" />
+    <Property Name="ME_INLET" Type="char" MaxLength="10" />
+    <Property Name="ME_S_W_TEM" Type="char" MaxLength="10" />
+    <Property Name="ME_TO_1" Type="char" MaxLength="20" />
+    <Property Name="ME_TO_2" Type="char" MaxLength="20" />
+    <Property Name="ME_TO_3" Type="char" MaxLength="20" />
+    <Property Name="ME_TO_4" Type="char" MaxLength="20" />
+    <Property Name="EG_T_IN_1" Type="char" MaxLength="20" />
+    <Property Name="EG_T_IN_2" Type="char" MaxLength="20" />
+    <Property Name="EG_T_IN_3" Type="char" MaxLength="20" />
+    <Property Name="EG_T_IN_4" Type="char" MaxLength="20" />
+    <Property Name="EG_T_OU_1" Type="char" MaxLength="20" />
+    <Property Name="EG_T_OU_2" Type="char" MaxLength="20" />
+    <Property Name="EG_T_OU_3" Type="char" MaxLength="20" />
+    <Property Name="EG_T_OU_4" Type="char" MaxLength="20" />
+    <Property Name="EP_REC_BAR" Type="char" MaxLength="20" />
+    <Property Name="EP_REC_MM" Type="char" MaxLength="20" />
+    <Property Name="EP_TO_1" Type="char" MaxLength="20" />
+    <Property Name="EP_TO_2" Type="char" MaxLength="20" />
+    <Property Name="EP_TO_3" Type="char" MaxLength="20" />
+    <Property Name="EP_TO_4" Type="char" MaxLength="20" />
+    <Property Name="TC_RPM_1" Type="char" MaxLength="20" />
+    <Property Name="TC_RPM_2" Type="char" MaxLength="20" />
+    <Property Name="TC_RPM_3" Type="char" MaxLength="20" />
+    <Property Name="TC_RPM_4" Type="char" MaxLength="20" />
+    <Property Name="AU_BL_ONOF" Type="char" MaxLength="20" />
+    <Property Name="AU_VI_MM" Type="char" MaxLength="20" />
+    <Property Name="SC_FLT_1" Type="char" MaxLength="20" />
+    <Property Name="SC_FLT_2" Type="char" MaxLength="20" />
+    <Property Name="SC_FLT_3" Type="char" MaxLength="20" />
+    <Property Name="SC_FLT_4" Type="char" MaxLength="20" />
+    <Property Name="SC_COL_1" Type="char" MaxLength="20" />
+    <Property Name="SC_COL_2" Type="char" MaxLength="20" />
+    <Property Name="SC_COL_3" Type="char" MaxLength="20" />
+    <Property Name="SC_COL_4" Type="char" MaxLength="20" />
+    <Property Name="SC_REC_BAR" Type="char" MaxLength="20" />
+    <Property Name="SC_REC_MM" Type="char" MaxLength="20" />
+    <Property Name="SC_AIR_TEM" Type="char" MaxLength="20" />
+    <Property Name="SCT_IB_1" Type="char" MaxLength="20" />
+    <Property Name="SCT_IB_2" Type="char" MaxLength="20" />
+    <Property Name="SCT_IB_3" Type="char" MaxLength="20" />
+    <Property Name="SCT_IB_4" Type="char" MaxLength="20" />
+    <Property Name="SCT_BC_1" Type="char" MaxLength="20" />
+    <Property Name="SCT_BC_2" Type="char" MaxLength="20" />
+    <Property Name="SCT_BC_3" Type="char" MaxLength="20" />
+    <Property Name="SCT_BC_4" Type="char" MaxLength="20" />
+    <Property Name="SCT_AC_1" Type="char" MaxLength="20" />
+    <Property Name="SCT_AC_2" Type="char" MaxLength="20" />
+    <Property Name="SCT_AC_3" Type="char" MaxLength="20" />
+    <Property Name="SCT_AC_4" Type="char" MaxLength="20" />
+    <Property Name="PRE_SYSOIL" Type="char" MaxLength="20" />
+    <Property Name="PRE_COLOIL" Type="char" MaxLength="20" />
+    <Property Name="PRE_CAMOIL" Type="char" MaxLength="20" />
+    <Property Name="PRE_TUROIL" Type="char" MaxLength="20" />
+    <Property Name="TEM_INENG" Type="char" MaxLength="20" />
+    <Property Name="TEM_INCAM" Type="char" MaxLength="20" />
+    <Property Name="TEM_OUTCAM" Type="char" MaxLength="20" />
+    <Property Name="PRE_THUSEG" Type="char" MaxLength="20" />
+    <Property Name="TC_IN_BL_1" Type="char" MaxLength="20" />
+    <Property Name="TC_IN_BL_2" Type="char" MaxLength="20" />
+    <Property Name="TC_IN_BL_3" Type="char" MaxLength="20" />
+    <Property Name="TC_IN_BL_4" Type="char" MaxLength="20" />
+    <Property Name="TC_OU_BL_1" Type="char" MaxLength="20" />
+    <Property Name="TC_OU_BL_2" Type="char" MaxLength="20" />
+    <Property Name="TC_OU_BL_3" Type="char" MaxLength="20" />
+    <Property Name="TC_OU_BL_4" Type="char" MaxLength="20" />
+    <Property Name="FO_PRE_BF" Type="char" MaxLength="20" />
+    <Property Name="FO_PRE_AF" Type="char" MaxLength="20" />
+    <Property Name="TEM_BP" Type="char" MaxLength="20" />
+    <Property Name="REM" Type="char" MaxLength="200" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MEBRDTL">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="TYPECODE" Type="char" MaxLength="10" />
+    <Property Name="VAL1" Type="char" MaxLength="6" />
+    <Property Name="VAL2" Type="char" MaxLength="6" />
+    <Property Name="VAL3" Type="char" MaxLength="6" />
+    <Property Name="VAL4" Type="char" MaxLength="6" />
+    <Property Name="VAL5" Type="char" MaxLength="6" />
+    <Property Name="VAL6" Type="char" MaxLength="6" />
+    <Property Name="VAL7" Type="char" MaxLength="6" />
+    <Property Name="VAL8" Type="char" MaxLength="6" />
+    <Property Name="VAL9" Type="char" MaxLength="6" />
+    <Property Name="VAL10" Type="char" MaxLength="6" />
+    <Property Name="VAL11" Type="char" MaxLength="6" />
+    <Property Name="VAL12" Type="char" MaxLength="6" />
+    <Property Name="VAL13" Type="char" MaxLength="6" />
+    <Property Name="VAL14" Type="char" MaxLength="6" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MEBRHEAD">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="AT" Type="char" MaxLength="25" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="CRAKPINMIN" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="CRAKPINMAX" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="CROSPINMIN" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="CROSPINMAX" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="MAINJOUMIN" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="MAINJOUMAX" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="THRUSTPAD" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="OHAULREQD" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="REMARKS" Type="varchar(max)" />
+    <Property Name="MEASUREDBY" Type="char" MaxLength="70" />
+    <Property Name="ENG" Type="char" MaxLength="10" />
+    <Property Name="VAL1" Type="char" MaxLength="5" />
+    <Property Name="VAL2" Type="char" MaxLength="5" />
+    <Property Name="VAL3" Type="char" MaxLength="5" />
+    <Property Name="VAL4" Type="char" MaxLength="5" />
+    <Property Name="VAL5" Type="char" MaxLength="5" />
+    <Property Name="VAL6" Type="char" MaxLength="5" />
+    <Property Name="VAL7" Type="char" MaxLength="5" />
+    <Property Name="VAL8" Type="char" MaxLength="5" />
+    <Property Name="VAL9" Type="char" MaxLength="5" />
+    <Property Name="VAL10" Type="char" MaxLength="5" />
+    <Property Name="VAL11" Type="char" MaxLength="5" />
+    <Property Name="VAL12" Type="char" MaxLength="5" />
+    <Property Name="VAL13" Type="char" MaxLength="5" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MECRSDTL">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="OHHAULDT" Type="date" />
+    <Property Name="SLNO" Type="numeric" Precision="2" />
+    <Property Name="CL_LIMIT1" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="CL_LIMIT2" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="CL_LIMIT3" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="CL_LIMIT4" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="CL_LIMIT5" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="CL_LIMIT6" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="CL_LIMIT7" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="CL_LIMIT8" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="CL_LIMIT9" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="CL_LIMIT10" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="CL_LIMIT11" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="CL_LIMIT12" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MECRSHED">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="ENG_TYPE" Type="char" MaxLength="2" />
+    <Property Name="OHHAULDT" Type="date" />
+    <Property Name="MEAS_AT" Type="char" MaxLength="40" />
+    <Property Name="MEAS_ON" Type="date" />
+    <Property Name="MEAS_BY" Type="char" MaxLength="40" />
+    <Property Name="CRANK_TEMP" Type="char" MaxLength="10" />
+    <Property Name="REMARK" Type="varchar(max)" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MEEXOVR">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="OHHAULDT" Type="date" />
+    <Property Name="ENG_TYPE" Type="char" MaxLength="2" />
+    <Property Name="EXUNITNO" Type="char" MaxLength="4" />
+    <Property Name="HOUSID" Type="char" MaxLength="4" />
+    <Property Name="SPINDID" Type="char" MaxLength="4" />
+    <Property Name="SEATID" Type="char" MaxLength="4" />
+    <Property Name="HOUSMAKE" Type="char" MaxLength="50" />
+    <Property Name="SPINMAKE" Type="char" MaxLength="50" />
+    <Property Name="SEATMAKE" Type="char" MaxLength="50" />
+    <Property Name="HRRUNLAST" Type="numeric" Precision="6" />
+    <Property Name="HOUSNEW" Type="numeric" Precision="6" />
+    <Property Name="HOUSRECON" Type="numeric" Precision="6" />
+    <Property Name="HOUSTIMES" Type="numeric" Precision="6" />
+    <Property Name="SPINNEW" Type="numeric" Precision="6" />
+    <Property Name="SPINRECON" Type="numeric" Precision="6" />
+    <Property Name="SPINTIMES" Type="numeric" Precision="6" />
+    <Property Name="SEATNEW" Type="numeric" Precision="6" />
+    <Property Name="SEATRECON" Type="numeric" Precision="6" />
+    <Property Name="SEATTIMES" Type="numeric" Precision="6" />
+    <Property Name="STEMDIAE1" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="STEMDIAE2" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="STEMDIALT" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="COMBUSF1" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="COMBUSF2" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="COMBUSF3" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="COMBUSF4" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="COMBUSLT" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="SEALG1BE" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="SEALG1AT" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="SEALG1GR" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="SEALG1LT" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="SEATG2BE" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="SEATG2AT" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="SEATG2GR" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="SEATG2LT" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="RECEG3BE" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="RECEG3AT" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="RECEG3LT" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="GYDBUSHC" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="GYDBUSHD" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="GYDBUSHREN" Type="bit" />
+    <Property Name="BYDBUSHLT" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="AIRCYLA" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="AIRCYLB" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="AIRCYLREN" Type="bit" />
+    <Property Name="AIRCYLLT" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="REMARKS" Type="varchar(max)" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MEPERDET">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="ITZ" Type="numeric" Precision="1" />
+    <Property Name="CYLNO" Type="numeric" Precision="2" />
+    <Property Name="PRESSMAX" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="PRESSCOM" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="PRESMAXCOM" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="MIP" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="FUELPINDEX" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="FUELPVIT" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="EXHTEMP" Type="numeric" Precision="4" />
+    <Property Name="IHP" Type="numeric" Precision="6" />
+    <Property Name="LASTOHAUL" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="UNITOHAUL" Type="numeric" Precision="6" />
+    <Property Name="NEWLINER" Type="numeric" Precision="6" />
+    <Property Name="INJECHANGE" Type="numeric" Precision="6" />
+    <Property Name="EXHVALCHG" Type="numeric" Precision="6" />
+    <Property Name="NUM" Type="numeric" Precision="2" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MEPERFORM">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="ITZ" Type="numeric" Precision="1" />
+    <Property Name="TIME" Type="char" MaxLength="10" />
+    <Property Name="FROMPORT" Type="char" MaxLength="60" />
+    <Property Name="SLNO" Type="numeric" Precision="2" />
+    <Property Name="ENGMAKER" Type="char" MaxLength="80" />
+    <Property Name="MCR" Type="numeric" Precision="6" />
+    <Property Name="MCRAT" Type="numeric" Precision="6" />
+    <Property Name="DEADWT" Type="numeric" Precision="7" />
+    <Property Name="DISPLACE" Type="numeric" Precision="7" />
+    <Property Name="BAROMETER" Type="char" MaxLength="10" />
+    <Property Name="FUELUSE" Type="char" MaxLength="10" />
+    <Property Name="FODAYTANK" Type="numeric" Precision="4" />
+    <Property Name="SULPHUR" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLOILGRAD" Type="char" MaxLength="30" />
+    <Property Name="INDSPR1" Type="numeric" Precision="4" />
+    <Property Name="INDSPR2" Type="numeric" Precision="6" />
+    <Property Name="POWER" Type="numeric" Precision="6" />
+    <Property Name="SHAFTGEN" Type="numeric" Precision="6" />
+    <Property Name="SHAFTPOWER" Type="numeric" Precision="6" />
+    <Property Name="CYLCONST" Type="numeric" Precision="7" Scale="4" />
+    <Property Name="PITCHSET" Type="char" MaxLength="10" />
+    <Property Name="SPEEDSETAR" Type="char" MaxLength="6" />
+    <Property Name="SPCFUELCON" Type="numeric" Precision="8" Scale="4" />
+    <Property Name="FUELSGRAV" Type="numeric" Precision="7" Scale="4" />
+    <Property Name="FUELSGRAVT" Type="numeric" Precision="3" />
+    <Property Name="FOTEMPINJ" Type="numeric" Precision="5" />
+    <Property Name="FOVISINJ" Type="numeric" Precision="5" />
+    <Property Name="FQS" Type="char" MaxLength="10" />
+    <Property Name="VIT" Type="char" MaxLength="10" />
+    <Property Name="TCOVERH1" Type="numeric" Precision="6" />
+    <Property Name="TCOVERH2" Type="numeric" Precision="6" />
+    <Property Name="TCOVERH3" Type="numeric" Precision="6" />
+    <Property Name="EXTURBBE1" Type="numeric" Precision="3" />
+    <Property Name="EXTURBAT1" Type="numeric" Precision="3" />
+    <Property Name="EXTRUBBE2" Type="numeric" Precision="3" />
+    <Property Name="EXTURBAT2" Type="numeric" Precision="3" />
+    <Property Name="EXTRUBBE3" Type="numeric" Precision="3" />
+    <Property Name="EXTURBAT3" Type="numeric" Precision="3" />
+    <Property Name="AIRFILT1" Type="numeric" Precision="3" />
+    <Property Name="AIRFILT2" Type="numeric" Precision="3" />
+    <Property Name="AIRFILT3" Type="numeric" Precision="3" />
+    <Property Name="AIRCOOLBE1" Type="numeric" Precision="3" />
+    <Property Name="AIRCOOLAT1" Type="numeric" Precision="3" />
+    <Property Name="AIRCOOLBE2" Type="numeric" Precision="3" />
+    <Property Name="AIRCOOLAT2" Type="numeric" Precision="3" />
+    <Property Name="AIRCOOLBE3" Type="numeric" Precision="3" />
+    <Property Name="AIRCOOLAT3" Type="numeric" Precision="3" />
+    <Property Name="CWCOOLBE1" Type="numeric" Precision="3" />
+    <Property Name="CWCOOLAT1" Type="numeric" Precision="3" />
+    <Property Name="CWCOOLBE2" Type="numeric" Precision="3" />
+    <Property Name="CWCOOLAT2" Type="numeric" Precision="3" />
+    <Property Name="CWCOOLBE3" Type="numeric" Precision="3" />
+    <Property Name="CWCOOLAT3" Type="numeric" Precision="3" />
+    <Property Name="CWBLOWBE1" Type="numeric" Precision="3" />
+    <Property Name="CWBLOWAT1" Type="numeric" Precision="3" />
+    <Property Name="CWBLOWBE2" Type="numeric" Precision="3" />
+    <Property Name="CWBLOWAT2" Type="numeric" Precision="3" />
+    <Property Name="CWBLOWBE3" Type="numeric" Precision="3" />
+    <Property Name="CWBLOWAT3" Type="numeric" Precision="3" />
+    <Property Name="OILGAS1" Type="numeric" Precision="3" />
+    <Property Name="OILAIR1" Type="numeric" Precision="3" />
+    <Property Name="OILGAS2" Type="numeric" Precision="3" />
+    <Property Name="OILAIR2" Type="numeric" Precision="3" />
+    <Property Name="OILGAS3" Type="numeric" Precision="3" />
+    <Property Name="OILAIR3" Type="numeric" Precision="3" />
+    <Property Name="AIRFILPRE1" Type="numeric" Precision="3" />
+    <Property Name="AIRFILPRE2" Type="numeric" Precision="3" />
+    <Property Name="AIRFILPRE3" Type="numeric" Precision="3" />
+    <Property Name="AIRCOLPRE1" Type="numeric" Precision="3" />
+    <Property Name="AIRCOLPRE2" Type="numeric" Precision="3" />
+    <Property Name="AIRCOLPRE3" Type="numeric" Precision="3" />
+    <Property Name="GASINTUR1" Type="numeric" Precision="3" />
+    <Property Name="GASINTUR2" Type="numeric" Precision="3" />
+    <Property Name="GASINTUR3" Type="numeric" Precision="3" />
+    <Property Name="GASOUTTUR1" Type="numeric" Precision="3" />
+    <Property Name="GASOUTTUR2" Type="numeric" Precision="3" />
+    <Property Name="GASOUTTUR3" Type="numeric" Precision="3" />
+    <Property Name="RPM1" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="RPM2" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="RPM3" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="LOPPBRG1" Type="numeric" Precision="6" />
+    <Property Name="LOPPBRG2" Type="numeric" Precision="6" />
+    <Property Name="LOPPBRG3" Type="numeric" Precision="6" />
+    <Property Name="LOPPRATE1" Type="numeric" Precision="6" />
+    <Property Name="LOPPRATE2" Type="numeric" Precision="6" />
+    <Property Name="LOPPRATE3" Type="numeric" Precision="6" />
+    <Property Name="PPBRGS1" Type="numeric" Precision="6" />
+    <Property Name="PPBRGS2" Type="numeric" Precision="6" />
+    <Property Name="PPBRGS3" Type="numeric" Precision="6" />
+    <Property Name="HRSAIRFIL1" Type="numeric" Precision="6" />
+    <Property Name="HRSAIRFIL2" Type="numeric" Precision="6" />
+    <Property Name="HRSAIRFIL3" Type="numeric" Precision="6" />
+    <Property Name="HRSAIRCOL1" Type="numeric" Precision="6" />
+    <Property Name="HRSAIRCOL2" Type="numeric" Precision="6" />
+    <Property Name="HRSAIRCOL3" Type="numeric" Precision="6" />
+    <Property Name="TUWASHAIR1" Type="numeric" Precision="6" />
+    <Property Name="TUWASHAIR2" Type="numeric" Precision="6" />
+    <Property Name="TUWASHAIR3" Type="numeric" Precision="6" />
+    <Property Name="TUWASHGAS1" Type="numeric" Precision="6" />
+    <Property Name="TUWASHGAS2" Type="numeric" Precision="6" />
+    <Property Name="TUWASHGAS3" Type="numeric" Precision="6" />
+    <Property Name="ENGROOMTB" Type="numeric" Precision="6" />
+    <Property Name="SEAWATER" Type="numeric" Precision="6" />
+    <Property Name="SCAVAIRBEL" Type="numeric" Precision="6" />
+    <Property Name="MEFWINLET" Type="numeric" Precision="6" />
+    <Property Name="MEFWOUTLET" Type="numeric" Precision="6" />
+    <Property Name="PISTCOLMAX" Type="numeric" Precision="6" />
+    <Property Name="PISTCOLMIN" Type="numeric" Precision="6" />
+    <Property Name="LOCOOLBF" Type="numeric" Precision="6" />
+    <Property Name="LOCOOLAT" Type="numeric" Precision="6" />
+    <Property Name="SWCOOLER" Type="numeric" Precision="3" />
+    <Property Name="SCAVAIRBP" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="FWMEPRES" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="PISTMEPRES" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="LOMEPRES" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="SWCOOLPRES" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="CRANKPRESS" Type="numeric" Precision="8" Scale="4" />
+    <Property Name="GASBOILER" Type="numeric" Precision="8" Scale="4" />
+    <Property Name="CYLOILFEED" Type="numeric" Precision="8" Scale="4" />
+    <Property Name="COMMENTS" Type="varchar(max)" />
+    <Property Name="RPM" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="SLIP" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="SPEED" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="LOADIND" Type="numeric" Precision="5" Scale="1" />
+    <Property Name="GOVIND" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="FWD" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="AFT" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="WINDFORCE" Type="numeric" Precision="2" />
+    <Property Name="RELDIR" Type="char" MaxLength="10" />
+    <Property Name="SEASTATE" Type="numeric" Precision="2" />
+    <Property Name="CURRENTS" Type="numeric" Precision="4" Scale="2" />
+    <Property Name="TOPORT" Type="char" MaxLength="60" />
+    <Property Name="SWELL" Type="numeric" Precision="4" Scale="1" />
+    <Property Name="SWRELDIR" Type="char" MaxLength="10" />
+    <Property Name="FOCONS" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="CYLCON" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="CYLOILSPE" Type="numeric" Precision="7" Scale="4" />
+    <Property Name="SYSTCONS" Type="numeric" Precision="5" />
+    <Property Name="TCOVERH4" Type="numeric" Precision="6" />
+    <Property Name="EXTURBBE4" Type="numeric" Precision="6" />
+    <Property Name="EXTURBAT4" Type="numeric" Precision="3" />
+    <Property Name="AIRFILT4" Type="numeric" Precision="3" />
+    <Property Name="AIRCOOLBE4" Type="numeric" Precision="3" />
+    <Property Name="AIRCOOLAT4" Type="numeric" Precision="3" />
+    <Property Name="CWCOOLBE4" Type="numeric" Precision="3" />
+    <Property Name="CWCOOLAT4" Type="numeric" Precision="3" />
+    <Property Name="CWBLOWBE4" Type="numeric" Precision="3" />
+    <Property Name="CWBLOWAT4" Type="numeric" Precision="3" />
+    <Property Name="OILGAS4" Type="numeric" Precision="3" />
+    <Property Name="OILAIR4" Type="numeric" Precision="3" />
+    <Property Name="AIRFILPRE4" Type="numeric" Precision="3" />
+    <Property Name="AIRCOLPRE4" Type="numeric" Precision="3" />
+    <Property Name="GASINTUR4" Type="numeric" Precision="3" />
+    <Property Name="GASOUTTUR4" Type="numeric" Precision="3" />
+    <Property Name="RPM4" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="LOPPBRG4" Type="numeric" Precision="6" />
+    <Property Name="LOPPRATE4" Type="numeric" Precision="6" />
+    <Property Name="PPBRGS4" Type="numeric" Precision="6" />
+    <Property Name="HRSAIRFIL4" Type="numeric" Precision="6" />
+    <Property Name="HRSAIRCOL4" Type="numeric" Precision="6" />
+    <Property Name="TUWASHAIR4" Type="numeric" Precision="6" />
+    <Property Name="TUWASHGAS4" Type="numeric" Precision="6" />
+    <Property Name="EXHFOLD" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="FAVOUR" Type="numeric" Precision="1" />
+    <Property Name="AGAINST" Type="numeric" Precision="1" />
+    <Property Name="ATMTEMP" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="THRUSTBEAR" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="FUELOIL" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="NUM" Type="numeric" Precision="2" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MESPDTL">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="SPID" Type="char" MaxLength="20" />
+    <Property Name="SPUSERID" Type="char" MaxLength="5" />
+    <Property Name="OHHRS" Type="numeric" Precision="7" />
+    <Property Name="OHDATE" Type="date" />
+    <Property Name="MEHRS" Type="numeric" Precision="7" />
+    <Property Name="REMARKS" Type="varchar(max)" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MESPITEM">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="SPID" Type="char" MaxLength="20" />
+    <Property Name="SPUSERID" Type="char" MaxLength="5" />
+    <Property Name="TOTHRS" Type="numeric" Precision="7" />
+    <Property Name="OHDATE" Type="date" />
+    <Property Name="TYPECODE" Type="char" MaxLength="10" />
+    <Property Name="SPARED" Type="bit" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MOTMEG">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="KWRATING" Type="char" MaxLength="10" />
+    <Property Name="WPROOF" Type="bit" />
+    <Property Name="BEARINGNUM" Type="char" MaxLength="20" />
+    <Property Name="LASTDONE" Type="date" />
+    <Property Name="OHLDATE" Type="date" />
+    <Property Name="MEGGER" Type="char" MaxLength="10" />
+    <Property Name="REPODATE" Type="date" />
+    <Property Name="REMARKS" Type="char" MaxLength="200" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MSGDATA">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FUSERCODE" Type="char" MaxLength="2" />
+    <Property Name="TUSERCODE" Type="char" MaxLength="2" />
+    <Property Name="ENTDT" Type="datetime" />
+    <Property Name="REMARKS" Type="varchar(max)" />
+    <Property Name="READDT" Type="datetime" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="MSGID" Type="char" MaxLength="10" />
+    <Property Name="MSGCONTID" Type="char" MaxLength="10" />
+    <Property Name="SUBJECT" Type="char" MaxLength="150" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="MSM">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CATAGORY" Type="char" MaxLength="1" />
+    <Property Name="GRPCODE" Type="char" MaxLength="5" />
+    <Property Name="GRPNAME" Type="char" MaxLength="60" />
+    <Property Name="SUBGRPCODE" Type="char" MaxLength="5" />
+    <Property Name="SUBGRPNAME" Type="char" MaxLength="50" />
+    <Property Name="MSMCODE" Type="char" MaxLength="10" />
+    <Property Name="MSMDESC" Type="char" MaxLength="85" />
+  </EntityType>
+  <EntityType Name="mymenu">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PARENTKEY" Type="char" MaxLength="3" />
+    <Property Name="CHILDKEY" Type="char" MaxLength="3" />
+    <Property Name="CATEGORY" Type="char" MaxLength="1" />
+    <Property Name="ITEMS" Type="char" MaxLength="100" />
+    <Property Name="KEYCODE" Type="char" MaxLength="30" />
+    <Property Name="PIC" Type="char" MaxLength="50" />
+    <Property Name="REMARKS" Type="char" MaxLength="150" />
+    <Property Name="ICONFILE" Type="varchar(max)" />
+    <Property Name="APPRUN" Type="char" MaxLength="100" />
+    <Property Name="DIS" Type="char" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="NEARMISS">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PEOPLE" Type="bit" />
+    <Property Name="PROPERTY" Type="bit" />
+    <Property Name="SRNUMB" Type="char" MaxLength="10" />
+    <Property Name="MISSDT" Type="date" />
+    <Property Name="TIMEMISS" Type="char" MaxLength="10" />
+    <Property Name="DESCEND" Type="varchar(max)" />
+    <Property Name="LOCATION" Type="char" MaxLength="5" />
+    <Property Name="SHASSIST" Type="bit" />
+    <Property Name="LATITUDE" Type="char" MaxLength="10" />
+    <Property Name="LONGITUDE" Type="char" MaxLength="10" />
+    <Property Name="PORTNAME" Type="char" MaxLength="30" />
+    <Property Name="NARRWHAT" Type="varchar(max)" />
+    <Property Name="NARRWHY" Type="varchar(max)" />
+    <Property Name="REGULATION" Type="varchar(max)" />
+    <Property Name="SLIP" Type="varchar(max)" />
+    <Property Name="LAPSE" Type="varchar(max)" />
+    <Property Name="MISTAKE" Type="varchar(max)" />
+    <Property Name="PREVENT" Type="varchar(max)" />
+    <Property Name="SEVERITY" Type="numeric" Precision="1" />
+    <Property Name="PROBABLE" Type="numeric" Precision="1" />
+    <Property Name="RISKFACTOR" Type="numeric" Precision="3" />
+    <Property Name="PRIMCAUSE" Type="char" MaxLength="10" />
+    <Property Name="SECONCAUS" Type="char" MaxLength="10" />
+    <Property Name="PERSONAL" Type="char" MaxLength="10" />
+    <Property Name="JOB" Type="char" MaxLength="10" />
+    <Property Name="MASTERCOMM" Type="varchar(max)" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="DEPPORT" Type="char" MaxLength="30" />
+    <Property Name="DEPDATE" Type="date" />
+    <Property Name="DESTPORT" Type="char" MaxLength="30" />
+    <Property Name="ARRDATE" Type="date" />
+    <Property Name="ROUTVIOLAT" Type="varchar(max)" />
+    <Property Name="EXCEPVIOLA" Type="varchar(max)" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="NEAROFF">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OFFUSER" Type="char" MaxLength="60" />
+    <Property Name="OFFCOMM" Type="varchar(max)" />
+    <Property Name="OFFCOMMDT" Type="date" />
+    <Property Name="REFNO" Type="char" MaxLength="10" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="UPDTREC" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="NEARPIC">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SRNUMB" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="PICPATH" Type="char" MaxLength="254" />
+    <Property Name="TOOLTEXT" Type="char" MaxLength="100" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="NkkType">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NKKCODE" Type="numeric" Precision="2" />
+    <Property Name="NKKITEM" Type="char" MaxLength="5" />
+    <Property Name="NKKDESC" Type="char" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="OFFEX">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TABLE_NAME" Type="char" MaxLength="128" />
+    <Property Name="TABLE_OPT" Type="char" MaxLength="1" />
+    <Property Name="FLD_DATE" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="OVRPMS">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="TMAINCODE" Type="char" MaxLength="10" />
+    <Property Name="TPMSCODE" Type="char" MaxLength="10" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="PASSWORD">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="USERS" Type="char" MaxLength="35" />
+    <Property Name="PASSWORD" Type="char" MaxLength="10" />
+    <Property Name="LEVEL" Type="char" MaxLength="2" />
+    <Property Name="CATEGORY" Type="char" MaxLength="1" />
+    <Property Name="PERSON" Type="char" MaxLength="60" />
+    <Property Name="SHORTUSER" Type="char" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="PETMAIN">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="MAINITEM" Type="char" MaxLength="40" />
+    <Property Name="M_P" Type="char" MaxLength="1" />
+    <Property Name="TOTHRS" Type="numeric" Precision="7" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="PETPMS">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSITEM" Type="char" MaxLength="40" />
+    <Property Name="HEADR" Type="char" MaxLength="60" />
+    <Property Name="EQCODE" Type="char" MaxLength="10" />
+    <Property Name="PERIOD" Type="char" MaxLength="1" />
+    <Property Name="INTERVAL" Type="numeric" Precision="6" />
+    <Property Name="SCHED" Type="numeric" Precision="4" />
+    <Property Name="OHAULAT" Type="numeric" Precision="7" />
+    <Property Name="HRSNET" Type="numeric" Precision="7" />
+    <Property Name="M_E_D" Type="char" MaxLength="1" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="E_D_S" Type="char" MaxLength="1" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="CRIT" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="RESPONSE" Type="char" MaxLength="5" />
+    <Property Name="MANUFCODE" Type="char" MaxLength="10" />
+    <Property Name="TYPE" Type="char" MaxLength="30" />
+    <Property Name="SERIAL" Type="char" MaxLength="20" />
+    <Property Name="DECOMM" Type="bit" />
+    <Property Name="STPOINT2" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="STPOINT3" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="STPOINT4" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="SETRANGE" Type="char" MaxLength="20" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="PISTDETL">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="RUNHRS" Type="numeric" Precision="5" />
+    <Property Name="WEAR" Type="numeric" Precision="7" Scale="4" />
+    <Property Name="RADORIG" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="RADIALA" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="RADIALB" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="RADIALC" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="BUTTNOW" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="BUTTALLOW" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="AUXIALA" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="AUXIALB" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="AUXIALC" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="AUXAVG" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="GROVNOW" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="GROVALLOW" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="MATER" Type="char" MaxLength="30" />
+    <Property Name="RINGCOND" Type="char" MaxLength="30" />
+    <Property Name="RENEW" Type="numeric" Precision="1" />
+    <Property Name="RADIAL" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="BUTT" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="AUXIAL" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="GROVCLEAR" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="NEWMATE" Type="char" MaxLength="30" />
+    <Property Name="SLNO" Type="numeric" Precision="1" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="PISTON">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="PCLSID" Type="char" MaxLength="15" />
+    <Property Name="PISTSINCE" Type="char" MaxLength="15" />
+    <Property Name="PTOTHRS" Type="char" MaxLength="7" />
+    <Property Name="CYLDCARB" Type="numeric" Precision="1" />
+    <Property Name="CONDROD" Type="char" MaxLength="15" />
+    <Property Name="BURNMAX" Type="char" MaxLength="15" />
+    <Property Name="PISTOPEN" Type="char" MaxLength="15" />
+    <Property Name="PISTPTEST" Type="char" MaxLength="15" />
+    <Property Name="PISTSPARE" Type="char" MaxLength="15" />
+    <Property Name="STUFFBOX" Type="numeric" Precision="1" />
+    <Property Name="HEIGHT" Type="char" MaxLength="15" />
+    <Property Name="OVERSIZE" Type="char" MaxLength="15" />
+    <Property Name="SCRAPER" Type="char" MaxLength="15" />
+    <Property Name="SCRHEIGHT" Type="char" MaxLength="15" />
+    <Property Name="LEFTPIST" Type="char" MaxLength="6" />
+    <Property Name="LEFTHEIGHT" Type="char" MaxLength="15" />
+    <Property Name="RIGHTPIST" Type="char" MaxLength="15" />
+    <Property Name="FUTURE" Type="char" MaxLength="100" />
+    <Property Name="RIGHTHEIGH" Type="char" MaxLength="15" />
+    <Property Name="PISTREPL" Type="char" MaxLength="15" />
+    <Property Name="PISTOVAL" Type="char" MaxLength="15" />
+    <Property Name="PISTHRS" Type="char" MaxLength="15" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="COMPRING1" Type="numeric" Precision="3" />
+    <Property Name="COMPRING2" Type="numeric" Precision="3" />
+    <Property Name="COMPRING3" Type="numeric" Precision="3" />
+    <Property Name="COMPRING4" Type="numeric" Precision="3" />
+    <Property Name="COMPRING5" Type="numeric" Precision="3" />
+    <Property Name="SCRARING1" Type="numeric" Precision="3" />
+    <Property Name="SCRARING2" Type="numeric" Precision="3" />
+    <Property Name="SEALRING1" Type="numeric" Precision="3" />
+    <Property Name="SEALRING2" Type="numeric" Precision="3" />
+    <Property Name="STUFFRING1" Type="numeric" Precision="3" />
+    <Property Name="STUFFRING2" Type="numeric" Precision="3" />
+    <Property Name="STUFFRING3" Type="numeric" Precision="3" />
+    <Property Name="STUFFRING4" Type="numeric" Precision="3" />
+    <Property Name="STUFFRING5" Type="numeric" Precision="3" />
+    <Property Name="MATERIAL1" Type="char" MaxLength="15" />
+    <Property Name="MATERIAL2" Type="char" MaxLength="15" />
+    <Property Name="MATERIAL3" Type="char" MaxLength="15" />
+    <Property Name="MATERIAL4" Type="char" MaxLength="15" />
+    <Property Name="MATERIAL5" Type="char" MaxLength="15" />
+    <Property Name="MATERIAL6" Type="char" MaxLength="15" />
+    <Property Name="MATERIAL7" Type="char" MaxLength="15" />
+    <Property Name="PERINCHARG" Type="char" MaxLength="60" />
+    <Property Name="REMARK" Type="varchar(max)" />
+    <Property Name="FURREPAIR" Type="varchar(max)" />
+    <Property Name="MAX1" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="MAX2" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="MAX3" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="MAX4" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="MAX5" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="MIN1" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="MIN2" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="MIN3" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="MIN4" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="MIN5" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="AVG1" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="AVG2" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="AVG3" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="AVG4" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="AVG5" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="REASON" Type="varchar(max)" />
+    <Property Name="LPISTOPEN" Type="date" />
+    <Property Name="EXVALVE" Type="numeric" Precision="1" />
+    <Property Name="FUELINJ" Type="numeric" Precision="1" />
+    <Property Name="MES" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="PISTREAD">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="GROVE" Type="numeric" Precision="1" />
+    <Property Name="GNO1" Type="char" MaxLength="7" />
+    <Property Name="GNO2" Type="char" MaxLength="7" />
+    <Property Name="GNO3" Type="char" MaxLength="7" />
+    <Property Name="GNO4" Type="char" MaxLength="7" />
+    <Property Name="GNO5" Type="char" MaxLength="7" />
+    <Property Name="GNO6" Type="char" MaxLength="7" />
+    <Property Name="GNO7" Type="char" MaxLength="7" />
+    <Property Name="RING" Type="numeric" Precision="1" />
+    <Property Name="RNO1" Type="char" MaxLength="6" />
+    <Property Name="RNO2" Type="char" MaxLength="6" />
+    <Property Name="RNO3" Type="char" MaxLength="6" />
+    <Property Name="RNO4" Type="char" MaxLength="6" />
+    <Property Name="RNO5" Type="char" MaxLength="6" />
+    <Property Name="RNO6" Type="char" MaxLength="6" />
+    <Property Name="RNO7" Type="char" MaxLength="6" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="MES" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="PMSBK">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSITEM" Type="char" MaxLength="45" />
+    <Property Name="HEADR" Type="char" MaxLength="60" />
+    <Property Name="EQCODE" Type="char" MaxLength="10" />
+    <Property Name="PERIOD" Type="char" MaxLength="1" />
+    <Property Name="INTERVAL" Type="numeric" Precision="6" />
+    <Property Name="SCHED" Type="numeric" Precision="4" />
+    <Property Name="OHAULAT" Type="numeric" Precision="7" />
+    <Property Name="HRSNET" Type="numeric" Precision="7" />
+    <Property Name="M_E_D" Type="char" MaxLength="1" />
+    <Property Name="CRIT" Type="bit" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="L_DCARB" Type="bit" />
+    <Property Name="TYPECODE" Type="char" MaxLength="8" />
+    <Property Name="NUM" Type="numeric" Precision="2" />
+    <Property Name="STPOINT" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="STPOINT1" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="UNITS" Type="char" MaxLength="10" />
+    <Property Name="E_D_S" Type="char" MaxLength="1" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="USERS" Type="char" MaxLength="35" />
+    <Property Name="REASON" Type="char" MaxLength="254" />
+    <Property Name="PTOTHRS" Type="numeric" Precision="7" />
+    <Property Name="L_PGROUP" Type="bit" />
+    <Property Name="L_PSTPND" Type="bit" />
+    <Property Name="DTPSTPND" Type="date" />
+    <Property Name="NPSTPND" Type="numeric" Precision="8" />
+    <Property Name="UPSTPND" Type="char" MaxLength="8" />
+    <Property Name="EO_ECO" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="RESPONSE" Type="char" MaxLength="5" />
+    <Property Name="COMMENT" Type="char" MaxLength="254" />
+    <Property Name="WARNPRD" Type="numeric" Precision="6" />
+    <Property Name="MANUFCODE" Type="char" MaxLength="10" />
+    <Property Name="TYPE" Type="char" MaxLength="30" />
+    <Property Name="SERIAL" Type="char" MaxLength="20" />
+    <Property Name="DECOMM" Type="bit" />
+    <Property Name="POSTPNDBY" Type="char" MaxLength="100" />
+    <Property Name="STPOINT2" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="STPOINT3" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="STPOINT4" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="SETRANGE" Type="char" MaxLength="20" />
+    <Property Name="OFFUPDT" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="PMSCOND">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ITEMCODE" Type="char" MaxLength="10" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="COND" Type="numeric" Precision="1" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="PMSDESC">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PAGENO" Type="numeric" Precision="2" />
+    <Property Name="WIND_NO" Type="numeric" Precision="2" />
+    <Property Name="SLNO" Type="numeric" Precision="2" />
+    <Property Name="DESCRIPT" Type="char" MaxLength="100" />
+    <Property Name="TYPECODE" Type="char" MaxLength="10" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="pmsflds">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FIELD_NAME" Type="char" MaxLength="128" />
+    <Property Name="FIELD_NEW" Type="char" MaxLength="10" />
+    <Property Name="TABLE_NAME" Type="char" MaxLength="128" />
+    <Property Name="FIELD_TYPE" Type="char" MaxLength="1" />
+    <Property Name="FIELD_LEN" Type="numeric" Precision="3" />
+    <Property Name="FIELD_DEC" Type="numeric" Precision="3" />
+    <Property Name="FIELD_NULL" Type="bit" />
+    <Property Name="FIELD_NOCP" Type="bit" />
+    <Property Name="FIELD_DEFA" Type="varchar(max)" />
+    <Property Name="FIELD_RULE" Type="varchar(max)" />
+    <Property Name="FIELD_ERR" Type="varchar(max)" />
+    <Property Name="TABLE_RULE" Type="varchar(max)" />
+    <Property Name="TABLE_ERR" Type="varchar(max)" />
+    <Property Name="INS_TRIG" Type="varchar(max)" />
+    <Property Name="UPD_TRIG" Type="varchar(max)" />
+    <Property Name="DEL_TRIG" Type="varchar(max)" />
+    <Property Name="TABLE_CMT" Type="varchar(max)" />
+    <Property Name="TABLE_CAT" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="PMSHIST">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="USERS" Type="char" MaxLength="36" />
+    <Property Name="DATETIME" Type="datetime" />
+    <Property Name="DESCRIPT1" Type="varchar(max)" />
+    <Property Name="ITEMCODE" Type="char" MaxLength="10" />
+    <Property Name="MODE" Type="char" MaxLength="7" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="USERNAME" Type="char" MaxLength="60" />
+    <Property Name="DESCRIPT2" Type="varchar(max)" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="PMSITEM">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSITEM" Type="char" MaxLength="45" />
+    <Property Name="HEADR" Type="char" MaxLength="60" />
+    <Property Name="EQCODE" Type="char" MaxLength="10" />
+    <Property Name="PERIOD" Type="char" MaxLength="1" />
+    <Property Name="INTERVAL" Type="numeric" Precision="6" />
+    <Property Name="SCHED" Type="numeric" Precision="4" />
+    <Property Name="OHAULAT" Type="numeric" Precision="7" />
+    <Property Name="HRSNET" Type="numeric" Precision="7" />
+    <Property Name="M_E_D" Type="char" MaxLength="1" />
+    <Property Name="CRIT" Type="bit" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="L_DCARB" Type="bit" />
+    <Property Name="TYPECODE" Type="char" MaxLength="8" />
+    <Property Name="NUM" Type="numeric" Precision="2" />
+    <Property Name="STPOINT" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="STPOINT1" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="UNITS" Type="char" MaxLength="10" />
+    <Property Name="E_D_S" Type="char" MaxLength="1" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="USERS" Type="char" MaxLength="35" />
+    <Property Name="REASON" Type="char" MaxLength="254" />
+    <Property Name="PTOTHRS" Type="numeric" Precision="7" />
+    <Property Name="L_PGROUP" Type="bit" />
+    <Property Name="L_PSTPND" Type="bit" />
+    <Property Name="DTPSTPND" Type="date" />
+    <Property Name="NPSTPND" Type="numeric" Precision="8" />
+    <Property Name="UPSTPND" Type="char" MaxLength="8" />
+    <Property Name="EO_ECO" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="RESPONSE" Type="char" MaxLength="5" />
+    <Property Name="COMMENT" Type="char" MaxLength="254" />
+    <Property Name="WARNPRD" Type="numeric" Precision="6" />
+    <Property Name="MANUFCODE" Type="char" MaxLength="10" />
+    <Property Name="TYPE" Type="char" MaxLength="30" />
+    <Property Name="SERIAL" Type="char" MaxLength="20" />
+    <Property Name="DECOMM" Type="bit" />
+    <Property Name="POSTPNDBY" Type="char" MaxLength="100" />
+    <Property Name="STPOINT2" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="STPOINT3" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="STPOINT4" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="SETRANGE" Type="char" MaxLength="20" />
+    <Property Name="OFFUPDT" Type="bit" />
+    <Property Name="NKKCODE" Type="numeric" Precision="2" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="PMSJOB">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="SCHED" Type="numeric" Precision="4" />
+    <Property Name="OFFUPDT" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="PMSTYPE">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TYPECODE" Type="char" MaxLength="8" />
+    <Property Name="PMSTYPE" Type="char" MaxLength="45" />
+    <Property Name="L_DEFA" Type="bit" />
+    <Property Name="HISTCODE1" Type="char" MaxLength="10" />
+    <Property Name="HISTCODE2" Type="char" MaxLength="10" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="MCAT" Type="char" MaxLength="1" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="POSTPOND">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINCODE" Type="char" MaxLength="10" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="REASON" Type="char" MaxLength="254" />
+    <Property Name="L_PSTPND" Type="bit" />
+    <Property Name="DTPSTPND" Type="date" />
+    <Property Name="NTPSTPND" Type="numeric" Precision="8" />
+    <Property Name="OHAULAT" Type="numeric" Precision="8" />
+    <Property Name="TOTHRS" Type="numeric" Precision="8" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDTDT" Type="date" />
+    <Property Name="POSTPNDBY" Type="char" MaxLength="100" />
+    <Property Name="RESETBY" Type="char" MaxLength="100" />
+    <Property Name="RESETDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="PUMPOVER">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PMSCODE" Type="char" MaxLength="10" />
+    <Property Name="DESCRIPT" Type="char" MaxLength="200" />
+    <Property Name="BEARINGNUM" Type="char" MaxLength="15" />
+    <Property Name="OHLDATE" Type="date" />
+    <Property Name="LASTSURV" Type="date" />
+    <Property Name="REPODATE" Type="date" />
+    <Property Name="REMARKS" Type="char" MaxLength="200" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="REP_ORDER">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="REP_ON" Type="char" MaxLength="2" />
+    <Property Name="REPNO" Type="char" MaxLength="10" />
+    <Property Name="OFFUPDT" Type="bit" />
+    <Property Name="REFNO" Type="char" MaxLength="12" />
+    <Property Name="ORDERNO" Type="char" MaxLength="20" />
+    <Property Name="ORD_DATE" Type="date" />
+    <Property Name="PORT" Type="char" MaxLength="30" />
+    <Property Name="NAME" Type="char" MaxLength="30" />
+    <Property Name="ADD1" Type="char" MaxLength="30" />
+    <Property Name="ADD2" Type="char" MaxLength="30" />
+    <Property Name="ADD3" Type="char" MaxLength="30" />
+    <Property Name="DTL_DESC" Type="varchar(max)" />
+    <Property Name="SUPNAME" Type="char" MaxLength="30" />
+    <Property Name="SUPDTAPPDT" Type="date" />
+    <Property Name="PHOTO" Type="bit" />
+    <Property Name="DRAWING" Type="bit" />
+    <Property Name="SKETCH" Type="bit" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
 </Schema>

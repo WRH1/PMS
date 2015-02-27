@@ -1,0 +1,177 @@
+﻿@model IEnumerable<PMS.AEBERHED>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MAINCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PMSCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CL_DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENG_TYPE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NORM_BORE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LAST_OVER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RUN_HRS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENG_NO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENG_LOCA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REMARKS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MEAS_BY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CHK_INTER1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STD_CLE11)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STD_CLE12)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WER_LIMIT1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CHK_INTER2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STD_CLE21)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STD_CLE22)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WER_LIMIT2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAX_ALLOW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CRANK_TEMP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAINCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PMSCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CL_DATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENG_TYPE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NORM_BORE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LAST_OVER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RUN_HRS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENG_NO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENG_LOCA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REMARKS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MEAS_BY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHK_INTER1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STD_CLE11)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STD_CLE12)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WER_LIMIT1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHK_INTER2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STD_CLE21)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STD_CLE22)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WER_LIMIT2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAX_ALLOW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CRANK_TEMP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

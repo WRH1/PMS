@@ -1,0 +1,197 @@
+﻿@model PMS.AEPERHEAD
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>AEPERHEAD</legend>
+
+        @Html.HiddenFor(model => model.PK)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DT)
+            @Html.ValidationMessageFor(model => model.DT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ENGNUM)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ENGNUM)
+            @Html.ValidationMessageFor(model => model.ENGNUM)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DTMEASURED)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DTMEASURED)
+            @Html.ValidationMessageFor(model => model.DTMEASURED)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LOAD)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LOAD)
+            @Html.ValidationMessageFor(model => model.LOAD)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TCHRRPM)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TCHRRPM)
+            @Html.ValidationMessageFor(model => model.TCHRRPM)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SCAVPRES)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SCAVPRES)
+            @Html.ValidationMessageFor(model => model.SCAVPRES)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SCAVTEMP)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SCAVTEMP)
+            @Html.ValidationMessageFor(model => model.SCAVTEMP)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ACPRESDROP)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ACPRESDROP)
+            @Html.ValidationMessageFor(model => model.ACPRESDROP)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LOPRESS)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LOPRESS)
+            @Html.ValidationMessageFor(model => model.LOPRESS)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LOTEMPIN)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LOTEMPIN)
+            @Html.ValidationMessageFor(model => model.LOTEMPIN)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LOTEMPOUT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LOTEMPOUT)
+            @Html.ValidationMessageFor(model => model.LOTEMPOUT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.GOVRLOADIN)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GOVRLOADIN)
+            @Html.ValidationMessageFor(model => model.GOVRLOADIN)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ELLOADKW)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ELLOADKW)
+            @Html.ValidationMessageFor(model => model.ELLOADKW)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ELLOADAMPS)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ELLOADAMPS)
+            @Html.ValidationMessageFor(model => model.ELLOADAMPS)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.INJECTOR)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.INJECTOR)
+            @Html.ValidationMessageFor(model => model.INJECTOR)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CYLHDOHAUL)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CYLHDOHAUL)
+            @Html.ValidationMessageFor(model => model.CYLHDOHAUL)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.COMPDECARB)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.COMPDECARB)
+            @Html.ValidationMessageFor(model => model.COMPDECARB)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.REMARKS)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.REMARKS)
+            @Html.ValidationMessageFor(model => model.REMARKS)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EDITED)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EDITED)
+            @Html.ValidationMessageFor(model => model.EDITED)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EDITDT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EDITDT)
+            @Html.ValidationMessageFor(model => model.EDITDT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BKDT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BKDT)
+            @Html.ValidationMessageFor(model => model.BKDT)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

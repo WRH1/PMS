@@ -1,0 +1,78 @@
+﻿@model PMS.AUDIT
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>AUDIT</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.USERS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.USERS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DATETIME)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DATETIME)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MODULE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MODULE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MODULECODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MODULECODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.USERNAME)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.USERNAME)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

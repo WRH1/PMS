@@ -1,0 +1,291 @@
+﻿@model PMS.ACCIDENT
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>ACCIDENT</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SEVERITY)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SEVERITY)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PROBABLE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PROBABLE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SUBJECT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SUBJECT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ARRDATE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ARRDATE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CAUSE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CAUSE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ACCDATE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ACCDATE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GMT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GMT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPPORT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPPORT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPDATE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPDATE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DESTPORT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DESTPORT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LOCATION)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LOCATION)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ACCTYPE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ACCTYPE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PRIMCAUSE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PRIMCAUSE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SECONCAUS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SECONCAUS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PLACEINCI)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PLACEINCI)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DAMAGE1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DAMAGE1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DAMAGE2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DAMAGE2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.COST)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.COST)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DAYSLOST)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DAYSLOST)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HRSLOST)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HRSLOST)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MINSLOST)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MINSLOST)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TOTALS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TOTALS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EVENTS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EVENTS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CAUSDAM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CAUSDAM)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.REMARK)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.REMARK)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DDAYS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DDAYS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DHRS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DHRS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DMINS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DMINS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDAMAGE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDAMAGE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DDAMAGE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DDAMAGE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TREPAIR)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TREPAIR)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PREPAIR)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PREPAIR)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DETAIL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DETAIL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PERSONAL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PERSONAL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.JOB)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.JOB)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
