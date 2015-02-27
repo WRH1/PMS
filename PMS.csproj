@@ -167,7 +167,20 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ACCIDENTController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ACCPICController.cs" />
+    <Compile Include="Controllers\AEBERHEDController.cs" />
+    <Compile Include="Controllers\AECPBEDTController.cs" />
+    <Compile Include="Controllers\AECRPDTLController.cs" />
+    <Compile Include="Controllers\AEPERDETLController.cs" />
+    <Compile Include="Controllers\AEPERHEADController.cs" />
+    <Compile Include="Controllers\AUDITController.cs" />
+    <Compile Include="Controllers\AUXODET1Controller.cs" />
+    <Compile Include="Controllers\AUXODET2Controller.cs" />
+    <Compile Include="Controllers\AUXODET3Controller.cs" />
+    <Compile Include="Controllers\AUXODET4Controller.cs" />
+    <Compile Include="Controllers\AUXOHEADController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -306,6 +319,201 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>pmsData.Designer.cs</LastGenOutput>
     </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ACCIDENT\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ACCIDENT\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ACCIDENT\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ACCIDENT\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ACCIDENT\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ACCPIC\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ACCPIC\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ACCPIC\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ACCPIC\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ACCPIC\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AEBERHED\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AEBERHED\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AEBERHED\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AEBERHED\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AEBERHED\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AECPBEDT\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AECPBEDT\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AECPBEDT\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AECPBEDT\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AECPBEDT\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AECRPDTL\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AECRPDTL\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AECRPDTL\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AECRPDTL\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AECRPDTL\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AEPERDETL\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AEPERDETL\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AEPERDETL\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AEPERDETL\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AEPERDETL\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AEPERHEAD\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AEPERHEAD\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AEPERHEAD\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AEPERHEAD\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AEPERHEAD\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUDIT\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUDIT\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUDIT\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUDIT\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUDIT\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET1\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET1\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET1\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET1\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET1\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET2\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET2\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET2\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET2\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET2\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET3\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET3\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET3\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET3\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET3\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET4\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET4\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET4\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET4\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXODET4\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXOHEAD\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXOHEAD\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXOHEAD\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXOHEAD\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AUXOHEAD\Delete.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
