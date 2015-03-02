@@ -1,0 +1,135 @@
+﻿@model IEnumerable<PMS.DRDETL>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DRCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JAN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FEB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JUN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JUL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AUG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OCT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DRYEAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SLNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DRCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JAN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FEB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JUN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JUL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AUG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OCT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DRYEAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SLNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

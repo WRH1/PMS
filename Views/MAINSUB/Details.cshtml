@@ -1,0 +1,197 @@
+﻿@model PMS.MAINSUB
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>MAINSUB</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CONNS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CONNS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CATEGORY)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CATEGORY)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAIN)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAIN)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SUBMAIN)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SUBMAIN)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PARTNAME)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PARTNAME)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TYPE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TYPE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SERIAL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SERIAL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HP)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HP)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CAPACITY)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CAPACITY)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.YEARB)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.YEARB)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AMPS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AMPS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.KVA)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.KVA)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RPM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RPM)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VOLTS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VOLTS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HZ)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HZ)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HEAD)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HEAD)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SUCTHEAD)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SUCTHEAD)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DISCHPRESS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DISCHPRESS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CUFTPERMIN)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CUFTPERMIN)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SPECIFIC)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SPECIFIC)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MODEL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MODEL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EQUIPDESC)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EQUIPDESC)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RATING)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RATING)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

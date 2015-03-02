@@ -1,0 +1,173 @@
+﻿@model PMS.PMSFLD
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>PMSFLD</legend>
+
+        @Html.HiddenFor(model => model.PK)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FIELD_NAME)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FIELD_NAME)
+            @Html.ValidationMessageFor(model => model.FIELD_NAME)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FIELD_NEW)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FIELD_NEW)
+            @Html.ValidationMessageFor(model => model.FIELD_NEW)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TABLE_NAME)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TABLE_NAME)
+            @Html.ValidationMessageFor(model => model.TABLE_NAME)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FIELD_TYPE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FIELD_TYPE)
+            @Html.ValidationMessageFor(model => model.FIELD_TYPE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FIELD_LEN)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FIELD_LEN)
+            @Html.ValidationMessageFor(model => model.FIELD_LEN)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FIELD_DEC)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FIELD_DEC)
+            @Html.ValidationMessageFor(model => model.FIELD_DEC)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FIELD_NULL)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FIELD_NULL)
+            @Html.ValidationMessageFor(model => model.FIELD_NULL)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FIELD_NOCP)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FIELD_NOCP)
+            @Html.ValidationMessageFor(model => model.FIELD_NOCP)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FIELD_DEFA)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FIELD_DEFA)
+            @Html.ValidationMessageFor(model => model.FIELD_DEFA)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FIELD_RULE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FIELD_RULE)
+            @Html.ValidationMessageFor(model => model.FIELD_RULE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FIELD_ERR)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FIELD_ERR)
+            @Html.ValidationMessageFor(model => model.FIELD_ERR)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TABLE_RULE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TABLE_RULE)
+            @Html.ValidationMessageFor(model => model.TABLE_RULE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TABLE_ERR)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TABLE_ERR)
+            @Html.ValidationMessageFor(model => model.TABLE_ERR)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.INS_TRIG)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.INS_TRIG)
+            @Html.ValidationMessageFor(model => model.INS_TRIG)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UPD_TRIG)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.UPD_TRIG)
+            @Html.ValidationMessageFor(model => model.UPD_TRIG)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DEL_TRIG)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DEL_TRIG)
+            @Html.ValidationMessageFor(model => model.DEL_TRIG)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TABLE_CMT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TABLE_CMT)
+            @Html.ValidationMessageFor(model => model.TABLE_CMT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TABLE_CAT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TABLE_CAT)
+            @Html.ValidationMessageFor(model => model.TABLE_CAT)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

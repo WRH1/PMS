@@ -1,0 +1,60 @@
+﻿@model PMS.FOXUSER
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>FOXUSER</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TYPE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TYPE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NAME)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NAME)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.READONLY)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.READONLY)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CKVAL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CKVAL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DATA)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DATA)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UPDATED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UPDATED)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

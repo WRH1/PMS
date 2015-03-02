@@ -1,0 +1,201 @@
+﻿@model IEnumerable<PMS.DBLTHEAD>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MAINCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PMSCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INSPBY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ALLS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PORT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STBD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FWD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AFT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UPP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LWR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTINS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTNOTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ACCINS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ACCNOTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SOUINS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SOURNOTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PIPINS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PIPNOTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUCINS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUCNOTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REMARKS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DETAIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOLDNO1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOLDNO2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TESTALL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAINCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PMSCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INSPBY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ALLS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PORT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STBD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FWD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AFT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UPP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LWR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTINS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTNOTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ACCINS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ACCNOTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SOUINS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SOURNOTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PIPINS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PIPNOTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUCINS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUCNOTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REMARKS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DETAIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOLDNO1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOLDNO2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TESTALL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

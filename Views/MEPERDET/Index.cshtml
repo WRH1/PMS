@@ -1,0 +1,147 @@
+﻿@model IEnumerable<PMS.MEPERDET>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ITZ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CYLNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRESSMAX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRESSCOM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRESMAXCOM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MIP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FUELPINDEX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FUELPVIT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EXHTEMP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IHP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LASTOHAUL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UNITOHAUL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NEWLINER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INJECHANGE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EXHVALCHG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ITZ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CYLNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRESSMAX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRESSCOM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRESMAXCOM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MIP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FUELPINDEX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FUELPVIT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EXHTEMP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IHP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LASTOHAUL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UNITOHAUL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NEWLINER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INJECHANGE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EXHVALCHG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

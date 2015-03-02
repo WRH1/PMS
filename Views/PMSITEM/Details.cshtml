@@ -1,0 +1,337 @@
+﻿@model PMS.PMSITEM
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>PMSITEM</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAINCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAINCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PMSCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PMSCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PMSITEM1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PMSITEM1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HEADR)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HEADR)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EQCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EQCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PERIOD)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PERIOD)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.INTERVAL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.INTERVAL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SCHED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SCHED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OHAULAT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OHAULAT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HRSNET)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HRSNET)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.M_E_D)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.M_E_D)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CRIT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CRIT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DATE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DATE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.L_DCARB)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.L_DCARB)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TYPECODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TYPECODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NUM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NUM)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.STPOINT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.STPOINT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.STPOINT1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.STPOINT1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UNITS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UNITS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.E_D_S)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.E_D_S)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.USERS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.USERS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.REASON)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.REASON)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PTOTHRS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PTOTHRS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.L_PGROUP)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.L_PGROUP)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.L_PSTPND)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.L_PSTPND)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DTPSTPND)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DTPSTPND)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NPSTPND)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NPSTPND)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UPSTPND)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UPSTPND)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EO_ECO)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EO_ECO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RESPONSE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RESPONSE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.COMMENT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.COMMENT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WARNPRD)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WARNPRD)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MANUFCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MANUFCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TYPE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TYPE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SERIAL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SERIAL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DECOMM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DECOMM)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.POSTPNDBY)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.POSTPNDBY)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.STPOINT2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.STPOINT2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.STPOINT3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.STPOINT3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.STPOINT4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.STPOINT4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SETRANGE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SETRANGE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OFFUPDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OFFUPDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NKKCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NKKCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

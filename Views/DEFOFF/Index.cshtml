@@ -1,0 +1,93 @@
+﻿@model IEnumerable<PMS.DEFOFF>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OFFUSER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OFFCOMM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OFFCOMMDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REFNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UPDTREC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OFFDEFCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SHPDEFCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OFFUPDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OFFUSER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OFFCOMM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OFFCOMMDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REFNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UPDTREC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OFFDEFCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SHPDEFCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OFFUPDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

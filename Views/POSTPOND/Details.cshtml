@@ -1,0 +1,120 @@
+﻿@model PMS.POSTPOND
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>POSTPOND</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAINCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAINCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PMSCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PMSCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.REASON)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.REASON)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.L_PSTPND)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.L_PSTPND)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DTPSTPND)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DTPSTPND)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NTPSTPND)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NTPSTPND)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OHAULAT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OHAULAT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TOTHRS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TOTHRS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DATE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DATE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDTDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDTDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.POSTPNDBY)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.POSTPNDBY)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RESETBY)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RESETBY)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RESETDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RESETDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

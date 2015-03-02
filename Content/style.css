@@ -7,11 +7,14 @@ h1, h2, h3						{ margin:0px; padding:0px; font-weight:normal; }
 input, input:hover				{ outline:none; }
 textarea						{ height:auto; border:1px solid #cccccc; outline:none }
 
+.DashboardGrid					{ float:left; width:100%; height:auto; margin-bottom:10px; }
+.DashboardSubSec				{ width:31.9%; background-color:#ffffff; float:left; padding:5px; margin-right:5px; }
+
 .MainWrapper					{ width:99%; margin:0px auto; height:auto; position:relative; margin-top:5px; }
 .NavOuter						{ width:100%; float:left; margin-bottom: 10px; border-bottom: 1px solid #CCCCCC; PADDING-BOTTOM: 5px; }
-.Nav							{ width:90%; margin:0px auto; height:auto; }
+.Nav							{ width:92%; margin:0px auto; height:auto; }
 .Nav li							{ width:auto; line-height:20px; font-size:11px; font-weight:bold; float:left; margin-right:2px;  }
-.Nav li a:hover					{ background:#7e96cc url(../images/btn_bg.png) bottom repeat-x; border:1px solid #0451b0; color:#ffffff; display:block; padding:3px 5px; }
+.Nav li a:hover					{ background:#7e96cc url(images/btn_bg.png) bottom repeat-x; border:1px solid #0451b0; color:#ffffff; display:block; padding:3px 5px; }
 .Nav li a						{ color:#333333; text-decoration:none; display:block; padding:3px 5px; border:1px solid #ffffff; }
 .ContentOtr						{ width:100%; float:left; height:auto;  }
 .LftOtr							{ width:20%; float:left; height:auto; }
@@ -22,8 +25,9 @@ textarea						{ height:auto; border:1px solid #cccccc; outline:none }
 .PMSTab li a.Selected, .Title span.Selected, 						{  background-color:#083e80 !important; border:1px solid #071f3d; color:#ffffff; }
 
 .TabOtr						{ width:78%; float:right; height:auto; background-color: #f2f2f2; border: 1px solid #cccccc; font-size:12px; padding:5px; margin-bottom:20px; }
+.FullWidth					{ width:99%; }
 .Title						{ width:100%; float:left; height:auto; border-bottom:1px solid #cccccc; margin-bottom:10px; padding-bottom:10px; }
-.Title span, .PMSButton					{ float:left; margin-right:5px; border:1px solid #cccccc; padding:5px; background:#ffffff url(../images/grey_btn.png) repeat-x bottom; }
+.Title span, .PMSButton					{ float:left; margin-right:5px; border:1px solid #cccccc; padding:5px; background:#ffffff url(images/grey_btn.png) repeat-x bottom; }
 .Title span a				{ color:#333333; text-decoration:none; }
 .Title span.Selected		{ background-image:none; }
 .LabelOtr							{ width:100%; float:left; margin-top:10px; }
@@ -53,7 +57,7 @@ fieldset span, .FormRytSec span				{ float:left; width:100%; margin-bottom:10px;
 .PMSContent					{ background-color:#ffffff; border:1px solid #cccccc; padding:3px; border-top:none; margin-bottom:10px; float:left; min-width:96%; }
 .PmsLastSec					{ width:19%;  float:right; height:auto; }
 .Grid						{ border:1px solid #cccccc; border-top:none; border-left:none; overflow:auto; }
-.Grid td, .Grid th					{ border:1px solid #cccccc; border-right:none; border-bottom:none; padding:5px; }
+.Grid td, .Grid th					{ border:1px solid #cccccc; border-right:none; border-bottom:none; padding:5px; background-color:#ffffff; }
 .Grid th					{ background-color:#999999; font-size:12px; font-weight:normal }
 .CriticalPMSMiddleSec			{ width:50%; } 
 
@@ -75,7 +79,7 @@ fieldset span, .FormRytSec span				{ float:left; width:100%; margin-bottom:10px;
 .PMSResponsible select				{ width:50%; }
 .PMSResponsible textarea			{ width:100%; float:left; margin-top:5px; font-family:Tahoma, Geneva, sans-serif; font-size:12px; }
 .CriticalJobDesc					{ width:98.6%; }
-.SearchTxtBox						{ width:98%; margin:5px 0; float:left; background:url(../images/searchIcon.png) no-repeat right top; border:1px solid #cccccc; padding:3px 0;	 }
+.SearchTxtBox						{ width:98%; margin:5px 0; float:left; background:url(images/searchIcon.png) no-repeat right top; border:1px solid #cccccc; padding:3px 0;	 }
 .GroupDetails						{ width:100%; float:left; height:auto; background-color:#ffffff; }
 .GroupName							{ width:32.3%; float:left; margin-right:10px; }
 .GroupName .NameDetails				{ width:99%; }

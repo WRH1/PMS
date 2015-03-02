@@ -1,0 +1,105 @@
+﻿@model IEnumerable<PMS.MOTMEG>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MAINCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PMSCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KWRATING)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WPROOF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BEARINGNUM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LASTDONE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OHLDATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MEGGER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REPODATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REMARKS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAINCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PMSCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KWRATING)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WPROOF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BEARINGNUM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LASTDONE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OHLDATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MEGGER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REPODATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REMARKS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,71 @@
+﻿@model PMS.GRPBK
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>GRPBK</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRPMCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRPMCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRPMNAME)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRPMNAME)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRPMPARENT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRPMPARENT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OFFUPDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OFFUPDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.USERS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.USERS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

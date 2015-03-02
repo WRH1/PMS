@@ -1,0 +1,339 @@
+﻿@model IEnumerable<PMS.MEEXOVR>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MAINCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PMSCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OHHAULDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENG_TYPE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EXUNITNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOUSID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SPINDID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEATID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOUSMAKE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SPINMAKE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEATMAKE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HRRUNLAST)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOUSNEW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOUSRECON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOUSTIMES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SPINNEW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SPINRECON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SPINTIMES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEATNEW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEATRECON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEATTIMES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STEMDIAE1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STEMDIAE2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STEMDIALT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMBUSF1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMBUSF2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMBUSF3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMBUSF4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMBUSLT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEALG1BE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEALG1AT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEALG1GR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEALG1LT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEATG2BE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEATG2AT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEATG2GR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEATG2LT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RECEG3BE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RECEG3AT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RECEG3LT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GYDBUSHC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GYDBUSHD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GYDBUSHREN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BYDBUSHLT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRCYLA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRCYLB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRCYLREN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRCYLLT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REMARKS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAINCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PMSCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OHHAULDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENG_TYPE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EXUNITNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOUSID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SPINDID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEATID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOUSMAKE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SPINMAKE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEATMAKE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HRRUNLAST)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOUSNEW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOUSRECON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOUSTIMES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SPINNEW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SPINRECON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SPINTIMES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEATNEW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEATRECON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEATTIMES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STEMDIAE1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STEMDIAE2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STEMDIALT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMBUSF1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMBUSF2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMBUSF3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMBUSF4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMBUSLT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEALG1BE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEALG1AT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEALG1GR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEALG1LT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEATG2BE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEATG2AT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEATG2GR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEATG2LT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RECEG3BE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RECEG3AT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RECEG3LT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GYDBUSHC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GYDBUSHD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GYDBUSHREN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BYDBUSHLT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRCYLA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRCYLB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRCYLREN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRCYLLT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REMARKS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

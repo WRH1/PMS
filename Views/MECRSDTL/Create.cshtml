@@ -1,0 +1,179 @@
+﻿@model PMS.MECRSDTL
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>MECRSDTL</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MAINCODE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MAINCODE)
+            @Html.ValidationMessageFor(model => model.MAINCODE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PMSCODE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PMSCODE)
+            @Html.ValidationMessageFor(model => model.PMSCODE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OHHAULDT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OHHAULDT)
+            @Html.ValidationMessageFor(model => model.OHHAULDT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SLNO)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SLNO)
+            @Html.ValidationMessageFor(model => model.SLNO)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CL_LIMIT1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CL_LIMIT1)
+            @Html.ValidationMessageFor(model => model.CL_LIMIT1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CL_LIMIT2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CL_LIMIT2)
+            @Html.ValidationMessageFor(model => model.CL_LIMIT2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CL_LIMIT3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CL_LIMIT3)
+            @Html.ValidationMessageFor(model => model.CL_LIMIT3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CL_LIMIT4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CL_LIMIT4)
+            @Html.ValidationMessageFor(model => model.CL_LIMIT4)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CL_LIMIT5)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CL_LIMIT5)
+            @Html.ValidationMessageFor(model => model.CL_LIMIT5)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CL_LIMIT6)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CL_LIMIT6)
+            @Html.ValidationMessageFor(model => model.CL_LIMIT6)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CL_LIMIT7)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CL_LIMIT7)
+            @Html.ValidationMessageFor(model => model.CL_LIMIT7)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CL_LIMIT8)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CL_LIMIT8)
+            @Html.ValidationMessageFor(model => model.CL_LIMIT8)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CL_LIMIT9)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CL_LIMIT9)
+            @Html.ValidationMessageFor(model => model.CL_LIMIT9)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CL_LIMIT10)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CL_LIMIT10)
+            @Html.ValidationMessageFor(model => model.CL_LIMIT10)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CL_LIMIT11)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CL_LIMIT11)
+            @Html.ValidationMessageFor(model => model.CL_LIMIT11)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CL_LIMIT12)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CL_LIMIT12)
+            @Html.ValidationMessageFor(model => model.CL_LIMIT12)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EDITED)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EDITED)
+            @Html.ValidationMessageFor(model => model.EDITED)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EDITDT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EDITDT)
+            @Html.ValidationMessageFor(model => model.EDITDT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BKDT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BKDT)
+            @Html.ValidationMessageFor(model => model.BKDT)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

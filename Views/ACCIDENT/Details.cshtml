@@ -10,6 +10,13 @@
     <legend>ACCIDENT</legend>
 
     <div class="display-label">
+         @Html.DisplayNameFor(model => model.SRNUMB)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SRNUMB)
+    </div>
+
+    <div class="display-label">
          @Html.DisplayNameFor(model => model.SEVERITY)
     </div>
     <div class="display-field">
@@ -283,6 +290,6 @@
     </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

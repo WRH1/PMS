@@ -12,6 +12,9 @@
 <table>
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.SRNUMB)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.SEVERITY)
         </th>
         <th>
@@ -134,6 +137,9 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.SRNUMB)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.SEVERITY)
         </td>
         <td>
@@ -251,9 +257,9 @@
             @Html.DisplayFor(modelItem => item.BKDT)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
         </td>
     </tr>
 }

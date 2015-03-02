@@ -1,0 +1,85 @@
+﻿@model PMS.COMPITEM
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>COMPITEM</legend>
+
+        @Html.HiddenFor(model => model.PK)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MAINCAT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MAINCAT)
+            @Html.ValidationMessageFor(model => model.MAINCAT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SUBCAT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SUBCAT)
+            @Html.ValidationMessageFor(model => model.SUBCAT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NAME)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NAME)
+            @Html.ValidationMessageFor(model => model.NAME)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CONDITION)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CONDITION)
+            @Html.ValidationMessageFor(model => model.CONDITION)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TYPECODE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TYPECODE)
+            @Html.ValidationMessageFor(model => model.TYPECODE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CONTROL)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CONTROL)
+            @Html.ValidationMessageFor(model => model.CONTROL)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ORDCODE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ORDCODE)
+            @Html.ValidationMessageFor(model => model.ORDCODE)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

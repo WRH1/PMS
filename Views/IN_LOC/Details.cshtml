@@ -1,0 +1,29 @@
+﻿@model PMS.IN_LOC
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>IN_LOC</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DESCEND)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DESCEND)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TYPES)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TYPES)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

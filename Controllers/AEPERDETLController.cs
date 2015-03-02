@@ -79,7 +79,7 @@ namespace PMS.Controllers
             if (ModelState.IsValid)
             {
                 db.AEPERDETLs.Attach(aeperdetl);
-                db.ObjectStateManager.ChangeObjectState(aeperdetl, EntityState.Modified);
+                db.ObjectStateManager.ChangeObjectState(aeperdetl, System.Data.EntityState.Modified);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

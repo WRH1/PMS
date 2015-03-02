@@ -1,0 +1,109 @@
+﻿@model PMS.PUMPOVER
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>PUMPOVER</legend>
+
+        @Html.HiddenFor(model => model.PK)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PMSCODE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PMSCODE)
+            @Html.ValidationMessageFor(model => model.PMSCODE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DESCRIPT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DESCRIPT)
+            @Html.ValidationMessageFor(model => model.DESCRIPT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BEARINGNUM)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BEARINGNUM)
+            @Html.ValidationMessageFor(model => model.BEARINGNUM)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OHLDATE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OHLDATE)
+            @Html.ValidationMessageFor(model => model.OHLDATE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LASTSURV)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LASTSURV)
+            @Html.ValidationMessageFor(model => model.LASTSURV)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.REPODATE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.REPODATE)
+            @Html.ValidationMessageFor(model => model.REPODATE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.REMARKS)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.REMARKS)
+            @Html.ValidationMessageFor(model => model.REMARKS)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EDITED)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EDITED)
+            @Html.ValidationMessageFor(model => model.EDITED)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EDITDT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EDITDT)
+            @Html.ValidationMessageFor(model => model.EDITDT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BKDT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BKDT)
+            @Html.ValidationMessageFor(model => model.BKDT)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

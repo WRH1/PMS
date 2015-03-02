@@ -1,0 +1,141 @@
+﻿@model PMS.LOGBOOK
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>LOGBOOK</legend>
+
+        @Html.HiddenFor(model => model.PK)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DT)
+            @Html.ValidationMessageFor(model => model.DT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TYPECODE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TYPECODE)
+            @Html.ValidationMessageFor(model => model.TYPECODE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CATEGORY)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CATEGORY)
+            @Html.ValidationMessageFor(model => model.CATEGORY)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DATA1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DATA1)
+            @Html.ValidationMessageFor(model => model.DATA1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DATA2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DATA2)
+            @Html.ValidationMessageFor(model => model.DATA2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DATA3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DATA3)
+            @Html.ValidationMessageFor(model => model.DATA3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DATA4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DATA4)
+            @Html.ValidationMessageFor(model => model.DATA4)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DATA5)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DATA5)
+            @Html.ValidationMessageFor(model => model.DATA5)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DATA6)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DATA6)
+            @Html.ValidationMessageFor(model => model.DATA6)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DATA7)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DATA7)
+            @Html.ValidationMessageFor(model => model.DATA7)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DATA8)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DATA8)
+            @Html.ValidationMessageFor(model => model.DATA8)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EDITED)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EDITED)
+            @Html.ValidationMessageFor(model => model.EDITED)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EDITDT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EDITDT)
+            @Html.ValidationMessageFor(model => model.EDITDT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BKDT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BKDT)
+            @Html.ValidationMessageFor(model => model.BKDT)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

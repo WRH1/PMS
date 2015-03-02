@@ -1,0 +1,134 @@
+﻿@model PMS.BRKDOWN
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>BRKDOWN</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAINCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAINCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PMSCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PMSCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BRKDATE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BRKDATE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.REASON)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.REASON)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ACTION)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ACTION)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DELAY)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DELAY)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DAY)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DAY)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HOURS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HOURS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ASSIST)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ASSIST)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.REPAIRER)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.REPAIRER)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PORT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PORT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RUNHRS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RUNHRS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OVERHAUL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OVERHAUL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.INTERVAL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.INTERVAL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

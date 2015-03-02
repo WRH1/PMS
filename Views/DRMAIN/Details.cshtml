@@ -1,0 +1,50 @@
+﻿@model PMS.DRMAIN
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>DRMAIN</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRPCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRPCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRPNAME)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRPNAME)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

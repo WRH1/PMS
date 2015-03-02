@@ -1,0 +1,158 @@
+﻿@model PMS.MEPERDET
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>MEPERDET</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DATE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DATE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ITZ)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ITZ)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CYLNO)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CYLNO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PRESSMAX)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PRESSMAX)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PRESSCOM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PRESSCOM)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PRESMAXCOM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PRESMAXCOM)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MIP)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MIP)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FUELPINDEX)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FUELPINDEX)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FUELPVIT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FUELPVIT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EXHTEMP)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EXHTEMP)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IHP)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IHP)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LASTOHAUL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LASTOHAUL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UNITOHAUL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UNITOHAUL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NEWLINER)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NEWLINER)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.INJECHANGE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.INJECHANGE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EXHVALCHG)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EXHVALCHG)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NUM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NUM)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,99 @@
+﻿@model IEnumerable<PMS.DRITEM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ENV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DRILLITEM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ITEMNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DRILLCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GRPCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUBGRPCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REMARK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCRIPT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FREQ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DRILLITEM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ITEMNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DRILLCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GRPCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUBGRPCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REMARK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESCRIPT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FREQ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

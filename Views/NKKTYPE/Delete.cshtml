@@ -1,0 +1,39 @@
+﻿@model PMS.NKKTYPE
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>NKKTYPE</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NKKCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NKKCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NKKITEM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NKKITEM)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NKKDESC)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NKKDESC)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

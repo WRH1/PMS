@@ -3,7 +3,6 @@
   <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="ACCIDENTs" EntityType="PMSDataModel.ACCIDENT" />
     <EntitySet Name="ACCPICs" EntityType="PMSDataModel.ACCPIC" />
-    <EntitySet Name="MAINITEMs" EntityType="PMSDataModel.MAINITEM" />
     <EntitySet Name="AEBERHEDs" EntityType="PMSDataModel.AEBERHED" />
     <EntitySet Name="AECPBEDTs" EntityType="PMSDataModel.AECPBEDT" />
     <EntitySet Name="AECRPDTLs" EntityType="PMSDataModel.AECRPDTL" />
@@ -21,9 +20,9 @@
     <EntitySet Name="BRKDNPICs" EntityType="PMSDataModel.BRKDNPIC" />
     <EntitySet Name="BRKDOWNs" EntityType="PMSDataModel.BRKDOWN" />
     <EntitySet Name="COMPDETLs" EntityType="PMSDataModel.COMPDETL" />
-    <EntitySet Name="CompItems" EntityType="PMSDataModel.CompItem" />
-    <EntitySet Name="complogoes" EntityType="PMSDataModel.complogo" />
+    <EntitySet Name="COMPITEMs" EntityType="PMSDataModel.COMPITEM" />
     <EntitySet Name="COMPMSTs" EntityType="PMSDataModel.COMPMST" />
+    <EntitySet Name="CPMPLOGOes" EntityType="PMSDataModel.CPMPLOGO" />
     <EntitySet Name="CURRMASTs" EntityType="PMSDataModel.CURRMAST" />
     <EntitySet Name="CYL_COND_INSP" EntityType="PMSDataModel.CYL_COND_INSP" />
     <EntitySet Name="DBLTDETLs" EntityType="PMSDataModel.DBLTDETL" />
@@ -67,6 +66,7 @@
     <EntitySet Name="LINERPICs" EntityType="PMSDataModel.LINERPIC" />
     <EntitySet Name="LOGBOOKs" EntityType="PMSDataModel.LOGBOOK" />
     <EntitySet Name="MAINBKs" EntityType="PMSDataModel.MAINBK" />
+    <EntitySet Name="MAINITEMs" EntityType="PMSDataModel.MAINITEM" />
     <EntitySet Name="MAINMANUFs" EntityType="PMSDataModel.MAINMANUF" />
     <EntitySet Name="MAINMEGs" EntityType="PMSDataModel.MAINMEG" />
     <EntitySet Name="MAINSUBs" EntityType="PMSDataModel.MAINSUB" />
@@ -88,11 +88,11 @@
     <EntitySet Name="MOTMEGs" EntityType="PMSDataModel.MOTMEG" />
     <EntitySet Name="MSGDATAs" EntityType="PMSDataModel.MSGDATA" />
     <EntitySet Name="MSMs" EntityType="PMSDataModel.MSM" />
-    <EntitySet Name="mymenus" EntityType="PMSDataModel.mymenu" />
+    <EntitySet Name="MYMENUs" EntityType="PMSDataModel.MYMENU" />
     <EntitySet Name="NEARMISSes" EntityType="PMSDataModel.NEARMISS" />
     <EntitySet Name="NEAROFFs" EntityType="PMSDataModel.NEAROFF" />
     <EntitySet Name="NEARPICs" EntityType="PMSDataModel.NEARPIC" />
-    <EntitySet Name="NkkTypes" EntityType="PMSDataModel.NkkType" />
+    <EntitySet Name="NKKTYPEs" EntityType="PMSDataModel.NKKTYPE" />
     <EntitySet Name="OFFEXes" EntityType="PMSDataModel.OFFEX" />
     <EntitySet Name="OVRPMS" EntityType="PMSDataModel.OVRPM" />
     <EntitySet Name="PASSWORDs" EntityType="PMSDataModel.PASSWORD" />
@@ -104,7 +104,7 @@
     <EntitySet Name="PMSBKs" EntityType="PMSDataModel.PMSBK" />
     <EntitySet Name="PMSCONDs" EntityType="PMSDataModel.PMSCOND" />
     <EntitySet Name="PMSDESCs" EntityType="PMSDataModel.PMSDESC" />
-    <EntitySet Name="pmsflds" EntityType="PMSDataModel.pmsfld" />
+    <EntitySet Name="PMSFLDs" EntityType="PMSDataModel.PMSFLD" />
     <EntitySet Name="PMSHISTs" EntityType="PMSDataModel.PMSHIST" />
     <EntitySet Name="PMSITEMs" EntityType="PMSDataModel.PMSITEM" />
     <EntitySet Name="PMSJOBs" EntityType="PMSDataModel.PMSJOB" />
@@ -112,13 +112,14 @@
     <EntitySet Name="POSTPONDs" EntityType="PMSDataModel.POSTPOND" />
     <EntitySet Name="PUMPOVERs" EntityType="PMSDataModel.PUMPOVER" />
     <EntitySet Name="REP_ORDER" EntityType="PMSDataModel.REP_ORDER" />
+    <EntitySet Name="sysdiagrams" EntityType="PMSDataModel.sysdiagram" />
   </EntityContainer>
   <EntityType Name="ACCIDENT">
     <Key>
-      <PropertyRef Name="SRNUMB" />
       <PropertyRef Name="PK" />
     </Key>
-    <Property Type="String" Name="SRNUMB" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="PK" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SRNUMB" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Type="Decimal" Name="SEVERITY" Precision="1" Scale="0" />
     <Property Type="Decimal" Name="PROBABLE" Precision="1" Scale="0" />
     <Property Type="String" Name="SUBJECT" MaxLength="250" FixedLength="true" Unicode="false" />
@@ -158,51 +159,18 @@
     <Property Type="Boolean" Name="EDITED" />
     <Property Type="DateTime" Name="EDITDT" />
     <Property Type="DateTime" Name="BKDT" />
-    <Property Type="Int32" Name="PK" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="ACCPIC">
     <Key>
-      <PropertyRef Name="SRNUMB" />
       <PropertyRef Name="PK" />
     </Key>
-    <Property Type="String" Name="SRNUMB" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="PK" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SRNUMB" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Type="DateTime" Name="DATE" />
     <Property Type="String" Name="PICPATH" MaxLength="254" FixedLength="true" Unicode="false" />
     <Property Type="String" Name="TOOLTEXT" MaxLength="100" FixedLength="true" Unicode="false" />
     <Property Type="Boolean" Name="EDITED" />
     <Property Type="DateTime" Name="EDITDT" />
-    <Property Type="DateTime" Name="BKDT" />
-    <Property Type="Int32" Name="PK" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-  </EntityType>
-  <EntityType Name="MAINITEM">
-    <Key>
-      <PropertyRef Name="MAINCODE" />
-    </Key>
-    <Property Type="String" Name="MAINCODE" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
-    <Property Type="String" Name="MAINITEM1" MaxLength="40" FixedLength="true" Unicode="false" />
-    <Property Type="String" Name="SURVTYPE" MaxLength="1" FixedLength="true" Unicode="false" />
-    <Property Type="String" Name="M_P" MaxLength="1" FixedLength="true" Unicode="false" />
-    <Property Type="Decimal" Name="TOTHRS" Precision="7" Scale="0" />
-    <Property Type="Boolean" Name="ME" />
-    <Property Type="Decimal" Name="ORGDIA" Precision="6" Scale="2" />
-    <Property Type="Boolean" Name="AE" />
-    <Property Type="Decimal" Name="NUM" Precision="2" Scale="0" />
-    <Property Type="DateTime" Name="THU_DATE" />
-    <Property Type="Boolean" Name="SEPA" />
-    <Property Type="Boolean" Name="ACOMP" />
-    <Property Type="Boolean" Name="AL" />
-    <Property Type="Boolean" Name="PMPOHL" />
-    <Property Type="Boolean" Name="PMPRTN" />
-    <Property Type="Boolean" Name="MOTOHL" />
-    <Property Type="Boolean" Name="MOTRTN" />
-    <Property Type="Boolean" Name="EDITED" />
-    <Property Type="Boolean" Name="L_MGROUP" />
-    <Property Type="String" Name="MTCODE" MaxLength="8" FixedLength="true" Unicode="false" />
-    <Property Type="DateTime" Name="EDITDT" />
-    <Property Type="Boolean" Name="MES" />
-    <Property Type="String" Name="GRPMCODE" MaxLength="10" FixedLength="true" Unicode="false" />
-    <Property Type="Boolean" Name="OFFUPDT" />
-    <Property Type="Boolean" Name="SLF" />
     <Property Type="DateTime" Name="BKDT" />
   </EntityType>
   <EntityType Name="AEBERHED">
@@ -681,7 +649,7 @@
     <Property Type="Decimal" Name="UNITTOTHRS" Precision="10" Scale="0" />
     <Property Type="DateTime" Name="BKDT" />
   </EntityType>
-  <EntityType Name="CompItem">
+  <EntityType Name="COMPITEM">
     <Key>
       <PropertyRef Name="PK" />
     </Key>
@@ -693,13 +661,6 @@
     <Property Type="String" Name="TYPECODE" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Type="String" Name="CONTROL" MaxLength="20" FixedLength="true" Unicode="false" />
     <Property Type="String" Name="ORDCODE" MaxLength="2" FixedLength="true" Unicode="false" />
-  </EntityType>
-  <EntityType Name="complogo">
-    <Key>
-      <PropertyRef Name="PK" />
-    </Key>
-    <Property Type="Int32" Name="PK" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="LOGO" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="COMPMST">
     <Key>
@@ -723,6 +684,13 @@
     <Property Type="Boolean" Name="CANEDIT" />
     <Property Type="String" Name="WORK" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Type="DateTime" Name="BKDT" />
+  </EntityType>
+  <EntityType Name="CPMPLOGO">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Type="Int32" Name="PK" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="LOGO" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="CURRMAST">
     <Key>
@@ -1941,6 +1909,37 @@
     <Property Type="Boolean" Name="SLF" />
     <Property Type="DateTime" Name="BKDT" />
   </EntityType>
+  <EntityType Name="MAINITEM">
+    <Key>
+      <PropertyRef Name="MAINCODE" />
+    </Key>
+    <Property Type="String" Name="MAINCODE" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="MAINITEM1" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="SURVTYPE" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="M_P" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="TOTHRS" Precision="7" Scale="0" />
+    <Property Type="Boolean" Name="ME" />
+    <Property Type="Decimal" Name="ORGDIA" Precision="6" Scale="2" />
+    <Property Type="Boolean" Name="AE" />
+    <Property Type="Decimal" Name="NUM" Precision="2" Scale="0" />
+    <Property Type="DateTime" Name="THU_DATE" />
+    <Property Type="Boolean" Name="SEPA" />
+    <Property Type="Boolean" Name="ACOMP" />
+    <Property Type="Boolean" Name="AL" />
+    <Property Type="Boolean" Name="PMPOHL" />
+    <Property Type="Boolean" Name="PMPRTN" />
+    <Property Type="Boolean" Name="MOTOHL" />
+    <Property Type="Boolean" Name="MOTRTN" />
+    <Property Type="Boolean" Name="EDITED" />
+    <Property Type="Boolean" Name="L_MGROUP" />
+    <Property Type="String" Name="MTCODE" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="EDITDT" />
+    <Property Type="Boolean" Name="MES" />
+    <Property Type="String" Name="GRPMCODE" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="Boolean" Name="OFFUPDT" />
+    <Property Type="Boolean" Name="SLF" />
+    <Property Type="DateTime" Name="BKDT" />
+  </EntityType>
   <EntityType Name="MAINMANUF">
     <Key>
       <PropertyRef Name="PK" />
@@ -2709,7 +2708,7 @@
     <Property Type="String" Name="MSMCODE" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Type="String" Name="MSMDESC" MaxLength="85" FixedLength="true" Unicode="false" />
   </EntityType>
-  <EntityType Name="mymenu">
+  <EntityType Name="MYMENU">
     <Key>
       <PropertyRef Name="PK" />
     </Key>
@@ -2793,7 +2792,7 @@
     <Property Type="DateTime" Name="EDITDT" />
     <Property Type="DateTime" Name="BKDT" />
   </EntityType>
-  <EntityType Name="NkkType">
+  <EntityType Name="NKKTYPE">
     <Key>
       <PropertyRef Name="PK" />
     </Key>
@@ -3100,7 +3099,7 @@
     <Property Type="DateTime" Name="EDITDT" />
     <Property Type="DateTime" Name="BKDT" />
   </EntityType>
-  <EntityType Name="pmsfld">
+  <EntityType Name="PMSFLD">
     <Key>
       <PropertyRef Name="PK" />
     </Key>
@@ -3281,5 +3280,15 @@
     <Property Type="Boolean" Name="EDITED" />
     <Property Type="DateTime" Name="EDITDT" />
     <Property Type="DateTime" Name="BKDT" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="principal_id" Nullable="false" />
+    <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="version" />
+    <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
   </EntityType>
 </Schema>

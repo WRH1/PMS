@@ -1,0 +1,60 @@
+﻿@model PMS.MAINTYPE
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>MAINTYPE</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MTCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MTCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAINTYPE1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAINTYPE1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.L_DEFA)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.L_DEFA)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

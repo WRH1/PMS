@@ -12,7 +12,15 @@
     <fieldset>
         <legend>ACCPIC</legend>
 
-        @Html.HiddenFor(model => model.SRNUMB)
+        @Html.HiddenFor(model => model.PK)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SRNUMB)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SRNUMB)
+            @Html.ValidationMessageFor(model => model.SRNUMB)
+        </div>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.DATE)
@@ -61,8 +69,6 @@
             @Html.EditorFor(model => model.BKDT)
             @Html.ValidationMessageFor(model => model.BKDT)
         </div>
-
-        @Html.HiddenFor(model => model.PK)
 
         <p>
             <input type="submit" value="Save" />

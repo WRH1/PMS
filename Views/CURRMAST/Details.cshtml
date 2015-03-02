@@ -1,0 +1,36 @@
+﻿@model PMS.CURRMAST
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CURRMAST</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CURCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CURCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CURNAME)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CURNAME)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CURNUM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CURNUM)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

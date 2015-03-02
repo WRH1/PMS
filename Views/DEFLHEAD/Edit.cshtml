@@ -1,0 +1,125 @@
+﻿@model PMS.DEFLHEAD
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>DEFLHEAD</legend>
+
+        @Html.HiddenFor(model => model.PK)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MAINCODE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MAINCODE)
+            @Html.ValidationMessageFor(model => model.MAINCODE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PMSCODE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PMSCODE)
+            @Html.ValidationMessageFor(model => model.PMSCODE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DATE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DATE)
+            @Html.ValidationMessageFor(model => model.DATE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DRAFTFWD)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DRAFTFWD)
+            @Html.ValidationMessageFor(model => model.DRAFTFWD)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DRAFTAFT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DRAFTAFT)
+            @Html.ValidationMessageFor(model => model.DRAFTAFT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PORT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PORT)
+            @Html.ValidationMessageFor(model => model.PORT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CRANKTMP)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CRANKTMP)
+            @Html.ValidationMessageFor(model => model.CRANKTMP)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DEFMEASBY)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DEFMEASBY)
+            @Html.ValidationMessageFor(model => model.DEFMEASBY)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EDITED)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EDITED)
+            @Html.ValidationMessageFor(model => model.EDITED)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EDITDT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EDITDT)
+            @Html.ValidationMessageFor(model => model.EDITDT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.REMARKS)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.REMARKS)
+            @Html.ValidationMessageFor(model => model.REMARKS)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BKDT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BKDT)
+            @Html.ValidationMessageFor(model => model.BKDT)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

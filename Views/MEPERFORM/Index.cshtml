@@ -1,0 +1,1065 @@
+﻿@model IEnumerable<PMS.MEPERFORM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ITZ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FROMPORT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SLNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENGMAKER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MCR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MCRAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEADWT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DISPLACE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BAROMETER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FUELUSE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FODAYTANK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SULPHUR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CYLOILGRAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INDSPR1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INDSPR2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.POWER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SHAFTGEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SHAFTPOWER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CYLCONST)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PITCHSET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SPEEDSETAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SPCFUELCON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FUELSGRAV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FUELSGRAVT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FOTEMPINJ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FOVISINJ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FQS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VIT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TCOVERH1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TCOVERH2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TCOVERH3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EXTURBBE1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EXTURBAT1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EXTRUBBE2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EXTURBAT2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EXTRUBBE3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EXTURBAT3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRFILT1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRFILT2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRFILT3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRCOOLBE1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRCOOLAT1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRCOOLBE2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRCOOLAT2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRCOOLBE3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRCOOLAT3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CWCOOLBE1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CWCOOLAT1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CWCOOLBE2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CWCOOLAT2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CWCOOLBE3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CWCOOLAT3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CWBLOWBE1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CWBLOWAT1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CWBLOWBE2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CWBLOWAT2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CWBLOWBE3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CWBLOWAT3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OILGAS1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OILAIR1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OILGAS2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OILAIR2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OILGAS3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OILAIR3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRFILPRE1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRFILPRE2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRFILPRE3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRCOLPRE1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRCOLPRE2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRCOLPRE3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GASINTUR1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GASINTUR2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GASINTUR3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GASOUTTUR1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GASOUTTUR2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GASOUTTUR3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RPM1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RPM2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RPM3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOPPBRG1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOPPBRG2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOPPBRG3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOPPRATE1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOPPRATE2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOPPRATE3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PPBRGS1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PPBRGS2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PPBRGS3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HRSAIRFIL1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HRSAIRFIL2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HRSAIRFIL3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HRSAIRCOL1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HRSAIRCOL2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HRSAIRCOL3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TUWASHAIR1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TUWASHAIR2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TUWASHAIR3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TUWASHGAS1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TUWASHGAS2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TUWASHGAS3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENGROOMTB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEAWATER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCAVAIRBEL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MEFWINLET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MEFWOUTLET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PISTCOLMAX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PISTCOLMIN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOCOOLBF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOCOOLAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SWCOOLER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCAVAIRBP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FWMEPRES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PISTMEPRES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOMEPRES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SWCOOLPRES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CRANKPRESS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GASBOILER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CYLOILFEED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMMENTS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RPM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SLIP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SPEED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOADIND)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GOVIND)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FWD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AFT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WINDFORCE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RELDIR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEASTATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CURRENTS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TOPORT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SWELL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SWRELDIR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FOCONS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CYLCON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CYLOILSPE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SYSTCONS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TCOVERH4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EXTURBBE4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EXTURBAT4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRFILT4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRCOOLBE4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRCOOLAT4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CWCOOLBE4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CWCOOLAT4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CWBLOWBE4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CWBLOWAT4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OILGAS4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OILAIR4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRFILPRE4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIRCOLPRE4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GASINTUR4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GASOUTTUR4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RPM4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOPPBRG4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOPPRATE4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PPBRGS4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HRSAIRFIL4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HRSAIRCOL4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TUWASHAIR4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TUWASHGAS4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EXHFOLD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FAVOUR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AGAINST)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ATMTEMP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.THRUSTBEAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FUELOIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ITZ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FROMPORT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SLNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENGMAKER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MCR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MCRAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEADWT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DISPLACE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BAROMETER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FUELUSE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FODAYTANK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SULPHUR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CYLOILGRAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INDSPR1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INDSPR2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.POWER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SHAFTGEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SHAFTPOWER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CYLCONST)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PITCHSET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SPEEDSETAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SPCFUELCON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FUELSGRAV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FUELSGRAVT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FOTEMPINJ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FOVISINJ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FQS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VIT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TCOVERH1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TCOVERH2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TCOVERH3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EXTURBBE1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EXTURBAT1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EXTRUBBE2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EXTURBAT2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EXTRUBBE3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EXTURBAT3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRFILT1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRFILT2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRFILT3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRCOOLBE1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRCOOLAT1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRCOOLBE2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRCOOLAT2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRCOOLBE3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRCOOLAT3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CWCOOLBE1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CWCOOLAT1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CWCOOLBE2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CWCOOLAT2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CWCOOLBE3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CWCOOLAT3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CWBLOWBE1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CWBLOWAT1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CWBLOWBE2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CWBLOWAT2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CWBLOWBE3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CWBLOWAT3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OILGAS1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OILAIR1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OILGAS2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OILAIR2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OILGAS3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OILAIR3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRFILPRE1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRFILPRE2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRFILPRE3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRCOLPRE1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRCOLPRE2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRCOLPRE3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GASINTUR1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GASINTUR2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GASINTUR3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GASOUTTUR1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GASOUTTUR2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GASOUTTUR3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RPM1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RPM2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RPM3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOPPBRG1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOPPBRG2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOPPBRG3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOPPRATE1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOPPRATE2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOPPRATE3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PPBRGS1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PPBRGS2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PPBRGS3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HRSAIRFIL1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HRSAIRFIL2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HRSAIRFIL3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HRSAIRCOL1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HRSAIRCOL2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HRSAIRCOL3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TUWASHAIR1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TUWASHAIR2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TUWASHAIR3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TUWASHGAS1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TUWASHGAS2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TUWASHGAS3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENGROOMTB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEAWATER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCAVAIRBEL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MEFWINLET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MEFWOUTLET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PISTCOLMAX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PISTCOLMIN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOCOOLBF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOCOOLAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SWCOOLER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCAVAIRBP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FWMEPRES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PISTMEPRES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOMEPRES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SWCOOLPRES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CRANKPRESS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GASBOILER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CYLOILFEED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMMENTS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RPM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SLIP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SPEED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOADIND)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GOVIND)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FWD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AFT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WINDFORCE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RELDIR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEASTATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CURRENTS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TOPORT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SWELL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SWRELDIR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FOCONS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CYLCON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CYLOILSPE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SYSTCONS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TCOVERH4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EXTURBBE4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EXTURBAT4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRFILT4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRCOOLBE4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRCOOLAT4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CWCOOLBE4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CWCOOLAT4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CWBLOWBE4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CWBLOWAT4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OILGAS4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OILAIR4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRFILPRE4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIRCOLPRE4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GASINTUR4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GASOUTTUR4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RPM4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOPPBRG4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOPPRATE4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PPBRGS4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HRSAIRFIL4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HRSAIRCOL4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TUWASHAIR4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TUWASHGAS4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EXHFOLD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FAVOUR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AGAINST)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ATMTEMP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.THRUSTBEAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FUELOIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

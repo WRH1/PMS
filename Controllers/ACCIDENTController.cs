@@ -23,9 +23,9 @@ namespace PMS.Controllers
         //
         // GET: /ACCIDENT/Details/5
 
-        public ActionResult Details(string id = null)
+        public ActionResult Details(int id = 0)
         {
-            ACCIDENT accident = db.ACCIDENTs.Single(a => a.SRNUMB == id);
+            ACCIDENT accident = db.ACCIDENTs.Single(a => a.PK == id);
             if (accident == null)
             {
                 return HttpNotFound();
@@ -60,9 +60,9 @@ namespace PMS.Controllers
         //
         // GET: /ACCIDENT/Edit/5
 
-        public ActionResult Edit(string id = null)
+        public ActionResult Edit(int id = 0)
         {
-            ACCIDENT accident = db.ACCIDENTs.Single(a => a.SRNUMB == id);
+            ACCIDENT accident = db.ACCIDENTs.Single(a => a.PK == id);
             if (accident == null)
             {
                 return HttpNotFound();
@@ -79,7 +79,7 @@ namespace PMS.Controllers
             if (ModelState.IsValid)
             {
                 db.ACCIDENTs.Attach(accident);
-                db.ObjectStateManager.ChangeObjectState(accident, EntityState.Modified);
+                db.ObjectStateManager.ChangeObjectState(accident, System.Data.EntityState.Modified);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -89,9 +89,9 @@ namespace PMS.Controllers
         //
         // GET: /ACCIDENT/Delete/5
 
-        public ActionResult Delete(string id = null)
+        public ActionResult Delete(int id = 0)
         {
-            ACCIDENT accident = db.ACCIDENTs.Single(a => a.SRNUMB == id);
+            ACCIDENT accident = db.ACCIDENTs.Single(a => a.PK == id);
             if (accident == null)
             {
                 return HttpNotFound();
@@ -103,9 +103,9 @@ namespace PMS.Controllers
         // POST: /ACCIDENT/Delete/5
 
         [HttpPost, ActionName("Delete")]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
-            ACCIDENT accident = db.ACCIDENTs.Single(a => a.SRNUMB == id);
+            ACCIDENT accident = db.ACCIDENTs.Single(a => a.PK == id);
             db.ACCIDENTs.DeleteObject(accident);
             db.SaveChanges();
             return RedirectToAction("Index");

@@ -1,0 +1,81 @@
+﻿@model PMS.BKIMGDBF
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>BKIMGDBF</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SLNO)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SLNO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FROMDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FROMDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TODT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TODT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKBY)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKBY)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKFILENAME)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKFILENAME)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKPATH)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKPATH)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

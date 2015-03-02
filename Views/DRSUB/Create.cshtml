@@ -1,0 +1,123 @@
+﻿@model PMS.DRSUB
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>DRSUB</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ENV)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ENV)
+            @Html.ValidationMessageFor(model => model.ENV)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.GRPCODE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GRPCODE)
+            @Html.ValidationMessageFor(model => model.GRPCODE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SUBGRPCODE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SUBGRPCODE)
+            @Html.ValidationMessageFor(model => model.SUBGRPCODE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SUBGRPNAME)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SUBGRPNAME)
+            @Html.ValidationMessageFor(model => model.SUBGRPNAME)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SUBDETL)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SUBDETL)
+            @Html.ValidationMessageFor(model => model.SUBDETL)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FREQ)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FREQ)
+            @Html.ValidationMessageFor(model => model.FREQ)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SUBNO)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SUBNO)
+            @Html.ValidationMessageFor(model => model.SUBNO)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EDITED)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EDITED)
+            @Html.ValidationMessageFor(model => model.EDITED)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EDITDT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EDITDT)
+            @Html.ValidationMessageFor(model => model.EDITDT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DESCRIPT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DESCRIPT)
+            @Html.ValidationMessageFor(model => model.DESCRIPT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.REMARK)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.REMARK)
+            @Html.ValidationMessageFor(model => model.REMARK)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BKDT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BKDT)
+            @Html.ValidationMessageFor(model => model.BKDT)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

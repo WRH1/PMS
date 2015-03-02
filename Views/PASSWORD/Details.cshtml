@@ -1,0 +1,57 @@
+﻿@model PMS.PASSWORD
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>PASSWORD</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.USERS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.USERS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PASSWORD1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PASSWORD1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LEVEL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LEVEL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CATEGORY)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CATEGORY)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PERSON)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PERSON)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SHORTUSER)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SHORTUSER)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

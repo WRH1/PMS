@@ -4,7 +4,6 @@
     <EntitySetMapping Name="ACCIDENTs">
       <EntityTypeMapping TypeName="PMSDataModel.ACCIDENT">
         <MappingFragment StoreEntitySet="ACCIDENT">
-          <ScalarProperty Name="PK" ColumnName="PK" />
           <ScalarProperty Name="BKDT" ColumnName="BKDT" />
           <ScalarProperty Name="EDITDT" ColumnName="EDITDT" />
           <ScalarProperty Name="EDITED" ColumnName="EDITED" />
@@ -45,13 +44,13 @@
           <ScalarProperty Name="PROBABLE" ColumnName="PROBABLE" />
           <ScalarProperty Name="SEVERITY" ColumnName="SEVERITY" />
           <ScalarProperty Name="SRNUMB" ColumnName="SRNUMB" />
+          <ScalarProperty Name="PK" ColumnName="PK" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ACCPICs">
       <EntityTypeMapping TypeName="PMSDataModel.ACCPIC">
         <MappingFragment StoreEntitySet="ACCPIC">
-          <ScalarProperty Name="PK" ColumnName="PK" />
           <ScalarProperty Name="BKDT" ColumnName="BKDT" />
           <ScalarProperty Name="EDITDT" ColumnName="EDITDT" />
           <ScalarProperty Name="EDITED" ColumnName="EDITED" />
@@ -59,38 +58,7 @@
           <ScalarProperty Name="PICPATH" ColumnName="PICPATH" />
           <ScalarProperty Name="DATE" ColumnName="DATE" />
           <ScalarProperty Name="SRNUMB" ColumnName="SRNUMB" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="MAINITEMs">
-      <EntityTypeMapping TypeName="PMSDataModel.MAINITEM">
-        <MappingFragment StoreEntitySet="MAINITEM">
-          <ScalarProperty Name="BKDT" ColumnName="BKDT" />
-          <ScalarProperty Name="SLF" ColumnName="SLF" />
-          <ScalarProperty Name="OFFUPDT" ColumnName="OFFUPDT" />
-          <ScalarProperty Name="GRPMCODE" ColumnName="GRPMCODE" />
-          <ScalarProperty Name="MES" ColumnName="MES" />
-          <ScalarProperty Name="EDITDT" ColumnName="EDITDT" />
-          <ScalarProperty Name="MTCODE" ColumnName="MTCODE" />
-          <ScalarProperty Name="L_MGROUP" ColumnName="L_MGROUP" />
-          <ScalarProperty Name="EDITED" ColumnName="EDITED" />
-          <ScalarProperty Name="MOTRTN" ColumnName="MOTRTN" />
-          <ScalarProperty Name="MOTOHL" ColumnName="MOTOHL" />
-          <ScalarProperty Name="PMPRTN" ColumnName="PMPRTN" />
-          <ScalarProperty Name="PMPOHL" ColumnName="PMPOHL" />
-          <ScalarProperty Name="AL" ColumnName="AL" />
-          <ScalarProperty Name="ACOMP" ColumnName="ACOMP" />
-          <ScalarProperty Name="SEPA" ColumnName="SEPA" />
-          <ScalarProperty Name="THU_DATE" ColumnName="THU_DATE" />
-          <ScalarProperty Name="NUM" ColumnName="NUM" />
-          <ScalarProperty Name="AE" ColumnName="AE" />
-          <ScalarProperty Name="ORGDIA" ColumnName="ORGDIA" />
-          <ScalarProperty Name="ME" ColumnName="ME" />
-          <ScalarProperty Name="TOTHRS" ColumnName="TOTHRS" />
-          <ScalarProperty Name="M_P" ColumnName="M_P" />
-          <ScalarProperty Name="SURVTYPE" ColumnName="SURVTYPE" />
-          <ScalarProperty Name="MAINITEM1" ColumnName="MAINITEM" />
-          <ScalarProperty Name="MAINCODE" ColumnName="MAINCODE" />
+          <ScalarProperty Name="PK" ColumnName="PK" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -587,9 +555,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CompItems">
-      <EntityTypeMapping TypeName="PMSDataModel.CompItem">
-        <MappingFragment StoreEntitySet="CompItem">
+    <EntitySetMapping Name="COMPITEMs">
+      <EntityTypeMapping TypeName="PMSDataModel.COMPITEM">
+        <MappingFragment StoreEntitySet="COMPITEM">
           <ScalarProperty Name="ORDCODE" ColumnName="ORDCODE" />
           <ScalarProperty Name="CONTROL" ColumnName="CONTROL" />
           <ScalarProperty Name="TYPECODE" ColumnName="TYPECODE" />
@@ -597,14 +565,6 @@
           <ScalarProperty Name="NAME" ColumnName="NAME" />
           <ScalarProperty Name="SUBCAT" ColumnName="SUBCAT" />
           <ScalarProperty Name="MAINCAT" ColumnName="MAINCAT" />
-          <ScalarProperty Name="PK" ColumnName="PK" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="complogoes">
-      <EntityTypeMapping TypeName="PMSDataModel.complogo">
-        <MappingFragment StoreEntitySet="complogo">
-          <ScalarProperty Name="LOGO" ColumnName="LOGO" />
           <ScalarProperty Name="PK" ColumnName="PK" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -629,6 +589,14 @@
           <ScalarProperty Name="MAINCAT" ColumnName="MAINCAT" />
           <ScalarProperty Name="SUBCODE" ColumnName="SUBCODE" />
           <ScalarProperty Name="COMPCODE" ColumnName="COMPCODE" />
+          <ScalarProperty Name="PK" ColumnName="PK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CPMPLOGOes">
+      <EntityTypeMapping TypeName="PMSDataModel.CPMPLOGO">
+        <MappingFragment StoreEntitySet="CPMPLOGO">
+          <ScalarProperty Name="LOGO" ColumnName="LOGO" />
           <ScalarProperty Name="PK" ColumnName="PK" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -1893,6 +1861,38 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="MAINITEMs">
+      <EntityTypeMapping TypeName="PMSDataModel.MAINITEM">
+        <MappingFragment StoreEntitySet="MAINITEM">
+          <ScalarProperty Name="BKDT" ColumnName="BKDT" />
+          <ScalarProperty Name="SLF" ColumnName="SLF" />
+          <ScalarProperty Name="OFFUPDT" ColumnName="OFFUPDT" />
+          <ScalarProperty Name="GRPMCODE" ColumnName="GRPMCODE" />
+          <ScalarProperty Name="MES" ColumnName="MES" />
+          <ScalarProperty Name="EDITDT" ColumnName="EDITDT" />
+          <ScalarProperty Name="MTCODE" ColumnName="MTCODE" />
+          <ScalarProperty Name="L_MGROUP" ColumnName="L_MGROUP" />
+          <ScalarProperty Name="EDITED" ColumnName="EDITED" />
+          <ScalarProperty Name="MOTRTN" ColumnName="MOTRTN" />
+          <ScalarProperty Name="MOTOHL" ColumnName="MOTOHL" />
+          <ScalarProperty Name="PMPRTN" ColumnName="PMPRTN" />
+          <ScalarProperty Name="PMPOHL" ColumnName="PMPOHL" />
+          <ScalarProperty Name="AL" ColumnName="AL" />
+          <ScalarProperty Name="ACOMP" ColumnName="ACOMP" />
+          <ScalarProperty Name="SEPA" ColumnName="SEPA" />
+          <ScalarProperty Name="THU_DATE" ColumnName="THU_DATE" />
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="AE" ColumnName="AE" />
+          <ScalarProperty Name="ORGDIA" ColumnName="ORGDIA" />
+          <ScalarProperty Name="ME" ColumnName="ME" />
+          <ScalarProperty Name="TOTHRS" ColumnName="TOTHRS" />
+          <ScalarProperty Name="M_P" ColumnName="M_P" />
+          <ScalarProperty Name="SURVTYPE" ColumnName="SURVTYPE" />
+          <ScalarProperty Name="MAINITEM1" ColumnName="MAINITEM" />
+          <ScalarProperty Name="MAINCODE" ColumnName="MAINCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="MAINMANUFs">
       <EntityTypeMapping TypeName="PMSDataModel.MAINMANUF">
         <MappingFragment StoreEntitySet="MAINMANUF">
@@ -2682,9 +2682,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="mymenus">
-      <EntityTypeMapping TypeName="PMSDataModel.mymenu">
-        <MappingFragment StoreEntitySet="mymenu">
+    <EntitySetMapping Name="MYMENUs">
+      <EntityTypeMapping TypeName="PMSDataModel.MYMENU">
+        <MappingFragment StoreEntitySet="MYMENU">
           <ScalarProperty Name="DIS" ColumnName="DIS" />
           <ScalarProperty Name="APPRUN" ColumnName="APPRUN" />
           <ScalarProperty Name="ICONFILE" ColumnName="ICONFILE" />
@@ -2770,9 +2770,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="NkkTypes">
-      <EntityTypeMapping TypeName="PMSDataModel.NkkType">
-        <MappingFragment StoreEntitySet="NkkType">
+    <EntitySetMapping Name="NKKTYPEs">
+      <EntityTypeMapping TypeName="PMSDataModel.NKKTYPE">
+        <MappingFragment StoreEntitySet="NKKTYPE">
           <ScalarProperty Name="NKKDESC" ColumnName="NKKDESC" />
           <ScalarProperty Name="NKKITEM" ColumnName="NKKITEM" />
           <ScalarProperty Name="NKKCODE" ColumnName="NKKCODE" />
@@ -3089,9 +3089,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="pmsflds">
-      <EntityTypeMapping TypeName="PMSDataModel.pmsfld">
-        <MappingFragment StoreEntitySet="pmsflds">
+    <EntitySetMapping Name="PMSFLDs">
+      <EntityTypeMapping TypeName="PMSDataModel.PMSFLD">
+        <MappingFragment StoreEntitySet="PMSFLD">
           <ScalarProperty Name="TABLE_CAT" ColumnName="TABLE_CAT" />
           <ScalarProperty Name="TABLE_CMT" ColumnName="TABLE_CMT" />
           <ScalarProperty Name="DEL_TRIG" ColumnName="DEL_TRIG" />
@@ -3276,6 +3276,17 @@
           <ScalarProperty Name="REPNO" ColumnName="REPNO" />
           <ScalarProperty Name="REP_ON" ColumnName="REP_ON" />
           <ScalarProperty Name="PK" ColumnName="PK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="PMSDataModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -1,0 +1,67 @@
+﻿@model PMS.BACKUP
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>BACKUP</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BUPFILE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BUPFILE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BUPPATH)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BUPPATH)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BUPTYPE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BUPTYPE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BUPDATE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BUPDATE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BUPSRNUM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BUPSRNUM)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BUPEDA)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BUPEDA)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BUPREC)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BUPREC)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

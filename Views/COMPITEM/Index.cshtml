@@ -1,0 +1,69 @@
+﻿@model IEnumerable<PMS.COMPITEM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MAINCAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUBCAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CONDITION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TYPECODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CONTROL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ORDCODE)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAINCAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUBCAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CONDITION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TYPECODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CONTROL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ORDCODE)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

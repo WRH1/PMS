@@ -79,7 +79,7 @@ namespace PMS.Controllers
             if (ModelState.IsValid)
             {
                 db.AUXODET3.Attach(auxodet3);
-                db.ObjectStateManager.ChangeObjectState(auxodet3, EntityState.Modified);
+                db.ObjectStateManager.ChangeObjectState(auxodet3, System.Data.EntityState.Modified);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

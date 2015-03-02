@@ -1,0 +1,95 @@
+﻿@model PMS.MESPDTL
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>MESPDTL</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAINCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAINCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PMSCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PMSCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SPID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SPID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SPUSERID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SPUSERID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OHHRS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OHHRS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OHDATE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OHDATE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MEHRS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MEHRS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.REMARKS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.REMARKS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

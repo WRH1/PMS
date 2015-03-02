@@ -1,0 +1,519 @@
+﻿@model PMS.PISTON
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>PISTON</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAINCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAINCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PMSCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PMSCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DATE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DATE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PCLSID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PCLSID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PISTSINCE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PISTSINCE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PTOTHRS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PTOTHRS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CYLDCARB)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CYLDCARB)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CONDROD)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CONDROD)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BURNMAX)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BURNMAX)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PISTOPEN)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PISTOPEN)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PISTPTEST)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PISTPTEST)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PISTSPARE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PISTSPARE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.STUFFBOX)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.STUFFBOX)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HEIGHT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HEIGHT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OVERSIZE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OVERSIZE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SCRAPER)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SCRAPER)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SCRHEIGHT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SCRHEIGHT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LEFTPIST)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LEFTPIST)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LEFTHEIGHT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LEFTHEIGHT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RIGHTPIST)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RIGHTPIST)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FUTURE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FUTURE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RIGHTHEIGH)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RIGHTHEIGH)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PISTREPL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PISTREPL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PISTOVAL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PISTOVAL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PISTHRS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PISTHRS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.COMPRING1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.COMPRING1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.COMPRING2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.COMPRING2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.COMPRING3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.COMPRING3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.COMPRING4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.COMPRING4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.COMPRING5)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.COMPRING5)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SCRARING1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SCRARING1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SCRARING2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SCRARING2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SEALRING1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SEALRING1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SEALRING2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SEALRING2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.STUFFRING1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.STUFFRING1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.STUFFRING2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.STUFFRING2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.STUFFRING3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.STUFFRING3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.STUFFRING4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.STUFFRING4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.STUFFRING5)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.STUFFRING5)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MATERIAL1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MATERIAL1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MATERIAL2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MATERIAL2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MATERIAL3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MATERIAL3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MATERIAL4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MATERIAL4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MATERIAL5)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MATERIAL5)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MATERIAL6)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MATERIAL6)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MATERIAL7)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MATERIAL7)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PERINCHARG)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PERINCHARG)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.REMARK)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.REMARK)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FURREPAIR)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FURREPAIR)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAX1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAX1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAX2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAX2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAX3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAX3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAX4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAX4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAX5)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAX5)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MIN1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MIN1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MIN2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MIN2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MIN3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MIN3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MIN4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MIN4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MIN5)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MIN5)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AVG1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AVG1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AVG2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AVG2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AVG3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AVG3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AVG4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AVG4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AVG5)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AVG5)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.REASON)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.REASON)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LPISTOPEN)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LPISTOPEN)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EXVALVE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EXVALVE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FUELINJ)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FUELINJ)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MES)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MES)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

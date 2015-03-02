@@ -1,0 +1,249 @@
+﻿@model IEnumerable<PMS.LINER>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MAINCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PMSCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PS1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PS2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PS3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PS4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PS5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PS6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PS7)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PS8)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PS9)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PS10)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PS11)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PS12)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FA1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FA2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FA3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FA4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FA5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FA6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FA7)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FA8)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FA9)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FA10)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FA11)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FA12)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LINERNOW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TOTSH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.A_HRS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAXDIAPER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CYLOIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SPECCONS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAINCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PMSCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PS1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PS2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PS3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PS4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PS5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PS6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PS7)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PS8)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PS9)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PS10)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PS11)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PS12)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FA1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FA2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FA3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FA4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FA5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FA6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FA7)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FA8)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FA9)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FA10)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FA11)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FA12)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LINERNOW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TOTSH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.A_HRS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAXDIAPER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CYLOIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SPECCONS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

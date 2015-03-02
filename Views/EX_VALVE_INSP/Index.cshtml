@@ -1,0 +1,555 @@
+﻿@model IEnumerable<PMS.EX_VALVE_INSP>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TYPECODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BUILDER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENG_NO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NO_OF_CYL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENG_TYPE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VALVE_NO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VALVE_HRS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SPARE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TEST)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIS_CYL_NO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIS_DT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIS_HRS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CHECK_OHL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CHK_OHL_DT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CHK_PLACE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MOUN_CYLNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MOUN_DT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MOUN_HRS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_TYPE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_MARK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_S_MAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_DRAWNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_LST_OVL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_HRS_TOT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_CRACK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_BLOW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_ST_CON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_DNT_MRK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_STGRND)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_STGRND_H)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_DEP_CHM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_MX_DTHIK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_ANGDEP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_D_W_F_V)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_REM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_MARK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_B_MAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_D_U_MAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_S_MAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_ST_SUR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_DRAW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_LST_OVL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_HRS_TOT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_CRACKS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_BLOW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_ST_CON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_S_D_MAX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_AT_POS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_BRN_RATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_D_M_L)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_D_GRIND)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_D_HRS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_S_D_A_S)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_M_S_D_S)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_W_S_R)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_REM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.H_MARK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.H_DRAW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.H_LST_OVL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.H_HRS_TOT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.H_MINTOP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.H_MAXTOP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.H_MINBOT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.H_MAXBOT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.H_SP_G_H_T)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_MM_A_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_MM_A_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_MM_A_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_MM_B_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_MM_B_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_MM_B_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_MM_C_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_MM_C_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_MM_C_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_PO_A_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_PO_A_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_PO_A_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_PO_B_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_PO_B_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_PO_B_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_PO_C_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_PO_C_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_PO_C_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_REM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TYPECODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BUILDER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENG_NO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NO_OF_CYL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENG_TYPE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VALVE_NO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VALVE_HRS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SPARE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEST)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIS_CYL_NO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIS_DT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIS_HRS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHECK_OHL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHK_OHL_DT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHK_PLACE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MOUN_CYLNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MOUN_DT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MOUN_HRS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_TYPE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_MARK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_S_MAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_DRAWNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_LST_OVL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_HRS_TOT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_CRACK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_BLOW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_ST_CON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_DNT_MRK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_STGRND)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_STGRND_H)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_DEP_CHM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_MX_DTHIK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_ANGDEP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_D_W_F_V)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_REM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_MARK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_B_MAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_D_U_MAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_S_MAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_ST_SUR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_DRAW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_LST_OVL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_HRS_TOT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_CRACKS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_BLOW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_ST_CON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_S_D_MAX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_AT_POS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_BRN_RATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_D_M_L)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_D_GRIND)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_D_HRS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_S_D_A_S)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_M_S_D_S)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_W_S_R)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_REM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.H_MARK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.H_DRAW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.H_LST_OVL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.H_HRS_TOT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.H_MINTOP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.H_MAXTOP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.H_MINBOT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.H_MAXBOT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.H_SP_G_H_T)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_MM_A_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_MM_A_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_MM_A_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_MM_B_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_MM_B_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_MM_B_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_MM_C_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_MM_C_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_MM_C_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_PO_A_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_PO_A_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_PO_A_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_PO_B_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_PO_B_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_PO_B_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_PO_C_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_PO_C_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_PO_C_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_REM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

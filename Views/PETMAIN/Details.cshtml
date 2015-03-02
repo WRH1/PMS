@@ -1,0 +1,64 @@
+﻿@model PMS.PETMAIN
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>PETMAIN</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAINCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAINCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAINITEM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAINITEM)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.M_P)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.M_P)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TOTHRS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TOTHRS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

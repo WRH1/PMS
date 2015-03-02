@@ -23,9 +23,9 @@ namespace PMS.Controllers
         //
         // GET: /ACCPIC/Details/5
 
-        public ActionResult Details(string id = null)
+        public ActionResult Details(int id = 0)
         {
-            ACCPIC accpic = db.ACCPICs.Single(a => a.SRNUMB == id);
+            ACCPIC accpic = db.ACCPICs.Single(a => a.PK == id);
             if (accpic == null)
             {
                 return HttpNotFound();
@@ -60,9 +60,9 @@ namespace PMS.Controllers
         //
         // GET: /ACCPIC/Edit/5
 
-        public ActionResult Edit(string id = null)
+        public ActionResult Edit(int id = 0)
         {
-            ACCPIC accpic = db.ACCPICs.Single(a => a.SRNUMB == id);
+            ACCPIC accpic = db.ACCPICs.Single(a => a.PK == id);
             if (accpic == null)
             {
                 return HttpNotFound();
@@ -79,7 +79,7 @@ namespace PMS.Controllers
             if (ModelState.IsValid)
             {
                 db.ACCPICs.Attach(accpic);
-                db.ObjectStateManager.ChangeObjectState(accpic, EntityState.Modified);
+                db.ObjectStateManager.ChangeObjectState(accpic, System.Data.EntityState.Modified);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -89,9 +89,9 @@ namespace PMS.Controllers
         //
         // GET: /ACCPIC/Delete/5
 
-        public ActionResult Delete(string id = null)
+        public ActionResult Delete(int id = 0)
         {
-            ACCPIC accpic = db.ACCPICs.Single(a => a.SRNUMB == id);
+            ACCPIC accpic = db.ACCPICs.Single(a => a.PK == id);
             if (accpic == null)
             {
                 return HttpNotFound();
@@ -103,9 +103,9 @@ namespace PMS.Controllers
         // POST: /ACCPIC/Delete/5
 
         [HttpPost, ActionName("Delete")]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
-            ACCPIC accpic = db.ACCPICs.Single(a => a.SRNUMB == id);
+            ACCPIC accpic = db.ACCPICs.Single(a => a.PK == id);
             db.ACCPICs.DeleteObject(accpic);
             db.SaveChanges();
             return RedirectToAction("Index");

@@ -1,0 +1,885 @@
+﻿@model IEnumerable<PMS.ME_PERFORM_INSP>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TYPECODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENG_TYPE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BUILDER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENG_NO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YARD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LAYOUT_KW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LAYOUT_RPM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SIGN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TEST_NO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NO_OF_TC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.T_SRLNO_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.T_SRLNO_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.T_SRLNO_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.T_SRLNO_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NO_OF_CYL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BORE_M)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STROKE_M)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.T_MAKE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.T_TYPE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CYL_MEAN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.T_MAX_RPM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.T_MAX_TEMP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_SLIP_FAC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_DIAM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CYL_INT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CL_EXFRMME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CL_EXFRMGT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TC_SPEC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OBS_NO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FOIL_VISCO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FVISCO_AT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BUNK_STA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CYLOIL_BRN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CYLOIL_TYP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OIL_BRAND)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HEAT_VALVE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CIROIL_BRN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CIROIL_TYP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DENS_AT15)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUL_PER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TOIL_BRN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TOIL_TYP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TEST_DT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TEST_HOUR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOAD_PER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AMB_PRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENG_RPM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.T_RUN_HRS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GOV_INDX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SPD_SET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VIT_CONT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DRAFT_FORE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOG_KNOTS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WIND_M_S)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WIND_DIREC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EF_PWR_KW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IND_PWR_KW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EF_FUL_CON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IN_FUL_CON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DRAFT_AFT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OBS_KNOTS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WAVE_HIGHT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WAV_DIREC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AC_IN_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AC_IN_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AC_IN_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AC_IN_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AC_OUT_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AC_OUT_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AC_OUT_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AC_OUT_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ME_INLET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ME_S_W_TEM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ME_TO_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ME_TO_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ME_TO_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ME_TO_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EG_T_IN_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EG_T_IN_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EG_T_IN_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EG_T_IN_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EG_T_OU_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EG_T_OU_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EG_T_OU_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EG_T_OU_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EP_REC_BAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EP_REC_MM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EP_TO_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EP_TO_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EP_TO_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EP_TO_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TC_RPM_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TC_RPM_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TC_RPM_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TC_RPM_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AU_BL_ONOF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AU_VI_MM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SC_FLT_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SC_FLT_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SC_FLT_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SC_FLT_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SC_COL_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SC_COL_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SC_COL_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SC_COL_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SC_REC_BAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SC_REC_MM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SC_AIR_TEM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCT_IB_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCT_IB_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCT_IB_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCT_IB_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCT_BC_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCT_BC_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCT_BC_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCT_BC_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCT_AC_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCT_AC_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCT_AC_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCT_AC_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRE_SYSOIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRE_COLOIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRE_CAMOIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRE_TUROIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TEM_INENG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TEM_INCAM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TEM_OUTCAM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRE_THUSEG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TC_IN_BL_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TC_IN_BL_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TC_IN_BL_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TC_IN_BL_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TC_OU_BL_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TC_OU_BL_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TC_OU_BL_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TC_OU_BL_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FO_PRE_BF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FO_PRE_AF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TEM_BP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TYPECODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENG_TYPE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BUILDER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENG_NO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YARD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LAYOUT_KW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LAYOUT_RPM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SIGN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEST_NO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NO_OF_TC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.T_SRLNO_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.T_SRLNO_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.T_SRLNO_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.T_SRLNO_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NO_OF_CYL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BORE_M)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STROKE_M)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.T_MAKE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.T_TYPE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CYL_MEAN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.T_MAX_RPM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.T_MAX_TEMP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_SLIP_FAC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_DIAM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CYL_INT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CL_EXFRMME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CL_EXFRMGT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TC_SPEC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OBS_NO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FOIL_VISCO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FVISCO_AT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BUNK_STA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CYLOIL_BRN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CYLOIL_TYP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OIL_BRAND)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HEAT_VALVE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CIROIL_BRN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CIROIL_TYP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DENS_AT15)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUL_PER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TOIL_BRN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TOIL_TYP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEST_DT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEST_HOUR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOAD_PER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AMB_PRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENG_RPM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.T_RUN_HRS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GOV_INDX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SPD_SET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VIT_CONT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DRAFT_FORE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOG_KNOTS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WIND_M_S)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WIND_DIREC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EF_PWR_KW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IND_PWR_KW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EF_FUL_CON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IN_FUL_CON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DRAFT_AFT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OBS_KNOTS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WAVE_HIGHT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WAV_DIREC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AC_IN_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AC_IN_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AC_IN_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AC_IN_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AC_OUT_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AC_OUT_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AC_OUT_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AC_OUT_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ME_INLET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ME_S_W_TEM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ME_TO_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ME_TO_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ME_TO_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ME_TO_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EG_T_IN_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EG_T_IN_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EG_T_IN_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EG_T_IN_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EG_T_OU_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EG_T_OU_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EG_T_OU_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EG_T_OU_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EP_REC_BAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EP_REC_MM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EP_TO_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EP_TO_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EP_TO_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EP_TO_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TC_RPM_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TC_RPM_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TC_RPM_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TC_RPM_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AU_BL_ONOF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AU_VI_MM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SC_FLT_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SC_FLT_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SC_FLT_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SC_FLT_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SC_COL_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SC_COL_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SC_COL_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SC_COL_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SC_REC_BAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SC_REC_MM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SC_AIR_TEM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCT_IB_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCT_IB_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCT_IB_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCT_IB_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCT_BC_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCT_BC_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCT_BC_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCT_BC_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCT_AC_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCT_AC_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCT_AC_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCT_AC_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRE_SYSOIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRE_COLOIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRE_CAMOIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRE_TUROIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEM_INENG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEM_INCAM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEM_OUTCAM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRE_THUSEG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TC_IN_BL_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TC_IN_BL_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TC_IN_BL_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TC_IN_BL_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TC_OU_BL_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TC_OU_BL_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TC_OU_BL_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TC_OU_BL_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FO_PRE_BF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FO_PRE_AF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEM_BP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,93 @@
+﻿@model IEnumerable<PMS.MSGDATA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FUSERCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TUSERCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REMARKS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.READDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MSGID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MSGCONTID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUBJECT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FUSERCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TUSERCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REMARKS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.READDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MSGID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MSGCONTID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUBJECT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

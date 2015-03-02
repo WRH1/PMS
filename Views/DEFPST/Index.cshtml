@@ -1,0 +1,111 @@
+﻿@model IEnumerable<PMS.DEFPST>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SLNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REFNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TARGETDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PSTREM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PSTUSER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PSTPND)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SENT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENTDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OFFUPDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OLDTGDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEFPSTCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SLNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REFNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TARGETDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PSTREM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PSTUSER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PSTPND)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SENT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENTDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OFFUPDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OLDTGDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEFPSTCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

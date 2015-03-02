@@ -1,0 +1,71 @@
+﻿@model PMS.MAINTPIC
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>MAINTPIC</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAINCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAINCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PMSCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PMSCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MNTDATE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MNTDATE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PICPATH)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PICPATH)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TOOLTEXT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TOOLTEXT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

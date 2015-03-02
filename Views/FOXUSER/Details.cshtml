@@ -1,0 +1,57 @@
+﻿@model PMS.FOXUSER
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>FOXUSER</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TYPE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TYPE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NAME)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NAME)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.READONLY)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.READONLY)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CKVAL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CKVAL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DATA)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DATA)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UPDATED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UPDATED)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

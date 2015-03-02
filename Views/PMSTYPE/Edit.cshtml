@@ -1,0 +1,101 @@
+﻿@model PMS.PMSTYPE
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>PMSTYPE</legend>
+
+        @Html.HiddenFor(model => model.PK)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TYPECODE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TYPECODE)
+            @Html.ValidationMessageFor(model => model.TYPECODE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PMSTYPE1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PMSTYPE1)
+            @Html.ValidationMessageFor(model => model.PMSTYPE1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.L_DEFA)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.L_DEFA)
+            @Html.ValidationMessageFor(model => model.L_DEFA)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HISTCODE1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HISTCODE1)
+            @Html.ValidationMessageFor(model => model.HISTCODE1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HISTCODE2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HISTCODE2)
+            @Html.ValidationMessageFor(model => model.HISTCODE2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EDITED)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EDITED)
+            @Html.ValidationMessageFor(model => model.EDITED)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EDITDT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EDITDT)
+            @Html.ValidationMessageFor(model => model.EDITDT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MCAT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MCAT)
+            @Html.ValidationMessageFor(model => model.MCAT)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BKDT)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BKDT)
+            @Html.ValidationMessageFor(model => model.BKDT)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,1376 @@
+﻿@model PMS.CYL_COND_INSP
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>CYL_COND_INSP</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TYPECODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TYPECODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BUILDER)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BUILDER)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ENG_NO)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ENG_NO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CHECKEDBY)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CHECKEDBY)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NO_OF_CYL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NO_OF_CYL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ENG_TYPE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ENG_TYPE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MK)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MK)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ENG_HRS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ENG_HRS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ENTDATE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ENTDATE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UNITNO)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UNITNO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WKS_PR_PL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WKS_PR_PL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MCR)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MCR)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LUB_P_CON)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LUB_P_CON)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LUB_TYPE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LUB_TYPE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CYLOIL_CON)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CYLOIL_CON)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AT_LOAD)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AT_LOAD)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.COIL_TYPE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.COIL_TYPE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SULPH)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SULPH)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SHIP_POS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SHIP_POS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WE_COND)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WE_COND)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SEA_W_TEMP)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SEA_W_TEMP)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEP_PORT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEP_PORT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEP_DT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEP_DT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DES_PORT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DES_PORT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DES_DT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DES_DT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.L_HOURS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.L_HOURS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.INS_PIPE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.INS_PIPE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PC_RING)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PC_RING)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LINE_MATE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LINE_MATE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DRAW_NO)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DRAW_NO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FRAME_TYPE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FRAME_TYPE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LIN_COL_TY)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LIN_COL_TY)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PRO_MARK)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PRO_MARK)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WEAR_TYPE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WEAR_TYPE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LINE_HOND)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LINE_HOND)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CYL_COV_TD)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CYL_COV_TD)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TEMP_B_MT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TEMP_B_MT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SHIMS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SHIMS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPTH_0)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTH_0)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPTH_1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTH_1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPTH_2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTH_2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPTH_3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTH_3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPTH_4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTH_4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPTH_5)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTH_5)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPTH_6)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTH_6)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPTH_7)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTH_7)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPTH_8)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTH_8)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPTH_9)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTH_9)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPTH_10)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTH_10)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPTH_11)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTH_11)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPTH_A1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTH_A1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEPTH_A2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEPTH_A2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAFA_0)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAFA_0)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAFA_1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAFA_1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAFA_2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAFA_2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAFA_3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAFA_3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAFA_4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAFA_4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAFA_5)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAFA_5)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAFA_6)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAFA_6)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAFA_7)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAFA_7)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAFA_8)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAFA_8)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAFA_9)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAFA_9)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAFA_10)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAFA_10)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAFA_11)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAFA_11)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAFA_A1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAFA_A1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAFA_A2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAFA_A2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAEM_0)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAEM_0)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAEM_1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAEM_1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAEM_2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAEM_2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAEM_3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAEM_3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAEM_4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAEM_4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAEM_5)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAEM_5)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAEM_6)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAEM_6)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAEM_7)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAEM_7)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAEM_8)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAEM_8)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAEM_9)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAEM_9)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAEM_10)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAEM_10)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAEM_11)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAEM_11)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAEM_A1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAEM_A1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIAEM_A2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIAEM_A2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LINE_REM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LINE_REM)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BMATE_R1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BMATE_R1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BMATE_R2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BMATE_R2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BMATE_R3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BMATE_R3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BMATE_R4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BMATE_R4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.COAT_R1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.COAT_R1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.COAT_R2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.COAT_R2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.COAT_R3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.COAT_R3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.COAT_R4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.COAT_R4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.COATLS_R1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.COATLS_R1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.COATLS_R2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.COATLS_R2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.COATLS_R3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.COATLS_R3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.COATLS_R4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.COATLS_R4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PROF_R1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PROF_R1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PROF_R2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PROF_R2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PROF_R3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PROF_R3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PROF_R4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PROF_R4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MANUF_R1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MANUF_R1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MANUF_R2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MANUF_R2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MANUF_R3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MANUF_R3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MANUF_R4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MANUF_R4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LKTYP_R1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LKTYP_R1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LKTYP_R2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LKTYP_R2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LKTYP_R3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LKTYP_R3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LKTYP_R4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LKTYP_R4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CLGROV_R1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CLGROV_R1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CLGROV_R2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CLGROV_R2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CLGROV_R3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CLGROV_R3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CLGROV_R4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CLGROV_R4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CLGRWD_R1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CLGRWD_R1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CLGRWD_R2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CLGRWD_R2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CLGRWD_R3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CLGRWD_R3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CLGRWD_R4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CLGRWD_R4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BRK_R1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BRK_R1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BRK_R2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BRK_R2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BRK_R3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BRK_R3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BRK_R4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BRK_R4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RNG_DEG_A)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RNG_DEG_A)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RNG_DEG_B)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RNG_DEG_B)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RNG_DEG_C)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RNG_DEG_C)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RNG_DEG_D)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RNG_DEG_D)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RNG_DEG_E)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RNG_DEG_E)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG1_A)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG1_A)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG1_B)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG1_B)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG1_C)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG1_C)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG1_D)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG1_D)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG1_E)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG1_E)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GAP_RNG1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GAP_RNG1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG2_A)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG2_A)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG2_B)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG2_B)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG2_C)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG2_C)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG2_D)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG2_D)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG2_E)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG2_E)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GAP_RNG2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GAP_RNG2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG3_A)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG3_A)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG3_B)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG3_B)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG3_C)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG3_C)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG3_D)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG3_D)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG3_E)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG3_E)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GAP_RNG3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GAP_RNG3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG4_A)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG4_A)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG4_B)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG4_B)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG4_C)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG4_C)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG4_D)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG4_D)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.WDT_RNG4_E)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WDT_RNG4_E)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GAP_RNG4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GAP_RNG4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRV_RNG1_F)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRV_RNG1_F)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRV_RNG1_E)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRV_RNG1_E)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRV_RNG1_A)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRV_RNG1_A)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRV_RNG1_M)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRV_RNG1_M)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRV_RNG2_F)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRV_RNG2_F)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRV_RNG2_E)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRV_RNG2_E)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRV_RNG2_A)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRV_RNG2_A)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRV_RNG2_M)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRV_RNG2_M)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRV_RNG3_F)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRV_RNG3_F)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRV_RNG3_E)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRV_RNG3_E)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRV_RNG3_A)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRV_RNG3_A)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRV_RNG3_M)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRV_RNG3_M)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRV_RNG4_F)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRV_RNG4_F)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRV_RNG4_E)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRV_RNG4_E)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRV_RNG4_A)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRV_RNG4_A)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GRV_RNG4_M)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GRV_RNG4_M)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LST_OVL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LST_OVL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CRWN_HRS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CRWN_HRS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HI_TOPLOAD)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HI_TOPLOAD)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.R_PIS_OVL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.R_PIS_OVL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TEST)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TEST)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BNZ_RING)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BNZ_RING)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OROS_PIST)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OROS_PIST)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CHK_LIN_CO)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CHK_LIN_CO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAX_BURN1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAX_BURN1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PIST1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PIST1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAX_BURN2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAX_BURN2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PIST2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PIST2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAX_BURN3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAX_BURN3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PIST3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PIST3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LIN_CRACK)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LIN_CRACK)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LIN_SCUF)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LIN_SCUF)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LIN_LEAK)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LIN_LEAK)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PCRN_BURN)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PCRN_BURN)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PCRN_CRACK)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PCRN_CRACK)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PCRM_LEAK)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PCRM_LEAK)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PCRM_HGW)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PCRM_HGW)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PRING_BRK)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PRING_BRK)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PRING_COLL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PRING_COLL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PRING_SCUF)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PRING_SCUF)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PRING_STIC)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PRING_STIC)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PSKRT_LEAK)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PSKRT_LEAK)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PSKRT_SCUF)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PSKRT_SCUF)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PROD_SBOX)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PROD_SBOX)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PIS_REM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PIS_REM)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

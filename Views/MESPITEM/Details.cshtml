@@ -1,0 +1,92 @@
+﻿@model PMS.MESPITEM
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>MESPITEM</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAINCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAINCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PMSCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PMSCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SPID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SPID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SPUSERID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SPUSERID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TOTHRS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TOTHRS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OHDATE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OHDATE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TYPECODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TYPECODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SPARED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SPARED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

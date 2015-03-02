@@ -1,0 +1,123 @@
+﻿@model PMS.HATCHHEAD
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>HATCHHEAD</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MAINCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MAINCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PMSCODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PMSCODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TYPECODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TYPECODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DATE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DATE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.INSPBY)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.INSPBY)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PACKING)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PACKING)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OPENS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OPENS)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CLOSES)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CLOSES)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.REMARKS1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.REMARKS1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.REMARKS2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.REMARKS2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.REMARKS3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.REMARKS3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.REMARKS4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.REMARKS4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,71 @@
+﻿@model PMS.NEAROFF
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>NEAROFF</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OFFUSER)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OFFUSER)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OFFCOMM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OFFCOMM)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OFFCOMMDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OFFCOMMDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.REFNO)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.REFNO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITED)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITED)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITDT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UPDTREC)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UPDTREC)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BKDT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BKDT)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

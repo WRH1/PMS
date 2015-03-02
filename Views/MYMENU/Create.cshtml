@@ -1,0 +1,107 @@
+﻿@model PMS.MYMENU
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>MYMENU</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PARENTKEY)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PARENTKEY)
+            @Html.ValidationMessageFor(model => model.PARENTKEY)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CHILDKEY)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CHILDKEY)
+            @Html.ValidationMessageFor(model => model.CHILDKEY)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CATEGORY)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CATEGORY)
+            @Html.ValidationMessageFor(model => model.CATEGORY)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ITEMS)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ITEMS)
+            @Html.ValidationMessageFor(model => model.ITEMS)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.KEYCODE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.KEYCODE)
+            @Html.ValidationMessageFor(model => model.KEYCODE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PIC)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PIC)
+            @Html.ValidationMessageFor(model => model.PIC)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.REMARKS)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.REMARKS)
+            @Html.ValidationMessageFor(model => model.REMARKS)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ICONFILE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ICONFILE)
+            @Html.ValidationMessageFor(model => model.ICONFILE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.APPRUN)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.APPRUN)
+            @Html.ValidationMessageFor(model => model.APPRUN)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DIS)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DIS)
+            @Html.ValidationMessageFor(model => model.DIS)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

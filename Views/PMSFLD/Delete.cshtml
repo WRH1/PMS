@@ -1,0 +1,144 @@
+﻿@model PMS.PMSFLD
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>PMSFLD</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FIELD_NAME)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FIELD_NAME)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FIELD_NEW)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FIELD_NEW)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TABLE_NAME)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TABLE_NAME)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FIELD_TYPE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FIELD_TYPE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FIELD_LEN)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FIELD_LEN)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FIELD_DEC)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FIELD_DEC)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FIELD_NULL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FIELD_NULL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FIELD_NOCP)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FIELD_NOCP)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FIELD_DEFA)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FIELD_DEFA)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FIELD_RULE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FIELD_RULE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FIELD_ERR)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FIELD_ERR)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TABLE_RULE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TABLE_RULE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TABLE_ERR)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TABLE_ERR)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.INS_TRIG)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.INS_TRIG)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UPD_TRIG)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UPD_TRIG)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DEL_TRIG)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DEL_TRIG)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TABLE_CMT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TABLE_CMT)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TABLE_CAT)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TABLE_CAT)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

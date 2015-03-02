@@ -79,7 +79,7 @@ namespace PMS.Controllers
             if (ModelState.IsValid)
             {
                 db.AUDITs.Attach(audit);
-                db.ObjectStateManager.ChangeObjectState(audit, EntityState.Modified);
+                db.ObjectStateManager.ChangeObjectState(audit, System.Data.EntityState.Modified);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

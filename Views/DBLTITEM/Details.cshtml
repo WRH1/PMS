@@ -1,0 +1,36 @@
+﻿@model PMS.DBLTITEM
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>DBLTITEM</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CODE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CODE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NAME)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NAME)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UNDER)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UNDER)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

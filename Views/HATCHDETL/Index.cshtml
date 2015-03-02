@@ -1,0 +1,159 @@
+﻿@model IEnumerable<PMS.HATCHDETL>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MAINCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PMSCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TYPECODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TYPE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FLD1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FLD2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FLD3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FLD4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FLD5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FLD6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FLD7)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FLD8)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FLD9)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NARRATIVE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PHOTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REPAIRS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REPAIRDOCK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FOLLOWUP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAINCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PMSCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TYPECODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TYPE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FLD1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FLD2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FLD3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FLD4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FLD5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FLD6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FLD7)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FLD8)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FLD9)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NARRATIVE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PHOTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REPAIRS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REPAIRDOCK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FOLLOWUP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

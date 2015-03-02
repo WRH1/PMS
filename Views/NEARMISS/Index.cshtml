@@ -1,0 +1,237 @@
+﻿@model IEnumerable<PMS.NEARMISS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PEOPLE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PROPERTY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SRNUMB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MISSDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIMEMISS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCEND)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOCATION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SHASSIST)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LATITUDE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LONGITUDE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PORTNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NARRWHAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NARRWHY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REGULATION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SLIP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LAPSE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MISTAKE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PREVENT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEVERITY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PROBABLE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RISKFACTOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRIMCAUSE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SECONCAUS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PERSONAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MASTERCOMM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEPPORT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEPDATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESTPORT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ARRDATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ROUTVIOLAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EXCEPVIOLA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PEOPLE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PROPERTY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SRNUMB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MISSDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIMEMISS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESCEND)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOCATION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SHASSIST)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LATITUDE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LONGITUDE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PORTNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NARRWHAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NARRWHY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REGULATION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SLIP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LAPSE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MISTAKE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PREVENT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEVERITY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PROBABLE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RISKFACTOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRIMCAUSE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SECONCAUS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PERSONAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MASTERCOMM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEPPORT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEPDATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESTPORT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ARRDATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ROUTVIOLAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EXCEPVIOLA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

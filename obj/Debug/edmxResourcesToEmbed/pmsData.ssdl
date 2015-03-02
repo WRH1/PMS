@@ -20,9 +20,9 @@
     <EntitySet Name="BRKDNPIC" EntityType="PMSDataModel.Store.BRKDNPIC" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="BRKDOWN" EntityType="PMSDataModel.Store.BRKDOWN" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="COMPDETL" EntityType="PMSDataModel.Store.COMPDETL" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="CompItem" EntityType="PMSDataModel.Store.CompItem" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="complogo" EntityType="PMSDataModel.Store.complogo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="COMPITEM" EntityType="PMSDataModel.Store.COMPITEM" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="COMPMST" EntityType="PMSDataModel.Store.COMPMST" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CPMPLOGO" EntityType="PMSDataModel.Store.CPMPLOGO" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="CURRMAST" EntityType="PMSDataModel.Store.CURRMAST" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="CYL_COND_INSP" EntityType="PMSDataModel.Store.CYL_COND_INSP" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="DBLTDETL" EntityType="PMSDataModel.Store.DBLTDETL" store:Type="Tables" Schema="dbo" />
@@ -71,19 +71,7 @@
     <EntitySet Name="MAINMEG" EntityType="PMSDataModel.Store.MAINMEG" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="MAINSUB" EntityType="PMSDataModel.Store.MAINSUB" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="MAINTEN" EntityType="PMSDataModel.Store.MAINTEN" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="MAINTPIC" EntityType="PMSDataModel.Store.MAINTPIC" store:Type="Tables" store:Schema="dbo" store:Name="MAINTPIC">
-      <DefiningQuery>SELECT 
-      [MAINTPIC].[PK] AS [PK], 
-      [MAINTPIC].[MAINCODE] AS [MAINCODE], 
-      [MAINTPIC].[PMSCODE] AS [PMSCODE], 
-      [MAINTPIC].[MNTDATE] AS [MNTDATE], 
-      [MAINTPIC].[PICPATH] AS [PICPATH], 
-      [MAINTPIC].[TOOLTEXT] AS [TOOLTEXT], 
-      [MAINTPIC].[EDITDT] AS [EDITDT], 
-      [MAINTPIC].[EDITED] AS [EDITED], 
-      [MAINTPIC].[BKDT] AS [BKDT]
-      FROM [dbo].[MAINTPIC] AS [MAINTPIC]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="MAINTPIC" EntityType="PMSDataModel.Store.MAINTPIC" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="MAINTYPE" EntityType="PMSDataModel.Store.MAINTYPE" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="MANUF" EntityType="PMSDataModel.Store.MANUF" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ME_CYLINDER_INSP" EntityType="PMSDataModel.Store.ME_CYLINDER_INSP" store:Type="Tables" Schema="dbo" />
@@ -100,11 +88,11 @@
     <EntitySet Name="MOTMEG" EntityType="PMSDataModel.Store.MOTMEG" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="MSGDATA" EntityType="PMSDataModel.Store.MSGDATA" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="MSM" EntityType="PMSDataModel.Store.MSM" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="mymenu" EntityType="PMSDataModel.Store.mymenu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MYMENU" EntityType="PMSDataModel.Store.MYMENU" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="NEARMISS" EntityType="PMSDataModel.Store.NEARMISS" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="NEAROFF" EntityType="PMSDataModel.Store.NEAROFF" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="NEARPIC" EntityType="PMSDataModel.Store.NEARPIC" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="NkkType" EntityType="PMSDataModel.Store.NkkType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NKKTYPE" EntityType="PMSDataModel.Store.NKKTYPE" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="OFFEX" EntityType="PMSDataModel.Store.OFFEX" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="OVRPMS" EntityType="PMSDataModel.Store.OVRPMS" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PASSWORD" EntityType="PMSDataModel.Store.PASSWORD" store:Type="Tables" Schema="dbo" />
@@ -116,7 +104,7 @@
     <EntitySet Name="PMSBK" EntityType="PMSDataModel.Store.PMSBK" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PMSCOND" EntityType="PMSDataModel.Store.PMSCOND" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PMSDESC" EntityType="PMSDataModel.Store.PMSDESC" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="pmsflds" EntityType="PMSDataModel.Store.pmsflds" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PMSFLD" EntityType="PMSDataModel.Store.PMSFLD" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PMSHIST" EntityType="PMSDataModel.Store.PMSHIST" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PMSITEM" EntityType="PMSDataModel.Store.PMSITEM" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PMSJOB" EntityType="PMSDataModel.Store.PMSJOB" store:Type="Tables" Schema="dbo" />
@@ -124,6 +112,7 @@
     <EntitySet Name="POSTPOND" EntityType="PMSDataModel.Store.POSTPOND" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PUMPOVER" EntityType="PMSDataModel.Store.PUMPOVER" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="REP_ORDER" EntityType="PMSDataModel.Store.REP_ORDER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="PMSDataModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
   </EntityContainer>
   <EntityType Name="ACCIDENT">
     <Key>
@@ -660,7 +649,7 @@
     <Property Name="UNITTOTHRS" Type="numeric" Precision="10" />
     <Property Name="BKDT" Type="date" />
   </EntityType>
-  <EntityType Name="CompItem">
+  <EntityType Name="COMPITEM">
     <Key>
       <PropertyRef Name="PK" />
     </Key>
@@ -672,13 +661,6 @@
     <Property Name="TYPECODE" Type="char" MaxLength="10" />
     <Property Name="CONTROL" Type="char" MaxLength="20" />
     <Property Name="ORDCODE" Type="char" MaxLength="2" />
-  </EntityType>
-  <EntityType Name="complogo">
-    <Key>
-      <PropertyRef Name="PK" />
-    </Key>
-    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="LOGO" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="COMPMST">
     <Key>
@@ -702,6 +684,13 @@
     <Property Name="CANEDIT" Type="bit" />
     <Property Name="WORK" Type="varchar(max)" />
     <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="CPMPLOGO">
+    <Key>
+      <PropertyRef Name="PK" />
+    </Key>
+    <Property Name="PK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LOGO" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="CURRMAST">
     <Key>
@@ -2042,9 +2031,6 @@
     <Property Name="BKDT" Type="date" />
     <Property Name="NONSCH" Type="bit" />
   </EntityType>
-  <!--Errors Found During Generation:
-      warning 6002: The table/view 'PMSData.dbo.MAINTPIC' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
   <EntityType Name="MAINTPIC">
     <Key>
       <PropertyRef Name="PK" />
@@ -2722,7 +2708,7 @@
     <Property Name="MSMCODE" Type="char" MaxLength="10" />
     <Property Name="MSMDESC" Type="char" MaxLength="85" />
   </EntityType>
-  <EntityType Name="mymenu">
+  <EntityType Name="MYMENU">
     <Key>
       <PropertyRef Name="PK" />
     </Key>
@@ -2806,7 +2792,7 @@
     <Property Name="EDITDT" Type="date" />
     <Property Name="BKDT" Type="date" />
   </EntityType>
-  <EntityType Name="NkkType">
+  <EntityType Name="NKKTYPE">
     <Key>
       <PropertyRef Name="PK" />
     </Key>
@@ -3113,7 +3099,7 @@
     <Property Name="EDITDT" Type="date" />
     <Property Name="BKDT" Type="date" />
   </EntityType>
-  <EntityType Name="pmsflds">
+  <EntityType Name="PMSFLD">
     <Key>
       <PropertyRef Name="PK" />
     </Key>
@@ -3294,5 +3280,15 @@
     <Property Name="EDITED" Type="bit" />
     <Property Name="EDITDT" Type="date" />
     <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
 </Schema>

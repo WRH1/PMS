@@ -1,0 +1,64 @@
+﻿@model PMS.BACKUP
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>BACKUP</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BUPFILE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BUPFILE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BUPPATH)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BUPPATH)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BUPTYPE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BUPTYPE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BUPDATE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BUPDATE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BUPSRNUM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BUPSRNUM)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BUPEDA)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BUPEDA)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BUPREC)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BUPREC)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,459 @@
+﻿@model IEnumerable<PMS.PISTON>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MAINCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PMSCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PCLSID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PISTSINCE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PTOTHRS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CYLDCARB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CONDROD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BURNMAX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PISTOPEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PISTPTEST)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PISTSPARE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STUFFBOX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HEIGHT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OVERSIZE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCRAPER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCRHEIGHT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LEFTPIST)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LEFTHEIGHT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RIGHTPIST)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FUTURE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RIGHTHEIGH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PISTREPL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PISTOVAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PISTHRS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMPRING1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMPRING2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMPRING3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMPRING4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMPRING5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCRARING1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SCRARING2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEALRING1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEALRING2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STUFFRING1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STUFFRING2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STUFFRING3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STUFFRING4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STUFFRING5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MATERIAL1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MATERIAL2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MATERIAL3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MATERIAL4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MATERIAL5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MATERIAL6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MATERIAL7)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PERINCHARG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REMARK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FURREPAIR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAX1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAX2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAX3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAX4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAX5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MIN1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MIN2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MIN3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MIN4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MIN5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AVG1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AVG2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AVG3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AVG4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AVG5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REASON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LPISTOPEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EXVALVE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FUELINJ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAINCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PMSCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PCLSID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PISTSINCE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PTOTHRS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CYLDCARB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CONDROD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BURNMAX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PISTOPEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PISTPTEST)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PISTSPARE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STUFFBOX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HEIGHT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OVERSIZE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCRAPER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCRHEIGHT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LEFTPIST)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LEFTHEIGHT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RIGHTPIST)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FUTURE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RIGHTHEIGH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PISTREPL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PISTOVAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PISTHRS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMPRING1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMPRING2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMPRING3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMPRING4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMPRING5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCRARING1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SCRARING2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEALRING1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEALRING2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STUFFRING1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STUFFRING2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STUFFRING3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STUFFRING4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STUFFRING5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MATERIAL1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MATERIAL2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MATERIAL3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MATERIAL4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MATERIAL5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MATERIAL6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MATERIAL7)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PERINCHARG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REMARK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FURREPAIR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAX1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAX2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAX3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAX4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAX5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MIN1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MIN2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MIN3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MIN4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MIN5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AVG1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AVG2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AVG3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AVG4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AVG5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REASON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LPISTOPEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EXVALVE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FUELINJ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

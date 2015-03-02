@@ -13,6 +13,14 @@
         <legend>ACCIDENT</legend>
 
         <div class="editor-label">
+            @Html.LabelFor(model => model.SRNUMB)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SRNUMB)
+            @Html.ValidationMessageFor(model => model.SRNUMB)
+        </div>
+
+        <div class="editor-label">
             @Html.LabelFor(model => model.SEVERITY)
         </div>
         <div class="editor-field">

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<PMS.MSM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CATAGORY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GRPCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GRPNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUBGRPCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUBGRPNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MSMCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MSMDESC)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CATAGORY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GRPCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GRPNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUBGRPCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUBGRPNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MSMCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MSMDESC)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

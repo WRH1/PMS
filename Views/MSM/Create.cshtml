@@ -1,0 +1,83 @@
+﻿@model PMS.MSM
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>MSM</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CATAGORY)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CATAGORY)
+            @Html.ValidationMessageFor(model => model.CATAGORY)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.GRPCODE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GRPCODE)
+            @Html.ValidationMessageFor(model => model.GRPCODE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.GRPNAME)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GRPNAME)
+            @Html.ValidationMessageFor(model => model.GRPNAME)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SUBGRPCODE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SUBGRPCODE)
+            @Html.ValidationMessageFor(model => model.SUBGRPCODE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SUBGRPNAME)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SUBGRPNAME)
+            @Html.ValidationMessageFor(model => model.SUBGRPNAME)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MSMCODE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MSMCODE)
+            @Html.ValidationMessageFor(model => model.MSMCODE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MSMDESC)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MSMDESC)
+            @Html.ValidationMessageFor(model => model.MSMDESC)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

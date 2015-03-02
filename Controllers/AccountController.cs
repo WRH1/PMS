@@ -17,6 +17,8 @@ namespace PMS.Controllers
     [InitializeSimpleMembership]
     public class AccountController : Controller
     {
+        private Entities db = new Entities();
+
         //
         // GET: /Account/Login
 
@@ -35,8 +37,9 @@ namespace PMS.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginModel model, string returnUrl)
         {
-            if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
+            if (ModelState.IsValid)
             {
+                //var loggedInUser = db.SPDTs.SingleOrDefault(u => u.USERNAME == model.UserName && u.PASSWORD == model.Password);
                 return RedirectToLocal(returnUrl);
             }
 

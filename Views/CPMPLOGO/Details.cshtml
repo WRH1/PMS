@@ -1,0 +1,22 @@
+﻿@model PMS.CPMPLOGO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CPMPLOGO</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LOGO)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LOGO)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

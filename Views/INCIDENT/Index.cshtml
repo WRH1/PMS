@@ -1,0 +1,435 @@
+﻿@model IEnumerable<PMS.INCIDENT>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SRNUMB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PROP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENVI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BUSI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEVERITY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PROBABLE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RISKFACTOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUBJECT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ACCDATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GMT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEPPORT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEPDATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESTPORT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ARRDATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PORTNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LATITUDE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LONGITUDE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TASKINVOL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOCATION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ACCTYPE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRIMCAUSE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SECONCAUS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PERSONAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAINCAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUBCAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DDAYS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DHRS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DMINS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DREASON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MHOURLOSTD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MHOURLOSTH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MHOURLOSTM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEVIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OFFHIRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SHOREA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REPTYPE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EVENTS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CAUSEWHY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REGULATION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ROUTVIOLAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EXCEPVIOLA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SLIP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LAPSE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MISTAKE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REMARKDAMAGE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REPLACE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OFFHCOST)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VDELAYCOST)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MANHLCOST)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEVIATCOST)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REPAIRS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MISCEXPCOS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TOTALS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MISCREASON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DETLOVR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ATTCHSURV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ATTCHMAST)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ATTCHLOG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ATCHPHOTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MASTERNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CENAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REPODATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MASTERCOMM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITED)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BKDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SRNUMB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PROP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENVI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BUSI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEVERITY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PROBABLE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RISKFACTOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUBJECT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ACCDATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GMT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEPPORT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEPDATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESTPORT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ARRDATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PORTNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LATITUDE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LONGITUDE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TASKINVOL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOCATION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ACCTYPE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRIMCAUSE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SECONCAUS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PERSONAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAINCAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUBCAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DDAYS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DHRS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DMINS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DREASON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MHOURLOSTD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MHOURLOSTH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MHOURLOSTM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEVIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OFFHIRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SHOREA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REPTYPE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EVENTS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CAUSEWHY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REGULATION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ROUTVIOLAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EXCEPVIOLA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SLIP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LAPSE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MISTAKE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REMARKDAMAGE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REPLACE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OFFHCOST)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VDELAYCOST)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MANHLCOST)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEVIATCOST)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REPAIRS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MISCEXPCOS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TOTALS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MISCREASON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DETLOVR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ATTCHSURV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ATTCHMAST)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ATTCHLOG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ATCHPHOTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MASTERNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CENAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REPODATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MASTERCOMM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITED)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BKDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PK }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PK }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PK })
+        </td>
+    </tr>
+}
+
+</table>

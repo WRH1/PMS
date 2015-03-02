@@ -100,22 +100,6 @@ namespace PMS
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<MAINITEM> MAINITEMs
-        {
-            get
-            {
-                if ((_MAINITEMs == null))
-                {
-                    _MAINITEMs = base.CreateObjectSet<MAINITEM>("MAINITEMs");
-                }
-                return _MAINITEMs;
-            }
-        }
-        private ObjectSet<MAINITEM> _MAINITEMs;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<AEBERHED> AEBERHEDs
         {
             get
@@ -388,34 +372,18 @@ namespace PMS
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<CompItem> CompItems
+        public ObjectSet<COMPITEM> COMPITEMs
         {
             get
             {
-                if ((_CompItems == null))
+                if ((_COMPITEMs == null))
                 {
-                    _CompItems = base.CreateObjectSet<CompItem>("CompItems");
+                    _COMPITEMs = base.CreateObjectSet<COMPITEM>("COMPITEMs");
                 }
-                return _CompItems;
+                return _COMPITEMs;
             }
         }
-        private ObjectSet<CompItem> _CompItems;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<complogo> complogoes
-        {
-            get
-            {
-                if ((_complogoes == null))
-                {
-                    _complogoes = base.CreateObjectSet<complogo>("complogoes");
-                }
-                return _complogoes;
-            }
-        }
-        private ObjectSet<complogo> _complogoes;
+        private ObjectSet<COMPITEM> _COMPITEMs;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -432,6 +400,22 @@ namespace PMS
             }
         }
         private ObjectSet<COMPMST> _COMPMSTs;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<CPMPLOGO> CPMPLOGOes
+        {
+            get
+            {
+                if ((_CPMPLOGOes == null))
+                {
+                    _CPMPLOGOes = base.CreateObjectSet<CPMPLOGO>("CPMPLOGOes");
+                }
+                return _CPMPLOGOes;
+            }
+        }
+        private ObjectSet<CPMPLOGO> _CPMPLOGOes;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1124,6 +1108,22 @@ namespace PMS
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<MAINITEM> MAINITEMs
+        {
+            get
+            {
+                if ((_MAINITEMs == null))
+                {
+                    _MAINITEMs = base.CreateObjectSet<MAINITEM>("MAINITEMs");
+                }
+                return _MAINITEMs;
+            }
+        }
+        private ObjectSet<MAINITEM> _MAINITEMs;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<MAINMANUF> MAINMANUFs
         {
             get
@@ -1460,18 +1460,18 @@ namespace PMS
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<mymenu> mymenus
+        public ObjectSet<MYMENU> MYMENUs
         {
             get
             {
-                if ((_mymenus == null))
+                if ((_MYMENUs == null))
                 {
-                    _mymenus = base.CreateObjectSet<mymenu>("mymenus");
+                    _MYMENUs = base.CreateObjectSet<MYMENU>("MYMENUs");
                 }
-                return _mymenus;
+                return _MYMENUs;
             }
         }
-        private ObjectSet<mymenu> _mymenus;
+        private ObjectSet<MYMENU> _MYMENUs;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1524,18 +1524,18 @@ namespace PMS
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<NkkType> NkkTypes
+        public ObjectSet<NKKTYPE> NKKTYPEs
         {
             get
             {
-                if ((_NkkTypes == null))
+                if ((_NKKTYPEs == null))
                 {
-                    _NkkTypes = base.CreateObjectSet<NkkType>("NkkTypes");
+                    _NKKTYPEs = base.CreateObjectSet<NKKTYPE>("NKKTYPEs");
                 }
-                return _NkkTypes;
+                return _NKKTYPEs;
             }
         }
-        private ObjectSet<NkkType> _NkkTypes;
+        private ObjectSet<NKKTYPE> _NKKTYPEs;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1716,18 +1716,18 @@ namespace PMS
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<pmsfld> pmsflds
+        public ObjectSet<PMSFLD> PMSFLDs
         {
             get
             {
-                if ((_pmsflds == null))
+                if ((_PMSFLDs == null))
                 {
-                    _pmsflds = base.CreateObjectSet<pmsfld>("pmsflds");
+                    _PMSFLDs = base.CreateObjectSet<PMSFLD>("PMSFLDs");
                 }
-                return _pmsflds;
+                return _PMSFLDs;
             }
         }
-        private ObjectSet<pmsfld> _pmsflds;
+        private ObjectSet<PMSFLD> _PMSFLDs;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1840,6 +1840,22 @@ namespace PMS
             }
         }
         private ObjectSet<REP_ORDER> _REP_ORDER;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<sysdiagram> sysdiagrams
+        {
+            get
+            {
+                if ((_sysdiagrams == null))
+                {
+                    _sysdiagrams = base.CreateObjectSet<sysdiagram>("sysdiagrams");
+                }
+                return _sysdiagrams;
+            }
+        }
+        private ObjectSet<sysdiagram> _sysdiagrams;
 
         #endregion
 
@@ -1859,14 +1875,6 @@ namespace PMS
         public void AddToACCPICs(ACCPIC aCCPIC)
         {
             base.AddObject("ACCPICs", aCCPIC);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the MAINITEMs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToMAINITEMs(MAINITEM mAINITEM)
-        {
-            base.AddObject("MAINITEMs", mAINITEM);
         }
     
         /// <summary>
@@ -2006,19 +2014,11 @@ namespace PMS
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the CompItems EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the COMPITEMs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToCompItems(CompItem compItem)
+        public void AddToCOMPITEMs(COMPITEM cOMPITEM)
         {
-            base.AddObject("CompItems", compItem);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the complogoes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddTocomplogoes(complogo complogo)
-        {
-            base.AddObject("complogoes", complogo);
+            base.AddObject("COMPITEMs", cOMPITEM);
         }
     
         /// <summary>
@@ -2027,6 +2027,14 @@ namespace PMS
         public void AddToCOMPMSTs(COMPMST cOMPMST)
         {
             base.AddObject("COMPMSTs", cOMPMST);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the CPMPLOGOes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToCPMPLOGOes(CPMPLOGO cPMPLOGO)
+        {
+            base.AddObject("CPMPLOGOes", cPMPLOGO);
         }
     
         /// <summary>
@@ -2374,6 +2382,14 @@ namespace PMS
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the MAINITEMs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToMAINITEMs(MAINITEM mAINITEM)
+        {
+            base.AddObject("MAINITEMs", mAINITEM);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the MAINMANUFs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToMAINMANUFs(MAINMANUF mAINMANUF)
@@ -2542,11 +2558,11 @@ namespace PMS
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the mymenus EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the MYMENUs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTomymenus(mymenu mymenu)
+        public void AddToMYMENUs(MYMENU mYMENU)
         {
-            base.AddObject("mymenus", mymenu);
+            base.AddObject("MYMENUs", mYMENU);
         }
     
         /// <summary>
@@ -2574,11 +2590,11 @@ namespace PMS
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the NkkTypes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the NKKTYPEs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToNkkTypes(NkkType nkkType)
+        public void AddToNKKTYPEs(NKKTYPE nKKTYPE)
         {
-            base.AddObject("NkkTypes", nkkType);
+            base.AddObject("NKKTYPEs", nKKTYPE);
         }
     
         /// <summary>
@@ -2670,11 +2686,11 @@ namespace PMS
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the pmsflds EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the PMSFLDs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTopmsflds(pmsfld pmsfld)
+        public void AddToPMSFLDs(PMSFLD pMSFLD)
         {
-            base.AddObject("pmsflds", pmsfld);
+            base.AddObject("PMSFLDs", pMSFLD);
         }
     
         /// <summary>
@@ -2732,6 +2748,14 @@ namespace PMS
         {
             base.AddObject("REP_ORDER", rEP_ORDER);
         }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the sysdiagrams EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTosysdiagrams(sysdiagram sysdiagram)
+        {
+            base.AddObject("sysdiagrams", sysdiagram);
+        }
 
         #endregion
 
@@ -2754,12 +2778,10 @@ namespace PMS
         /// <summary>
         /// Create a new ACCIDENT object.
         /// </summary>
-        /// <param name="sRNUMB">Initial value of the SRNUMB property.</param>
         /// <param name="pK">Initial value of the PK property.</param>
-        public static ACCIDENT CreateACCIDENT(global::System.String sRNUMB, global::System.Int32 pK)
+        public static ACCIDENT CreateACCIDENT(global::System.Int32 pK)
         {
             ACCIDENT aCCIDENT = new ACCIDENT();
-            aCCIDENT.SRNUMB = sRNUMB;
             aCCIDENT.PK = pK;
             return aCCIDENT;
         }
@@ -2773,6 +2795,33 @@ namespace PMS
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.Int32 PK
+        {
+            get
+            {
+                return _PK;
+            }
+            set
+            {
+                if (_PK != value)
+                {
+                    OnPKChanging(value);
+                    ReportPropertyChanging("PK");
+                    _PK = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("PK");
+                    OnPKChanged();
+                }
+            }
+        }
+        private global::System.Int32 _PK;
+        partial void OnPKChanging(global::System.Int32 value);
+        partial void OnPKChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
         public global::System.String SRNUMB
         {
             get
@@ -2781,14 +2830,11 @@ namespace PMS
             }
             set
             {
-                if (_SRNUMB != value)
-                {
-                    OnSRNUMBChanging(value);
-                    ReportPropertyChanging("SRNUMB");
-                    _SRNUMB = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("SRNUMB");
-                    OnSRNUMBChanged();
-                }
+                OnSRNUMBChanging(value);
+                ReportPropertyChanging("SRNUMB");
+                _SRNUMB = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("SRNUMB");
+                OnSRNUMBChanged();
             }
         }
         private global::System.String _SRNUMB;
@@ -3730,6 +3776,36 @@ namespace PMS
         private Nullable<global::System.DateTime> _BKDT;
         partial void OnBKDTChanging(Nullable<global::System.DateTime> value);
         partial void OnBKDTChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="PMSDataModel", Name="ACCPIC")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class ACCPIC : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new ACCPIC object.
+        /// </summary>
+        /// <param name="pK">Initial value of the PK property.</param>
+        public static ACCPIC CreateACCPIC(global::System.Int32 pK)
+        {
+            ACCPIC aCCPIC = new ACCPIC();
+            aCCPIC.PK = pK;
+            return aCCPIC;
+        }
+
+        #endregion
+
+        #region Primitive Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3757,43 +3833,11 @@ namespace PMS
         private global::System.Int32 _PK;
         partial void OnPKChanging(global::System.Int32 value);
         partial void OnPKChanged();
-
-        #endregion
-
-    
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="PMSDataModel", Name="ACCPIC")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class ACCPIC : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new ACCPIC object.
-        /// </summary>
-        /// <param name="sRNUMB">Initial value of the SRNUMB property.</param>
-        /// <param name="pK">Initial value of the PK property.</param>
-        public static ACCPIC CreateACCPIC(global::System.String sRNUMB, global::System.Int32 pK)
-        {
-            ACCPIC aCCPIC = new ACCPIC();
-            aCCPIC.SRNUMB = sRNUMB;
-            aCCPIC.PK = pK;
-            return aCCPIC;
-        }
-
-        #endregion
-
-        #region Primitive Properties
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String SRNUMB
         {
@@ -3803,14 +3847,11 @@ namespace PMS
             }
             set
             {
-                if (_SRNUMB != value)
-                {
-                    OnSRNUMBChanging(value);
-                    ReportPropertyChanging("SRNUMB");
-                    _SRNUMB = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("SRNUMB");
-                    OnSRNUMBChanged();
-                }
+                OnSRNUMBChanging(value);
+                ReportPropertyChanging("SRNUMB");
+                _SRNUMB = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("SRNUMB");
+                OnSRNUMBChanged();
             }
         }
         private global::System.String _SRNUMB;
@@ -3960,33 +4001,6 @@ namespace PMS
         private Nullable<global::System.DateTime> _BKDT;
         partial void OnBKDTChanging(Nullable<global::System.DateTime> value);
         partial void OnBKDTChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 PK
-        {
-            get
-            {
-                return _PK;
-            }
-            set
-            {
-                if (_PK != value)
-                {
-                    OnPKChanging(value);
-                    ReportPropertyChanging("PK");
-                    _PK = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("PK");
-                    OnPKChanged();
-                }
-            }
-        }
-        private global::System.Int32 _PK;
-        partial void OnPKChanging(global::System.Int32 value);
-        partial void OnPKChanged();
 
         #endregion
 
@@ -13943,22 +13957,22 @@ namespace PMS
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="PMSDataModel", Name="CompItem")]
+    [EdmEntityTypeAttribute(NamespaceName="PMSDataModel", Name="COMPITEM")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class CompItem : EntityObject
+    public partial class COMPITEM : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new CompItem object.
+        /// Create a new COMPITEM object.
         /// </summary>
         /// <param name="pK">Initial value of the PK property.</param>
-        public static CompItem CreateCompItem(global::System.Int32 pK)
+        public static COMPITEM CreateCOMPITEM(global::System.Int32 pK)
         {
-            CompItem compItem = new CompItem();
-            compItem.PK = pK;
-            return compItem;
+            COMPITEM cOMPITEM = new COMPITEM();
+            cOMPITEM.PK = pK;
+            return cOMPITEM;
         }
 
         #endregion
@@ -14159,87 +14173,6 @@ namespace PMS
         private global::System.String _ORDCODE;
         partial void OnORDCODEChanging(global::System.String value);
         partial void OnORDCODEChanged();
-
-        #endregion
-
-    
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="PMSDataModel", Name="complogo")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class complogo : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new complogo object.
-        /// </summary>
-        /// <param name="pK">Initial value of the PK property.</param>
-        public static complogo Createcomplogo(global::System.Int32 pK)
-        {
-            complogo complogo = new complogo();
-            complogo.PK = pK;
-            return complogo;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 PK
-        {
-            get
-            {
-                return _PK;
-            }
-            set
-            {
-                if (_PK != value)
-                {
-                    OnPKChanging(value);
-                    ReportPropertyChanging("PK");
-                    _PK = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("PK");
-                    OnPKChanged();
-                }
-            }
-        }
-        private global::System.Int32 _PK;
-        partial void OnPKChanging(global::System.Int32 value);
-        partial void OnPKChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String LOGO
-        {
-            get
-            {
-                return _LOGO;
-            }
-            set
-            {
-                OnLOGOChanging(value);
-                ReportPropertyChanging("LOGO");
-                _LOGO = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("LOGO");
-                OnLOGOChanged();
-            }
-        }
-        private global::System.String _LOGO;
-        partial void OnLOGOChanging(global::System.String value);
-        partial void OnLOGOChanged();
 
         #endregion
 
@@ -14705,6 +14638,87 @@ namespace PMS
         private Nullable<global::System.DateTime> _BKDT;
         partial void OnBKDTChanging(Nullable<global::System.DateTime> value);
         partial void OnBKDTChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="PMSDataModel", Name="CPMPLOGO")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class CPMPLOGO : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new CPMPLOGO object.
+        /// </summary>
+        /// <param name="pK">Initial value of the PK property.</param>
+        public static CPMPLOGO CreateCPMPLOGO(global::System.Int32 pK)
+        {
+            CPMPLOGO cPMPLOGO = new CPMPLOGO();
+            cPMPLOGO.PK = pK;
+            return cPMPLOGO;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 PK
+        {
+            get
+            {
+                return _PK;
+            }
+            set
+            {
+                if (_PK != value)
+                {
+                    OnPKChanging(value);
+                    ReportPropertyChanging("PK");
+                    _PK = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("PK");
+                    OnPKChanged();
+                }
+            }
+        }
+        private global::System.Int32 _PK;
+        partial void OnPKChanging(global::System.Int32 value);
+        partial void OnPKChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String LOGO
+        {
+            get
+            {
+                return _LOGO;
+            }
+            set
+            {
+                OnLOGOChanging(value);
+                ReportPropertyChanging("LOGO");
+                _LOGO = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("LOGO");
+                OnLOGOChanged();
+            }
+        }
+        private global::System.String _LOGO;
+        partial void OnLOGOChanging(global::System.String value);
+        partial void OnLOGOChanged();
 
         #endregion
 
@@ -57443,22 +57457,22 @@ namespace PMS
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="PMSDataModel", Name="mymenu")]
+    [EdmEntityTypeAttribute(NamespaceName="PMSDataModel", Name="MYMENU")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class mymenu : EntityObject
+    public partial class MYMENU : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new mymenu object.
+        /// Create a new MYMENU object.
         /// </summary>
         /// <param name="pK">Initial value of the PK property.</param>
-        public static mymenu Createmymenu(global::System.Int32 pK)
+        public static MYMENU CreateMYMENU(global::System.Int32 pK)
         {
-            mymenu mymenu = new mymenu();
-            mymenu.PK = pK;
-            return mymenu;
+            MYMENU mYMENU = new MYMENU();
+            mYMENU.PK = pK;
+            return mYMENU;
         }
 
         #endregion
@@ -59111,22 +59125,22 @@ namespace PMS
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="PMSDataModel", Name="NkkType")]
+    [EdmEntityTypeAttribute(NamespaceName="PMSDataModel", Name="NKKTYPE")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class NkkType : EntityObject
+    public partial class NKKTYPE : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new NkkType object.
+        /// Create a new NKKTYPE object.
         /// </summary>
         /// <param name="pK">Initial value of the PK property.</param>
-        public static NkkType CreateNkkType(global::System.Int32 pK)
+        public static NKKTYPE CreateNKKTYPE(global::System.Int32 pK)
         {
-            NkkType nkkType = new NkkType();
-            nkkType.PK = pK;
-            return nkkType;
+            NKKTYPE nKKTYPE = new NKKTYPE();
+            nKKTYPE.PK = pK;
+            return nKKTYPE;
         }
 
         #endregion
@@ -65435,22 +65449,22 @@ namespace PMS
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="PMSDataModel", Name="pmsfld")]
+    [EdmEntityTypeAttribute(NamespaceName="PMSDataModel", Name="PMSFLD")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class pmsfld : EntityObject
+    public partial class PMSFLD : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new pmsfld object.
+        /// Create a new PMSFLD object.
         /// </summary>
         /// <param name="pK">Initial value of the PK property.</param>
-        public static pmsfld Createpmsfld(global::System.Int32 pK)
+        public static PMSFLD CreatePMSFLD(global::System.Int32 pK)
         {
-            pmsfld pmsfld = new pmsfld();
-            pmsfld.PK = pK;
-            return pmsfld;
+            PMSFLD pMSFLD = new PMSFLD();
+            pMSFLD.PK = pK;
+            return pMSFLD;
         }
 
         #endregion
@@ -69098,6 +69112,163 @@ namespace PMS
         private Nullable<global::System.DateTime> _BKDT;
         partial void OnBKDTChanging(Nullable<global::System.DateTime> value);
         partial void OnBKDTChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="PMSDataModel", Name="sysdiagram")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class sysdiagram : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new sysdiagram object.
+        /// </summary>
+        /// <param name="name">Initial value of the name property.</param>
+        /// <param name="principal_id">Initial value of the principal_id property.</param>
+        /// <param name="diagram_id">Initial value of the diagram_id property.</param>
+        public static sysdiagram Createsysdiagram(global::System.String name, global::System.Int32 principal_id, global::System.Int32 diagram_id)
+        {
+            sysdiagram sysdiagram = new sysdiagram();
+            sysdiagram.name = name;
+            sysdiagram.principal_id = principal_id;
+            sysdiagram.diagram_id = diagram_id;
+            return sysdiagram;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                OnnameChanging(value);
+                ReportPropertyChanging("name");
+                _name = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("name");
+                OnnameChanged();
+            }
+        }
+        private global::System.String _name;
+        partial void OnnameChanging(global::System.String value);
+        partial void OnnameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 principal_id
+        {
+            get
+            {
+                return _principal_id;
+            }
+            set
+            {
+                Onprincipal_idChanging(value);
+                ReportPropertyChanging("principal_id");
+                _principal_id = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("principal_id");
+                Onprincipal_idChanged();
+            }
+        }
+        private global::System.Int32 _principal_id;
+        partial void Onprincipal_idChanging(global::System.Int32 value);
+        partial void Onprincipal_idChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 diagram_id
+        {
+            get
+            {
+                return _diagram_id;
+            }
+            set
+            {
+                if (_diagram_id != value)
+                {
+                    Ondiagram_idChanging(value);
+                    ReportPropertyChanging("diagram_id");
+                    _diagram_id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("diagram_id");
+                    Ondiagram_idChanged();
+                }
+            }
+        }
+        private global::System.Int32 _diagram_id;
+        partial void Ondiagram_idChanging(global::System.Int32 value);
+        partial void Ondiagram_idChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> version
+        {
+            get
+            {
+                return _version;
+            }
+            set
+            {
+                OnversionChanging(value);
+                ReportPropertyChanging("version");
+                _version = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("version");
+                OnversionChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _version;
+        partial void OnversionChanging(Nullable<global::System.Int32> value);
+        partial void OnversionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] definition
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_definition);
+            }
+            set
+            {
+                OndefinitionChanging(value);
+                ReportPropertyChanging("definition");
+                _definition = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("definition");
+                OndefinitionChanged();
+            }
+        }
+        private global::System.Byte[] _definition;
+        partial void OndefinitionChanging(global::System.Byte[] value);
+        partial void OndefinitionChanged();
 
         #endregion
 
