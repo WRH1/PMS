@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PMSDataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="PMSDataModelStoreContainer">
+          <EntitySet Name="MAINITEM" EntityType="PMSDataModel.Store.MAINITEM" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PMSITEM" EntityType="PMSDataModel.Store.PMSITEM" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_PMSITEM_MAINITEM" Association="PMSDataModel.Store.FK_PMSITEM_MAINITEM">
+            <End Role="MAINITEM" EntitySet="MAINITEM" />
+            <End Role="PMSITEM" EntitySet="PMSITEM" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="MAINITEM">
+          <Key>
+            <PropertyRef Name="MAINCODE" />
+          </Key>
+          <Property Name="MAINCODE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MAINITEM" Type="char" MaxLength="40" />
+          <Property Name="SURVTYPE" Type="char" MaxLength="1" />
+          <Property Name="M_P" Type="char" MaxLength="1" />
+          <Property Name="TOTHRS" Type="numeric" Precision="7" />
+          <Property Name="ME" Type="bit" />
+          <Property Name="ORGDIA" Type="numeric" Precision="6" Scale="2" />
+          <Property Name="AE" Type="bit" />
+          <Property Name="NUM" Type="numeric" Precision="2" />
+          <Property Name="THU_DATE" Type="date" />
+          <Property Name="SEPA" Type="bit" />
+          <Property Name="ACOMP" Type="bit" />
+          <Property Name="AL" Type="bit" />
+          <Property Name="PMPOHL" Type="bit" />
+          <Property Name="PMPRTN" Type="bit" />
+          <Property Name="MOTOHL" Type="bit" />
+          <Property Name="MOTRTN" Type="bit" />
+          <Property Name="EDITED" Type="bit" />
+          <Property Name="L_MGROUP" Type="bit" />
+          <Property Name="MTCODE" Type="char" MaxLength="8" />
+          <Property Name="EDITDT" Type="date" />
+          <Property Name="MES" Type="bit" />
+          <Property Name="GRPMCODE" Type="char" MaxLength="10" />
+          <Property Name="OFFUPDT" Type="bit" />
+          <Property Name="SLF" Type="bit" />
+          <Property Name="BKDT" Type="date" />
+        </EntityType>
+        <EntityType Name="PMSITEM">
+          <Key>
+            <PropertyRef Name="PMSCODE" />
+          </Key>
+          <Property Name="MAINCODE" Type="int" />
+          <Property Name="PMSCODE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PMSITEM" Type="char" MaxLength="45" />
+          <Property Name="HEADR" Type="char" MaxLength="60" />
+          <Property Name="EQCODE" Type="char" MaxLength="10" />
+          <Property Name="PERIOD" Type="char" MaxLength="1" />
+          <Property Name="INTERVAL" Type="numeric" Precision="6" />
+          <Property Name="SCHED" Type="numeric" Precision="4" />
+          <Property Name="OHAULAT" Type="numeric" Precision="7" />
+          <Property Name="HRSNET" Type="numeric" Precision="7" />
+          <Property Name="M_E_D" Type="char" MaxLength="1" />
+          <Property Name="CRIT" Type="bit" />
+          <Property Name="DATE" Type="date" />
+          <Property Name="L_DCARB" Type="bit" />
+          <Property Name="TYPECODE" Type="char" MaxLength="8" />
+          <Property Name="NUM" Type="numeric" Precision="2" />
+          <Property Name="STPOINT" Type="numeric" Precision="7" Scale="2" />
+          <Property Name="STPOINT1" Type="numeric" Precision="7" Scale="2" />
+          <Property Name="UNITS" Type="char" MaxLength="10" />
+          <Property Name="E_D_S" Type="char" MaxLength="1" />
+          <Property Name="EDITED" Type="bit" />
+          <Property Name="USERS" Type="char" MaxLength="35" />
+          <Property Name="REASON" Type="char" MaxLength="254" />
+          <Property Name="PTOTHRS" Type="numeric" Precision="7" />
+          <Property Name="L_PGROUP" Type="bit" />
+          <Property Name="L_PSTPND" Type="bit" />
+          <Property Name="DTPSTPND" Type="date" />
+          <Property Name="NPSTPND" Type="numeric" Precision="8" />
+          <Property Name="UPSTPND" Type="char" MaxLength="8" />
+          <Property Name="EO_ECO" Type="bit" />
+          <Property Name="EDITDT" Type="date" />
+          <Property Name="RESPONSE" Type="char" MaxLength="5" />
+          <Property Name="COMMENT" Type="char" MaxLength="254" />
+          <Property Name="WARNPRD" Type="numeric" Precision="6" />
+          <Property Name="MANUFCODE" Type="char" MaxLength="10" />
+          <Property Name="TYPE" Type="char" MaxLength="30" />
+          <Property Name="SERIAL" Type="char" MaxLength="20" />
+          <Property Name="DECOMM" Type="bit" />
+          <Property Name="POSTPNDBY" Type="char" MaxLength="100" />
+          <Property Name="STPOINT2" Type="numeric" Precision="7" Scale="2" />
+          <Property Name="STPOINT3" Type="numeric" Precision="7" Scale="2" />
+          <Property Name="STPOINT4" Type="numeric" Precision="7" Scale="2" />
+          <Property Name="SETRANGE" Type="char" MaxLength="20" />
+          <Property Name="OFFUPDT" Type="bit" />
+          <Property Name="NKKCODE" Type="numeric" Precision="2" />
+          <Property Name="BKDT" Type="date" />
+        </EntityType>
+        <Association Name="FK_PMSITEM_MAINITEM">
+          <End Role="MAINITEM" Type="PMSDataModel.Store.MAINITEM" Multiplicity="0..1" />
+          <End Role="PMSITEM" Type="PMSDataModel.Store.PMSITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAINITEM">
+              <PropertyRef Name="MAINCODE" />
+            </Principal>
+            <Dependent Role="PMSITEM">
+              <PropertyRef Name="MAINCODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PMSDataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="PMSDataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MAINITEMs" EntityType="PMSDataModel.MAINITEM" />
+          <EntitySet Name="PMSITEMs" EntityType="PMSDataModel.PMSITEM" />
+          <AssociationSet Name="FK_PMSITEM_MAINITEM" Association="PMSDataModel.FK_PMSITEM_MAINITEM">
+            <End Role="MAINITEM" EntitySet="MAINITEMs" />
+            <End Role="PMSITEM" EntitySet="PMSITEMs" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="MAINITEM">
+          <Key>
+            <PropertyRef Name="MAINCODE" />
+          </Key>
+          <Property Type="Int32" Name="MAINCODE" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="MAINITEM1" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="SURVTYPE" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="M_P" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Decimal" Name="TOTHRS" Precision="7" Scale="0" />
+          <Property Type="Boolean" Name="ME" />
+          <Property Type="Decimal" Name="ORGDIA" Precision="6" Scale="2" />
+          <Property Type="Boolean" Name="AE" />
+          <Property Type="Decimal" Name="NUM" Precision="2" Scale="0" />
+          <Property Type="DateTime" Name="THU_DATE" />
+          <Property Type="Boolean" Name="SEPA" />
+          <Property Type="Boolean" Name="ACOMP" />
+          <Property Type="Boolean" Name="AL" />
+          <Property Type="Boolean" Name="PMPOHL" />
+          <Property Type="Boolean" Name="PMPRTN" />
+          <Property Type="Boolean" Name="MOTOHL" />
+          <Property Type="Boolean" Name="MOTRTN" />
+          <Property Type="Boolean" Name="EDITED" />
+          <Property Type="Boolean" Name="L_MGROUP" />
+          <Property Type="String" Name="MTCODE" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="EDITDT" />
+          <Property Type="Boolean" Name="MES" />
+          <Property Type="String" Name="GRPMCODE" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="Boolean" Name="OFFUPDT" />
+          <Property Type="Boolean" Name="SLF" />
+          <Property Type="DateTime" Name="BKDT" />
+          <NavigationProperty Name="PMSITEMs" Relationship="PMSDataModel.FK_PMSITEM_MAINITEM" FromRole="MAINITEM" ToRole="PMSITEM" />
+        </EntityType>
+        <EntityType Name="PMSITEM">
+          <Key>
+            <PropertyRef Name="PMSCODE" />
+          </Key>
+          <Property Type="Int32" Name="MAINCODE" />
+          <Property Type="Int32" Name="PMSCODE" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="PMSITEM1" MaxLength="45" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="HEADR" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="EQCODE" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="PERIOD" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Decimal" Name="INTERVAL" Precision="6" Scale="0" />
+          <Property Type="Decimal" Name="SCHED" Precision="4" Scale="0" />
+          <Property Type="Decimal" Name="OHAULAT" Precision="7" Scale="0" />
+          <Property Type="Decimal" Name="HRSNET" Precision="7" Scale="0" />
+          <Property Type="String" Name="M_E_D" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Boolean" Name="CRIT" />
+          <Property Type="DateTime" Name="DATE" />
+          <Property Type="Boolean" Name="L_DCARB" />
+          <Property Type="String" Name="TYPECODE" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Type="Decimal" Name="NUM" Precision="2" Scale="0" />
+          <Property Type="Decimal" Name="STPOINT" Precision="7" Scale="2" />
+          <Property Type="Decimal" Name="STPOINT1" Precision="7" Scale="2" />
+          <Property Type="String" Name="UNITS" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="E_D_S" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Boolean" Name="EDITED" />
+          <Property Type="String" Name="USERS" MaxLength="35" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="REASON" MaxLength="254" FixedLength="true" Unicode="false" />
+          <Property Type="Decimal" Name="PTOTHRS" Precision="7" Scale="0" />
+          <Property Type="Boolean" Name="L_PGROUP" />
+          <Property Type="Boolean" Name="L_PSTPND" />
+          <Property Type="DateTime" Name="DTPSTPND" />
+          <Property Type="Decimal" Name="NPSTPND" Precision="8" Scale="0" />
+          <Property Type="String" Name="UPSTPND" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Type="Boolean" Name="EO_ECO" />
+          <Property Type="DateTime" Name="EDITDT" />
+          <Property Type="String" Name="RESPONSE" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="COMMENT" MaxLength="254" FixedLength="true" Unicode="false" />
+          <Property Type="Decimal" Name="WARNPRD" Precision="6" Scale="0" />
+          <Property Type="String" Name="MANUFCODE" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="TYPE" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="SERIAL" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Type="Boolean" Name="DECOMM" />
+          <Property Type="String" Name="POSTPNDBY" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Type="Decimal" Name="STPOINT2" Precision="7" Scale="2" />
+          <Property Type="Decimal" Name="STPOINT3" Precision="7" Scale="2" />
+          <Property Type="Decimal" Name="STPOINT4" Precision="7" Scale="2" />
+          <Property Type="String" Name="SETRANGE" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Type="Boolean" Name="OFFUPDT" />
+          <Property Type="Decimal" Name="NKKCODE" Precision="2" Scale="0" />
+          <Property Type="DateTime" Name="BKDT" />
+          <NavigationProperty Name="MAINITEM" Relationship="PMSDataModel.FK_PMSITEM_MAINITEM" FromRole="PMSITEM" ToRole="MAINITEM" />
+        </EntityType>
+        <Association Name="FK_PMSITEM_MAINITEM">
+          <End Type="PMSDataModel.MAINITEM" Role="MAINITEM" Multiplicity="0..1" />
+          <End Type="PMSDataModel.PMSITEM" Role="PMSITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAINITEM">
+              <PropertyRef Name="MAINCODE" />
+            </Principal>
+            <Dependent Role="PMSITEM">
+              <PropertyRef Name="MAINCODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PMSDataModelStoreContainer" CdmEntityContainer="PMSDataEntities">
+          <EntitySetMapping Name="MAINITEMs">
+            <EntityTypeMapping TypeName="PMSDataModel.MAINITEM">
+              <MappingFragment StoreEntitySet="MAINITEM">
+                <ScalarProperty Name="BKDT" ColumnName="BKDT" />
+                <ScalarProperty Name="SLF" ColumnName="SLF" />
+                <ScalarProperty Name="OFFUPDT" ColumnName="OFFUPDT" />
+                <ScalarProperty Name="GRPMCODE" ColumnName="GRPMCODE" />
+                <ScalarProperty Name="MES" ColumnName="MES" />
+                <ScalarProperty Name="EDITDT" ColumnName="EDITDT" />
+                <ScalarProperty Name="MTCODE" ColumnName="MTCODE" />
+                <ScalarProperty Name="L_MGROUP" ColumnName="L_MGROUP" />
+                <ScalarProperty Name="EDITED" ColumnName="EDITED" />
+                <ScalarProperty Name="MOTRTN" ColumnName="MOTRTN" />
+                <ScalarProperty Name="MOTOHL" ColumnName="MOTOHL" />
+                <ScalarProperty Name="PMPRTN" ColumnName="PMPRTN" />
+                <ScalarProperty Name="PMPOHL" ColumnName="PMPOHL" />
+                <ScalarProperty Name="AL" ColumnName="AL" />
+                <ScalarProperty Name="ACOMP" ColumnName="ACOMP" />
+                <ScalarProperty Name="SEPA" ColumnName="SEPA" />
+                <ScalarProperty Name="THU_DATE" ColumnName="THU_DATE" />
+                <ScalarProperty Name="NUM" ColumnName="NUM" />
+                <ScalarProperty Name="AE" ColumnName="AE" />
+                <ScalarProperty Name="ORGDIA" ColumnName="ORGDIA" />
+                <ScalarProperty Name="ME" ColumnName="ME" />
+                <ScalarProperty Name="TOTHRS" ColumnName="TOTHRS" />
+                <ScalarProperty Name="M_P" ColumnName="M_P" />
+                <ScalarProperty Name="SURVTYPE" ColumnName="SURVTYPE" />
+                <ScalarProperty Name="MAINITEM1" ColumnName="MAINITEM" />
+                <ScalarProperty Name="MAINCODE" ColumnName="MAINCODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PMSITEMs">
+            <EntityTypeMapping TypeName="PMSDataModel.PMSITEM">
+              <MappingFragment StoreEntitySet="PMSITEM">
+                <ScalarProperty Name="BKDT" ColumnName="BKDT" />
+                <ScalarProperty Name="NKKCODE" ColumnName="NKKCODE" />
+                <ScalarProperty Name="OFFUPDT" ColumnName="OFFUPDT" />
+                <ScalarProperty Name="SETRANGE" ColumnName="SETRANGE" />
+                <ScalarProperty Name="STPOINT4" ColumnName="STPOINT4" />
+                <ScalarProperty Name="STPOINT3" ColumnName="STPOINT3" />
+                <ScalarProperty Name="STPOINT2" ColumnName="STPOINT2" />
+                <ScalarProperty Name="POSTPNDBY" ColumnName="POSTPNDBY" />
+                <ScalarProperty Name="DECOMM" ColumnName="DECOMM" />
+                <ScalarProperty Name="SERIAL" ColumnName="SERIAL" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="MANUFCODE" ColumnName="MANUFCODE" />
+                <ScalarProperty Name="WARNPRD" ColumnName="WARNPRD" />
+                <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+                <ScalarProperty Name="RESPONSE" ColumnName="RESPONSE" />
+                <ScalarProperty Name="EDITDT" ColumnName="EDITDT" />
+                <ScalarProperty Name="EO_ECO" ColumnName="EO_ECO" />
+                <ScalarProperty Name="UPSTPND" ColumnName="UPSTPND" />
+                <ScalarProperty Name="NPSTPND" ColumnName="NPSTPND" />
+                <ScalarProperty Name="DTPSTPND" ColumnName="DTPSTPND" />
+                <ScalarProperty Name="L_PSTPND" ColumnName="L_PSTPND" />
+                <ScalarProperty Name="L_PGROUP" ColumnName="L_PGROUP" />
+                <ScalarProperty Name="PTOTHRS" ColumnName="PTOTHRS" />
+                <ScalarProperty Name="REASON" ColumnName="REASON" />
+                <ScalarProperty Name="USERS" ColumnName="USERS" />
+                <ScalarProperty Name="EDITED" ColumnName="EDITED" />
+                <ScalarProperty Name="E_D_S" ColumnName="E_D_S" />
+                <ScalarProperty Name="UNITS" ColumnName="UNITS" />
+                <ScalarProperty Name="STPOINT1" ColumnName="STPOINT1" />
+                <ScalarProperty Name="STPOINT" ColumnName="STPOINT" />
+                <ScalarProperty Name="NUM" ColumnName="NUM" />
+                <ScalarProperty Name="TYPECODE" ColumnName="TYPECODE" />
+                <ScalarProperty Name="L_DCARB" ColumnName="L_DCARB" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="CRIT" ColumnName="CRIT" />
+                <ScalarProperty Name="M_E_D" ColumnName="M_E_D" />
+                <ScalarProperty Name="HRSNET" ColumnName="HRSNET" />
+                <ScalarProperty Name="OHAULAT" ColumnName="OHAULAT" />
+                <ScalarProperty Name="SCHED" ColumnName="SCHED" />
+                <ScalarProperty Name="INTERVAL" ColumnName="INTERVAL" />
+                <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+                <ScalarProperty Name="EQCODE" ColumnName="EQCODE" />
+                <ScalarProperty Name="HEADR" ColumnName="HEADR" />
+                <ScalarProperty Name="PMSITEM1" ColumnName="PMSITEM" />
+                <ScalarProperty Name="PMSCODE" ColumnName="PMSCODE" />
+                <ScalarProperty Name="MAINCODE" ColumnName="MAINCODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="PMSModel" ZoomLevel="59">
+        <EntityTypeShape EntityType="PMSDataModel.MAINITEM" Width="1.5" PointX="0.75" PointY="3.25" Height="6.2109179687499809" />
+        <EntityTypeShape EntityType="PMSDataModel.PMSITEM" Width="1.5" PointX="3" PointY="1.375" Height="10.056946614583353" />
+        <AssociationConnector Association="PMSDataModel.FK_PMSITEM_MAINITEM" >
+          <ConnectorPoint PointX="2.25" PointY="6.3554589843749909" />
+          <ConnectorPoint PointX="3" PointY="6.3554589843749909" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,27 @@
+﻿@if (Request.IsAuthenticated) {
+    <text>
+        Hello, @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })!
+        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
+            @Html.AntiForgeryToken()
+            <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+        }
+    </text>
+} else {
+@*    <ul>
+        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>*@
+    <ul class="Nav">
+    	<li>@Html.ActionLink("PMS Status", "Index", "PMSStatus", routeValues: null, htmlAttributes: new { id = "pms_status" })</li>
+        <li><a href="#">Spare Inventory</a></li>
+        <li><a href="#">Tech. Defect</a></li>
+        <li><a href="#">Machinery Survey</a></li>
+        <li><a href="#">Statutory Survey</a></li>
+        <li><a href="#">Open DD List</a></li>
+        <li><a href="#">Company Forms by Month</a></li>
+        <li><a href="#">Changes made by ship</a></li>
+        <li><a href="#">Select Ship</a></li>
+        <li><a href="#">Spdt. Comments</a></li>
+        <li><a href="#">Change Spdt. Password</a></li>
+    </ul>
+}

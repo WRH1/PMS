@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "PMS Status";
+}
+@section featured {
+
+}
+
+    	<div class="LftOtr">
+        	<button>Toggle</button>
+        	<div id='cssmenu' class='cssmenu1'>
+            <ul>
+            <li class='has-sub'><a href='#'><span>PMS Forms</span></a>
+              <ul>
+                 <li>@Html.ActionLink("PMS Status", "Index", "PMSStatus", routeValues: null, htmlAttributes: new { id = "pms_status" })</li>
+                 <li>@Html.ActionLink("PMS Overdue Status", "Overdue", "PMSStatus", routeValues: null, htmlAttributes: new { id = "overdue" })</li>
+                 <li>@Html.ActionLink("Monthly Maintenance Report", "MonthlyReport", "PMSStatus", routeValues: null, htmlAttributes: new { id = "monthly" })</li>
+                 <li>@Html.ActionLink("Postponed PMS Items", "PostponedItems", "PMSStatus", routeValues: null, htmlAttributes: new { id = "postponed" })</li>
+                 <li>@Html.ActionLink("Tracing Main Components", "TracingComp", "PMSStatus", routeValues: null, htmlAttributes: new { id = "tracing" })</li>
+                 <li>@Html.ActionLink("Alram Set Point", "AlramSetPoint", "PMSStatus", routeValues: null, htmlAttributes: new { id = "alram" })</li>
+                 <li>@Html.ActionLink("Incident", "Incident", "PMSStatus", routeValues: null, htmlAttributes: new { id = "incident" })</li>
+                 <li>@Html.ActionLink("Print Preview Running Hours", "RunningHours", "PMSStatus", routeValues: null, htmlAttributes: new { id = "running" })</li>
+                 <li>@Html.ActionLink("Budgeting", "Budgeting", "PMSStatus", routeValues: null, htmlAttributes: new { id = "budgeting" })</li>
+                 <li>@Html.ActionLink("Inculation Report", "Inculation", "PMSStatus", routeValues: null, htmlAttributes: new { id = "inculation" })</li>
+              </ul>
+            </li>
+            <li class='has-sub'><a href='#'><span>PMS Add, Edit &amp; Delete</span></a>
+              <ul>
+                 <li>@Html.ActionLink("Add/Edit/Delete PMS Items (Single)", "SingleAddEdit", "PMSStatus", routeValues: null, htmlAttributes: new { id = "single" })</li>
+                 <li>@Html.ActionLink("Add/Edit/Delete PMS Items (Multiple Ships)", "MultipleAddEdit", "PMSStatus", routeValues: null, htmlAttributes: new { id = "multiple" })</li>
+                 <li>@Html.ActionLink("Change Interval and set Critical Items", "SetCriticalItems", "PMSStatus", routeValues: null, htmlAttributes: new { id = "critical" })</li>
+              </ul>
+            </li>	
+            <li class='has-sub'><a href='#'><span>Equipment &amp; Vendor Add, Edit</span></a>
+              <ul>
+                 <li>@Html.ActionLink("Equipment Details", "EquipmentDetails", "PMSStatus", routeValues: null, htmlAttributes: new { id = "equipment" })</li>
+                 <li>@Html.ActionLink("Vendor, Manufacturer", "Vendor", "PMSStatus", routeValues: null, htmlAttributes: new { id = "vendor" })</li>
+              </ul>
+            </li>
+            </ul>
+    	</div>
+        </div>
+        <div class="TabOtr">
+        	To be implemented
+        </div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#cssmenu").toggle();
+                $(".TabOtr").toggleClass("FullWidth");
+            });
+        });
+    </script>
+}

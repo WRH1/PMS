@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+body							{ background:#f6fbfb url(../images/login_BG.png) repeat-x top; font-family:Tahoma, Geneva, sans-serif; }
+
+.LoginOtr						{ width:400px; height:auto; border:1px solid #999999; padding:5px; margin:0px auto;  margin-top:15%; background:#c5ccd3 url(../images/loginInside.png) repeat-x; min-height:160px; border-radius:5px; }
+.LoginOtr label					{ margin:10px 0px 5px 6px; width:100%; color:#000000; font-size:14px; }
+.LoginOtr .TxtBox				{ width:94%;  margin:5px; margin-bottom:10px; padding:5px; height:auto; background-color:#ffffff; border:1px solid #666666; }
+.BtnOtr							{ width:98%; float:left; height:auto; text-align:right; margin-top:10px; }
+.Btn							{ background-color:#083E80; padding:5px; color:#ffffff; border:none; border-radius:5px; cursor:pointer; }

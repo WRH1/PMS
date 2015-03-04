@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+
+body							{ margin:0px; padding:0px; font-family:Tahoma, Geneva, sans-serif; }
+ul, li							{ margin:0px; padding:0px; list-style:none; }
+h1, h2, h3						{ margin:0px; padding:0px; font-weight:normal; }
+input, input:hover				{ outline:none; }
+textarea						{ height:auto; border:1px solid #cccccc; outline:none }
+
+.DashboardGrid					{ float:left; width:100%; height:auto; margin-bottom:10px; }
+.DashboardSubSec				{ width:32.8%; float:left; padding:0px; margin-right:5px; margin-bottom:3px; }
+.DashboardTab					{ width:100%; height:auto; float:left; }
+.DashboardTab li				{ float:left; background-color:#cccccc; width:auto; height:auto; margin-right:5px; font-size:12px; padding:5px; border-top-left-radius:5px; border-top-right-radius:5px; }
+.DashboardTab li a				{ text-decoration:none; color:#333333; }
+
+
+.MainWrapper					{ width:99%; margin:0px auto; height:auto; position:relative; margin-top:5px; }
+.NavOuter						{ width:100%; float:left; margin-bottom: 10px; border-bottom: 1px solid #CCCCCC; PADDING-BOTTOM: 5px; }
+.Nav							{ width:92%; margin:0px auto; height:auto; }
+.Nav li							{ width:auto; line-height:20px; font-size:11px; font-weight:bold; float:left; margin-right:2px;  }
+.Nav li a:hover					{ background:#7e96cc url(../images/btn_bg.png) bottom repeat-x; border:1px solid #0451b0; color:#ffffff; display:block; padding:3px 5px; }
+.Nav li a						{ color:#333333; text-decoration:none; display:block; padding:3px 5px; border:1px solid #ffffff; }
+.ContentOtr						{ width:100%; float:left; height:auto;  }
+.LftOtr							{ width:20%; float:left; height:auto; }
+.LftOtr h1, .GroupDetails h1						{ font-size:12px; background-color:#083e80; border-top-left-radius:5px; border-top-right-radius:5px; width:100%; color:#ffffff; height:25px; line-height:25px; padding-left:5px; }
+.PMSTab							{ width:100%; float:left; height:auto; }
+.PMSTab li						{ width:100%; float:left; margin-right:5px; }
+.PMSTab li a					{ padding:7px; color:#333333; font-size:11px; background-color:#f2f2f2; border:1px solid #cccccc; text-decoration:none; display:inline-block; width:93%; border-top:none; padding-left:15px; }
+.PMSTab li a.Selected, .Title span.Selected, 						{  background-color:#083e80 !important; border:1px solid #071f3d; color:#ffffff; }
+
+.TabOtr						{ width:78%; float:right; height:auto; background-color: #f2f2f2; border: 1px solid #cccccc; font-size:12px; padding:5px; margin-bottom:20px; }
+.FullWidth					{ width:99%; }
+.Title						{ width:100%; float:left; height:auto; border-bottom:1px solid #cccccc; margin-bottom:10px; padding-bottom:10px; position:relative; }
+.PMSDetailsOtr					{ position:absolute; top:0px; right:0px; width:300px; }
+.PMSDetailsOtr label			{ min-width:150px; float:left; height:25px; line-height:25px; }
+.CriticalPMS_Sec01				{ float:left; width:99%; height:auto; background-color:#ffffff; border:1px solid #cccccc; padding:5px; }
+.CriticalPMS_Sec01 div			{ width:48%; float:left; }
+.CriticalPMS_Sec01 div label	{ width: 50%; float: left; line-height:25px; }
+.CriticalPMS_Sec01 div label input	{ float:left; margin-top:8px; }
+ .PMSButton, .DashboardTab li					{ float:left; margin-right:5px; border:1px solid #cccccc; padding:5px; background:#ffffff url(../images/grey_btn.png) repeat-x bottom; }
+.Title span a				{ color:#333333; text-decoration:none; }
+.Title span.Selected, .DashboardTab li.Selected		{ background-image:none; }
+.LabelOtr							{ width:100%; float:left; margin-top:10px; }
+.LabelOtr input				{ float:left; }
+.LabelOtr label, fieldset label				{ line-height:17px; float:left; margin-right:10px; }
+fieldset					{ border:1px solid #cccccc; padding:10px; width:35%; float:left; }
+legend						{ font-weight:bold; }
+fieldset input				{ float:left; }
+fieldset span, .FormRytSec span				{ float:left; width:100%; margin-bottom:10px; }
+.FormRytSec					{ float: left; width: 60%; margin-left: 10px; margin-top: 5px; }
+.FormRytSec .ChkBox			{ float:left; margin-right:5px; margin-left:0px; }
+.FormRytSec label			{ float:left; line-height:17px; }
+.FormRytSec img				{ float:left; margin-left:10px; margin-right:50px; }
+.FormRytSec span			{ margin-top:10px; }
+.FormRytSec select							{ float: left; margin-left: 5px; width: 100px; height: auto; background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); }
+.ProductDetails				{ background-color:#dfa21e; width:99%; padding:5px; color:#ffffff; margin-top:50px !important; margin-bottom:0px !important; }
+.PmsSectionOtr				{ width:100%; float:left; height:auto; margin-top:20px; }
+.PmsSectionOtr h1			{ width:100%; background-color:#dfa21e;  padding:5px 0; font-size:12px; font-weight:normal; color:#ffffff; border-top-left-radius:5px; border-top-right-radius:5px; float:left; }
+.PmsSectionOtr h1 span		{ padding-left:5px; }
+.PmsFirstSec				{ width:24%; float:left; height:auto; margin-right:5px;  }
+.PmsMiddleSec				{ width:56%;   float:left; height:auto; }
+.PmsMiddleSec1				{ width:30%; float:left; height:auto; margin-right:5px; }
+.PmsMiddleSec2				{ width:38%; }
+
+.JobDesc					{ margin-right: 0px; width: 69%; }
+
+.PMSContent					{ background-color:#ffffff; border:1px solid #cccccc; padding:3px; border-top:none; margin-bottom:10px; float:left; min-width:96%; }
+.PmsLastSec					{ width:19%;  float:right; height:auto; }
+.Grid						{ border:1px solid #cccccc; border-top:none; border-left:none; overflow:auto; }
+.Grid td, .Grid th					{ border:1px solid #cccccc; border-right:none; border-bottom:none; padding:5px; background-color:#ffffff; }
+.Grid th					{ background-color:#999999; font-size:12px; font-weight:normal }
+.CriticalPMSMiddleSec			{ width:50%; } 
+
+.CriticalPMSLastSec				{ width:25%; } 
+.BtnOtr							{ width:100%; float:left; height:auto; margin-top:10px; margin-bottom:5px; }
+.PMSButton						{ font-size:11px; cursor:pointer }
+.CriticalPMS span, .PMSResponsible span			{ width:100%; height:auto; margin-bottom:5px; float:left }
+.CriticalPMS label			{ width:25%; line-height:17px; float:left; margin-bottom:5px; }
+.CriticalPMS input[type=text]	{ width:70%; margin-bottom:5px; border:1px solid #cccccc; }
+.CriticalPMS select			{ width:30%; float:left; margin-right:10px; }
+.CriticalPMS span.Txt		{ width: 75%; float: left; margin-left: 25%; }
+.ChkboxOtr					{ float:left; margin-left: 124px; width: 75% !important; }
+.CriticalPMS span.ChkboxOtr input	{ float:left; margin-right:5px; float:left }
+.CriticalPMS span.ChkboxOtr label	{ float:left; }
+.PMSPeriod							{ width:42%; }
+.PMSResponsible						{ width: 46%; float: left; margin-left: 10px; margin-top: 8px; }
+.Chkbox1 input						{ float:left; }
+.Chkbox1 label						{ width:14%; }
+.PMSResponsible select				{ width:50%; }
+.PMSResponsible textarea			{ width:100%; float:left; margin-top:5px; font-family:Tahoma, Geneva, sans-serif; font-size:12px; }
+.CriticalJobDesc					{ width:98.6%; }
+.SearchTxtBox						{ width:98%; margin:5px 0; float:left; background:url(../images/searchIcon.png) no-repeat right top; border:1px solid #cccccc; padding:3px 0;	 }
+.GroupDetails						{ width:100%; float:left; height:auto; background-color:#ffffff; }
+.GroupName							{ width:32.3%; float:left; margin-right:10px; }
+.GroupName .NameDetails				{ width:99%; }
+.GroupName h1						{ background-color:#dfa21e; }
+.EquipForm input 					{ width:52% !important; float:left; }
+.EquipForm label					{ width:12%; float:left; }
+.EquipType							{  width: 20% !important; margin-right: 10px; float:left; }
+.EquipForm textarea					{ width:52%; }
+.EquipForm h2						{ font-weight:bold; font-size:14px; margin-bottom:10px; margin-top:5px; float:left; }
+
+
+
+@media screen only and (max-width: 1024px) {
+
+
+.Nav							{ width:100%; }
+.Nav li							{ margin:0px; }
+.Nav li	 a						{ padding:3px; }
+.Nav li	 a:hover				{ padding:3px; }
+	
+}

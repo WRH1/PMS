@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PMSDataModelStoreContainer" CdmEntityContainer="PMSDataEntities">
+    <EntitySetMapping Name="MAINITEMs">
+      <EntityTypeMapping TypeName="PMSDataModel.MAINITEM">
+        <MappingFragment StoreEntitySet="MAINITEM">
+          <ScalarProperty Name="BKDT" ColumnName="BKDT" />
+          <ScalarProperty Name="SLF" ColumnName="SLF" />
+          <ScalarProperty Name="OFFUPDT" ColumnName="OFFUPDT" />
+          <ScalarProperty Name="GRPMCODE" ColumnName="GRPMCODE" />
+          <ScalarProperty Name="MES" ColumnName="MES" />
+          <ScalarProperty Name="EDITDT" ColumnName="EDITDT" />
+          <ScalarProperty Name="MTCODE" ColumnName="MTCODE" />
+          <ScalarProperty Name="L_MGROUP" ColumnName="L_MGROUP" />
+          <ScalarProperty Name="EDITED" ColumnName="EDITED" />
+          <ScalarProperty Name="MOTRTN" ColumnName="MOTRTN" />
+          <ScalarProperty Name="MOTOHL" ColumnName="MOTOHL" />
+          <ScalarProperty Name="PMPRTN" ColumnName="PMPRTN" />
+          <ScalarProperty Name="PMPOHL" ColumnName="PMPOHL" />
+          <ScalarProperty Name="AL" ColumnName="AL" />
+          <ScalarProperty Name="ACOMP" ColumnName="ACOMP" />
+          <ScalarProperty Name="SEPA" ColumnName="SEPA" />
+          <ScalarProperty Name="THU_DATE" ColumnName="THU_DATE" />
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="AE" ColumnName="AE" />
+          <ScalarProperty Name="ORGDIA" ColumnName="ORGDIA" />
+          <ScalarProperty Name="ME" ColumnName="ME" />
+          <ScalarProperty Name="TOTHRS" ColumnName="TOTHRS" />
+          <ScalarProperty Name="M_P" ColumnName="M_P" />
+          <ScalarProperty Name="SURVTYPE" ColumnName="SURVTYPE" />
+          <ScalarProperty Name="MAINITEM1" ColumnName="MAINITEM" />
+          <ScalarProperty Name="MAINCODE" ColumnName="MAINCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PMSITEMs">
+      <EntityTypeMapping TypeName="PMSDataModel.PMSITEM">
+        <MappingFragment StoreEntitySet="PMSITEM">
+          <ScalarProperty Name="BKDT" ColumnName="BKDT" />
+          <ScalarProperty Name="NKKCODE" ColumnName="NKKCODE" />
+          <ScalarProperty Name="OFFUPDT" ColumnName="OFFUPDT" />
+          <ScalarProperty Name="SETRANGE" ColumnName="SETRANGE" />
+          <ScalarProperty Name="STPOINT4" ColumnName="STPOINT4" />
+          <ScalarProperty Name="STPOINT3" ColumnName="STPOINT3" />
+          <ScalarProperty Name="STPOINT2" ColumnName="STPOINT2" />
+          <ScalarProperty Name="POSTPNDBY" ColumnName="POSTPNDBY" />
+          <ScalarProperty Name="DECOMM" ColumnName="DECOMM" />
+          <ScalarProperty Name="SERIAL" ColumnName="SERIAL" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="MANUFCODE" ColumnName="MANUFCODE" />
+          <ScalarProperty Name="WARNPRD" ColumnName="WARNPRD" />
+          <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+          <ScalarProperty Name="RESPONSE" ColumnName="RESPONSE" />
+          <ScalarProperty Name="EDITDT" ColumnName="EDITDT" />
+          <ScalarProperty Name="EO_ECO" ColumnName="EO_ECO" />
+          <ScalarProperty Name="UPSTPND" ColumnName="UPSTPND" />
+          <ScalarProperty Name="NPSTPND" ColumnName="NPSTPND" />
+          <ScalarProperty Name="DTPSTPND" ColumnName="DTPSTPND" />
+          <ScalarProperty Name="L_PSTPND" ColumnName="L_PSTPND" />
+          <ScalarProperty Name="L_PGROUP" ColumnName="L_PGROUP" />
+          <ScalarProperty Name="PTOTHRS" ColumnName="PTOTHRS" />
+          <ScalarProperty Name="REASON" ColumnName="REASON" />
+          <ScalarProperty Name="USERS" ColumnName="USERS" />
+          <ScalarProperty Name="EDITED" ColumnName="EDITED" />
+          <ScalarProperty Name="E_D_S" ColumnName="E_D_S" />
+          <ScalarProperty Name="UNITS" ColumnName="UNITS" />
+          <ScalarProperty Name="STPOINT1" ColumnName="STPOINT1" />
+          <ScalarProperty Name="STPOINT" ColumnName="STPOINT" />
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="TYPECODE" ColumnName="TYPECODE" />
+          <ScalarProperty Name="L_DCARB" ColumnName="L_DCARB" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="CRIT" ColumnName="CRIT" />
+          <ScalarProperty Name="M_E_D" ColumnName="M_E_D" />
+          <ScalarProperty Name="HRSNET" ColumnName="HRSNET" />
+          <ScalarProperty Name="OHAULAT" ColumnName="OHAULAT" />
+          <ScalarProperty Name="SCHED" ColumnName="SCHED" />
+          <ScalarProperty Name="INTERVAL" ColumnName="INTERVAL" />
+          <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+          <ScalarProperty Name="EQCODE" ColumnName="EQCODE" />
+          <ScalarProperty Name="HEADR" ColumnName="HEADR" />
+          <ScalarProperty Name="PMSITEM1" ColumnName="PMSITEM" />
+          <ScalarProperty Name="PMSCODE" ColumnName="PMSCODE" />
+          <ScalarProperty Name="MAINCODE" ColumnName="MAINCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

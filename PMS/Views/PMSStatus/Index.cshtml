@@ -1,0 +1,219 @@
+﻿@{
+    ViewBag.Title = "PMS Status";
+}
+@section featured {
+
+}
+
+    	<div class="LftOtr">
+        <button>Toggle</button>
+        <div id='cssmenu' class='cssmenu1'>
+            <ul>
+            <li class='has-sub'><a href='#'><span>PMS Forms</span></a>
+              <ul>
+                 <li>@Html.ActionLink("PMS Status", "Index", "PMSStatus", routeValues: null, htmlAttributes: new { id = "pms_status" })</li>
+                 <li>@Html.ActionLink("PMS Overdue Status", "Overdue", "PMSStatus", routeValues: null, htmlAttributes: new { id = "overdue" })</li>
+                 <li>@Html.ActionLink("Monthly Maintenance Report", "MonthlyReport", "PMSStatus", routeValues: null, htmlAttributes: new { id = "monthly" })</li>
+                 <li>@Html.ActionLink("Postponed PMS Items", "PostponedItems", "PMSStatus", routeValues: null, htmlAttributes: new { id = "postponed" })</li>
+                 <li>@Html.ActionLink("Tracing Main Components", "TracingComp", "PMSStatus", routeValues: null, htmlAttributes: new { id = "tracing" })</li>
+                 <li>@Html.ActionLink("Alram Set Point", "AlramSetPoint", "PMSStatus", routeValues: null, htmlAttributes: new { id = "alram" })</li>
+                 <li>@Html.ActionLink("Incident", "Incident", "PMSStatus", routeValues: null, htmlAttributes: new { id = "incident" })</li>
+                 <li>@Html.ActionLink("Print Preview Running Hours", "RunningHours", "PMSStatus", routeValues: null, htmlAttributes: new { id = "running" })</li>
+                 <li>@Html.ActionLink("Budgeting", "Budgeting", "PMSStatus", routeValues: null, htmlAttributes: new { id = "budgeting" })</li>
+                 <li>@Html.ActionLink("Inculation Report", "Inculation", "PMSStatus", routeValues: null, htmlAttributes: new { id = "inculation" })</li>
+              </ul>
+            </li>
+            <li class='has-sub'><a href='#'><span>PMS Add, Edit &amp; Delete</span></a>
+              <ul>
+                 <li>@Html.ActionLink("Add/Edit/Delete PMS Items (Single)", "SingleAddEdit", "PMSStatus", routeValues: null, htmlAttributes: new { id = "single" })</li>
+                 <li>@Html.ActionLink("Add/Edit/Delete PMS Items (Multiple Ships)", "MultipleAddEdit", "PMSStatus", routeValues: null, htmlAttributes: new { id = "multiple" })</li>
+                 <li>@Html.ActionLink("Change Interval and set Critical Items", "SetCriticalItems", "PMSStatus", routeValues: null, htmlAttributes: new { id = "critical" })</li>
+              </ul>
+            </li>	
+            <li class='has-sub'><a href='#'><span>Equipment &amp; Vendor Add, Edit</span></a>
+              <ul>
+                 <li>@Html.ActionLink("Equipment Details", "EquipmentDetails", "PMSStatus", routeValues: null, htmlAttributes: new { id = "equipment" })</li>
+                 <li>@Html.ActionLink("Vendor, Manufacturer", "Vendor", "PMSStatus", routeValues: null, htmlAttributes: new { id = "vendor" })</li>
+              </ul>
+            </li>
+            </ul>
+    	</div>
+        </div>
+        <div class="TabOtr">
+        	<div class="Title">
+            	<span class="Selected">Select Ship </span>
+                <span><a href="#">Oriental Queen</a></span>
+                <div class="LabelOtr">
+                	<input type="radio" name="Engine" />
+                    <label>Engine</label>
+                    <input type="radio" name="Engine" />
+                    <label>Deck</label>
+                </div>
+            </div>
+             <fieldset>
+             	<legend>Over Due and Item Dues By</legend>
+                <span>
+                    <input type="radio" name="01" />
+                    <label>No Condition</label>
+                    <input type="radio" name="01" />
+                    <label>Only Overdue</label>
+                </span>
+                <span>
+                    <input type="radio" name="01" />
+                    <label>30 Days/500 Hrs. Further</label>
+                    <input type="radio" name="01" />
+                    <label>60 Days/1000 Hrs. Further</label>
+                </span>
+                <span>
+                    <input type="radio"  name="01" />
+                    <label>90 Days/1500 Hrs. Further</label>
+                </span>
+                <span style="margin-bottom:0px;">
+                    <input type="radio"  name="01" />
+                    <label>Custom</label>
+                    <label style="margin-left:10px;">Date</label>
+                    <input type="text" name="" id="" />
+                    <label style="margin-left:10px;">Hours</label>
+                    <input type="text" name="" id="" style="width:26px;" />
+                </span>
+             </fieldset>
+          	 <div class="FormRytSec">
+             	<input type="checkbox" name="" id="" value="" class="ChkBox" />
+           		<label>Critical Items Only</label>
+            	<a href="#"><img src="images/refresh_icon.png" border="0" /></a>
+                <input type="checkbox" name="" id="" value="" class="ChkBox" />
+           		<label>Show Component &amp; maker</label>
+                <span>
+                	<label>Filter By Rank</label>
+                    <select>
+                    	<option>Select</option>
+                    </select>
+                </span>
+                <span class="ProductDetails">Group Main : Air Conditioning Fridge Compressor - AC</span>
+            </div>
+            <div class="PmsSectionOtr">
+                <div class="PmsFirstSec">
+                	<h1><span>Main &amp; PMS Items</span></h1>
+                	<div class="PMSContent">
+                    	TreeView
+                     </div>
+                     <h1><span>Survey Items</span></h1>
+                	<div class="PMSContent">
+                    	TreeView
+                     </div>
+                 </div>
+                <div class="PmsMiddleSec">
+                <h1><span>PMS Details</span></h1>
+                <div class="PMSContent">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" class="Grid">
+                    	<tr>
+                        	<th>Hist Only</th>
+                            <th>App. Pen</th>
+                            <th>Pone</th>
+                            <th>Csm/Coc</th>
+                            <th>Break Down</th>
+                            <th>Main Item</th>
+                            <th>PMS Item</th>
+                            <th>Crit</th>
+                            <th>Work To Be Done</th>
+                            <th>Status</th>
+                            <th>Hrs. Run</th>
+                        </tr>
+                        <tr>
+                        	<td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                        	<td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                        	<td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                 </div>
+                 <div class="PmsMiddleSec1">
+                 	<h1><span>Last Work Done</span></h1>
+                    <div class="PMSContent">
+                        TreeView
+                     </div>
+                 </div>
+                 <div class="PmsMiddleSec1 PmsMiddleSec2">
+                 	<h1><span>Job List</span></h1>
+                    <div class="PMSContent">
+                        TreeView
+                     </div>
+                 </div>
+                 <div class="PmsMiddleSec1" style="margin-right:0px;">
+                 	<h1><span>Present Condition</span></h1>
+                    <div class="PMSContent">
+                        TreeView
+                     </div>
+                 </div>
+                 <div class="PmsMiddleSec1">
+                 	<h1><span>Job Description</span></h1>
+                    <div class="PMSContent">
+                        TreeView
+                     </div>
+                 </div>
+                 <div class="PmsMiddleSec1 JobDesc" style="margin-right:0px;">
+                 	<h1><span>Job Details</span></h1>
+                    <div class="PMSContent" style="width:98%;">
+                        TreeView
+                     </div>
+                 </div>
+                     
+                </div>
+                <div class="PmsLastSec">
+                	<h1><span>Main Equi Pms</span></h1>
+                	<div class="PMSContent">
+                    	TreeView
+                     </div>
+                   <h1><span>PMS Items</span></h1>
+                	<div class="PMSContent">
+                    	TreeView
+                     </div>
+                </div>
+            </div>
+        </div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#cssmenu").toggle();
+                $(".TabOtr").toggleClass("FullWidth");
+            });
+        });
+    </script>
+}

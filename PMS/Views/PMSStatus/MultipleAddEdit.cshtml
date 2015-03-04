@@ -1,0 +1,192 @@
+﻿@{
+    ViewBag.Title = "MultipleAddEdit";
+}
+
+<div class="LftOtr">
+        	<button>Toggle</button>
+        	<div id='cssmenu' class='cssmenu1'>
+            <ul>
+            <li class='has-sub'><a href='#'><span>PMS Forms</span></a>
+              <ul>
+                 <li>@Html.ActionLink("PMS Status", "Index", "PMSStatus", routeValues: null, htmlAttributes: new { id = "pms_status" })</li>
+                 <li>@Html.ActionLink("PMS Overdue Status", "Overdue", "PMSStatus", routeValues: null, htmlAttributes: new { id = "overdue" })</li>
+                 <li>@Html.ActionLink("Monthly Maintenance Report", "MonthlyReport", "PMSStatus", routeValues: null, htmlAttributes: new { id = "monthly" })</li>
+                 <li>@Html.ActionLink("Postponed PMS Items", "PostponedItems", "PMSStatus", routeValues: null, htmlAttributes: new { id = "postponed" })</li>
+                 <li>@Html.ActionLink("Tracing Main Components", "TracingComp", "PMSStatus", routeValues: null, htmlAttributes: new { id = "tracing" })</li>
+                 <li>@Html.ActionLink("Alram Set Point", "AlramSetPoint", "PMSStatus", routeValues: null, htmlAttributes: new { id = "alram" })</li>
+                 <li>@Html.ActionLink("Incident", "Incident", "PMSStatus", routeValues: null, htmlAttributes: new { id = "incident" })</li>
+                 <li>@Html.ActionLink("Print Preview Running Hours", "RunningHours", "PMSStatus", routeValues: null, htmlAttributes: new { id = "running" })</li>
+                 <li>@Html.ActionLink("Budgeting", "Budgeting", "PMSStatus", routeValues: null, htmlAttributes: new { id = "budgeting" })</li>
+                 <li>@Html.ActionLink("Inculation Report", "Inculation", "PMSStatus", routeValues: null, htmlAttributes: new { id = "inculation" })</li>
+              </ul>
+            </li>
+            <li class='has-sub'><a href='#'><span>PMS Add, Edit &amp; Delete</span></a>
+              <ul>
+                 <li>@Html.ActionLink("Add/Edit/Delete PMS Items (Single)", "SingleAddEdit", "PMSStatus", routeValues: null, htmlAttributes: new { id = "single" })</li>
+                 <li>@Html.ActionLink("Add/Edit/Delete PMS Items (Multiple Ships)", "MultipleAddEdit", "PMSStatus", routeValues: null, htmlAttributes: new { id = "multiple" })</li>
+                 <li>@Html.ActionLink("Change Interval and set Critical Items", "SetCriticalItems", "PMSStatus", routeValues: null, htmlAttributes: new { id = "critical" })</li>
+              </ul>
+            </li>	
+            <li class='has-sub'><a href='#'><span>Equipment &amp; Vendor Add, Edit</span></a>
+              <ul>
+                 <li>@Html.ActionLink("Equipment Details", "EquipmentDetails", "PMSStatus", routeValues: null, htmlAttributes: new { id = "equipment" })</li>
+                 <li>@Html.ActionLink("Vendor, Manufacturer", "Vendor", "PMSStatus", routeValues: null, htmlAttributes: new { id = "vendor" })</li>
+              </ul>
+            </li>
+            </ul>
+    	</div>
+        </div>
+        <div class="TabOtr">
+        	<div class="Title">
+            	<span class="Selected">Select Ship </span>
+                <span><a href="#">Oriental Queen</a></span>
+                <div class="LabelOtr">
+                	<input type="radio" name="Engine" />
+                    <label>Engine</label>
+                    <input type="radio" name="Engine" />
+                    <label>Deck</label>
+                </div>
+            </div>
+        	<div class="PmsSectionOtr">
+                
+                <div class="PmsMiddleSec CriticalPMSMiddleSec">
+                <h1><span>Main Equipment Information</span></h1>
+                <div class="PMSContent" style="min-width:98%;">
+                <div class="CriticalPMS">
+                	<span>
+                    	<label>Main Group</label>
+                        <input type="text" id="" class="" name="" />
+                    </span>
+                    <span>
+                    	<label>Main Equipment</label>
+                        <input type="text" id="" class="" name="" />
+                    </span>
+                </div>    
+                </div>
+                <h1><span>PMS Items Information</span></h1>
+                <div class="PMSContent">
+                <div class="CriticalPMS">
+                	<span>
+                    	<label>PMS Item</label>
+                        <input type="text" id="" class="" name="" />
+                    </span>
+                    <span class="ChkboxOtr">
+                    	<input type="checkbox" value="" id="" name="" />
+                        <label>Critical</label>
+                    </span>
+                    <span>
+                    	<label>Work To Be Done</label>
+                        <input type="text" id="" class="" name="" />
+                    </span>
+                    <span  class="Chkbox1">
+                    	<label style="width:24%;">Period</label>
+                    	<input type="radio" value="" id="" name="Options" />
+                        <label>Monthly</label>
+                        <input type="radio" value="" id="" name="Options"  />
+                        <label>Hourly</label>
+                        <input type="radio" value="" id="" name="Options" />
+                        <label>Weekly</label>
+                    </span>
+                    <span>
+                        <label>O'Haul Intervals</label>
+                        <input type="text" name="" id="" style="width:50px; float:left;" />
+                        <label style="margin-left:10px; width:23%;">Monthly</label>
+                        <label style="width:15%;">Responsible</label>
+                        <select style="width:20%;">
+                            <option>C/E</option>
+                        </select>
+	                </span>
+                    <span>
+                        <label>Job No.</label>
+                        <input type="text" name="" id="" style="width:50px; float:left;" />
+                        <label style="margin-left:10px; width:23%;">Short Description</label>
+                        <input type="text" name="" id="" style="width:34%; float:left;" />
+	                </span>
+                </div>    
+             
+                </div>
+                
+                </div>
+                <div class="PmsFirstSec" style="margin-left:5px;">
+                	<h1><span>Sched</span></h1>
+                	<div class="PMSContent">
+                    	<table width="100%" cellpadding="0" cellspacing="0" border="0" class="Grid">
+                    	<tr>
+                        	<th>Sched</th>
+                            <th>Name</th>
+                        </tr>
+                        <tr>
+                        	<td align="center"><input type="checkbox" name="" id="" value="" /></td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                        	<td align="center"><input type="checkbox" name="" id="" value="" /></td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                        	<td align="center"><input type="checkbox" name="" id="" value="" /></td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table> 
+                     </div>
+              </div>
+                <div class="PmsLastSec CriticalPMSLastSec">
+                	<h1><span>Search Jobs</span></h1>
+                	<div class="PMSContent">
+                    	<table width="100%" cellpadding="0" cellspacing="0" border="0" class="Grid">
+                    	<tr>
+                        	<th></th>
+                            <th>Ship Code</th>
+                            <th>Ship Name</th>
+                        </tr>
+                        <tr>
+                        	<td align="center"><input type="checkbox" name="" id="" value="" /></td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                        	<td align="center"><input type="checkbox" name="" id="" value="" /></td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                        	<td align="center"><input type="checkbox" name="" id="" value="" /></td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table> 
+                     </div>
+                </div>
+            </div>
+            <div class="PmsSectionOtr" style="width:100%;">
+            	<div class="PmsMiddleSec CriticalPMSMiddleSec" style="width:100%;">
+                <h1><span>Ship Group Details</span></h1>
+                <div class="PMSContent" style="min-width:99%;">
+                <div class="CriticalPMS EquipForm">
+                	<table width="100%" cellpadding="0" cellspacing="0" border="0" class="Grid">
+                    	<tr>
+                        	<th>Group Name</th>
+                            <th>Main Item</th>
+                            <th>PMS Item</th>
+                        </tr>
+                        <tr>
+                        	<td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                        	<td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                        	<td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table> 
+                </div>    
+                </div>
+                </div>
+            </div>    
+        </div>

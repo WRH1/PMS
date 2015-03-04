@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PMSDataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="PMSDataModelStoreContainer">
+    <EntitySet Name="MAINITEM" EntityType="PMSDataModel.Store.MAINITEM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PMSITEM" EntityType="PMSDataModel.Store.PMSITEM" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_PMSITEM_MAINITEM" Association="PMSDataModel.Store.FK_PMSITEM_MAINITEM">
+      <End Role="MAINITEM" EntitySet="MAINITEM" />
+      <End Role="PMSITEM" EntitySet="PMSITEM" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="MAINITEM">
+    <Key>
+      <PropertyRef Name="MAINCODE" />
+    </Key>
+    <Property Name="MAINCODE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAINITEM" Type="char" MaxLength="40" />
+    <Property Name="SURVTYPE" Type="char" MaxLength="1" />
+    <Property Name="M_P" Type="char" MaxLength="1" />
+    <Property Name="TOTHRS" Type="numeric" Precision="7" />
+    <Property Name="ME" Type="bit" />
+    <Property Name="ORGDIA" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="AE" Type="bit" />
+    <Property Name="NUM" Type="numeric" Precision="2" />
+    <Property Name="THU_DATE" Type="date" />
+    <Property Name="SEPA" Type="bit" />
+    <Property Name="ACOMP" Type="bit" />
+    <Property Name="AL" Type="bit" />
+    <Property Name="PMPOHL" Type="bit" />
+    <Property Name="PMPRTN" Type="bit" />
+    <Property Name="MOTOHL" Type="bit" />
+    <Property Name="MOTRTN" Type="bit" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="L_MGROUP" Type="bit" />
+    <Property Name="MTCODE" Type="char" MaxLength="8" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="MES" Type="bit" />
+    <Property Name="GRPMCODE" Type="char" MaxLength="10" />
+    <Property Name="OFFUPDT" Type="bit" />
+    <Property Name="SLF" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <EntityType Name="PMSITEM">
+    <Key>
+      <PropertyRef Name="PMSCODE" />
+    </Key>
+    <Property Name="MAINCODE" Type="int" />
+    <Property Name="PMSCODE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PMSITEM" Type="char" MaxLength="45" />
+    <Property Name="HEADR" Type="char" MaxLength="60" />
+    <Property Name="EQCODE" Type="char" MaxLength="10" />
+    <Property Name="PERIOD" Type="char" MaxLength="1" />
+    <Property Name="INTERVAL" Type="numeric" Precision="6" />
+    <Property Name="SCHED" Type="numeric" Precision="4" />
+    <Property Name="OHAULAT" Type="numeric" Precision="7" />
+    <Property Name="HRSNET" Type="numeric" Precision="7" />
+    <Property Name="M_E_D" Type="char" MaxLength="1" />
+    <Property Name="CRIT" Type="bit" />
+    <Property Name="DATE" Type="date" />
+    <Property Name="L_DCARB" Type="bit" />
+    <Property Name="TYPECODE" Type="char" MaxLength="8" />
+    <Property Name="NUM" Type="numeric" Precision="2" />
+    <Property Name="STPOINT" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="STPOINT1" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="UNITS" Type="char" MaxLength="10" />
+    <Property Name="E_D_S" Type="char" MaxLength="1" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="USERS" Type="char" MaxLength="35" />
+    <Property Name="REASON" Type="char" MaxLength="254" />
+    <Property Name="PTOTHRS" Type="numeric" Precision="7" />
+    <Property Name="L_PGROUP" Type="bit" />
+    <Property Name="L_PSTPND" Type="bit" />
+    <Property Name="DTPSTPND" Type="date" />
+    <Property Name="NPSTPND" Type="numeric" Precision="8" />
+    <Property Name="UPSTPND" Type="char" MaxLength="8" />
+    <Property Name="EO_ECO" Type="bit" />
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="RESPONSE" Type="char" MaxLength="5" />
+    <Property Name="COMMENT" Type="char" MaxLength="254" />
+    <Property Name="WARNPRD" Type="numeric" Precision="6" />
+    <Property Name="MANUFCODE" Type="char" MaxLength="10" />
+    <Property Name="TYPE" Type="char" MaxLength="30" />
+    <Property Name="SERIAL" Type="char" MaxLength="20" />
+    <Property Name="DECOMM" Type="bit" />
+    <Property Name="POSTPNDBY" Type="char" MaxLength="100" />
+    <Property Name="STPOINT2" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="STPOINT3" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="STPOINT4" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="SETRANGE" Type="char" MaxLength="20" />
+    <Property Name="OFFUPDT" Type="bit" />
+    <Property Name="NKKCODE" Type="numeric" Precision="2" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
+  <Association Name="FK_PMSITEM_MAINITEM">
+    <End Role="MAINITEM" Type="PMSDataModel.Store.MAINITEM" Multiplicity="0..1" />
+    <End Role="PMSITEM" Type="PMSDataModel.Store.PMSITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAINITEM">
+        <PropertyRef Name="MAINCODE" />
+      </Principal>
+      <Dependent Role="PMSITEM">
+        <PropertyRef Name="MAINCODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
