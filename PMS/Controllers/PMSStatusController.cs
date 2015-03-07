@@ -30,12 +30,15 @@ namespace PMS.Controllers
 
 
         // Tree Main and pms items
-        public ActionResult TreeMainAndPmsItems()
+        public JsonResult TreeMainAndPmsItems()
         {
+            var maintree = (from m in db.MAINITEMs
+                            select new { pId = 0, id = m.MAINCODE, name = m.MAINITEM1 }).ToList();
             var tree = (from m in db.MAINITEMs
                         join p in db.PMSITEMs on m.MAINCODE equals p.MAINCODE
-                        select new{m.MAINCODE, p.PMSCODE, p.PMSITEM1}).ToList();
-            return View();
+                        select new { pId = m.MAINCODE, id = p.PMSCODE, name = p.PMSITEM1 }).ToList();
+            maintree.AddRange(tree);
+            return Json(maintree, JsonRequestBehavior.AllowGet);
         }
 
     }

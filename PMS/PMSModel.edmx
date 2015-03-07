@@ -6,13 +6,30 @@
     <edmx:StorageModels>
     <Schema Namespace="PMSDataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="PMSDataModelStoreContainer">
+          <EntitySet Name="GRPMAIN" EntityType="PMSDataModel.Store.GRPMAIN" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="MAINITEM" EntityType="PMSDataModel.Store.MAINITEM" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="PMSITEM" EntityType="PMSDataModel.Store.PMSITEM" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_MAINITEM_GRPMAIN" Association="PMSDataModel.Store.FK_MAINITEM_GRPMAIN">
+            <End Role="GRPMAIN" EntitySet="GRPMAIN" />
+            <End Role="MAINITEM" EntitySet="MAINITEM" />
+          </AssociationSet>
           <AssociationSet Name="FK_PMSITEM_MAINITEM" Association="PMSDataModel.Store.FK_PMSITEM_MAINITEM">
             <End Role="MAINITEM" EntitySet="MAINITEM" />
             <End Role="PMSITEM" EntitySet="PMSITEM" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="GRPMAIN">
+          <Key>
+            <PropertyRef Name="GRPMCODE" />
+          </Key>
+          <Property Name="EDITDT" Type="date" />
+          <Property Name="EDITED" Type="bit" />
+          <Property Name="GRPMCODE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GRPMNAME" Type="char" MaxLength="60" />
+          <Property Name="GRPMPARENT" Type="char" MaxLength="10" />
+          <Property Name="OFFUPDT" Type="bit" />
+          <Property Name="BKDT" Type="date" />
+        </EntityType>
         <EntityType Name="MAINITEM">
           <Key>
             <PropertyRef Name="MAINCODE" />
@@ -39,7 +56,7 @@
           <Property Name="MTCODE" Type="char" MaxLength="8" />
           <Property Name="EDITDT" Type="date" />
           <Property Name="MES" Type="bit" />
-          <Property Name="GRPMCODE" Type="char" MaxLength="10" />
+          <Property Name="GRPMCODE" Type="int" />
           <Property Name="OFFUPDT" Type="bit" />
           <Property Name="SLF" Type="bit" />
           <Property Name="BKDT" Type="date" />
@@ -95,6 +112,18 @@
           <Property Name="NKKCODE" Type="numeric" Precision="2" />
           <Property Name="BKDT" Type="date" />
         </EntityType>
+        <Association Name="FK_MAINITEM_GRPMAIN">
+          <End Role="GRPMAIN" Type="PMSDataModel.Store.GRPMAIN" Multiplicity="0..1" />
+          <End Role="MAINITEM" Type="PMSDataModel.Store.MAINITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRPMAIN">
+              <PropertyRef Name="GRPMCODE" />
+            </Principal>
+            <Dependent Role="MAINITEM">
+              <PropertyRef Name="GRPMCODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_PMSITEM_MAINITEM">
           <End Role="MAINITEM" Type="PMSDataModel.Store.MAINITEM" Multiplicity="0..1" />
           <End Role="PMSITEM" Type="PMSDataModel.Store.PMSITEM" Multiplicity="*" />
@@ -112,13 +141,31 @@
     <edmx:ConceptualModels>
       <Schema Namespace="PMSDataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="PMSDataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="GRPMAINs" EntityType="PMSDataModel.GRPMAIN" />
           <EntitySet Name="MAINITEMs" EntityType="PMSDataModel.MAINITEM" />
           <EntitySet Name="PMSITEMs" EntityType="PMSDataModel.PMSITEM" />
+          <AssociationSet Name="FK_MAINITEM_GRPMAIN" Association="PMSDataModel.FK_MAINITEM_GRPMAIN">
+            <End Role="GRPMAIN" EntitySet="GRPMAINs" />
+            <End Role="MAINITEM" EntitySet="MAINITEMs" />
+          </AssociationSet>
           <AssociationSet Name="FK_PMSITEM_MAINITEM" Association="PMSDataModel.FK_PMSITEM_MAINITEM">
             <End Role="MAINITEM" EntitySet="MAINITEMs" />
             <End Role="PMSITEM" EntitySet="PMSITEMs" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="GRPMAIN">
+          <Key>
+            <PropertyRef Name="GRPMCODE" />
+          </Key>
+          <Property Type="DateTime" Name="EDITDT" />
+          <Property Type="Boolean" Name="EDITED" />
+          <Property Type="Int32" Name="GRPMCODE" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="GRPMNAME" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="GRPMPARENT" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="Boolean" Name="OFFUPDT" />
+          <Property Type="DateTime" Name="BKDT" />
+          <NavigationProperty Name="MAINITEMs" Relationship="PMSDataModel.FK_MAINITEM_GRPMAIN" FromRole="GRPMAIN" ToRole="MAINITEM" />
+        </EntityType>
         <EntityType Name="MAINITEM">
           <Key>
             <PropertyRef Name="MAINCODE" />
@@ -145,10 +192,11 @@
           <Property Type="String" Name="MTCODE" MaxLength="8" FixedLength="true" Unicode="false" />
           <Property Type="DateTime" Name="EDITDT" />
           <Property Type="Boolean" Name="MES" />
-          <Property Type="String" Name="GRPMCODE" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="GRPMCODE" />
           <Property Type="Boolean" Name="OFFUPDT" />
           <Property Type="Boolean" Name="SLF" />
           <Property Type="DateTime" Name="BKDT" />
+          <NavigationProperty Name="GRPMAIN" Relationship="PMSDataModel.FK_MAINITEM_GRPMAIN" FromRole="MAINITEM" ToRole="GRPMAIN" />
           <NavigationProperty Name="PMSITEMs" Relationship="PMSDataModel.FK_PMSITEM_MAINITEM" FromRole="MAINITEM" ToRole="PMSITEM" />
         </EntityType>
         <EntityType Name="PMSITEM">
@@ -203,6 +251,18 @@
           <Property Type="DateTime" Name="BKDT" />
           <NavigationProperty Name="MAINITEM" Relationship="PMSDataModel.FK_PMSITEM_MAINITEM" FromRole="PMSITEM" ToRole="MAINITEM" />
         </EntityType>
+        <Association Name="FK_MAINITEM_GRPMAIN">
+          <End Type="PMSDataModel.GRPMAIN" Role="GRPMAIN" Multiplicity="0..1" />
+          <End Type="PMSDataModel.MAINITEM" Role="MAINITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRPMAIN">
+              <PropertyRef Name="GRPMCODE" />
+            </Principal>
+            <Dependent Role="MAINITEM">
+              <PropertyRef Name="GRPMCODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_PMSITEM_MAINITEM">
           <End Type="PMSDataModel.MAINITEM" Role="MAINITEM" Multiplicity="0..1" />
           <End Type="PMSDataModel.PMSITEM" Role="PMSITEM" Multiplicity="*" />
@@ -221,6 +281,19 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="PMSDataModelStoreContainer" CdmEntityContainer="PMSDataEntities">
+          <EntitySetMapping Name="GRPMAINs">
+            <EntityTypeMapping TypeName="PMSDataModel.GRPMAIN">
+              <MappingFragment StoreEntitySet="GRPMAIN">
+                <ScalarProperty Name="BKDT" ColumnName="BKDT" />
+                <ScalarProperty Name="OFFUPDT" ColumnName="OFFUPDT" />
+                <ScalarProperty Name="GRPMPARENT" ColumnName="GRPMPARENT" />
+                <ScalarProperty Name="GRPMNAME" ColumnName="GRPMNAME" />
+                <ScalarProperty Name="GRPMCODE" ColumnName="GRPMCODE" />
+                <ScalarProperty Name="EDITED" ColumnName="EDITED" />
+                <ScalarProperty Name="EDITDT" ColumnName="EDITDT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="MAINITEMs">
             <EntityTypeMapping TypeName="PMSDataModel.MAINITEM">
               <MappingFragment StoreEntitySet="MAINITEM">
@@ -325,12 +398,17 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="PMSModel" ZoomLevel="59">
-        <EntityTypeShape EntityType="PMSDataModel.MAINITEM" Width="1.5" PointX="0.75" PointY="3.25" Height="6.2109179687499809" />
-        <EntityTypeShape EntityType="PMSDataModel.PMSITEM" Width="1.5" PointX="3" PointY="1.375" Height="10.056946614583353" />
+      <Diagram Name="PMSModel" ZoomLevel="55">
+        <EntityTypeShape EntityType="PMSDataModel.GRPMAIN" Width="1.5" PointX="0.75" PointY="5.125" Height="2.5571907552083317" />
+        <EntityTypeShape EntityType="PMSDataModel.MAINITEM" Width="1.5" PointX="3" PointY="3.125" Height="6.4032194010416674" />
+        <EntityTypeShape EntityType="PMSDataModel.PMSITEM" Width="1.5" PointX="5.25" PointY="1.375" Height="10.056946614583332" />
+        <AssociationConnector Association="PMSDataModel.FK_MAINITEM_GRPMAIN" >
+          <ConnectorPoint PointX="2.25" PointY="6.4035953776041659" />
+          <ConnectorPoint PointX="3" PointY="6.4035953776041659" />
+        </AssociationConnector>
         <AssociationConnector Association="PMSDataModel.FK_PMSITEM_MAINITEM" >
-          <ConnectorPoint PointX="2.25" PointY="6.3554589843749909" />
-          <ConnectorPoint PointX="3" PointY="6.3554589843749909" />
+          <ConnectorPoint PointX="4.5" PointY="6.3266097005208337" />
+          <ConnectorPoint PointX="5.25" PointY="6.3266097005208337" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>

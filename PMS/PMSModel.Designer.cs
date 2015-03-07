@@ -19,6 +19,7 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
+[assembly: EdmRelationshipAttribute("PMSDataModel", "FK_MAINITEM_GRPMAIN", "GRPMAIN", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(PMS.GRPMAIN), "MAINITEM", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PMS.MAINITEM), true)]
 [assembly: EdmRelationshipAttribute("PMSDataModel", "FK_PMSITEM_MAINITEM", "MAINITEM", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(PMS.MAINITEM), "PMSITEM", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(PMS.PMSITEM), true)]
 
 #endregion
@@ -74,6 +75,22 @@ namespace PMS
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<GRPMAIN> GRPMAINs
+        {
+            get
+            {
+                if ((_GRPMAINs == null))
+                {
+                    _GRPMAINs = base.CreateObjectSet<GRPMAIN>("GRPMAINs");
+                }
+                return _GRPMAINs;
+            }
+        }
+        private ObjectSet<GRPMAIN> _GRPMAINs;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<MAINITEM> MAINITEMs
         {
             get
@@ -108,6 +125,14 @@ namespace PMS
         #region AddTo Methods
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the GRPMAINs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToGRPMAINs(GRPMAIN gRPMAIN)
+        {
+            base.AddObject("GRPMAINs", gRPMAIN);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the MAINITEMs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToMAINITEMs(MAINITEM mAINITEM)
@@ -130,6 +155,233 @@ namespace PMS
     #endregion
 
     #region Entities
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="PMSDataModel", Name="GRPMAIN")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class GRPMAIN : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new GRPMAIN object.
+        /// </summary>
+        /// <param name="gRPMCODE">Initial value of the GRPMCODE property.</param>
+        public static GRPMAIN CreateGRPMAIN(global::System.Int32 gRPMCODE)
+        {
+            GRPMAIN gRPMAIN = new GRPMAIN();
+            gRPMAIN.GRPMCODE = gRPMCODE;
+            return gRPMAIN;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> EDITDT
+        {
+            get
+            {
+                return _EDITDT;
+            }
+            set
+            {
+                OnEDITDTChanging(value);
+                ReportPropertyChanging("EDITDT");
+                _EDITDT = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("EDITDT");
+                OnEDITDTChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _EDITDT;
+        partial void OnEDITDTChanging(Nullable<global::System.DateTime> value);
+        partial void OnEDITDTChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> EDITED
+        {
+            get
+            {
+                return _EDITED;
+            }
+            set
+            {
+                OnEDITEDChanging(value);
+                ReportPropertyChanging("EDITED");
+                _EDITED = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("EDITED");
+                OnEDITEDChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _EDITED;
+        partial void OnEDITEDChanging(Nullable<global::System.Boolean> value);
+        partial void OnEDITEDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 GRPMCODE
+        {
+            get
+            {
+                return _GRPMCODE;
+            }
+            set
+            {
+                if (_GRPMCODE != value)
+                {
+                    OnGRPMCODEChanging(value);
+                    ReportPropertyChanging("GRPMCODE");
+                    _GRPMCODE = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("GRPMCODE");
+                    OnGRPMCODEChanged();
+                }
+            }
+        }
+        private global::System.Int32 _GRPMCODE;
+        partial void OnGRPMCODEChanging(global::System.Int32 value);
+        partial void OnGRPMCODEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String GRPMNAME
+        {
+            get
+            {
+                return _GRPMNAME;
+            }
+            set
+            {
+                OnGRPMNAMEChanging(value);
+                ReportPropertyChanging("GRPMNAME");
+                _GRPMNAME = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("GRPMNAME");
+                OnGRPMNAMEChanged();
+            }
+        }
+        private global::System.String _GRPMNAME;
+        partial void OnGRPMNAMEChanging(global::System.String value);
+        partial void OnGRPMNAMEChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String GRPMPARENT
+        {
+            get
+            {
+                return _GRPMPARENT;
+            }
+            set
+            {
+                OnGRPMPARENTChanging(value);
+                ReportPropertyChanging("GRPMPARENT");
+                _GRPMPARENT = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("GRPMPARENT");
+                OnGRPMPARENTChanged();
+            }
+        }
+        private global::System.String _GRPMPARENT;
+        partial void OnGRPMPARENTChanging(global::System.String value);
+        partial void OnGRPMPARENTChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> OFFUPDT
+        {
+            get
+            {
+                return _OFFUPDT;
+            }
+            set
+            {
+                OnOFFUPDTChanging(value);
+                ReportPropertyChanging("OFFUPDT");
+                _OFFUPDT = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("OFFUPDT");
+                OnOFFUPDTChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _OFFUPDT;
+        partial void OnOFFUPDTChanging(Nullable<global::System.Boolean> value);
+        partial void OnOFFUPDTChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> BKDT
+        {
+            get
+            {
+                return _BKDT;
+            }
+            set
+            {
+                OnBKDTChanging(value);
+                ReportPropertyChanging("BKDT");
+                _BKDT = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("BKDT");
+                OnBKDTChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _BKDT;
+        partial void OnBKDTChanging(Nullable<global::System.DateTime> value);
+        partial void OnBKDTChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("PMSDataModel", "FK_MAINITEM_GRPMAIN", "MAINITEM")]
+        public EntityCollection<MAINITEM> MAINITEMs
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MAINITEM>("PMSDataModel.FK_MAINITEM_GRPMAIN", "MAINITEM");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MAINITEM>("PMSDataModel.FK_MAINITEM_GRPMAIN", "MAINITEM", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
     
     /// <summary>
     /// No Metadata Documentation available.
@@ -692,7 +944,7 @@ namespace PMS
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String GRPMCODE
+        public Nullable<global::System.Int32> GRPMCODE
         {
             get
             {
@@ -702,13 +954,13 @@ namespace PMS
             {
                 OnGRPMCODEChanging(value);
                 ReportPropertyChanging("GRPMCODE");
-                _GRPMCODE = StructuralObject.SetValidValue(value, true);
+                _GRPMCODE = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("GRPMCODE");
                 OnGRPMCODEChanged();
             }
         }
-        private global::System.String _GRPMCODE;
-        partial void OnGRPMCODEChanging(global::System.String value);
+        private Nullable<global::System.Int32> _GRPMCODE;
+        partial void OnGRPMCODEChanging(Nullable<global::System.Int32> value);
         partial void OnGRPMCODEChanged();
     
         /// <summary>
@@ -787,6 +1039,44 @@ namespace PMS
 
     
         #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("PMSDataModel", "FK_MAINITEM_GRPMAIN", "GRPMAIN")]
+        public GRPMAIN GRPMAIN
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<GRPMAIN>("PMSDataModel.FK_MAINITEM_GRPMAIN", "GRPMAIN").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<GRPMAIN>("PMSDataModel.FK_MAINITEM_GRPMAIN", "GRPMAIN").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<GRPMAIN> GRPMAINReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<GRPMAIN>("PMSDataModel.FK_MAINITEM_GRPMAIN", "GRPMAIN");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<GRPMAIN>("PMSDataModel.FK_MAINITEM_GRPMAIN", "GRPMAIN", value);
+                }
+            }
+        }
     
         /// <summary>
         /// No Metadata Documentation available.

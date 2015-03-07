@@ -1,6 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="PMSDataModelStoreContainer" CdmEntityContainer="PMSDataEntities">
+    <EntitySetMapping Name="GRPMAINs">
+      <EntityTypeMapping TypeName="PMSDataModel.GRPMAIN">
+        <MappingFragment StoreEntitySet="GRPMAIN">
+          <ScalarProperty Name="BKDT" ColumnName="BKDT" />
+          <ScalarProperty Name="OFFUPDT" ColumnName="OFFUPDT" />
+          <ScalarProperty Name="GRPMPARENT" ColumnName="GRPMPARENT" />
+          <ScalarProperty Name="GRPMNAME" ColumnName="GRPMNAME" />
+          <ScalarProperty Name="GRPMCODE" ColumnName="GRPMCODE" />
+          <ScalarProperty Name="EDITED" ColumnName="EDITED" />
+          <ScalarProperty Name="EDITDT" ColumnName="EDITDT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="MAINITEMs">
       <EntityTypeMapping TypeName="PMSDataModel.MAINITEM">
         <MappingFragment StoreEntitySet="MAINITEM">

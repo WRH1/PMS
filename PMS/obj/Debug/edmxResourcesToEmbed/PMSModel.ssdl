@@ -1,13 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="PMSDataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="PMSDataModelStoreContainer">
+    <EntitySet Name="GRPMAIN" EntityType="PMSDataModel.Store.GRPMAIN" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="MAINITEM" EntityType="PMSDataModel.Store.MAINITEM" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PMSITEM" EntityType="PMSDataModel.Store.PMSITEM" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_MAINITEM_GRPMAIN" Association="PMSDataModel.Store.FK_MAINITEM_GRPMAIN">
+      <End Role="GRPMAIN" EntitySet="GRPMAIN" />
+      <End Role="MAINITEM" EntitySet="MAINITEM" />
+    </AssociationSet>
     <AssociationSet Name="FK_PMSITEM_MAINITEM" Association="PMSDataModel.Store.FK_PMSITEM_MAINITEM">
       <End Role="MAINITEM" EntitySet="MAINITEM" />
       <End Role="PMSITEM" EntitySet="PMSITEM" />
     </AssociationSet>
   </EntityContainer>
+  <EntityType Name="GRPMAIN">
+    <Key>
+      <PropertyRef Name="GRPMCODE" />
+    </Key>
+    <Property Name="EDITDT" Type="date" />
+    <Property Name="EDITED" Type="bit" />
+    <Property Name="GRPMCODE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GRPMNAME" Type="char" MaxLength="60" />
+    <Property Name="GRPMPARENT" Type="char" MaxLength="10" />
+    <Property Name="OFFUPDT" Type="bit" />
+    <Property Name="BKDT" Type="date" />
+  </EntityType>
   <EntityType Name="MAINITEM">
     <Key>
       <PropertyRef Name="MAINCODE" />
@@ -34,7 +51,7 @@
     <Property Name="MTCODE" Type="char" MaxLength="8" />
     <Property Name="EDITDT" Type="date" />
     <Property Name="MES" Type="bit" />
-    <Property Name="GRPMCODE" Type="char" MaxLength="10" />
+    <Property Name="GRPMCODE" Type="int" />
     <Property Name="OFFUPDT" Type="bit" />
     <Property Name="SLF" Type="bit" />
     <Property Name="BKDT" Type="date" />
@@ -90,6 +107,18 @@
     <Property Name="NKKCODE" Type="numeric" Precision="2" />
     <Property Name="BKDT" Type="date" />
   </EntityType>
+  <Association Name="FK_MAINITEM_GRPMAIN">
+    <End Role="GRPMAIN" Type="PMSDataModel.Store.GRPMAIN" Multiplicity="0..1" />
+    <End Role="MAINITEM" Type="PMSDataModel.Store.MAINITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GRPMAIN">
+        <PropertyRef Name="GRPMCODE" />
+      </Principal>
+      <Dependent Role="MAINITEM">
+        <PropertyRef Name="GRPMCODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_PMSITEM_MAINITEM">
     <End Role="MAINITEM" Type="PMSDataModel.Store.MAINITEM" Multiplicity="0..1" />
     <End Role="PMSITEM" Type="PMSDataModel.Store.PMSITEM" Multiplicity="*" />
