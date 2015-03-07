@@ -8,27 +8,63 @@
         <EntityContainer Name="PMSDataModelStoreContainer">
           <EntitySet Name="GRPMAIN" EntityType="PMSDataModel.Store.GRPMAIN" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="MAINITEM" EntityType="PMSDataModel.Store.MAINITEM" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MAINTYPE" EntityType="PMSDataModel.Store.MAINTYPE" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="PMSITEM" EntityType="PMSDataModel.Store.PMSITEM" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PMSTYPE" EntityType="PMSDataModel.Store.PMSTYPE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SURVDONE" EntityType="PMSDataModel.Store.SURVDONE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SURVJOB" EntityType="PMSDataModel.Store.SURVJOB" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SURVMAIN" EntityType="PMSDataModel.Store.SURVMAIN" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SURVPMS" EntityType="PMSDataModel.Store.SURVPMS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SURVSUB" EntityType="PMSDataModel.Store.SURVSUB" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SURVYEAR" EntityType="PMSDataModel.Store.SURVYEAR" store:Type="Tables" Schema="dbo" />
           <AssociationSet Name="FK_MAINITEM_GRPMAIN" Association="PMSDataModel.Store.FK_MAINITEM_GRPMAIN">
             <End Role="GRPMAIN" EntitySet="GRPMAIN" />
+            <End Role="MAINITEM" EntitySet="MAINITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MAINITEM_MAINTYPE" Association="PMSDataModel.Store.FK_MAINITEM_MAINTYPE">
+            <End Role="MAINTYPE" EntitySet="MAINTYPE" />
             <End Role="MAINITEM" EntitySet="MAINITEM" />
           </AssociationSet>
           <AssociationSet Name="FK_PMSITEM_MAINITEM" Association="PMSDataModel.Store.FK_PMSITEM_MAINITEM">
             <End Role="MAINITEM" EntitySet="MAINITEM" />
             <End Role="PMSITEM" EntitySet="PMSITEM" />
           </AssociationSet>
+          <AssociationSet Name="FK_PMSITEM_PMSTYPE" Association="PMSDataModel.Store.FK_PMSITEM_PMSTYPE">
+            <End Role="PMSTYPE" EntitySet="PMSTYPE" />
+            <End Role="PMSITEM" EntitySet="PMSITEM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SURVDONE_SURVPMS" Association="PMSDataModel.Store.FK_SURVDONE_SURVPMS">
+            <End Role="SURVPMS" EntitySet="SURVPMS" />
+            <End Role="SURVDONE" EntitySet="SURVDONE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SURVJOB_SURVPMS" Association="PMSDataModel.Store.FK_SURVJOB_SURVPMS">
+            <End Role="SURVPMS" EntitySet="SURVPMS" />
+            <End Role="SURVJOB" EntitySet="SURVJOB" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SURVPMS_SURVMAIN" Association="PMSDataModel.Store.FK_SURVPMS_SURVMAIN">
+            <End Role="SURVMAIN" EntitySet="SURVMAIN" />
+            <End Role="SURVPMS" EntitySet="SURVPMS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SURVSUB_SURVPMS" Association="PMSDataModel.Store.FK_SURVSUB_SURVPMS">
+            <End Role="SURVPMS" EntitySet="SURVPMS" />
+            <End Role="SURVSUB" EntitySet="SURVSUB" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SURVYEAR_SURVPMS" Association="PMSDataModel.Store.FK_SURVYEAR_SURVPMS">
+            <End Role="SURVPMS" EntitySet="SURVPMS" />
+            <End Role="SURVYEAR" EntitySet="SURVYEAR" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="GRPMAIN">
           <Key>
             <PropertyRef Name="GRPMCODE" />
           </Key>
-          <Property Name="EDITDT" Type="date" />
+          <Property Name="EDITDT" Type="datetime" />
           <Property Name="EDITED" Type="bit" />
           <Property Name="GRPMCODE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="GRPMNAME" Type="char" MaxLength="60" />
           <Property Name="GRPMPARENT" Type="char" MaxLength="10" />
           <Property Name="OFFUPDT" Type="bit" />
-          <Property Name="BKDT" Type="date" />
+          <Property Name="BKDT" Type="datetime" />
         </EntityType>
         <EntityType Name="MAINITEM">
           <Key>
@@ -43,7 +79,7 @@
           <Property Name="ORGDIA" Type="numeric" Precision="6" Scale="2" />
           <Property Name="AE" Type="bit" />
           <Property Name="NUM" Type="numeric" Precision="2" />
-          <Property Name="THU_DATE" Type="date" />
+          <Property Name="THU_DATE" Type="datetime" />
           <Property Name="SEPA" Type="bit" />
           <Property Name="ACOMP" Type="bit" />
           <Property Name="AL" Type="bit" />
@@ -53,13 +89,24 @@
           <Property Name="MOTRTN" Type="bit" />
           <Property Name="EDITED" Type="bit" />
           <Property Name="L_MGROUP" Type="bit" />
-          <Property Name="MTCODE" Type="char" MaxLength="8" />
-          <Property Name="EDITDT" Type="date" />
+          <Property Name="MTCODE" Type="int" />
+          <Property Name="EDITDT" Type="datetime" />
           <Property Name="MES" Type="bit" />
           <Property Name="GRPMCODE" Type="int" />
           <Property Name="OFFUPDT" Type="bit" />
           <Property Name="SLF" Type="bit" />
-          <Property Name="BKDT" Type="date" />
+          <Property Name="BKDT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="MAINTYPE">
+          <Key>
+            <PropertyRef Name="MTCODE" />
+          </Key>
+          <Property Name="MTCODE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MAINTYPE" Type="char" MaxLength="45" />
+          <Property Name="L_DEFA" Type="bit" />
+          <Property Name="EDITED" Type="bit" />
+          <Property Name="EDITDT" Type="datetime" />
+          <Property Name="BKDT" Type="datetime" />
         </EntityType>
         <EntityType Name="PMSITEM">
           <Key>
@@ -77,9 +124,9 @@
           <Property Name="HRSNET" Type="numeric" Precision="7" />
           <Property Name="M_E_D" Type="char" MaxLength="1" />
           <Property Name="CRIT" Type="bit" />
-          <Property Name="DATE" Type="date" />
+          <Property Name="DATES" Type="datetime" />
           <Property Name="L_DCARB" Type="bit" />
-          <Property Name="TYPECODE" Type="char" MaxLength="8" />
+          <Property Name="TYPECODE" Type="int" />
           <Property Name="NUM" Type="numeric" Precision="2" />
           <Property Name="STPOINT" Type="numeric" Precision="7" Scale="2" />
           <Property Name="STPOINT1" Type="numeric" Precision="7" Scale="2" />
@@ -91,11 +138,11 @@
           <Property Name="PTOTHRS" Type="numeric" Precision="7" />
           <Property Name="L_PGROUP" Type="bit" />
           <Property Name="L_PSTPND" Type="bit" />
-          <Property Name="DTPSTPND" Type="date" />
+          <Property Name="DTPSTPND" Type="datetime" />
           <Property Name="NPSTPND" Type="numeric" Precision="8" />
           <Property Name="UPSTPND" Type="char" MaxLength="8" />
           <Property Name="EO_ECO" Type="bit" />
-          <Property Name="EDITDT" Type="date" />
+          <Property Name="EDITDT" Type="datetime" />
           <Property Name="RESPONSE" Type="char" MaxLength="5" />
           <Property Name="COMMENT" Type="char" MaxLength="254" />
           <Property Name="WARNPRD" Type="numeric" Precision="6" />
@@ -110,7 +157,119 @@
           <Property Name="SETRANGE" Type="char" MaxLength="20" />
           <Property Name="OFFUPDT" Type="bit" />
           <Property Name="NKKCODE" Type="numeric" Precision="2" />
-          <Property Name="BKDT" Type="date" />
+          <Property Name="BKDT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PMSTYPE">
+          <Key>
+            <PropertyRef Name="TYPECODE" />
+          </Key>
+          <Property Name="TYPECODE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PMSTYPE" Type="char" MaxLength="45" />
+          <Property Name="L_DEFA" Type="bit" />
+          <Property Name="HISTCODE1" Type="char" MaxLength="10" />
+          <Property Name="HISTCODE2" Type="char" MaxLength="10" />
+          <Property Name="EDITED" Type="bit" />
+          <Property Name="EDITDT" Type="datetime" />
+          <Property Name="MCAT" Type="char" MaxLength="1" />
+          <Property Name="BKDT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SURVDONE">
+          <Key>
+            <PropertyRef Name="SDONECODE" />
+          </Key>
+          <Property Name="SDONECODE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SMAINCODE" Type="int" />
+          <Property Name="SSUBCODE" Type="int" />
+          <Property Name="MAINCODE" Type="int" />
+          <Property Name="PMSCODE" Type="int" />
+          <Property Name="DATES" Type="datetime" />
+          <Property Name="LASTDONE" Type="datetime" />
+          <Property Name="NEXTDUE" Type="datetime" />
+          <Property Name="PORT" Type="char" MaxLength="30" />
+          <Property Name="REMARK" Type="varchar(max)" />
+          <Property Name="WORKDONE" Type="varchar(max)" />
+          <Property Name="PERIOD" Type="numeric" Precision="10" />
+          <Property Name="LDUE" Type="datetime" />
+          <Property Name="EDITED" Type="bit" />
+          <Property Name="EDITDT" Type="datetime" />
+          <Property Name="COCCOND" Type="numeric" Precision="1" />
+          <Property Name="COCMON" Type="numeric" Precision="2" />
+          <Property Name="COCYEAR" Type="numeric" Precision="2" />
+          <Property Name="COCDAYS" Type="numeric" Precision="2" />
+          <Property Name="BKDT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SURVJOB">
+          <Key>
+            <PropertyRef Name="SJOBCODE" />
+          </Key>
+          <Property Name="SJOBCODE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EDITDT" Type="datetime" />
+          <Property Name="EDITED" Type="bit" />
+          <Property Name="SSUBCODE" Type="int" />
+          <Property Name="SSHED" Type="numeric" Precision="4" />
+          <Property Name="BKDT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SURVMAIN">
+          <Key>
+            <PropertyRef Name="SMAINCODE" />
+          </Key>
+          <Property Name="SMAINCODE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SNAME" Type="char" MaxLength="100" />
+          <Property Name="SMCODE" Type="char" MaxLength="8" />
+          <Property Name="EDITED" Type="bit" />
+          <Property Name="EDITDT" Type="datetime" />
+          <Property Name="SMORD" Type="numeric" Precision="7" />
+          <Property Name="BKDT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SURVPMS">
+          <Key>
+            <PropertyRef Name="SSUBCODE" />
+          </Key>
+          <Property Name="SMAINCODE" Type="int" />
+          <Property Name="SSUBCODE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PMSCODE" Type="int" />
+          <Property Name="MAINCODE" Type="int" />
+          <Property Name="EDITED" Type="bit" />
+          <Property Name="EDITDT" Type="datetime" />
+          <Property Name="SURVLINK" Type="bit" />
+          <Property Name="BKDT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SURVSUB">
+          <Key>
+            <PropertyRef Name="SSCODE" />
+          </Key>
+          <Property Name="SMAINCODE" Type="int" />
+          <Property Name="SSUBCODE" Type="int" />
+          <Property Name="SSUBNAME" Type="char" MaxLength="100" />
+          <Property Name="SSCODE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SCHED" Type="numeric" Precision="4" />
+          <Property Name="EDITED" Type="bit" />
+          <Property Name="CHFSURV" Type="bit" />
+          <Property Name="EDITDT" Type="datetime" />
+          <Property Name="PRD" Type="numeric" Precision="5" />
+          <Property Name="LASTDONE" Type="datetime" />
+          <Property Name="COCCOND" Type="numeric" Precision="1" />
+          <Property Name="COCMON" Type="numeric" Precision="2" />
+          <Property Name="COCREM" Type="varchar(max)" />
+          <Property Name="COCYEAR" Type="numeric" Precision="2" />
+          <Property Name="COCDAYS" Type="numeric" Precision="2" />
+          <Property Name="SURVTYPE" Type="numeric" Precision="1" />
+          <Property Name="NKKMON" Type="bit" />
+          <Property Name="SSORD" Type="numeric" Precision="7" />
+          <Property Name="BKDT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SURVYEAR">
+          <Key>
+            <PropertyRef Name="SYEARCODE" />
+          </Key>
+          <Property Name="SYEARCODE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="YEAR" Type="numeric" Precision="4" />
+          <Property Name="SSUBCODE" Type="int" />
+          <Property Name="SDATE" Type="datetime" />
+          <Property Name="NDATE" Type="datetime" />
+          <Property Name="EDITED" Type="bit" />
+          <Property Name="EDITDT" Type="datetime" />
+          <Property Name="BKDT" Type="datetime" />
         </EntityType>
         <Association Name="FK_MAINITEM_GRPMAIN">
           <End Role="GRPMAIN" Type="PMSDataModel.Store.GRPMAIN" Multiplicity="0..1" />
@@ -121,6 +280,18 @@
             </Principal>
             <Dependent Role="MAINITEM">
               <PropertyRef Name="GRPMCODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MAINITEM_MAINTYPE">
+          <End Role="MAINTYPE" Type="PMSDataModel.Store.MAINTYPE" Multiplicity="0..1" />
+          <End Role="MAINITEM" Type="PMSDataModel.Store.MAINITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAINTYPE">
+              <PropertyRef Name="MTCODE" />
+            </Principal>
+            <Dependent Role="MAINITEM">
+              <PropertyRef Name="MTCODE" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -136,6 +307,97 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_PMSITEM_PMSTYPE">
+          <End Role="PMSTYPE" Type="PMSDataModel.Store.PMSTYPE" Multiplicity="0..1" />
+          <End Role="PMSITEM" Type="PMSDataModel.Store.PMSITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PMSTYPE">
+              <PropertyRef Name="TYPECODE" />
+            </Principal>
+            <Dependent Role="PMSITEM">
+              <PropertyRef Name="TYPECODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SURVDONE_SURVPMS">
+          <End Role="SURVPMS" Type="PMSDataModel.Store.SURVPMS" Multiplicity="0..1" />
+          <End Role="SURVDONE" Type="PMSDataModel.Store.SURVDONE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SURVPMS">
+              <PropertyRef Name="SSUBCODE" />
+            </Principal>
+            <Dependent Role="SURVDONE">
+              <PropertyRef Name="SSUBCODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SURVJOB_SURVPMS">
+          <End Role="SURVPMS" Type="PMSDataModel.Store.SURVPMS" Multiplicity="0..1" />
+          <End Role="SURVJOB" Type="PMSDataModel.Store.SURVJOB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SURVPMS">
+              <PropertyRef Name="SSUBCODE" />
+            </Principal>
+            <Dependent Role="SURVJOB">
+              <PropertyRef Name="SSUBCODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SURVPMS_SURVMAIN">
+          <End Role="SURVMAIN" Type="PMSDataModel.Store.SURVMAIN" Multiplicity="0..1" />
+          <End Role="SURVPMS" Type="PMSDataModel.Store.SURVPMS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SURVMAIN">
+              <PropertyRef Name="SMAINCODE" />
+            </Principal>
+            <Dependent Role="SURVPMS">
+              <PropertyRef Name="SMAINCODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SURVSUB_SURVPMS">
+          <End Role="SURVPMS" Type="PMSDataModel.Store.SURVPMS" Multiplicity="0..1" />
+          <End Role="SURVSUB" Type="PMSDataModel.Store.SURVSUB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SURVPMS">
+              <PropertyRef Name="SSUBCODE" />
+            </Principal>
+            <Dependent Role="SURVSUB">
+              <PropertyRef Name="SSUBCODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SURVYEAR_SURVPMS">
+          <End Role="SURVPMS" Type="PMSDataModel.Store.SURVPMS" Multiplicity="0..1" />
+          <End Role="SURVYEAR" Type="PMSDataModel.Store.SURVYEAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SURVPMS">
+              <PropertyRef Name="SSUBCODE" />
+            </Principal>
+            <Dependent Role="SURVYEAR">
+              <PropertyRef Name="SSUBCODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'PMSData.dbo.SURVSTAT' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="SURVSTAT">
+        <Property Name="SLNO" Type="char" MaxLength="5" />
+        <Property Name="ITEM" Type="char" MaxLength="65" />
+        <Property Name="TYPE" Type="char" MaxLength="12" />
+        <Property Name="NO" Type="char" MaxLength="20" />
+        <Property Name="EXP" Type="datetime" />
+        <Property Name="PLACE" Type="char" MaxLength="35" />
+        <Property Name="DATES" Type="datetime" />
+        <Property Name="REMARK" Type="char" MaxLength="30" />
+        <Property Name="EXTN" Type="char" MaxLength="10" />
+        <Property Name="SURVCODE" Type="char" MaxLength="10" />
+        <Property Name="EDITED" Type="bit" />
+        <Property Name="EDITDT" Type="datetime" />
+        <Property Name="L_DEFA" Type="bit" />
+        <Property Name="BKDT" Type="datetime" />
+      </EntityType>-->
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -143,14 +405,50 @@
         <EntityContainer Name="PMSDataEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="GRPMAINs" EntityType="PMSDataModel.GRPMAIN" />
           <EntitySet Name="MAINITEMs" EntityType="PMSDataModel.MAINITEM" />
+          <EntitySet Name="MAINTYPEs" EntityType="PMSDataModel.MAINTYPE" />
           <EntitySet Name="PMSITEMs" EntityType="PMSDataModel.PMSITEM" />
+          <EntitySet Name="PMSTYPEs" EntityType="PMSDataModel.PMSTYPE" />
+          <EntitySet Name="SURVDONEs" EntityType="PMSDataModel.SURVDONE" />
+          <EntitySet Name="SURVJOBs" EntityType="PMSDataModel.SURVJOB" />
+          <EntitySet Name="SURVMAINs" EntityType="PMSDataModel.SURVMAIN" />
+          <EntitySet Name="SURVPMS" EntityType="PMSDataModel.SURVPM" />
+          <EntitySet Name="SURVSUBs" EntityType="PMSDataModel.SURVSUB" />
+          <EntitySet Name="SURVYEARs" EntityType="PMSDataModel.SURVYEAR" />
           <AssociationSet Name="FK_MAINITEM_GRPMAIN" Association="PMSDataModel.FK_MAINITEM_GRPMAIN">
             <End Role="GRPMAIN" EntitySet="GRPMAINs" />
+            <End Role="MAINITEM" EntitySet="MAINITEMs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MAINITEM_MAINTYPE" Association="PMSDataModel.FK_MAINITEM_MAINTYPE">
+            <End Role="MAINTYPE" EntitySet="MAINTYPEs" />
             <End Role="MAINITEM" EntitySet="MAINITEMs" />
           </AssociationSet>
           <AssociationSet Name="FK_PMSITEM_MAINITEM" Association="PMSDataModel.FK_PMSITEM_MAINITEM">
             <End Role="MAINITEM" EntitySet="MAINITEMs" />
             <End Role="PMSITEM" EntitySet="PMSITEMs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PMSITEM_PMSTYPE" Association="PMSDataModel.FK_PMSITEM_PMSTYPE">
+            <End Role="PMSTYPE" EntitySet="PMSTYPEs" />
+            <End Role="PMSITEM" EntitySet="PMSITEMs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SURVDONE_SURVPMS" Association="PMSDataModel.FK_SURVDONE_SURVPMS">
+            <End Role="SURVPM" EntitySet="SURVPMS" />
+            <End Role="SURVDONE" EntitySet="SURVDONEs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SURVJOB_SURVPMS" Association="PMSDataModel.FK_SURVJOB_SURVPMS">
+            <End Role="SURVPM" EntitySet="SURVPMS" />
+            <End Role="SURVJOB" EntitySet="SURVJOBs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SURVPMS_SURVMAIN" Association="PMSDataModel.FK_SURVPMS_SURVMAIN">
+            <End Role="SURVMAIN" EntitySet="SURVMAINs" />
+            <End Role="SURVPM" EntitySet="SURVPMS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SURVSUB_SURVPMS" Association="PMSDataModel.FK_SURVSUB_SURVPMS">
+            <End Role="SURVPM" EntitySet="SURVPMS" />
+            <End Role="SURVSUB" EntitySet="SURVSUBs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SURVYEAR_SURVPMS" Association="PMSDataModel.FK_SURVYEAR_SURVPMS">
+            <End Role="SURVPM" EntitySet="SURVPMS" />
+            <End Role="SURVYEAR" EntitySet="SURVYEARs" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="GRPMAIN">
@@ -189,7 +487,7 @@
           <Property Type="Boolean" Name="MOTRTN" />
           <Property Type="Boolean" Name="EDITED" />
           <Property Type="Boolean" Name="L_MGROUP" />
-          <Property Type="String" Name="MTCODE" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="MTCODE" />
           <Property Type="DateTime" Name="EDITDT" />
           <Property Type="Boolean" Name="MES" />
           <Property Type="Int32" Name="GRPMCODE" />
@@ -197,7 +495,20 @@
           <Property Type="Boolean" Name="SLF" />
           <Property Type="DateTime" Name="BKDT" />
           <NavigationProperty Name="GRPMAIN" Relationship="PMSDataModel.FK_MAINITEM_GRPMAIN" FromRole="MAINITEM" ToRole="GRPMAIN" />
+          <NavigationProperty Name="MAINTYPE" Relationship="PMSDataModel.FK_MAINITEM_MAINTYPE" FromRole="MAINITEM" ToRole="MAINTYPE" />
           <NavigationProperty Name="PMSITEMs" Relationship="PMSDataModel.FK_PMSITEM_MAINITEM" FromRole="MAINITEM" ToRole="PMSITEM" />
+        </EntityType>
+        <EntityType Name="MAINTYPE">
+          <Key>
+            <PropertyRef Name="MTCODE" />
+          </Key>
+          <Property Type="Int32" Name="MTCODE" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="MAINTYPE1" MaxLength="45" FixedLength="true" Unicode="false" />
+          <Property Type="Boolean" Name="L_DEFA" />
+          <Property Type="Boolean" Name="EDITED" />
+          <Property Type="DateTime" Name="EDITDT" />
+          <Property Type="DateTime" Name="BKDT" />
+          <NavigationProperty Name="MAINITEMs" Relationship="PMSDataModel.FK_MAINITEM_MAINTYPE" FromRole="MAINTYPE" ToRole="MAINITEM" />
         </EntityType>
         <EntityType Name="PMSITEM">
           <Key>
@@ -215,9 +526,9 @@
           <Property Type="Decimal" Name="HRSNET" Precision="7" Scale="0" />
           <Property Type="String" Name="M_E_D" MaxLength="1" FixedLength="true" Unicode="false" />
           <Property Type="Boolean" Name="CRIT" />
-          <Property Type="DateTime" Name="DATE" />
+          <Property Type="DateTime" Name="DATES" />
           <Property Type="Boolean" Name="L_DCARB" />
-          <Property Type="String" Name="TYPECODE" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="TYPECODE" />
           <Property Type="Decimal" Name="NUM" Precision="2" Scale="0" />
           <Property Type="Decimal" Name="STPOINT" Precision="7" Scale="2" />
           <Property Type="Decimal" Name="STPOINT1" Precision="7" Scale="2" />
@@ -250,6 +561,130 @@
           <Property Type="Decimal" Name="NKKCODE" Precision="2" Scale="0" />
           <Property Type="DateTime" Name="BKDT" />
           <NavigationProperty Name="MAINITEM" Relationship="PMSDataModel.FK_PMSITEM_MAINITEM" FromRole="PMSITEM" ToRole="MAINITEM" />
+          <NavigationProperty Name="PMSTYPE" Relationship="PMSDataModel.FK_PMSITEM_PMSTYPE" FromRole="PMSITEM" ToRole="PMSTYPE" />
+        </EntityType>
+        <EntityType Name="PMSTYPE">
+          <Key>
+            <PropertyRef Name="TYPECODE" />
+          </Key>
+          <Property Type="Int32" Name="TYPECODE" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="PMSTYPE1" MaxLength="45" FixedLength="true" Unicode="false" />
+          <Property Type="Boolean" Name="L_DEFA" />
+          <Property Type="String" Name="HISTCODE1" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="HISTCODE2" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="Boolean" Name="EDITED" />
+          <Property Type="DateTime" Name="EDITDT" />
+          <Property Type="String" Name="MCAT" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="BKDT" />
+          <NavigationProperty Name="PMSITEMs" Relationship="PMSDataModel.FK_PMSITEM_PMSTYPE" FromRole="PMSTYPE" ToRole="PMSITEM" />
+        </EntityType>
+        <EntityType Name="SURVDONE">
+          <Key>
+            <PropertyRef Name="SDONECODE" />
+          </Key>
+          <Property Type="Int32" Name="SDONECODE" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SMAINCODE" />
+          <Property Type="Int32" Name="SSUBCODE" />
+          <Property Type="Int32" Name="MAINCODE" />
+          <Property Type="Int32" Name="PMSCODE" />
+          <Property Type="DateTime" Name="DATES" />
+          <Property Type="DateTime" Name="LASTDONE" />
+          <Property Type="DateTime" Name="NEXTDUE" />
+          <Property Type="String" Name="PORT" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="REMARK" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="WORKDONE" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="PERIOD" Precision="10" Scale="0" />
+          <Property Type="DateTime" Name="LDUE" />
+          <Property Type="Boolean" Name="EDITED" />
+          <Property Type="DateTime" Name="EDITDT" />
+          <Property Type="Decimal" Name="COCCOND" Precision="1" Scale="0" />
+          <Property Type="Decimal" Name="COCMON" Precision="2" Scale="0" />
+          <Property Type="Decimal" Name="COCYEAR" Precision="2" Scale="0" />
+          <Property Type="Decimal" Name="COCDAYS" Precision="2" Scale="0" />
+          <Property Type="DateTime" Name="BKDT" />
+          <NavigationProperty Name="SURVPM" Relationship="PMSDataModel.FK_SURVDONE_SURVPMS" FromRole="SURVDONE" ToRole="SURVPM" />
+        </EntityType>
+        <EntityType Name="SURVJOB">
+          <Key>
+            <PropertyRef Name="SJOBCODE" />
+          </Key>
+          <Property Type="Int32" Name="SJOBCODE" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="EDITDT" />
+          <Property Type="Boolean" Name="EDITED" />
+          <Property Type="Int32" Name="SSUBCODE" />
+          <Property Type="Decimal" Name="SSHED" Precision="4" Scale="0" />
+          <Property Type="DateTime" Name="BKDT" />
+          <NavigationProperty Name="SURVPM" Relationship="PMSDataModel.FK_SURVJOB_SURVPMS" FromRole="SURVJOB" ToRole="SURVPM" />
+        </EntityType>
+        <EntityType Name="SURVMAIN">
+          <Key>
+            <PropertyRef Name="SMAINCODE" />
+          </Key>
+          <Property Type="Int32" Name="SMAINCODE" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SNAME" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="SMCODE" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Type="Boolean" Name="EDITED" />
+          <Property Type="DateTime" Name="EDITDT" />
+          <Property Type="Decimal" Name="SMORD" Precision="7" Scale="0" />
+          <Property Type="DateTime" Name="BKDT" />
+          <NavigationProperty Name="SURVPMS" Relationship="PMSDataModel.FK_SURVPMS_SURVMAIN" FromRole="SURVMAIN" ToRole="SURVPM" />
+        </EntityType>
+        <EntityType Name="SURVPM">
+          <Key>
+            <PropertyRef Name="SSUBCODE" />
+          </Key>
+          <Property Type="Int32" Name="SMAINCODE" />
+          <Property Type="Int32" Name="SSUBCODE" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PMSCODE" />
+          <Property Type="Int32" Name="MAINCODE" />
+          <Property Type="Boolean" Name="EDITED" />
+          <Property Type="DateTime" Name="EDITDT" />
+          <Property Type="Boolean" Name="SURVLINK" />
+          <Property Type="DateTime" Name="BKDT" />
+          <NavigationProperty Name="SURVDONEs" Relationship="PMSDataModel.FK_SURVDONE_SURVPMS" FromRole="SURVPM" ToRole="SURVDONE" />
+          <NavigationProperty Name="SURVJOBs" Relationship="PMSDataModel.FK_SURVJOB_SURVPMS" FromRole="SURVPM" ToRole="SURVJOB" />
+          <NavigationProperty Name="SURVMAIN" Relationship="PMSDataModel.FK_SURVPMS_SURVMAIN" FromRole="SURVPM" ToRole="SURVMAIN" />
+          <NavigationProperty Name="SURVSUBs" Relationship="PMSDataModel.FK_SURVSUB_SURVPMS" FromRole="SURVPM" ToRole="SURVSUB" />
+          <NavigationProperty Name="SURVYEARs" Relationship="PMSDataModel.FK_SURVYEAR_SURVPMS" FromRole="SURVPM" ToRole="SURVYEAR" />
+        </EntityType>
+        <EntityType Name="SURVSUB">
+          <Key>
+            <PropertyRef Name="SSCODE" />
+          </Key>
+          <Property Type="Int32" Name="SMAINCODE" />
+          <Property Type="Int32" Name="SSUBCODE" />
+          <Property Type="String" Name="SSUBNAME" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="SSCODE" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="SCHED" Precision="4" Scale="0" />
+          <Property Type="Boolean" Name="EDITED" />
+          <Property Type="Boolean" Name="CHFSURV" />
+          <Property Type="DateTime" Name="EDITDT" />
+          <Property Type="Decimal" Name="PRD" Precision="5" Scale="0" />
+          <Property Type="DateTime" Name="LASTDONE" />
+          <Property Type="Decimal" Name="COCCOND" Precision="1" Scale="0" />
+          <Property Type="Decimal" Name="COCMON" Precision="2" Scale="0" />
+          <Property Type="String" Name="COCREM" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="COCYEAR" Precision="2" Scale="0" />
+          <Property Type="Decimal" Name="COCDAYS" Precision="2" Scale="0" />
+          <Property Type="Decimal" Name="SURVTYPE" Precision="1" Scale="0" />
+          <Property Type="Boolean" Name="NKKMON" />
+          <Property Type="Decimal" Name="SSORD" Precision="7" Scale="0" />
+          <Property Type="DateTime" Name="BKDT" />
+          <NavigationProperty Name="SURVPM" Relationship="PMSDataModel.FK_SURVSUB_SURVPMS" FromRole="SURVSUB" ToRole="SURVPM" />
+        </EntityType>
+        <EntityType Name="SURVYEAR">
+          <Key>
+            <PropertyRef Name="SYEARCODE" />
+          </Key>
+          <Property Type="Int32" Name="SYEARCODE" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="YEAR" Precision="4" Scale="0" />
+          <Property Type="Int32" Name="SSUBCODE" />
+          <Property Type="DateTime" Name="SDATE" />
+          <Property Type="DateTime" Name="NDATE" />
+          <Property Type="Boolean" Name="EDITED" />
+          <Property Type="DateTime" Name="EDITDT" />
+          <Property Type="DateTime" Name="BKDT" />
+          <NavigationProperty Name="SURVPM" Relationship="PMSDataModel.FK_SURVYEAR_SURVPMS" FromRole="SURVYEAR" ToRole="SURVPM" />
         </EntityType>
         <Association Name="FK_MAINITEM_GRPMAIN">
           <End Type="PMSDataModel.GRPMAIN" Role="GRPMAIN" Multiplicity="0..1" />
@@ -263,6 +698,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_MAINITEM_MAINTYPE">
+          <End Type="PMSDataModel.MAINTYPE" Role="MAINTYPE" Multiplicity="0..1" />
+          <End Type="PMSDataModel.MAINITEM" Role="MAINITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MAINTYPE">
+              <PropertyRef Name="MTCODE" />
+            </Principal>
+            <Dependent Role="MAINITEM">
+              <PropertyRef Name="MTCODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_PMSITEM_MAINITEM">
           <End Type="PMSDataModel.MAINITEM" Role="MAINITEM" Multiplicity="0..1" />
           <End Type="PMSDataModel.PMSITEM" Role="PMSITEM" Multiplicity="*" />
@@ -272,6 +719,78 @@
             </Principal>
             <Dependent Role="PMSITEM">
               <PropertyRef Name="MAINCODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PMSITEM_PMSTYPE">
+          <End Type="PMSDataModel.PMSTYPE" Role="PMSTYPE" Multiplicity="0..1" />
+          <End Type="PMSDataModel.PMSITEM" Role="PMSITEM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PMSTYPE">
+              <PropertyRef Name="TYPECODE" />
+            </Principal>
+            <Dependent Role="PMSITEM">
+              <PropertyRef Name="TYPECODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SURVDONE_SURVPMS">
+          <End Type="PMSDataModel.SURVPM" Role="SURVPM" Multiplicity="0..1" />
+          <End Type="PMSDataModel.SURVDONE" Role="SURVDONE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SURVPM">
+              <PropertyRef Name="SSUBCODE" />
+            </Principal>
+            <Dependent Role="SURVDONE">
+              <PropertyRef Name="SSUBCODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SURVJOB_SURVPMS">
+          <End Type="PMSDataModel.SURVPM" Role="SURVPM" Multiplicity="0..1" />
+          <End Type="PMSDataModel.SURVJOB" Role="SURVJOB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SURVPM">
+              <PropertyRef Name="SSUBCODE" />
+            </Principal>
+            <Dependent Role="SURVJOB">
+              <PropertyRef Name="SSUBCODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SURVPMS_SURVMAIN">
+          <End Type="PMSDataModel.SURVMAIN" Role="SURVMAIN" Multiplicity="0..1" />
+          <End Type="PMSDataModel.SURVPM" Role="SURVPM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SURVMAIN">
+              <PropertyRef Name="SMAINCODE" />
+            </Principal>
+            <Dependent Role="SURVPM">
+              <PropertyRef Name="SMAINCODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SURVSUB_SURVPMS">
+          <End Type="PMSDataModel.SURVPM" Role="SURVPM" Multiplicity="0..1" />
+          <End Type="PMSDataModel.SURVSUB" Role="SURVSUB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SURVPM">
+              <PropertyRef Name="SSUBCODE" />
+            </Principal>
+            <Dependent Role="SURVSUB">
+              <PropertyRef Name="SSUBCODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SURVYEAR_SURVPMS">
+          <End Type="PMSDataModel.SURVPM" Role="SURVPM" Multiplicity="0..1" />
+          <End Type="PMSDataModel.SURVYEAR" Role="SURVYEAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SURVPM">
+              <PropertyRef Name="SSUBCODE" />
+            </Principal>
+            <Dependent Role="SURVYEAR">
+              <PropertyRef Name="SSUBCODE" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -326,6 +845,18 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="MAINTYPEs">
+            <EntityTypeMapping TypeName="PMSDataModel.MAINTYPE">
+              <MappingFragment StoreEntitySet="MAINTYPE">
+                <ScalarProperty Name="BKDT" ColumnName="BKDT" />
+                <ScalarProperty Name="EDITDT" ColumnName="EDITDT" />
+                <ScalarProperty Name="EDITED" ColumnName="EDITED" />
+                <ScalarProperty Name="L_DEFA" ColumnName="L_DEFA" />
+                <ScalarProperty Name="MAINTYPE1" ColumnName="MAINTYPE" />
+                <ScalarProperty Name="MTCODE" ColumnName="MTCODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="PMSITEMs">
             <EntityTypeMapping TypeName="PMSDataModel.PMSITEM">
               <MappingFragment StoreEntitySet="PMSITEM">
@@ -362,7 +893,7 @@
                 <ScalarProperty Name="NUM" ColumnName="NUM" />
                 <ScalarProperty Name="TYPECODE" ColumnName="TYPECODE" />
                 <ScalarProperty Name="L_DCARB" ColumnName="L_DCARB" />
-                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="DATES" ColumnName="DATES" />
                 <ScalarProperty Name="CRIT" ColumnName="CRIT" />
                 <ScalarProperty Name="M_E_D" ColumnName="M_E_D" />
                 <ScalarProperty Name="HRSNET" ColumnName="HRSNET" />
@@ -375,6 +906,125 @@
                 <ScalarProperty Name="PMSITEM1" ColumnName="PMSITEM" />
                 <ScalarProperty Name="PMSCODE" ColumnName="PMSCODE" />
                 <ScalarProperty Name="MAINCODE" ColumnName="MAINCODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PMSTYPEs">
+            <EntityTypeMapping TypeName="PMSDataModel.PMSTYPE">
+              <MappingFragment StoreEntitySet="PMSTYPE">
+                <ScalarProperty Name="BKDT" ColumnName="BKDT" />
+                <ScalarProperty Name="MCAT" ColumnName="MCAT" />
+                <ScalarProperty Name="EDITDT" ColumnName="EDITDT" />
+                <ScalarProperty Name="EDITED" ColumnName="EDITED" />
+                <ScalarProperty Name="HISTCODE2" ColumnName="HISTCODE2" />
+                <ScalarProperty Name="HISTCODE1" ColumnName="HISTCODE1" />
+                <ScalarProperty Name="L_DEFA" ColumnName="L_DEFA" />
+                <ScalarProperty Name="PMSTYPE1" ColumnName="PMSTYPE" />
+                <ScalarProperty Name="TYPECODE" ColumnName="TYPECODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SURVDONEs">
+            <EntityTypeMapping TypeName="PMSDataModel.SURVDONE">
+              <MappingFragment StoreEntitySet="SURVDONE">
+                <ScalarProperty Name="BKDT" ColumnName="BKDT" />
+                <ScalarProperty Name="COCDAYS" ColumnName="COCDAYS" />
+                <ScalarProperty Name="COCYEAR" ColumnName="COCYEAR" />
+                <ScalarProperty Name="COCMON" ColumnName="COCMON" />
+                <ScalarProperty Name="COCCOND" ColumnName="COCCOND" />
+                <ScalarProperty Name="EDITDT" ColumnName="EDITDT" />
+                <ScalarProperty Name="EDITED" ColumnName="EDITED" />
+                <ScalarProperty Name="LDUE" ColumnName="LDUE" />
+                <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+                <ScalarProperty Name="WORKDONE" ColumnName="WORKDONE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="PORT" ColumnName="PORT" />
+                <ScalarProperty Name="NEXTDUE" ColumnName="NEXTDUE" />
+                <ScalarProperty Name="LASTDONE" ColumnName="LASTDONE" />
+                <ScalarProperty Name="DATES" ColumnName="DATES" />
+                <ScalarProperty Name="PMSCODE" ColumnName="PMSCODE" />
+                <ScalarProperty Name="MAINCODE" ColumnName="MAINCODE" />
+                <ScalarProperty Name="SSUBCODE" ColumnName="SSUBCODE" />
+                <ScalarProperty Name="SMAINCODE" ColumnName="SMAINCODE" />
+                <ScalarProperty Name="SDONECODE" ColumnName="SDONECODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SURVJOBs">
+            <EntityTypeMapping TypeName="PMSDataModel.SURVJOB">
+              <MappingFragment StoreEntitySet="SURVJOB">
+                <ScalarProperty Name="BKDT" ColumnName="BKDT" />
+                <ScalarProperty Name="SSHED" ColumnName="SSHED" />
+                <ScalarProperty Name="SSUBCODE" ColumnName="SSUBCODE" />
+                <ScalarProperty Name="EDITED" ColumnName="EDITED" />
+                <ScalarProperty Name="EDITDT" ColumnName="EDITDT" />
+                <ScalarProperty Name="SJOBCODE" ColumnName="SJOBCODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SURVMAINs">
+            <EntityTypeMapping TypeName="PMSDataModel.SURVMAIN">
+              <MappingFragment StoreEntitySet="SURVMAIN">
+                <ScalarProperty Name="BKDT" ColumnName="BKDT" />
+                <ScalarProperty Name="SMORD" ColumnName="SMORD" />
+                <ScalarProperty Name="EDITDT" ColumnName="EDITDT" />
+                <ScalarProperty Name="EDITED" ColumnName="EDITED" />
+                <ScalarProperty Name="SMCODE" ColumnName="SMCODE" />
+                <ScalarProperty Name="SNAME" ColumnName="SNAME" />
+                <ScalarProperty Name="SMAINCODE" ColumnName="SMAINCODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SURVPMS">
+            <EntityTypeMapping TypeName="PMSDataModel.SURVPM">
+              <MappingFragment StoreEntitySet="SURVPMS">
+                <ScalarProperty Name="BKDT" ColumnName="BKDT" />
+                <ScalarProperty Name="SURVLINK" ColumnName="SURVLINK" />
+                <ScalarProperty Name="EDITDT" ColumnName="EDITDT" />
+                <ScalarProperty Name="EDITED" ColumnName="EDITED" />
+                <ScalarProperty Name="MAINCODE" ColumnName="MAINCODE" />
+                <ScalarProperty Name="PMSCODE" ColumnName="PMSCODE" />
+                <ScalarProperty Name="SSUBCODE" ColumnName="SSUBCODE" />
+                <ScalarProperty Name="SMAINCODE" ColumnName="SMAINCODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SURVSUBs">
+            <EntityTypeMapping TypeName="PMSDataModel.SURVSUB">
+              <MappingFragment StoreEntitySet="SURVSUB">
+                <ScalarProperty Name="BKDT" ColumnName="BKDT" />
+                <ScalarProperty Name="SSORD" ColumnName="SSORD" />
+                <ScalarProperty Name="NKKMON" ColumnName="NKKMON" />
+                <ScalarProperty Name="SURVTYPE" ColumnName="SURVTYPE" />
+                <ScalarProperty Name="COCDAYS" ColumnName="COCDAYS" />
+                <ScalarProperty Name="COCYEAR" ColumnName="COCYEAR" />
+                <ScalarProperty Name="COCREM" ColumnName="COCREM" />
+                <ScalarProperty Name="COCMON" ColumnName="COCMON" />
+                <ScalarProperty Name="COCCOND" ColumnName="COCCOND" />
+                <ScalarProperty Name="LASTDONE" ColumnName="LASTDONE" />
+                <ScalarProperty Name="PRD" ColumnName="PRD" />
+                <ScalarProperty Name="EDITDT" ColumnName="EDITDT" />
+                <ScalarProperty Name="CHFSURV" ColumnName="CHFSURV" />
+                <ScalarProperty Name="EDITED" ColumnName="EDITED" />
+                <ScalarProperty Name="SCHED" ColumnName="SCHED" />
+                <ScalarProperty Name="SSCODE" ColumnName="SSCODE" />
+                <ScalarProperty Name="SSUBNAME" ColumnName="SSUBNAME" />
+                <ScalarProperty Name="SSUBCODE" ColumnName="SSUBCODE" />
+                <ScalarProperty Name="SMAINCODE" ColumnName="SMAINCODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SURVYEARs">
+            <EntityTypeMapping TypeName="PMSDataModel.SURVYEAR">
+              <MappingFragment StoreEntitySet="SURVYEAR">
+                <ScalarProperty Name="BKDT" ColumnName="BKDT" />
+                <ScalarProperty Name="EDITDT" ColumnName="EDITDT" />
+                <ScalarProperty Name="EDITED" ColumnName="EDITED" />
+                <ScalarProperty Name="NDATE" ColumnName="NDATE" />
+                <ScalarProperty Name="SDATE" ColumnName="SDATE" />
+                <ScalarProperty Name="SSUBCODE" ColumnName="SSUBCODE" />
+                <ScalarProperty Name="YEAR" ColumnName="YEAR" />
+                <ScalarProperty Name="SYEARCODE" ColumnName="SYEARCODE" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -399,16 +1049,54 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="PMSModel" ZoomLevel="55">
-        <EntityTypeShape EntityType="PMSDataModel.GRPMAIN" Width="1.5" PointX="0.75" PointY="5.125" Height="2.5571907552083317" />
-        <EntityTypeShape EntityType="PMSDataModel.MAINITEM" Width="1.5" PointX="3" PointY="3.125" Height="6.4032194010416674" />
-        <EntityTypeShape EntityType="PMSDataModel.PMSITEM" Width="1.5" PointX="5.25" PointY="1.375" Height="10.056946614583332" />
+        <EntityTypeShape EntityType="PMSDataModel.GRPMAIN" Width="1.5" PointX="7.75" PointY="7" Height="2.5571907552083308" />
+        <EntityTypeShape EntityType="PMSDataModel.MAINITEM" Width="1.5" PointX="10" PointY="4.875" Height="6.5955208333333335" />
+        <EntityTypeShape EntityType="PMSDataModel.MAINTYPE" Width="1.5" PointX="7.75" PointY="3" Height="2.364889322916667" />
+        <EntityTypeShape EntityType="PMSDataModel.PMSITEM" Width="1.5" PointX="12.25" PointY="3.125" Height="10.249248046875003" />
+        <EntityTypeShape EntityType="PMSDataModel.PMSTYPE" Width="1.5" PointX="10" PointY="0.75" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="PMSDataModel.SURVDONE" Width="1.5" PointX="5.25" PointY="3.5" Height="5.0571093750000031" />
+        <EntityTypeShape EntityType="PMSDataModel.SURVJOB" Width="1.5" PointX="5.25" PointY="9.25" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="PMSDataModel.SURVMAIN" Width="1.5" PointX="0.75" PointY="10.875" Height="2.5571907552083317" />
+        <EntityTypeShape EntityType="PMSDataModel.SURVPM" Width="1.5" PointX="3" PointY="10.375" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="PMSDataModel.SURVSUB" Width="1.5" PointX="5.25" PointY="12.375" Height="4.8648079427083335" />
+        <EntityTypeShape EntityType="PMSDataModel.SURVYEAR" Width="1.5" PointX="5.25" PointY="18" Height="2.7494921875000031" />
         <AssociationConnector Association="PMSDataModel.FK_MAINITEM_GRPMAIN" >
-          <ConnectorPoint PointX="2.25" PointY="6.4035953776041659" />
-          <ConnectorPoint PointX="3" PointY="6.4035953776041659" />
+          <ConnectorPoint PointX="9.25" PointY="8.2785953776041659" />
+          <ConnectorPoint PointX="10" PointY="8.2785953776041659" />
+        </AssociationConnector>
+        <AssociationConnector Association="PMSDataModel.FK_MAINITEM_MAINTYPE" >
+          <ConnectorPoint PointX="9.25" PointY="5.1199446614583337" />
+          <ConnectorPoint PointX="10" PointY="5.1199446614583337" />
         </AssociationConnector>
         <AssociationConnector Association="PMSDataModel.FK_PMSITEM_MAINITEM" >
-          <ConnectorPoint PointX="4.5" PointY="6.3266097005208337" />
-          <ConnectorPoint PointX="5.25" PointY="6.3266097005208337" />
+          <ConnectorPoint PointX="11.5" PointY="8.1727604166666659" />
+          <ConnectorPoint PointX="12.25" PointY="8.1727604166666659" />
+        </AssociationConnector>
+        <AssociationConnector Association="PMSDataModel.FK_PMSITEM_PMSTYPE" >
+          <ConnectorPoint PointX="11.5" PointY="3.4083968098958337" />
+          <ConnectorPoint PointX="12.25" PointY="3.4083968098958337" />
+        </AssociationConnector>
+        <AssociationConnector Association="PMSDataModel.FK_SURVDONE_SURVPMS" >
+          <ConnectorPoint PointX="3.75" PointY="10.375" />
+          <ConnectorPoint PointX="3.75" PointY="6.0285546875000016" />
+          <ConnectorPoint PointX="5.25" PointY="6.0285546875000016" />
+        </AssociationConnector>
+        <AssociationConnector Association="PMSDataModel.FK_SURVJOB_SURVPMS" >
+          <ConnectorPoint PointX="4.5" PointY="10.994944661458334" />
+          <ConnectorPoint PointX="5.25" PointY="10.994944661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="PMSDataModel.FK_SURVPMS_SURVMAIN" >
+          <ConnectorPoint PointX="2.25" PointY="12.153595377604166" />
+          <ConnectorPoint PointX="3" PointY="12.153595377604166" />
+        </AssociationConnector>
+        <AssociationConnector Association="PMSDataModel.FK_SURVSUB_SURVPMS" >
+          <ConnectorPoint PointX="4.5" PointY="13.134348958333334" />
+          <ConnectorPoint PointX="5.25" PointY="13.134348958333334" />
+        </AssociationConnector>
+        <AssociationConnector Association="PMSDataModel.FK_SURVYEAR_SURVPMS" >
+          <ConnectorPoint PointX="3.75" PointY="13.893697916666667" />
+          <ConnectorPoint PointX="3.75" PointY="19.37474609375" />
+          <ConnectorPoint PointX="5.25" PointY="19.37474609375" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>

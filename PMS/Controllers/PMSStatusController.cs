@@ -41,5 +41,15 @@ namespace PMS.Controllers
             return Json(maintree, JsonRequestBehavior.AllowGet);
         }
 
+        // Load grid
+        public JsonResult LoadGrid()
+        {
+            var tree = (from m in db.MAINITEMs
+                        join p in db.PMSITEMs on m.MAINCODE equals p.MAINCODE
+                        select new { pId = m.MAINCODE, id = p.PMSCODE, name = p.PMSITEM1 }).ToList();
+
+            return Json(tree, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }
