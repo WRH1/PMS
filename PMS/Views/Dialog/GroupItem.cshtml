@@ -1,0 +1,29 @@
+﻿<br />
+<br />
+<div class="CriticalPMS">
+    <span>
+        <label>
+            Main Group</label>
+        <input type="text" id="grpName" class="" name="" />
+    </span>
+
+    <span style="text-align:right;width:95%">
+        <input type="submit" value="Save" onclick="SaveMainGrp();" />
+        <input type="button" value="Cancel" onclick="CloseDialog('grpDialog');" />
+    </span>
+</div>
+<script type="text/javascript">
+    function SaveMainGrp() {
+        $.ajax({
+            url: '@Url.Action("GroupItem", "Dialog")',
+            type: 'POST',
+            data: {GroupName: $("#grpName").val()},
+            success: function (data) {
+                $('#grpDialog').dialog('close');
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert(errorThrown);
+            }
+        });
+    }
+</script>

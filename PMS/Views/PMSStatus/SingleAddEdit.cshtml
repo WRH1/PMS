@@ -205,16 +205,17 @@
                 </div>
             </div>
             <div class="BtnOtr">
-            	<input type="button" value="Add Group Item" name="" id="" class="PMSButton" />
-                <input type="button" value="Add Main Item" name="" id="" class="PMSButton" />
+                @Html.ActionLink("Add Group Item", "GroupItem", "Dialog", null, new { @class = "PMSDailog", data_dialog_id = "grpDialog", data_dialog_title = "Main Group Add" })
+                @Html.ActionLink("Add Main Item", "MainItem", "Dialog", null, new { @class = "PMSDailog", data_dialog_id = "itmDialog", data_dialog_title = "Main Item Add" })
                 <input type="button" value="Add PMS Item" name="" id="" class="PMSButton" />
                 <input type="button" value="Delete PMS Item" name="" id="" class="PMSButton" />
                 <input type="button" value="Send Update To Ship" name="" id="" class="PMSButton" />
             </div>
         </div>
 
+<div id="result" style="display:none;"></div>
+
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -223,5 +224,6 @@
                 $(".TabOtr").toggleClass("FullWidth");
             });
         });
+
     </script>
 }

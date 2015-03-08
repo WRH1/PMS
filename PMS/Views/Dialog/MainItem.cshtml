@@ -1,0 +1,37 @@
+﻿<br />
+<div class="CriticalPMS">
+    <span>
+        <label>
+            Main Group</label>
+        <label id="GroupName"></label>
+    </span>
+    <span>
+        <label>Main Item</label>
+        <input type="text" id="MainItem" />
+    </span>
+    <span>
+        <label>Eqp Type</label>
+         @Html.DropDownList("EQPType", (SelectList)ViewBag.EQPType, "Please Select")
+        <label style="text-align:right">Number &nbsp;</label>
+        <input type="text" id="Num" size="2" style="width:10%" />
+    </span>
+    <span style="text-align:right;width:95%">
+        <input type="submit" value="Save" onclick="SaveMainGrp();" />
+        <input type="button" value="Cancel" onclick="CloseDialog('itmDialog');" />
+    </span>
+</div>
+<script type="text/javascript">
+    function SaveMainGrp() {
+        $.ajax({
+            url: '@Url.Action("MainItem", "Dialog")',
+            type: 'POST',
+            data: { MainItem: $("#MainItem").val(), EQPType: $("#EQPType").val(), Num: $("#Num").val() },
+            success: function (data) {
+                $('#itmDialog').dialog('close');
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert(errorThrown);
+            }
+        });
+    }
+</script>

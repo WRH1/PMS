@@ -37,7 +37,7 @@ textarea						{ height:auto; border:1px solid #cccccc; outline:none }
 .CriticalPMS_Sec01 div			{ width:48%; float:left; }
 .CriticalPMS_Sec01 div label	{ width: 50%; float: left; line-height:25px; }
 .CriticalPMS_Sec01 div label input	{ float:left; margin-top:8px; }
- .PMSButton, .DashboardTab li					{ float:left; margin-right:5px; border:1px solid #cccccc; padding:5px; background:#ffffff url(../images/grey_btn.png) repeat-x bottom; }
+ .PMSButton, .PMSDailog, .DashboardTab li					{ float:left; margin-right:5px; border:1px solid #cccccc; padding:5px; background:#ffffff url(../images/grey_btn.png) repeat-x bottom; }
 .Title span a				{ color:#333333; text-decoration:none; }
 .Title span.Selected, .DashboardTab li.Selected		{ background-image:none; }
 .LabelOtr							{ width:100%; float:left; margin-top:10px; }
@@ -73,7 +73,7 @@ fieldset span, .FormRytSec span				{ float:left; width:100%; margin-bottom:10px;
 
 .CriticalPMSLastSec				{ width:25%; } 
 .BtnOtr							{ width:100%; float:left; height:auto; margin-top:10px; margin-bottom:5px; }
-.PMSButton						{ font-size:11px; cursor:pointer }
+.PMSButton, .PMSDailog						{ font-size:11px; cursor:pointer }
 .CriticalPMS span, .PMSResponsible span			{ width:100%; height:auto; margin-bottom:5px; float:left }
 .CriticalPMS label			{ width:25%; line-height:17px; float:left; margin-bottom:5px; }
 .CriticalPMS input[type=text]	{ width:70%; margin-bottom:5px; border:1px solid #cccccc; }
